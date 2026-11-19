@@ -419,3 +419,4 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
 }
+

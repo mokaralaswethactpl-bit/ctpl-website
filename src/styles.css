@@ -11251,3 +11251,175 @@ main li b {
   }
 }
 
+/* =========================================
+   FOOTER - DISTINCT DARK NAVY BACKGROUND
+========================================= */
+
+.footer {
+  background: linear-gradient(
+    135deg,
+    #061522 0%,
+    #081b2e 60%,
+    #10283f 100%
+  ) !important;
+
+  color: #d3e0e8;
+}
+
+/* =========================================
+   LET'S CONNECT - ABSTRACT DIAGONAL TEXTURE
+========================================= */
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(0, 174, 239, 0.18),
+      transparent 45%
+    ),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0px,
+      transparent 24px,
+      rgba(255, 255, 255, 0.025) 25px,
+      transparent 26px,
+      transparent 50px
+    ),
+    linear-gradient(120deg, #071c35, #103d63 55%, #087e9c) !important;
+}
+
+/* =========================================
+   FOOTER - SOFT RADIAL TEXTURE
+========================================= */
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 90% 15%,
+      rgba(0, 174, 239, 0.13),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 10% 100%,
+      rgba(35, 91, 133, 0.18),
+      transparent 50%
+    ),
+    linear-gradient(135deg, #061522, #081b2e 65%, #10283f) !important;
+}
+/* CONTACT CTPL BUTTON - DARK NAVY */
+
+.cta-section .btn,
+.cta-section .btn-primary,
+.cta-section a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+
+  background: #082b46 !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+
+  padding: 16px 26px !important;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.cta-section .btn:hover,
+.cta-section .btn-primary:hover,
+.cta-section a:hover {
+  background: #061b2d !important;
+  color: #ffffff !important;
+}
+
+
+/* =========================================
+   STATIC INTERACTIVE GRID
+========================================= */
+
+.interactive-grid-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Fixed grid layer - no movement or animation */
+.interactive-grid-section .grid-hover-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  grid-auto-rows: 60px;
+
+  align-content: start;
+  justify-content: start;
+
+  pointer-events: auto;
+}
+
+/* Normal grid squares */
+.interactive-grid-section .grid-cell {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+
+  background: transparent;
+  border: 1px solid rgba(0, 174, 239, 0.10);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  transform: none;
+  animation: none;
+}
+
+/* Only the hovered square outline glows */
+.interactive-grid-section .grid-cell:hover {
+  background: transparent !important;
+
+  border-color: #00c8ff !important;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 200, 255, 0.65),
+    0 0 9px rgba(0, 200, 255, 0.35);
+
+  transform: none !important;
+}
+
+/* Keep content above the grid */
+.interactive-grid-section > .container {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Keep buttons and links clickable */
+.interactive-grid-section a,
+.interactive-grid-section button {
+  pointer-events: auto;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .interactive-grid-section .grid-hover-layer {
+    grid-template-columns: repeat(auto-fill, 48px);
+    grid-auto-rows: 48px;
+  }
+
+  .interactive-grid-section .grid-cell {
+    width: 48px;
+    height: 48px;
+  }
+}
