@@ -1,0 +1,242 @@
+
+import { Component, computed, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+type StateDocument = {
+  title: string;
+  url: string;
+};
+
+@Component({
+  selector: 'app-approvals-sop',
+  standalone: true,
+  imports: [RouterLink],
+
+  template: `
+
+    
+<!-- PAGE HEADER -->
+<section class="page-hero ctpl-sop-image-hero">
+      <div class="container">
+
+        <div class="eyebrow eyebrow-light">
+          CTPL / DEALER CENTRE
+        </div>
+
+        <h1>Approvals & SOP</h1>
+
+        <div class="page-hero-actions">
+          <a
+            routerLink="/"
+            class="btn btn-outline-light"
+          >
+            ← Back to homepage
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SOPs AND APPROVALS -->
+    <section class="sop-section">
+
+      <div class="sop-container">
+
+        <div class="sop-heading">
+          <h2>SOPs and Approvals</h2>
+        </div>
+
+        <!-- STATE SELECTION GRID -->
+        <div class="sop-states-grid">
+
+          @for (state of states; track state) {
+
+            <button
+              type="button"
+              class="sop-state-button"
+              [class.selected]="selectedState() === state"
+              [attr.aria-pressed]="selectedState() === state"
+              (click)="selectState(state)"
+            >
+              {{ state }}
+            </button>
+
+          }
+
+        </div>
+
+        <!-- SELECTED STATE AND DOCUMENTS -->
+        <div class="sop-detail-grid">
+
+          <!-- LEFT PANEL -->
+          <div class="sop-state-panel">
+
+            <div class="sop-map-icon">
+              <svg
+                viewBox="0 0 48 48"
+                width="45"
+                height="45"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 12L18 8V37L7 41V12Z"
+                  fill="#A7C3EF"
+                />
+                <path
+                  d="M20 8L30 12V41L20 37V8Z"
+                  fill="#BCD0F1"
+                />
+                <path
+                  d="M32 12L42 8V37L32 41V12Z"
+                  fill="#A7C3EF"
+                />
+              </svg>
+            </div>
+
+            @if (selectedState()) {
+
+              <h3>{{ selectedState() }}</h3>
+
+              <p>
+                State selected
+              </p>
+
+            } @else {
+
+              <h3>Select a State</h3>
+
+              <p>
+                Click any state above to load its
+                documents
+              </p>
+
+            }
+
+          </div>
+
+          <!-- RIGHT DOCUMENTS PANEL -->
+          <div class="sop-documents-panel">
+
+            <h3>Documents</h3>
+
+            <div class="sop-documents-content">
+
+              @if (!selectedState()) {
+
+                <p class="sop-empty-message">
+                  Please select a state to view available documents.
+                </p>
+
+              } @else if (selectedDocuments().length === 0) {
+
+                <p class="sop-empty-message">
+                  Documents for {{ selectedState() }}
+                  have not been added yet.
+                </p>
+
+              } @else {
+
+                <div class="sop-documents-list">
+
+                  @for (
+                    document of selectedDocuments();
+                    track document.url
+                  ) {
+
+                    <a
+                      class="sop-document-link"
+                      [href]="document.url"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+
+                      <span class="sop-document-icon">
+                        📄
+                      </span>
+
+                      <span class="sop-document-title">
+                        {{ document.title }}
+                      </span>
+
+                      <span class="sop-view-label">
+                        VIEW PDF
+                      </span>
+
+                    </a>
+
+                  }
+
+                </div>
+
+              }
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  `
+})
+export class ApprovalsSopComponent {
+
+  selectedState = signal<string | null>(null);
+
+  states: string[] = [
+    'Andhra Pradesh',
+    'Delhi',
+    'Karnataka',
+    'Kerala',
+    'Ladakh',
+
+    'Gujarat',
+    'Himachal Pradesh',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Nagaland',
+
+    'Jammu & Kashmir',
+    'Odisha',
+    'Rajasthan',
+    'Telangana',
+    'Tripura',
+
+    'Uttar Pradesh',
+    'Uttarakhand',
+    'West Bengal',
+    'Goa',
+    'Punjab',
+
+    'Haryana',
+    'Assam',
+    'Tamil Nadu',
+    'Jharkhand',
+    'Bihar'
+  ];
+
+  // Add original approved PDF documents here
+  // once the state-specific links are available.
+  documentsByState: Record<string, StateDocument[]> = {};
+
+  selectedDocuments = computed(() => {
+
+    const state = this.selectedState();
+
+    if (!state) {
+      return [];
+    }
+
+    return this.documentsByState[state] ?? [];
+
+  });
+
+  selectState(state: string): void {
+    this.selectedState.set(state);
+  }
+
+}
