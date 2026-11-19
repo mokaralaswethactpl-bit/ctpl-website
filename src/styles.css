@@ -11107,7 +11107,7 @@ main li b {
   }
 }
 /* ==========================================
-   EXPLORE CTPL - FULL BACKGROUND BUILDING
+   EXPLORE CTPL - TRANSPARENT OVERLAY
 ========================================== */
 
 .explore-ctpl-section {
@@ -11115,68 +11115,98 @@ main li b {
   isolation: isolate;
   overflow: hidden;
 
-  background:
-    linear-gradient(
-      rgba(4, 18, 32, 0.78),
-      rgba(4, 18, 32, 0.85)
-    ),
-    url("/assets/images/ctpl-building.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-}
-
-/* Keep section content above the background */
-.explore-ctpl-section > .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* Remove old grid and building overlays */
-.explore-ctpl-section::before,
-.explore-ctpl-section::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Mobile adjustment */
-@media (max-width: 768px) {
-  .explore-ctpl-section {
-    background-position: center;
-    background-size: cover;
-  }
-}
-/* EXPLORE CTPL - FULL BUILDING BACKGROUND */
-
-.explore-ctpl-section {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-
+  /* Original building image */
   background-image:
-    linear-gradient(
-      rgba(4, 18, 32, 0.72),
-      rgba(4, 18, 32, 0.82)
-    ),
     url("/assets/images/ctpl-building.jpg") !important;
 
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-color: #071827;
+  background-attachment: scroll;
+
+  /* Visible building area at the top */
+  padding-top: 180px !important;
+  padding-bottom: 70px !important;
 }
 
-.explore-ctpl-section::before,
-.explore-ctpl-section::after {
-  display: none !important;
-  content: none !important;
+
+/* FULL WIDTH TRANSPARENT LAYER */
+
+.explore-ctpl-section::before {
+  content: "" !important;
+  display: block !important;
+
+  position: absolute;
+
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.45) !important;
+
+  z-index: -1;
+  pointer-events: none;
 }
+
+
+/* Remove other background overlays */
+
+.explore-ctpl-section::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* Keep all information above transparent layer */
 
 .explore-ctpl-section > .container {
   position: relative;
   z-index: 1;
+}
+
+
+/* Main heading - white in both themes */
+
+.explore-ctpl-section h2 {
+  color: #ffffff !important;
+}
+
+
+/* EXPLORE CTPL label */
+
+.explore-ctpl-section .eyebrow {
+  color: #56cfe8 !important;
+}
+
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark) {
+
+  .explore-ctpl-section::before {
+    background: rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .explore-ctpl-section h2 {
+    color: #ffffff !important;
+  }
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .explore-ctpl-section {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+    background-position: center !important;
+  }
+
+  .explore-ctpl-section::before {
+    top: 60px;
+  }
 }
 
 /* =========================================
@@ -11422,4 +11452,507 @@ main li b {
     width: 48px;
     height: 48px;
   }
+}
+
+/* ============================================
+   CTPL - FIXED GRID WITH HOVER OUTLINE GLOW
+   No movement, no floating, no animation
+============================================ */
+
+.interactive-grid-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* STATIC GRID BACKGROUND */
+
+.interactive-grid-section .grid-hover-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  grid-auto-rows: 60px;
+
+  align-content: start;
+  justify-content: start;
+
+  pointer-events: auto;
+
+  /* Disable all movement */
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* INDIVIDUAL GRID SQUARES */
+
+.interactive-grid-section .grid-cell {
+  display: block;
+
+  width: 60px;
+  height: 60px;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  background: transparent !important;
+
+  border: 1px solid rgba(0, 174, 239, 0.12);
+
+  /* No animation or movement */
+  animation: none !important;
+  transform: none !important;
+
+  /* Only border and glow can change */
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* HOVER EFFECT - OUTLINE ONLY */
+
+/* Default grid */
+.interactive-grid-section .grid-cell {
+  background: transparent !important;
+  border: 1px solid rgba(0, 174, 239, 0.12);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Glow the hovered square and 4 neighboring squares */
+.interactive-grid-section .grid-cell:hover,
+.interactive-grid-section .grid-cell:hover + .grid-cell,
+.interactive-grid-section .grid-cell:hover + .grid-cell + .grid-cell,
+.interactive-grid-section .grid-cell:hover + .grid-cell + .grid-cell + .grid-cell,
+.interactive-grid-section .grid-cell:hover + .grid-cell + .grid-cell + .grid-cell + .grid-cell {
+  background: transparent !important;
+  border-color: #00c8ff !important;
+  box-shadow:
+    inset 0 0 5px rgba(0, 200, 255, 0.3),
+    0 0 9px rgba(0, 200, 255, 0.4);
+}
+/* KEEP CONTENT ABOVE THE GRID */
+
+.interactive-grid-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* RESPONSIVE GRID */
+
+@media (max-width: 768px) {
+  .interactive-grid-section .grid-hover-layer {
+    grid-template-columns: repeat(auto-fill, 48px);
+    grid-auto-rows: 48px;
+  }
+
+  .interactive-grid-section .grid-cell {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* =========================================
+   FINAL FIX - STOP CONNECTED SERVICES GRID
+   Keep grid fixed, glow outline on hover only
+========================================= */
+
+/* Stop the animated background grid */
+.interactive-grid-section.home-tech-bg::before {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+
+  background-position: 0 0 !important;
+  background-size: 50px 50px !important;
+}
+
+/* Stop the moving background light */
+.interactive-grid-section.home-tech-bg::after {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Keep the grid layer stationary */
+.interactive-grid-section .grid-hover-layer {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+  background-position: 0 0 !important;
+}
+
+/* Keep every square fixed */
+.interactive-grid-section .grid-cell {
+  animation: none !important;
+  transform: none !important;
+  background: transparent !important;
+  border: 1px solid rgba(0, 174, 239, 0.12);
+}
+
+/* Only outline glows on hover */
+.interactive-grid-section .grid-cell:hover {
+  animation: none !important;
+  transform: none !important;
+  background: transparent !important;
+
+  border-color: #00c8ff !important;
+
+  box-shadow:
+    inset 0 0 5px rgba(0, 200, 255, 0.3),
+    0 0 9px rgba(0, 200, 255, 0.4);
+}
+
+
+/* =========================================
+   SINGLE STATIC GRID - NO DUPLICATION
+========================================= */
+
+/* Remove the original grid pseudo-element */
+.interactive-grid-section.home-tech-bg::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove any additional animated overlay */
+.interactive-grid-section.home-tech-bg::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep only one grid layer */
+.interactive-grid-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.interactive-grid-section .grid-hover-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  grid-auto-rows: 60px;
+
+  pointer-events: auto;
+  animation: none !important;
+  transform: none !important;
+  background: none !important;
+}
+
+/* Grid squares */
+.interactive-grid-section .grid-cell {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+
+  background: transparent !important;
+  border: 1px solid rgba(0, 174, 239, 0.12);
+
+  animation: none !important;
+  transform: none !important;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover outline only */
+.interactive-grid-section .grid-cell:hover {
+  background: transparent !important;
+  border-color: #00c8ff !important;
+
+  box-shadow:
+    inset 0 0 5px rgba(0, 200, 255, 0.3),
+    0 0 9px rgba(0, 200, 255, 0.4);
+}
+
+/* Keep content above grid */
+.interactive-grid-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .interactive-grid-section .grid-hover-layer {
+    grid-template-columns: repeat(auto-fill, 48px);
+    grid-auto-rows: 48px;
+  }
+
+  .interactive-grid-section .grid-cell {
+    width: 48px;
+    height: 48px;
+  }
+}
+/* Remove grid lines from the experience section */
+.no-grid-section {
+  background-image: none !important;
+}
+
+.no-grid-section::before,
+.no-grid-section::after {
+  content: none !important;
+  display: none !important;
+}
+.stat-strip.no-grid-bg {
+  background-image: none !important;
+}
+
+.stat-strip.no-grid-bg::before,
+.stat-strip.no-grid-bg::after {
+  content: none !important;
+  display: none !important;
+}
+/* Remove both horizontal white lines from experience section */
+.stat-strip {
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.stat-strip::before,
+.stat-strip::after {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Reduce vertical gap in 18 years experience section */
+.stat-strip {
+  padding-top: 15px !important;
+  padding-bottom: 30px !important;
+  min-height: auto !important;
+}
+
+.stat-strip .stat-inner {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+
+/* ===== CENTERED 3D EXPERIENCE SECTION ===== */
+
+.stat-strip {
+  width: 100%;
+  padding: 35px 20px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  perspective: 1200px;
+  box-sizing: border-box;
+}
+
+.stat-strip .stat-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto !important;
+  padding: 35px 40px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+
+  box-sizing: border-box;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    #173d53,
+    #0b263a,
+    #071b2c
+  ) !important;
+
+  border: 1px solid rgba(80, 210, 245, 0.35);
+
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.30),
+    0 10px 20px rgba(0, 0, 0, 0.20),
+    inset 0 2px 3px rgba(255, 255, 255, 0.22),
+    inset 0 -5px 12px rgba(0, 0, 0, 0.18);
+
+  transform: perspective(1200px) rotateX(1deg);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* 3D hover effect */
+.stat-strip .stat-inner:hover {
+  transform: perspective(1200px) translateY(-5px);
+
+  box-shadow:
+    0 32px 55px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(0, 190, 230, 0.16),
+    inset 0 2px 3px rgba(255, 255, 255, 0.25);
+}
+
+/* Keep all text visible in light and dark modes */
+.stat-strip .stat-inner,
+.stat-strip .stat-inner p,
+.stat-strip .stat-inner span {
+  color: #eaf6fc !important;
+}
+
+.stat-strip .stat-figure strong {
+  color: #16c1e2 !important;
+  text-shadow:
+    1px 2px 0 #08718b,
+    2px 4px 0 #064b60,
+    0 0 20px rgba(0, 200, 255, 0.35);
+}
+
+.stat-strip .stat-figure span {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.stat-strip .stat-inner p {
+  color: #eaf6fc !important;
+  line-height: 1.8;
+}
+
+.stat-strip .stat-inner p strong {
+  color: #42ddf7 !important;
+}
+
+.stat-strip .stat-inner .text-link {
+  color: #42ddf7 !important;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.stat-strip .stat-inner .text-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(0, 200, 255, 0.7);
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .stat-strip {
+    padding: 25px 15px !important;
+  }
+
+  .stat-strip .stat-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px !important;
+    gap: 20px;
+    transform: none;
+  }
+}
+
+/* FORCE 3D PANEL TO CENTER */
+.stat-strip {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 35px 20px !important;
+}
+
+.stat-strip > .container.stat-inner {
+  float: none !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  width: 100% !important;
+  max-width: 1200px !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  box-sizing: border-box !important;
+}
+/* ==========================================
+   VLTD STATE LOGOS - DARK MODE IMAGE FIX
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  .original-vltd-card img {
+
+    width: 80px !important;
+    height: 80px !important;
+
+    max-width: 100% !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    background: #ffffff !important;
+
+    padding: 5px !important;
+    box-sizing: border-box !important;
+
+    border-radius: 8px !important;
+
+    display: block !important;
+    margin: 0 auto 12px !important;
+
+    filter: none !important;
+    transform: none !important;
+
+  }
+
+}
+
+/* Hide hero slider navigation arrows */
+.hero button,
+.hero .slider-arrow,
+.hero .slide-arrow,
+.hero .swiper-button-prev,
+.hero .swiper-button-next,
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+  display: none !important;
+}
+/* ==========================================
+   VLTD LOGOS - REMOVE WHITE BACKGROUND
+   DARK MODE ONLY
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  .original-vltd-card img {
+    background: transparent !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+
+    width: 80px !important;
+    height: 80px !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    filter: none !important;
+    display: block !important;
+    margin: 0 auto 12px !important;
+  }
+
+  /* Remove white background from logo wrapper */
+
+  .original-vltd-card :is(div, span, figure):has(> img) {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
 }

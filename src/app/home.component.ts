@@ -63,7 +63,7 @@ import { RevealDirective } from './reveal.directive';
 
 
     <!-- STAT STRIP -->
-    <section class="stat-strip home-tech-bg">
+    <<section class="stat-strip home-tech-bg no-grid-bg">>
       <div class="container stat-inner">
 
         <div class="stat-figure" appReveal>
