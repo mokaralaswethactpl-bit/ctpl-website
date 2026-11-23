@@ -1,0 +1,437 @@
+
+/* ==========================================
+   CTPL E-SIM VALIDITY PAGE
+========================================== */
+
+:host {
+  display: block;
+
+  --esim-primary: #009bd4;
+  --esim-navy: #10283f;
+  --esim-text: #475569;
+  --esim-bg: #f5f8fb;
+  --esim-card: #ffffff;
+  --esim-border: #dbe5ec;
+}
+
+/* ==========================================
+   E-SIM TOP BANNER
+========================================== */
+
+.esim-validity-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 280px;
+  padding: 65px 20px;
+
+  background: linear-gradient(
+    110deg,
+    #0b2745 0%,
+    #123d62 55%,
+    #0785a5 100%
+  );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.esim-validity-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  color: #ffffff !important;
+
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   E-SIM INFORMATION SECTION
+========================================== */
+
+.esim-validity-info {
+  padding: 75px 20px 90px;
+  background: var(--esim-bg);
+}
+
+.esim-validity-info .vlt-info-card {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  padding: 45px;
+
+  background: var(--esim-card);
+  border: 1px solid var(--esim-border);
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(16, 40, 63, 0.06);
+}
+
+.esim-validity-info .vlt-info-card h2 {
+  margin: 0 0 22px;
+
+  color: var(--esim-navy);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.esim-validity-info .vlt-description {
+  max-width: 980px;
+  margin: 0 auto 38px;
+
+  color: var(--esim-text);
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ==========================================
+   THREE LOGO CARDS
+========================================== */
+
+.esim-validity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+  align-items: stretch;
+}
+
+.esim-validity-grid .esim-validity-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 0;
+  min-height: 250px;
+
+  padding: 30px 20px 24px;
+
+  background: #f9fcfe;
+  border: 1px solid var(--esim-border);
+  border-radius: 14px;
+
+  text-align: center;
+  box-shadow: none;
+
+  transform: none !important;
+}
+
+/* Original logo colours are preserved */
+
+.esim-validity-grid .esim-validity-logo img {
+  display: block;
+
+  width: 100%;
+  max-width: 230px;
+  height: 140px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: transparent;
+
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* GO label - original non-clickable element */
+
+.esim-validity-grid .esim-go-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 85px;
+  min-height: 39px;
+  padding: 9px 20px;
+
+  margin-top: 22px;
+
+  background: var(--esim-primary);
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   SUPPORT SECTION
+========================================== */
+
+.esim-validity-support {
+  position: relative;
+  isolation: isolate;
+
+  padding: 90px 20px;
+
+  background: linear-gradient(
+    115deg,
+    #081725 0%,
+    #123650 65%,
+    #075f7c 100%
+  );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* NETWORK GRAPHIC */
+
+.esim-validity-support .vlt-network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.esim-validity-support .vlt-network-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.7;
+}
+
+/* SUPPORT INFORMATION */
+
+.esim-validity-support .vlt-support-content {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.esim-validity-support .vlt-support-content h2 {
+  max-width: 950px;
+  margin: 0 auto 24px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.esim-validity-support .vlt-support-content p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+
+  color: #d4e4ed !important;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* GET SUPPORT BUTTON */
+
+.esim-validity-support .vlt-support-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 13px 28px;
+
+  background: var(--esim-primary);
+  color: #ffffff !important;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.esim-validity-support .vlt-support-button:hover {
+  background: #007fac;
+}
+
+.esim-validity-support .vlt-support-button:focus-visible {
+  outline: 3px solid #56cfe8;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --esim-navy: #f1f5f9;
+    --esim-text: #b8c9d9;
+    --esim-bg: #081725;
+    --esim-card: #142a3e;
+    --esim-border: #294459;
+  }
+
+  .esim-validity-info {
+    background: #081725;
+  }
+
+  /* MAIN INFORMATION PANEL */
+
+  .esim-validity-info .vlt-info-card {
+    background: #142a3e !important;
+    background-image: none !important;
+
+    border-color: #294459;
+    box-shadow: none;
+  }
+
+  .esim-validity-info .vlt-info-card h2 {
+    color: #f1f5f9 !important;
+  }
+
+  .esim-validity-info .vlt-description {
+    color: #b8c9d9 !important;
+  }
+
+  /* LOGO CARDS */
+
+  .esim-validity-grid .esim-validity-logo {
+    background: #0d2032 !important;
+    background-image: none !important;
+
+    border-color: #294459 !important;
+
+    box-shadow: none !important;
+  }
+
+  .esim-validity-grid .esim-validity-logo img {
+    background: transparent !important;
+
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .esim-validity-grid .esim-go-label {
+    background: #009bd4;
+    color: #ffffff !important;
+  }
+
+  /* SUPPORT AREA */
+
+  .esim-validity-support {
+    background: linear-gradient(
+      115deg,
+      #061421,
+      #102b42 65%,
+      #064e67
+    );
+  }
+
+  .esim-validity-support .vlt-support-content h2 {
+    color: #ffffff !important;
+  }
+
+  .esim-validity-support .vlt-support-content p {
+    color: #d4e4ed !important;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .esim-validity-info .vlt-info-card {
+    padding: 35px;
+  }
+
+  .esim-validity-grid {
+    gap: 15px;
+  }
+
+  .esim-validity-grid .esim-validity-logo {
+    min-height: 220px;
+    padding: 24px 14px;
+  }
+
+  .esim-validity-grid .esim-validity-logo img {
+    height: 120px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .esim-validity-hero {
+    min-height: 220px;
+    padding: 55px 20px;
+  }
+
+  .esim-validity-info {
+    padding: 45px 15px 60px;
+  }
+
+  .esim-validity-info .vlt-info-card {
+    padding: 25px 20px;
+  }
+
+  .esim-validity-info .vlt-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .esim-validity-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .esim-validity-grid .esim-validity-logo {
+    min-height: 200px;
+  }
+
+  .esim-validity-grid .esim-validity-logo img {
+    max-width: 230px;
+    height: 120px;
+  }
+
+  .esim-validity-support {
+    padding: 60px 15px;
+  }
+
+  .esim-validity-support .vlt-support-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .esim-validity-support .vlt-support-button {
+    transition: none;
+  }
+
+}

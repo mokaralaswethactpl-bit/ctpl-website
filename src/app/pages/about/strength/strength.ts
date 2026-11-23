@@ -1,9 +1,15 @@
+
 import { Component } from '@angular/core';
+import { corporate } from '../../../content';
 
 @Component({
   selector: 'app-strength',
-  imports: [],
+  standalone: true,
   templateUrl: './strength.html',
-  styleUrl: './strength.scss',
+  styleUrl: './strength.scss'
 })
-export class Strength {}
+export class StrengthComponent {
+  page = corporate.find(
+    p => p.slug === 'strength-infrastructure'
+  );
+}

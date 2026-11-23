@@ -1,9 +1,15 @@
+
 import { Component } from '@angular/core';
+import { corporate } from '../../../content';
 
 @Component({
   selector: 'app-market-presence',
-  imports: [],
+  standalone: true,
   templateUrl: './market-presence.html',
-  styleUrl: './market-presence.scss',
+  styleUrl: './market-presence.scss'
 })
-export class MarketPresence {}
+export class MarketPresenceComponent {
+  page = corporate.find(
+    p => p.slug === 'market-presence'
+  );
+}

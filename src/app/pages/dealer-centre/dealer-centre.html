@@ -1,1 +1,292 @@
-<p>dealer-centre works!</p>
+
+<!-- ======================================
+     CTPL DEALER CENTRE HERO
+====================================== -->
+
+<section class="dealer-hero">
+
+  <div class="container dealer-hero-content">
+
+    <span class="dealer-eyebrow">
+      CTPL / DEALER CENTRE
+    </span>
+
+    <h1>Dealer Centre</h1>
+
+    <p>
+      Your dedicated destination for dealership
+      enquiries, device services, technical resources,
+      approvals and partner support.
+    </p>
+
+    <a
+      routerLink="/page/dealer-enquiry"
+      class="dealer-hero-button"
+    >
+      Become a Dealer
+      <span aria-hidden="true">↗</span>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+     DEALER CENTRE INTRODUCTION
+====================================== -->
+
+<section class="dealer-intro-section">
+
+  <div class="container">
+
+    <div class="dealer-intro-heading">
+
+      <span class="dealer-section-label">
+        DEALER SERVICES
+      </span>
+
+      <h2>
+        Everything You Need,
+        In One Place
+      </h2>
+
+      <p>
+        CTPL Dealer Centre brings together essential
+        resources for authorized dealers, channel
+        partners and customers. Explore the services
+        below for device-related assistance,
+        connectivity information, documentation
+        and business enquiries.
+      </p>
+
+    </div>
+
+
+    <!-- ======================================
+         DEALER SERVICES CARDS
+    ====================================== -->
+
+    <div class="dealer-services-grid">
+
+      @for (
+        service of dealerServices;
+        track service.route
+      ) {
+
+        <article class="dealer-service-card">
+
+          <div class="dealer-card-top">
+
+            <span
+              class="dealer-card-icon"
+              aria-hidden="true"
+            >
+              {{ service.icon }}
+            </span>
+
+            <span class="dealer-card-number">
+              {{ service.number }}
+            </span>
+
+          </div>
+
+          <div class="dealer-card-body">
+
+            <h3>
+              {{ service.title }}
+            </h3>
+
+            <p>
+              {{ service.description }}
+            </p>
+
+          </div>
+
+          <a
+            [routerLink]="service.route"
+            class="dealer-card-link"
+          >
+            Explore Service
+            <span aria-hidden="true">↗</span>
+          </a>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+     DEALER PARTNERSHIP INFORMATION
+====================================== -->
+
+<section class="dealer-partner-section">
+
+  <div class="container dealer-partner-grid">
+
+    <div class="dealer-partner-content">
+
+      <span class="dealer-section-label">
+        PARTNER WITH CTPL
+      </span>
+
+      <h2>
+        Grow Your Business
+        With CTPL
+      </h2>
+
+      <p>
+        Join our network of dealers and channel
+        partners supporting automotive safety,
+        vehicle tracking and connected mobility
+        technologies.
+      </p>
+
+      <p>
+        Learn more about dealership opportunities,
+        product-related information, onboarding
+        requirements and available support resources.
+      </p>
+
+      <a
+        routerLink="/page/dealer-enquiry"
+        class="dealer-primary-button"
+      >
+        Dealer Enquiry
+        <span aria-hidden="true">↗</span>
+      </a>
+
+    </div>
+
+    <div class="dealer-partner-visual">
+
+      <div class="dealer-visual-content">
+
+        <span class="dealer-visual-icon" aria-hidden="true">
+          🤝
+        </span>
+
+        <h3>Building Stronger Partnerships</h3>
+
+        <p>
+          Automotive Technology.
+          Connected Mobility.
+          Partner Support.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+     DEALER SUPPORT CTA
+====================================== -->
+
+<section class="dealer-support-section">
+
+  <div
+    class="dealer-network-background"
+    aria-hidden="true"
+  >
+
+    <svg
+      viewBox="0 0 1200 320"
+      preserveAspectRatio="xMidYMid slice"
+    >
+
+      <g
+        fill="none"
+        stroke="#66818c"
+        stroke-width="0.8"
+        opacity="0.48"
+      >
+
+        <path d="M40 40 L150 20 L120 95 L70 130 L40 40"/>
+        <path d="M40 40 L120 95 L150 20"/>
+
+        <path d="M330 20 L450 55 L650 30 L720 125"/>
+
+        <path d="M790 15 L900 65 L840 160 L790 15"/>
+
+        <path d="M900 65 L850 220 L940 285 L840 160"/>
+
+        <path d="M45 210 L130 250 L85 310 L45 210"/>
+
+        <path d="M1030 20 L1150 60"/>
+        <path d="M1140 190 L1130 270"/>
+
+        <path d="M150 20 L210 90 L120 95"/>
+        <path d="M330 20 L370 130 L450 55"/>
+        <path d="M650 30 L620 180 L720 125"/>
+        <path d="M790 15 L840 160 L720 125"/>
+        <path d="M940 285 L1030 220 L1130 270"/>
+
+      </g>
+
+      <g fill="#66818c" opacity="0.65">
+
+        <circle cx="40" cy="40" r="2"/>
+        <circle cx="150" cy="20" r="2"/>
+        <circle cx="120" cy="95" r="2"/>
+        <circle cx="70" cy="130" r="2"/>
+
+        <circle cx="330" cy="20" r="2"/>
+        <circle cx="450" cy="55" r="2"/>
+        <circle cx="650" cy="30" r="2"/>
+
+        <circle cx="790" cy="15" r="2"/>
+        <circle cx="900" cy="65" r="2"/>
+        <circle cx="850" cy="220" r="2"/>
+        <circle cx="940" cy="285" r="2"/>
+
+        <circle cx="45" cy="210" r="2"/>
+        <circle cx="130" cy="250" r="2"/>
+
+        <circle cx="1030" cy="20" r="2"/>
+        <circle cx="1150" cy="60" r="2"/>
+
+      </g>
+
+    </svg>
+
+  </div>
+
+  <div class="container dealer-support-content">
+
+    <span class="dealer-support-eyebrow">
+      CTPL SUPPORT
+    </span>
+
+    <h2>
+      Need Assistance With Our Services?
+    </h2>
+
+    <p>
+      Whether you need dealership information,
+      device-related assistance, technical documentation
+      or support with connectivity services,
+      our customer support resources are available
+      to guide you.
+    </p>
+
+    <a
+      routerLink="/page/customer-centre"
+      class="dealer-support-button"
+    >
+      CONTACT SUPPORT
+    </a>
+
+  </div>
+
+</section>

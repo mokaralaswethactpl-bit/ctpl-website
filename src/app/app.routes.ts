@@ -2,25 +2,32 @@
 import { Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home';
-import { DetailComponent } from './detail.component';
 
-import { CorporateInformationComponent } from './corporate-information.component';
-import { CorporateGovernanceComponent } from './corporate-governance.component';
-import { IPOComponent } from './ipo.component';
-import { RightsIssueComponent } from './rights-issue.component';
-import { ResultsReportsComponent } from './results-reports.component';
-import { ShareholdingsComponent } from './shareholdings.component';
+import { CorporateInformationComponent } from './pages/investors/corporate-information/corporate-information';
+import { CorporateGovernanceComponent } from './pages/investors/corporate-governance/corporate-governance';
+import { IPOComponent } from './pages/investors/ipo/ipo';
+import { RightsIssueComponent } from './pages/investors/rights-issue/rights-issue';
+import { ResultsReportsComponent } from './pages/investors/results/results';
+import { ShareholdingsComponent } from './pages/investors/shareholdings/shareholdings';
 
-import { DealerEnquiryComponent } from './dealer-enquiry.component';
-import { TranoproSmsCommandsComponent } from './tranopro-sms-commands.component';
-import { VltdDataValidityComponent } from './vltd-data-validity.component';
-import { EsimValidityComponent } from './esim-validity.component';
-import { ApprovalsSopComponent } from './approvals-sop.component';
+
+import { AboutComponent } from './pages/about/about';
+import { OurStoryComponent } from './pages/about/our-story/our-story';
+import { VisionComponent } from './pages/about/vision/vision';
+import { StrengthComponent } from './pages/about/strength/strength';
+import { MarketPresenceComponent } from './pages/about/market-presence/market-presence';
+
+
+import { RfcServiceCentresComponent } from './pages/dealer-centre/rfc/rfc';
+import { DealerEnquiryComponent } from './pages/dealer-centre/dealer-enquiry/dealer-enquiry';
+import { TranoproSmsCommandsComponent } from './pages/dealer-centre/sms-commands/sms-commands';
+import { VltdDataValidityComponent } from './pages/dealer-centre/vlt-data-validity/vlt-data-validity';
+import { EsimValidityComponent } from './pages/dealer-centre/esim-validity/esim-validity';
+import { ApprovalsSopComponent } from './pages/dealer-centre/approvals/approvals';
 
 import { CareersComponent } from './pages/careers/careers';
-import { BlogsComponent } from './blogs.component';
-import { VltdComponent } from './vltd.component';
-import { CustomerCentreComponent } from './customer-centre.component';
+import { BlogsComponent } from './pages/blogs/blogs';
+import { CustomerCentreComponent } from './pages/customer-centre/customer-centre';
 
 export const routes: Routes = [
   {
@@ -51,10 +58,38 @@ export const routes: Routes = [
     path: 'page/shareholdings',
     component: ShareholdingsComponent
   },
+
+
+{
+  path: 'page/about',
+  component: AboutComponent
+},
+{
+  path: 'page/our-story',
+  component: OurStoryComponent
+},
+{
+  path: 'page/vision-mission-values',
+  component: VisionComponent
+},
+{
+  path: 'page/strength-infrastructure',
+  component: StrengthComponent
+},
+{
+  path: 'page/market-presence',
+  component: MarketPresenceComponent
+},
   {
     path: 'page/dealer-enquiry',
     component: DealerEnquiryComponent
   },
+
+{
+  path: 'page/rfc',
+  component: RfcServiceCentresComponent
+},
+
   {
     path: 'page/tranopro-sms-commands',
     component: TranoproSmsCommandsComponent
@@ -77,14 +112,7 @@ export const routes: Routes = [
     component: CustomerCentreComponent
   },
   
-  {
-  path: 'page/vltd',
-  component: VltdComponent
-},
-  {
-    path: 'page/:slug',
-    component: DetailComponent
-  },
+  
 
 {
   path: 'careers',
