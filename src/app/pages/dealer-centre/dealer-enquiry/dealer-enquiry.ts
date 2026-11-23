@@ -1,6 +1,6 @@
 
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+
 
 import {
   FormBuilder,
@@ -13,7 +13,6 @@ import {
   standalone: true,
 
   imports: [
-    RouterLink,
     ReactiveFormsModule
   ],
 

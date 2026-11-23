@@ -9,8 +9,8 @@ import { RevealDirective } from '../../../reveal.directive';
   selector: 'app-rfc-service-centres',
   standalone: true,
   imports: [RouterLink, RevealDirective],
-  templateUrl: './rfc-service-centres.html',
-  styleUrl: './rfc-service-centres.scss'
+  templateUrl: './rfc.html',
+  styleUrl: './rfc.scss'
 })
 export class RfcServiceCentresComponent {
 

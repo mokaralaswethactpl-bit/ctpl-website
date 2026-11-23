@@ -13,8 +13,8 @@ type SmsCommand = {
   selector: 'app-tranopro-sms-commands',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './tranopro-sms-commands.html',
-  styleUrl: './tranopro-sms-commands.scss'
+  templateUrl: './sms-commands.html',
+  styleUrl: './sms-commands.scss'
 })
 export class TranoproSmsCommandsComponent {
 
