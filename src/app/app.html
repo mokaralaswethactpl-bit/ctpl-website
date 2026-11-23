@@ -1,0 +1,41 @@
+
+<!-- CTPL INTRO SCREEN -->
+<div
+  class="intro-screen"
+  [class.intro-exit]="isExiting"
+  *ngIf="showIntro"
+>
+  <div class="intro-content">
+
+    <div class="intro-logo">
+      CTPL
+    </div>
+
+    <p class="intro-message">
+      Welcome to the future of connected mobility
+    </p>
+
+    <div class="loader">
+      <div
+        class="loader-progress"
+        [style.width.%]="loadingProgress"
+      ></div>
+    </div>
+
+    <p class="loading-text">
+      Loading experience... {{ loadingProgress }}%
+    </p>
+
+  </div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div class="website-content" [class.website-visible]="showWebsite">
+
+  <app-navbar></app-navbar>
+
+  <app-home></app-home>
+
+  <app-whatsapp-button></app-whatsapp-button>
+
+</div>

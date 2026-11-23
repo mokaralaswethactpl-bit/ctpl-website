@@ -1,6 +1,7 @@
-import 'zone.js';
+
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
-import { AppComponent } from './app/app.component';
-import { routes } from './app/routes';
-bootstrapApplication(AppComponent, {providers:[provideRouter(routes,withInMemoryScrolling({scrollPositionRestoration:'top'}))]}).catch(console.error);
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));

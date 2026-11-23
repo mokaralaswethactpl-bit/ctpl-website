@@ -1,49 +1,59 @@
-# CTPL Premium Hybrid — Angular Starter
+# CtplWebsite
 
-A responsive Angular standalone-components starter based on the November 2026 CTPL site inventory and the uploaded CTPL visual blueprints. Designed for internal review and subsequent production implementation.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.26.
 
-## Run locally
+## Development server
 
-Install Node.js 20.19+ or 22.12+, then:
+To start a local development server, run:
 
 ```bash
-npm install
-npm start
+ng serve
 ```
 
-Open http://localhost:4200. Build for deployment with `npm run build`.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## What's included
+## Code scaffolding
 
-- Responsive sticky navigation with full primary categories and drop-down links.
-- Homepage sections: hero, experience, all six product families, six software services, safety feature, stakeholder pathways, enquiry CTA, footer.
-- Internal routes for 35+ CTPL content destinations, with editable summaries and external official-source links.
-- Balanced animations: hero image slow pan, 600 ms scroll-once content reveal, 250 ms card hover, 200 ms dropdown transitions; reduced-motion support.
-- Images extracted from the user's CTPL PDF: product images and vehicle hero. Original images and rights should be verified before going live.
-- Source inventory in `src/app/content.ts` — single source of truth for editing titles, descriptions and linked references.
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-## Crucial: content completeness
+```bash
+ng generate component component-name
+```
 
-**This is not a verified page-for-page migration of all content and files on containe.in.** It is a navigable starter that preserves the breadth of identified sections and references the original destination for the full information. Publication requires a content audit and manual transfer of missing detailed specifications, investor tables/PDF files, portal destinations, downloadable approvals, support processes, phone/address data and working forms. Do not claim the Angular starter contains every sentence or publication of the original site.
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-During source review, several CTPL URLs (`/motoreye-model-efrt/`, `/limits-model-epi/`, `/customer-centre/`) displayed unrelated shopping/e-commerce pages. **Do not clone or auto-link sensitive information from those pages until the site owner confirms their integrity.** The matching routes are marked as requiring source verification.
+```bash
+ng generate --help
+```
 
-### Content edit guide
+## Building
 
-- `src/app/content.ts`: products, services, about, investor, dealer/customer records; every entry includes the original website URL.
-- `src/app/home.component.ts`: homepage text, CTA, ordering and sections.
-- `src/styles.css`: colours (`--navy`, `--teal`, etc.), typography, spacing and motion.
-- `src/assets/images/`: hero and approved product illustrations; replace with finalized official brand assets and a licensed/authed background video if desired.
-- `src/app/detail.component.ts`: shared detail page. Extend this for real PDF downloads, subpage tables and specific application flows.
+To build the project run:
 
-### Production checklist
+```bash
+ng build
+```
 
-1. Owner approves exact information architecture and page-by-page migration matrix.
-2. Export authenticated source text/images/docs from WordPress (or approved original content repository), including date/version metadata.
-3. Audit each investor/dealer download and preserve legal document naming, dates, and direct PDF links.
-4. Validate contact methods, dealer service integrations, recharge/validity requests and secure backend APIs (not mocked forms).
-5. Run accessibility and keyboard checks, mobile QA, SEO metadata, performance testing, and Angular production build.
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Verification status
+## Running unit tests
 
-The package contents were generated locally. This environment did not have access to the npm registry, so `npm install` / `ng build` could not be run here. Please run them locally and report any errors for fixes.
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

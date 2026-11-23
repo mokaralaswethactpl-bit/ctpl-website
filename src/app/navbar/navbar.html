@@ -1,0 +1,51 @@
+
+<header class="navbar">
+  <div class="nav-container">
+
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" [class.open]="menuOpen">
+
+      <a href="#" (click)="closeMenu()">Home</a>
+
+      <a href="#about" (click)="closeMenu()">
+        About <span>⌄</span>
+      </a>
+
+      <a href="#products" (click)="closeMenu()">
+        Products <span>⌄</span>
+      </a>
+
+      <a href="#services" (click)="closeMenu()">
+        Services <span>⌄</span>
+      </a>
+
+      <a href="#investors" (click)="closeMenu()">
+        Investors <span>⌄</span>
+      </a>
+
+      <a href="#dealers" (click)="closeMenu()">
+        Dealer Centre <span>⌄</span>
+      </a>
+
+      <a href="#customers" (click)="closeMenu()">
+        Customer Centre
+      </a>
+
+      <a href="#careers" (click)="closeMenu()">Careers</a>
+
+      <a href="#blogs" (click)="closeMenu()">Blogs</a>
+
+      <a href="#" class="search-icon" aria-label="Search">⌕</a>
+
+      <a href="#intra" class="intra-btn" (click)="closeMenu()">
+        INTRA
+      </a>
+
+    </nav>
+  </div>
+</header>
