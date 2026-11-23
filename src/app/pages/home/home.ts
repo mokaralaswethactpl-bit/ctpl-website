@@ -5,10 +5,8 @@ import {
 } from '@angular/core';
 
 import { RouterLink } from '@angular/router';
-
-import { products, services } from '../content';
-
-import { RevealDirective } from '../reveal.directive';
+import { products, services } from '../../content';
+import { RevealDirective } from '../../reveal.directive';
 
 
 @Component({
