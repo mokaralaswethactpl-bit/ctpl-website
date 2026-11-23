@@ -1,0 +1,519 @@
+
+/* ==========================================
+   CTPL DEALER ENQUIRY PAGE
+========================================== */
+
+:host {
+  display: block;
+
+  --de-primary: #009bd4;
+  --de-primary-hover: #007fac;
+  --de-navy: #10283f;
+  --de-text: #475569;
+  --de-background: #ffffff;
+  --de-card: #ffffff;
+  --de-border: #cbd5e1;
+  --de-soft: #f3f7fa;
+}
+
+/* ==========================================
+   FULL WIDTH HERO BANNER
+========================================== */
+
+.de-image-hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 300px;
+  padding: 70px 20px;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(8, 35, 62, 0.92),
+      rgba(0, 128, 169, 0.72)
+    );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.de-image-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: #ffffff !important;
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   DEALER ENQUIRY FORM SECTION
+========================================== */
+
+.de-form-section {
+  padding: 80px 20px 90px;
+
+  background: var(--de-background);
+}
+
+.de-form-card {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+
+  padding: 45px;
+
+  background: var(--de-card);
+  border: 1px solid var(--de-border);
+  border-radius: 16px;
+
+  box-shadow: 0 14px 40px rgba(16, 40, 63, 0.06);
+}
+
+.de-form-card h2 {
+  margin: 0 0 20px;
+
+  color: var(--de-navy);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.de-form-card > p {
+  max-width: 900px;
+
+  color: var(--de-text);
+  font-size: 16px;
+  line-height: 1.85;
+
+  margin-bottom: 24px;
+}
+
+.de-form-instruction {
+  padding: 16px 20px;
+
+  background: rgba(0, 155, 212, 0.07);
+  border-left: 4px solid var(--de-primary);
+  border-radius: 5px;
+}
+
+.de-form-instruction strong {
+  color: var(--de-navy);
+  font-weight: 700;
+}
+
+/* ==========================================
+   FORM GRID
+========================================== */
+
+.de-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 25px 24px;
+  margin-bottom: 30px;
+}
+
+.de-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.de-full-width {
+  grid-column: 1 / -1;
+}
+
+/* ==========================================
+   LABELS
+========================================== */
+
+.de-field label {
+  color: var(--de-navy);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.de-field label span {
+  color: #e54848;
+  font-weight: 800;
+}
+
+/* ==========================================
+   INPUTS / SELECT / TEXTAREA
+========================================== */
+
+.de-field input,
+.de-field select,
+.de-field textarea {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: 13px 15px;
+
+  background: var(--de-card);
+  color: var(--de-navy);
+
+  border: 1px solid var(--de-border);
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.de-field input,
+.de-field select {
+  min-height: 49px;
+}
+
+.de-field textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.de-field input::placeholder,
+.de-field textarea::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+.de-field input:focus,
+.de-field select:focus,
+.de-field textarea:focus {
+  outline: none;
+
+  border-color: var(--de-primary);
+
+  box-shadow:
+    0 0 0 3px rgba(0, 155, 212, 0.13);
+}
+
+.de-field small {
+  display: block;
+
+  color: #dc3545;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+
+.de-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 130px;
+  min-height: 48px;
+  padding: 13px 28px;
+
+  background: var(--de-primary);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 7px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.de-submit:hover {
+  background: var(--de-primary-hover);
+}
+
+.de-submit:focus-visible {
+  outline: 3px solid #56cfe8;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   FORM NOTICE
+========================================== */
+
+.de-form-notice {
+  margin: 18px 0 0;
+  padding: 15px 18px;
+
+  color: #9a6700;
+  background: #fff5d9;
+
+  border: 1px solid #f5d48c;
+  border-radius: 7px;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   READY TO PARTNER SECTION
+========================================== */
+
+.de-partner-section {
+  position: relative;
+  isolation: isolate;
+
+  padding: 90px 20px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #081725 0%,
+      #123650 65%,
+      #075f7c 100%
+    );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* BACKGROUND NETWORK SVG */
+
+.de-network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.de-network-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.65;
+}
+
+/* CONTENT */
+
+.de-partner-content {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.de-partner-content h2 {
+  margin: 0 0 24px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 800;
+}
+
+.de-partner-content p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+
+  color: #d4e4ed !important;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* GET IN TOUCH BUTTON */
+
+.de-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 49px;
+  padding: 14px 30px;
+
+  background: var(--de-primary);
+  color: #ffffff !important;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.de-contact-button:hover {
+  background: var(--de-primary-hover);
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --de-navy: #f1f5f9;
+    --de-text: #b8c9d9;
+    --de-background: #081725;
+    --de-card: #142a3e;
+    --de-border: #294459;
+  }
+
+  .de-form-section {
+    background: #081725;
+  }
+
+  .de-form-card {
+    background: #142a3e;
+
+    border-color: #294459;
+    box-shadow: none;
+  }
+
+  .de-form-card h2,
+  .de-field label,
+  .de-form-instruction strong {
+    color: #f1f5f9 !important;
+  }
+
+  .de-form-card > p {
+    color: #b8c9d9 !important;
+  }
+
+  .de-form-instruction {
+    background: rgba(0, 155, 212, 0.1);
+  }
+
+  .de-field input,
+  .de-field select,
+  .de-field textarea {
+    background: #0d2032;
+    color: #ffffff;
+
+    border-color: #456074;
+  }
+
+  .de-field input::placeholder,
+  .de-field textarea::placeholder {
+    color: #91a8b9;
+  }
+
+  .de-form-notice {
+    background: #392e16;
+    border-color: #8f6b21;
+    color: #ffe2a3;
+  }
+
+  .de-field small {
+    color: #ff8585;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .de-form-card {
+    padding: 35px;
+  }
+
+  .de-form-section {
+    padding: 65px 20px;
+  }
+
+  .de-partner-section {
+    padding: 75px 20px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .de-image-hero {
+    min-height: 230px;
+    padding: 55px 20px;
+  }
+
+  .de-form-section {
+    padding: 45px 15px 60px;
+  }
+
+  .de-form-card {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .de-form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .de-full-width {
+    grid-column: auto;
+  }
+
+  .de-form-card > p {
+    font-size: 14px;
+  }
+
+  .de-field input,
+  .de-field select,
+  .de-field textarea {
+    font-size: 16px;
+  }
+
+  .de-partner-section {
+    padding: 60px 15px;
+  }
+
+  .de-partner-content p {
+    font-size: 14px;
+  }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .de-field input,
+  .de-field select,
+  .de-field textarea,
+  .de-submit,
+  .de-contact-button {
+    transition: none;
+  }
+
+}

@@ -1,9 +1,15 @@
+
 import { Component } from '@angular/core';
+import { corporate } from '../../../content';
 
 @Component({
   selector: 'app-vision',
-  imports: [],
+  standalone: true,
   templateUrl: './vision.html',
-  styleUrl: './vision.scss',
+  styleUrl: './vision.scss'
 })
-export class Vision {}
+export class VisionComponent {
+  page = corporate.find(
+    p => p.slug === 'vision-mission-values'
+  );
+}

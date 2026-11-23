@@ -1,0 +1,596 @@
+
+/* ==========================================
+   CTPL RFC / SERVICE CENTRES
+========================================== */
+
+:host {
+  display: block;
+
+  --rfc-blue: #009bd4;
+  --rfc-heading: #10283f;
+  --rfc-text: #475569;
+  --rfc-background: #ffffff;
+  --rfc-soft: #f5f8fb;
+  --rfc-card: #ffffff;
+  --rfc-border: #dbe5ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+
+/* ==========================================
+   HERO HEADER
+========================================== */
+
+.ctpl-rfc-image-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  min-height: 300px;
+  padding: 65px 0;
+
+  background: linear-gradient(
+    110deg,
+    #0b2745 0%,
+    #123d62 55%,
+    #0785a5 100%
+  );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.ctpl-rfc-image-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ctpl-rfc-image-hero .eyebrow {
+  margin-bottom: 15px;
+
+  color: #64d5ed;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ctpl-rfc-image-hero h1 {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.page-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 45px;
+  padding: 12px 20px;
+
+  color: #ffffff;
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================
+   RFC OVERVIEW SECTION
+========================================== */
+
+.ctpl-rfc-overview {
+  padding: 80px 0 90px;
+  background: var(--rfc-background);
+}
+
+.ctpl-detail-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+  gap: 50px;
+}
+
+.ctpl-detail-content {
+  min-width: 0;
+}
+
+.ctpl-service-heading {
+  margin: 0 0 28px;
+
+  color: var(--rfc-heading);
+  font-size: clamp(29px, 3.2vw, 43px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.ctpl-detail-content p {
+  margin: 0 0 20px;
+
+  color: var(--rfc-text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.ctpl-detail-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   RFC IMAGE
+========================================== */
+
+.ctpl-image-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 350px;
+
+  overflow: hidden;
+  border-radius: 15px;
+
+  background: var(--rfc-soft);
+  border: 1px solid var(--rfc-border);
+}
+
+.ctpl-image-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  max-height: 440px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.ctpl-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 350px;
+  width: 100%;
+  padding: 35px;
+
+  text-align: center;
+}
+
+.placeholder-icon {
+  display: block;
+  margin-bottom: 20px;
+
+  color: var(--rfc-blue);
+  font-size: 54px;
+}
+
+.ctpl-image-placeholder h3 {
+  margin: 0 0 12px;
+  color: var(--rfc-heading);
+  font-size: 24px;
+}
+
+.ctpl-image-placeholder p {
+  margin: 0;
+  color: var(--rfc-text);
+}
+
+/* ==========================================
+   TECHNICAL ASSISTANCE SECTION
+========================================== */
+
+.ctpl-rfc-support {
+  padding: 80px 0 100px;
+  background: var(--rfc-soft);
+}
+
+.ctpl-rfc-support .eyebrow {
+  margin-bottom: 12px;
+
+  color: var(--rfc-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ctpl-rfc-support h2 {
+  margin: 0 0 40px;
+
+  color: var(--rfc-heading);
+  font-size: clamp(29px, 3.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   FOUR SERVICE CARDS
+========================================== */
+
+.ctpl-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ctpl-support-card {
+  min-width: 0;
+  min-height: 270px;
+
+  padding: 30px 24px;
+
+  background: var(--rfc-card);
+  border: 1px solid var(--rfc-border);
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(16, 40, 63, 0.05);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ctpl-support-card:hover {
+  border-color: var(--rfc-blue);
+  box-shadow: 0 12px 30px rgba(16, 40, 63, 0.09);
+}
+
+.ctpl-support-icon {
+  display: grid;
+  place-items: center;
+
+  width: 62px;
+  height: 62px;
+
+  margin-bottom: 25px;
+
+  background: rgba(0, 155, 212, 0.09);
+  color: var(--rfc-blue);
+
+  border-radius: 12px;
+  font-size: 30px;
+}
+
+.ctpl-support-card h3 {
+  margin: 0 0 14px;
+
+  color: var(--rfc-heading);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.ctpl-support-card p {
+  margin: 0;
+
+  color: var(--rfc-text);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* ==========================================
+   TECHNICAL SUPPORT CONTACT
+========================================== */
+
+.ctpl-service-contact {
+  position: relative;
+  isolation: isolate;
+
+  padding: 95px 0;
+
+  background: linear-gradient(
+    115deg,
+    #081725 0%,
+    #123650 65%,
+    #075f7c 100%
+  );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* NETWORK SVG BACKGROUND */
+
+.ctpl-network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.ctpl-network-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+/* CONTACT CONTENT */
+
+.ctpl-service-contact-content {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.ctpl-service-contact-content h2 {
+  max-width: 900px;
+  margin: 0 auto 25px;
+
+  color: #ffffff;
+  font-size: clamp(29px, 3.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.ctpl-service-contact-content p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+
+  color: #d4e4ed;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* GET IN TOUCH BUTTON */
+
+.ctpl-get-in-touch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+  padding: 14px 30px;
+
+  background: var(--rfc-blue);
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.ctpl-get-in-touch:hover {
+  background: #007fac;
+}
+
+.ctpl-get-in-touch:focus-visible {
+  outline: 3px solid #56cfe8;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.will-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.will-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --rfc-heading: #f1f5f9;
+    --rfc-text: #b8c9d9;
+    --rfc-background: #081725;
+    --rfc-soft: #0d2032;
+    --rfc-card: #142a3e;
+    --rfc-border: #294459;
+  }
+
+  .ctpl-rfc-overview {
+    background: #081725;
+  }
+
+  .ctpl-detail-content p {
+    color: #b8c9d9;
+  }
+
+  .ctpl-service-heading {
+    color: #f1f5f9;
+  }
+
+  .ctpl-image-panel {
+    background: #142a3e;
+    border-color: #294459;
+  }
+
+  .ctpl-image-placeholder h3 {
+    color: #f1f5f9;
+  }
+
+  .ctpl-image-placeholder p {
+    color: #b8c9d9;
+  }
+
+  .ctpl-rfc-support {
+    background: #0d2032;
+  }
+
+  .ctpl-rfc-support h2 {
+    color: #f1f5f9;
+  }
+
+  .ctpl-support-card {
+    background: #142a3e;
+    border-color: #294459;
+    box-shadow: none;
+  }
+
+  .ctpl-support-card:hover {
+    border-color: #009bd4;
+  }
+
+  .ctpl-support-icon {
+    background: #203d55;
+  }
+
+  .ctpl-support-card h3 {
+    color: #f1f5f9;
+  }
+
+  .ctpl-support-card p {
+    color: #b8c9d9;
+  }
+
+  .ctpl-service-contact {
+    background: linear-gradient(
+      115deg,
+      #061421 0%,
+      #102b42 65%,
+      #064e67 100%
+    );
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1050px) {
+
+  .ctpl-detail-grid {
+    gap: 30px;
+  }
+
+  .ctpl-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: min(100% - 30px, 1200px);
+  }
+
+  .ctpl-rfc-image-hero {
+    min-height: 230px;
+    padding: 45px 0;
+  }
+
+  .ctpl-rfc-overview {
+    padding: 50px 0 60px;
+  }
+
+  .ctpl-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ctpl-detail-content p {
+    font-size: 14px;
+  }
+
+  .ctpl-image-panel,
+  .ctpl-image-placeholder {
+    min-height: 250px;
+  }
+
+  .ctpl-image-panel img {
+    min-height: 250px;
+    max-height: 330px;
+  }
+
+  .ctpl-rfc-support {
+    padding: 55px 0 70px;
+  }
+
+  .ctpl-support-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .ctpl-support-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .ctpl-service-contact {
+    padding: 65px 0;
+  }
+
+  .ctpl-service-contact-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .will-reveal,
+  .will-reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .ctpl-support-card,
+  .ctpl-get-in-touch,
+  .btn-outline-light {
+    transition: none;
+  }
+
+}
