@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-mis-convertz',
   standalone: true,
   templateUrl: './mis.html',
-  styleUrl: './mis.css'
+  styleUrl: './mis.scss'
 })
 export class MisConvertzComponent {
 

@@ -13,7 +13,7 @@ type RightsIssueItem = {
   standalone: true,
   imports: [RouterLink],
   templateUrl: './rights-issue.html',
-  styleUrl: './rights-issue.css'
+  styleUrl: './rights-issue.scss'
 })
 export class RightsIssueComponent {
 

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-geo-limits-gsld',
   standalone: true,
   templateUrl: './gsld.html',
-  styleUrl: './gsld.css'
+  styleUrl: './gsld.scss'
 })
 export class GeoLimitsGsldComponent {
 

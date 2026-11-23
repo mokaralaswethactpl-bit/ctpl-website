@@ -13,7 +13,7 @@ type ReportDocument = {
   standalone: true,
   imports: [RouterLink],
   templateUrl: './results.html',
-  styleUrl: './results.css'
+  styleUrl: './results.scss'
 })
 export class ResultsReportsComponent {
 

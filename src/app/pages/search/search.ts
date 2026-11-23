@@ -10,7 +10,7 @@ import { pages } from '../../content';
   standalone: true,
   imports: [FormsModule, RouterLink],
   templateUrl: './search.html',
-  styleUrl: './search.css'
+  styleUrl: './search.scss'
 })
 export class SearchComponent {
 

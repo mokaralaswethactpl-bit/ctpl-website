@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-ctpl-dialer',
   standalone: true,
   templateUrl: './dialer.html',
-  styleUrl: './dialer.css'
+  styleUrl: './dialer.scss'
 })
 export class CtplDialerComponent {
 

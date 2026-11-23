@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './rfid.html',
-  styleUrl: './rfid.css'
+  styleUrl: './rfid.scss'
 })
 export class TranoRfidComponent {
 

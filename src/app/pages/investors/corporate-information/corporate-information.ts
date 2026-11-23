@@ -17,7 +17,7 @@ type AnnouncementYear = {
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './corporate-information.html',
-  styleUrl: './corporate-information.css'
+  styleUrl: './corporate-information.scss'
 })
 export class CorporateInformationComponent {
 

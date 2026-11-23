@@ -13,7 +13,7 @@ type ShareRow = {
   standalone: true,
   imports: [RouterLink],
   templateUrl: './shareholdings.html',
-  styleUrl: './shareholdings.css'
+  styleUrl: './shareholdings.scss'
 })
 export class ShareholdingsComponent {
 

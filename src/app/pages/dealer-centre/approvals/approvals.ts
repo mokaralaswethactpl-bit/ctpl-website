@@ -17,8 +17,8 @@ type StateDocument = {
   standalone: true,
   imports: [RouterLink],
 
-  templateUrl: './approvals-sop.html',
-  styleUrl: './approvals-sop.scss'
+  templateUrl: './approvals.html',
+  styleUrl: './approvals.scss'
 })
 export class ApprovalsSopComponent {
 

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-trano',
   standalone: true,
   templateUrl: './trano.html',
-  styleUrl: './trano.css'
+  styleUrl: './trano.scss'
 })
 export class TranoComponent {
 

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-embedded-esim',
   standalone: true,
   templateUrl: './e-sim.html',
-  styleUrl: './e-sim.css'
+  styleUrl: './e-sim.scss'
 })
 export class EmbeddedEsimComponent {
 

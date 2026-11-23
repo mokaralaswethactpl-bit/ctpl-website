@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-ais-140-is-16833',
   standalone: true,
   templateUrl: './ais.html',
-  styleUrl: './ais.css'
+  styleUrl: './ais.scss'
 })
 export class Ais140Is16833Component {
 

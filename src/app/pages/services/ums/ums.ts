@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-ums',
   standalone: true,
   templateUrl: './ums.html',
-  styleUrl: './ums.css'
+  styleUrl: './ums.scss'
 })
 export class UmisComponent {
 
