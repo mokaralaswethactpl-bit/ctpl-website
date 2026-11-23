@@ -1,9 +1,49 @@
+
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-vltd',
-  imports: [],
+  standalone: true,
   templateUrl: './vltd.html',
-  styleUrl: './vltd.scss',
+  styleUrl: './vltd.css'
 })
-export class Vltd {}
+export class VltdComponent {
+
+  title = 'VLTD State Integrations';
+
+  eyebrow = 'GOVERNMENT INTEGRATIONS';
+
+  summary = `CTPL VLTD State Integrations services focus on the coordination of AIS-140 Vehicle Location Tracking Device requirements across government and departmental applications. These services relate to transport, mining and other sectors where vehicle tracking information is integrated with relevant operational systems. The integration framework supports the needs of organizations and authorized stakeholders working with state-level vehicle monitoring requirements, subject to the applicable technical specifications and approvals.`;
+
+  image = '/assets/images/vltd-service.jpg';
+
+  source = 'https://containe.in/vltd/';
+
+  miningStates = [
+    'Andhra Pradesh',
+    'Telangana',
+    'Rajasthan'
+  ];
+
+  transportStates = [
+    'Delhi',
+    'Himachal Pradesh',
+    'Kerala',
+    'Karnataka',
+    'Ladakh',
+    'Madhya Pradesh',
+    'Maharashtra',
+    'Nagaland',
+    'Odisha',
+    'Punjab',
+    'Tripura',
+    'Tamil Nadu',
+    'Uttarakhand',
+    'Uttar Pradesh',
+    'West Bengal'
+  ];
+
+  foodCorporationStates = [
+    'West Bengal'
+  ];
+}

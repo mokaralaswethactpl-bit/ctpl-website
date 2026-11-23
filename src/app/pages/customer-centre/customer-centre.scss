@@ -1,0 +1,321 @@
+
+/* =========================================
+   CTPL CUSTOMER CENTRE
+========================================= */
+
+/* FULL WIDTH IMAGE BANNER */
+
+.cc-hero {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url('/assets/images/ctpl-dialer.png');
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  animation: ccBannerMotion 24s ease-in-out infinite alternate;
+}
+
+.cc-hero h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 20px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes ccBannerMotion {
+  from {
+    background-position: 48% center;
+  }
+
+  to {
+    background-position: 53% center;
+  }
+}
+
+/* OFFICE LOCATION CARDS */
+
+.cc-office-section {
+  padding: 60px 0 75px;
+  background: #ffffff;
+}
+
+.cc-office-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 990px;
+}
+
+.cc-office-card {
+  min-height: 170px;
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  background: #ffffff;
+
+  transition:
+    transform 350ms ease,
+    box-shadow 350ms ease;
+}
+
+.cc-office-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(10, 50, 80, 0.08);
+}
+
+.cc-location-icon {
+  color: #0097d5;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.cc-office-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 10px;
+}
+
+.cc-office-card p {
+  color: #667587;
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CONTACT DETAILS AND FORM */
+
+.cc-contact-section {
+  padding: 65px 0 70px;
+  background: #ffffff;
+}
+
+.cc-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: start;
+  max-width: 1130px;
+}
+
+.cc-eyebrow {
+  color: #0097d5;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cc-contact-info h2 {
+  color: #071b42;
+  font-size: clamp(30px, 3vw, 39px);
+  line-height: 1.2;
+  margin: 0 0 22px;
+}
+
+.cc-intro {
+  font-size: 13px;
+  color: #52677a;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  max-width: 450px;
+}
+
+.cc-contact-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.cc-contact-icon {
+  color: #0097d5;
+  font-size: 23px;
+  min-width: 24px;
+}
+
+.cc-contact-item h3 {
+  font-size: 19px;
+  color: #111111;
+  margin: 0 0 4px;
+}
+
+.cc-contact-item p,
+.cc-contact-item a {
+  font-size: 13px;
+  color: #52677a;
+  line-height: 1.7;
+  text-decoration: none;
+  margin: 0;
+}
+
+.cc-contact-item a:hover {
+  color: #0097d5;
+  text-decoration: underline;
+}
+
+/* ENQUIRY FORM */
+
+.cc-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 12px;
+}
+
+.cc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.cc-field label {
+  font-size: 12px;
+  color: #0e2945;
+}
+
+.cc-field label span {
+  color: #e04444;
+}
+
+.cc-field input,
+.cc-field select,
+.cc-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 34px;
+  background: #ffffff;
+  border: 1px solid #d2d7de;
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #20364a;
+}
+
+.cc-field textarea {
+  min-height: 73px;
+  resize: vertical;
+}
+
+.cc-field input:focus,
+.cc-field select:focus,
+.cc-field textarea:focus {
+  outline: 2px solid #0097d5;
+  outline-offset: 1px;
+}
+
+.cc-field small {
+  color: #c32f2f;
+  font-size: 11px;
+}
+
+.cc-field-full {
+  grid-column: 1 / -1;
+}
+
+.cc-submit {
+  margin-top: 16px;
+  border: 0;
+  border-radius: 5px;
+  background: #0097d5;
+  color: #ffffff;
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cc-submit:hover {
+  background: #007bb0;
+}
+
+.cc-form-notice {
+  color: #915315;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* GOOGLE MAP */
+
+.cc-map-section {
+  width: 100%;
+  background: #e8f1f2;
+}
+
+.cc-map-section iframe {
+  display: block;
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .cc-office-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .cc-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cc-hero {
+    min-height: 270px;
+  }
+
+  .cc-office-section {
+    padding: 40px 0;
+  }
+
+  .cc-contact-section {
+    padding: 40px 0 50px;
+  }
+
+  .cc-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-field-full {
+    grid-column: auto;
+  }
+
+  .cc-map-section iframe {
+    height: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cc-hero {
+    animation: none;
+  }
+
+  .cc-office-card {
+    transition: none;
+  }
+
+  .cc-office-card:hover {
+    transform: none;
+  }
+}

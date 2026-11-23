@@ -1,0 +1,212 @@
+
+/* =========================================
+   CTPL SHAREHOLDINGS PAGE
+========================================= */
+
+.sh-section {
+  background: #ffffff;
+  padding: 45px 0 90px;
+}
+
+.sh-container {
+  width: calc(100% - 48px);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sh-page-title {
+  color: #0097d5;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 18px;
+  text-transform: capitalize;
+}
+
+/* TABLE SCROLLING */
+
+.sh-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sh-table-spacing {
+  margin-top: 24px;
+}
+
+/* TABLE DESIGN */
+
+.sh-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111111;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.sh-table th,
+.sh-table td {
+  border: 1px solid #7acbeb;
+  padding: 9px 10px;
+  vertical-align: middle;
+}
+
+.sh-table thead th {
+  background: #cef0ff;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sh-table-heading {
+  background: #cef0ff !important;
+  color: #000000;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 15px !important;
+}
+
+.sh-table tbody td:first-child {
+  text-align: left;
+}
+
+.sh-table tbody td:not(:first-child) {
+  text-align: center;
+}
+
+/* INITIAL YES/NO TABLE */
+
+.sh-question-table {
+  min-width: 760px;
+}
+
+.sh-question-table th:first-child {
+  width: 55px;
+}
+
+.sh-question-table th:last-child {
+  width: 135px;
+}
+
+.sh-question-table tbody td:first-child {
+  text-align: center;
+}
+
+.sh-question-table tbody td:nth-child(2) {
+  text-align: left;
+  font-size: 12px;
+}
+
+.sh-question-table tbody td:last-child {
+  text-align: center;
+}
+
+/* SUMMARY TABLES */
+
+.sh-wide-table {
+  min-width: 1250px;
+  table-layout: auto;
+}
+
+.sh-wide-table th {
+  min-width: 75px;
+}
+
+.sh-wide-table th:nth-child(2) {
+  min-width: 155px;
+}
+
+.sh-wide-table tbody td:nth-child(2) {
+  text-align: left;
+}
+
+/* PROMOTER / PUBLIC TABLES */
+
+.sh-category-table {
+  min-width: 850px;
+}
+
+.sh-category-table th:first-child {
+  width: 32%;
+}
+
+.sh-category-table tbody td:first-child {
+  text-align: left;
+}
+
+/* SECTION ROWS */
+
+.sh-section-row td {
+  background: #f0faff;
+  text-align: left !important;
+  font-weight: 700;
+}
+
+/* TOTAL ROWS */
+
+.sh-total-row td {
+  font-weight: 700;
+  background: #f5f9fb;
+}
+
+/* FOREIGN OWNERSHIP */
+
+.sh-foreign-table {
+  min-width: 650px;
+}
+
+.sh-foreign-table th:first-child {
+  width: 45%;
+}
+
+.sh-foreign-table tbody td:first-child {
+  text-align: left;
+}
+
+/* NOTES */
+
+.sh-notes {
+  background: #f7f7f7;
+  text-align: left !important;
+  padding: 16px !important;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.sh-notes strong {
+  display: block;
+}
+
+.sh-notes div {
+  margin-bottom: 8px;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+  .sh-section {
+    padding: 30px 0 55px;
+  }
+
+  .sh-container {
+    width: calc(100% - 28px);
+  }
+
+  .sh-page-title {
+    font-size: 21px;
+  }
+
+  .sh-table {
+    font-size: 10px;
+  }
+
+  .sh-table th,
+  .sh-table td {
+    padding: 8px;
+  }
+
+}
