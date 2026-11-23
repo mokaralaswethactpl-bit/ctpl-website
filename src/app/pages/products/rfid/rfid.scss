@@ -1,0 +1,401 @@
+
+/* =========================================
+   TRANO RFID PRODUCT PAGE
+   ========================================= */
+
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.trfid-container {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* HERO */
+
+.trfid-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 0 65px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(0, 190, 210, 0.22), transparent 32%),
+    linear-gradient(115deg, #071c35, #103d63 65%, #087e9c);
+}
+
+.trfid-eyebrow,
+.trfid-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #079bb5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.trfid-eyebrow {
+  color: #70e5ef;
+}
+
+.trfid-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.trfid-hero p {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #d5e8f1;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.trfid-hero-actions {
+  margin-top: 35px;
+}
+
+.trfid-back-link {
+  display: inline-block;
+  padding: 11px 20px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 250ms ease;
+}
+
+.trfid-back-link:hover {
+  color: #071c35;
+  background: #70e5ef;
+  border-color: #70e5ef;
+}
+
+
+/* COMMON SECTIONS */
+
+.trfid-section {
+  padding: 85px 0;
+}
+
+.trfid-overview {
+  background: #ffffff;
+}
+
+.trfid-overview-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.trfid-content h2,
+.trfid-section-heading h2 {
+  margin: 0 0 22px;
+  color: #102e49;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.25;
+}
+
+.trfid-content p {
+  margin: 0 0 17px;
+  color: #5a6c7c;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.trfid-content .trfid-lead {
+  color: #344f65;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* PRODUCT IMAGE */
+
+.trfid-image-panel {
+  display: flex;
+  min-height: 340px;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #edf8fa, #f7fbfc);
+  border: 1px solid #dcebef;
+  border-radius: 22px;
+}
+
+.trfid-image-panel img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  transition: transform 450ms ease;
+}
+
+.trfid-image-panel:hover img {
+  transform: scale(1.04);
+}
+
+
+/* APPLICATIONS */
+
+.trfid-applications {
+  background: #f2f7fa;
+}
+
+.trfid-section-heading {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.trfid-section-heading p {
+  color: #637789;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.trfid-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.trfid-card {
+  position: relative;
+  min-height: 260px;
+  padding: 32px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e0ebef;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(7, 28, 53, 0.05);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.trfid-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 38px rgba(7, 28, 53, 0.11);
+}
+
+.trfid-card-number {
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  color: #dcebef;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.trfid-card-icon {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: #087e9c;
+  background: #e6f7fa;
+  border-radius: 15px;
+  font-size: 28px;
+}
+
+.trfid-card h3 {
+  margin: 0 0 13px;
+  color: #102e49;
+  font-size: 20px;
+}
+
+.trfid-card p {
+  margin: 0;
+  color: #637789;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* HIGHLIGHT */
+
+.trfid-highlight {
+  padding: 75px 0;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(115deg, #071c35, #103d63, #087e9c);
+}
+
+.trfid-highlight-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.trfid-light-label {
+  color: #70e5ef;
+}
+
+.trfid-highlight h2 {
+  margin: 0 0 15px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 43px);
+}
+
+.trfid-highlight p {
+  max-width: 650px;
+  margin: 0;
+  color: #d5e8f1;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.trfid-highlight-symbol {
+  display: flex;
+  width: 190px;
+  height: 190px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #70e5ef;
+  border: 2px solid rgba(112, 229, 239, 0.4);
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 800;
+  box-shadow: 0 0 55px rgba(112, 229, 239, 0.12);
+}
+
+.trfid-highlight-symbol span {
+  font-size: 50px;
+}
+
+
+/* CONTACT */
+
+.trfid-contact {
+  padding: 75px 0;
+  background: #ffffff;
+}
+
+.trfid-contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.trfid-contact h2 {
+  margin: 0 0 13px;
+  color: #102e49;
+  font-size: clamp(27px, 4vw, 38px);
+}
+
+.trfid-contact p {
+  max-width: 650px;
+  margin: 0;
+  color: #637789;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.trfid-contact-btn {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 15px 27px;
+  color: #ffffff;
+  background: #087e9c;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 250ms ease;
+}
+
+.trfid-contact-btn:hover {
+  background: #071c35;
+  transform: translateY(-3px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .trfid-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .trfid-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trfid-highlight-symbol {
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .trfid-container {
+    width: min(100% - 32px, 1160px);
+  }
+
+  .trfid-hero {
+    padding: 55px 0 50px;
+  }
+
+  .trfid-hero p {
+    font-size: 16px;
+  }
+
+  .trfid-section {
+    padding: 60px 0;
+  }
+
+  .trfid-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trfid-card {
+    min-height: auto;
+  }
+
+  .trfid-highlight {
+    padding: 60px 0;
+  }
+
+  .trfid-highlight-inner,
+  .trfid-contact-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .trfid-highlight-symbol {
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+  }
+
+  .trfid-highlight-symbol span {
+    font-size: 35px;
+  }
+
+  .trfid-image-panel {
+    min-height: 250px;
+  }
+
+  .trfid-image-panel img {
+    max-height: 250px;
+  }
+
+}
