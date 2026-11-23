@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-limits-epi',
   standalone: true,
   templateUrl: './limits.html',
-  styleUrl: './limits.css'
+  styleUrl: './limits.scss'
 })
 export class LimitsEpiComponent {
 

@@ -7,7 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './corporate-governance.html',
-  styleUrl: './corporate-governance.css'
+  styleUrl: './corporate-governance.scss'
 })
 export class CorporateGovernanceComponent {
 

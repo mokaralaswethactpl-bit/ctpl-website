@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-ctpl-erp',
   standalone: true,
   templateUrl: './erp.html',
-  styleUrl: './erp.css'
+  styleUrl: './erp.scss'
 })
 export class CtplErpComponent {
 

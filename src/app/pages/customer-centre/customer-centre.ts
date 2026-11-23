@@ -18,7 +18,7 @@ import {
   standalone: true,
   imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './customer-centre.html',
-  styleUrl: './customer-centre.css'
+  styleUrl: './customer-centre.scss'
 })
 export class CustomerCentreComponent {
 

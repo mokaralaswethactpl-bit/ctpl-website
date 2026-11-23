@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-vltd',
   standalone: true,
   templateUrl: './vltd.html',
-  styleUrl: './vltd.css'
+  styleUrl: './vltd.scss'
 })
 export class VltdComponent {
 

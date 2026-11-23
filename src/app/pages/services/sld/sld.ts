@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-sld',
   standalone: true,
   templateUrl: './sld.html',
-  styleUrl: './sld.css'
+  styleUrl: './sld.scss'
 })
 export class SldComponent {
 

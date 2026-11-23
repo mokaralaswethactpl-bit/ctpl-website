@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-motoreye-efrt',
   standalone: true,
   templateUrl: './motoreye.html',
-  styleUrl: './motoreye.css'
+  styleUrl: './motoreye.scss'
 })
 export class MotoreyeEfrtComponent {
 

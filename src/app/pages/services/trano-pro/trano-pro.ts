@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   selector: 'app-tranopro',
   standalone: true,
   templateUrl: './trano-pro.html',
-  styleUrl: './trano-pro.css'
+  styleUrl: './trano-pro.scss'
 })
 export class TranoproComponent {
 
@@ -17,5 +17,15 @@ export class TranoproComponent {
 
   image = '/assets/images/tranopro-service.jpg';
 
+
+
+
+
+
+
+
+
+
+  
   source = 'https://containe.in/services/';
 }

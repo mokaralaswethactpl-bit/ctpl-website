@@ -18,7 +18,7 @@ type IPOItem = {
   standalone: true,
   imports: [RouterLink],
   templateUrl: './ipo.html',
-  styleUrl: './ipo.css'
+  styleUrl: './ipo.scss'
 })
 
 export class IPOComponent implements AfterViewInit {
