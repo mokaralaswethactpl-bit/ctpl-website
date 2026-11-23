@@ -1,9 +1,23 @@
-import { Component } from '@angular/core';
+
+import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-corporate-governance',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink],
   templateUrl: './corporate-governance.html',
-  styleUrl: './corporate-governance.scss',
+  styleUrl: './corporate-governance.css'
 })
-export class CorporateGovernance {}
+export class CorporateGovernanceComponent {
+
+  activeTab = signal(0);
+
+  tabs = [
+    'Investor Information',
+    'Share holding pattern',
+    'Compliance Report on CG',
+    'Investor Grievances Report'
+  ];
+
+}
