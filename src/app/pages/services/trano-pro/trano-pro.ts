@@ -17,5 +17,15 @@ export class TranoproComponent {
 
   image = '/assets/images/tranopro-service.jpg';
 
+
+
+
+
+
+
+
+
+
+  
   source = 'https://containe.in/services/';
 }
