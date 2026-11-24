@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-embedded-esim',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './e-sim.html',
   styleUrl: './e-sim.scss'
 })

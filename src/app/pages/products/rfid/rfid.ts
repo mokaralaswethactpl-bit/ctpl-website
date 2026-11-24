@@ -5,7 +5,11 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-trano-rfid',
   standalone: true,
-  imports: [RouterLink],
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './rfid.html',
   styleUrl: './rfid.scss'
 })

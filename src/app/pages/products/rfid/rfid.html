@@ -1,204 +1,262 @@
 
-<!-- PRODUCT HERO -->
-<section class="page-hero trfid-hero">
-  <div class="trfid-container">
+<section class="trfid-page">
 
-    <span class="trfid-eyebrow">{{ eyebrow }}</span>
+  <!-- PRODUCT HERO -->
 
-    <h1>{{ title }}</h1>
+  <section class="page-hero trfid-hero">
 
-    <p>
-      Contactless identification and tracking
-      for connected applications.
-    </p>
+    <div class="trfid-container">
 
-    <div class="trfid-hero-actions">
-      <a routerLink="/" class="trfid-back-link">
-        ← Back to homepage
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- PRODUCT OVERVIEW -->
-<section class="trfid-section trfid-overview">
-
-  <div class="trfid-container trfid-overview-grid">
-
-    <div class="trfid-content">
-
-      <span class="trfid-label">PRODUCT OVERVIEW</span>
-
-      <h2>
-        Simplifying identification through RFID technology.
-      </h2>
-
-      <p class="trfid-lead">
-        {{ summary }}
-      </p>
-
-      <p>
-        Radio Frequency Identification (RFID) uses radio waves
-        to identify compatible tags and exchange identification
-        information with suitable reading equipment.
-      </p>
-
-      <p>
-        Trano RFID represents CTPL's offering in contactless
-        identification and tracking applications.
-      </p>
-
-    </div>
-
-    <div class="trfid-image-panel">
-
-      <img
-        [src]="image"
-        alt="Trano RFID product"
-        loading="lazy"
-      >
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- APPLICATIONS -->
-<section class="trfid-section trfid-applications">
-
-  <div class="trfid-container">
-
-    <div class="trfid-section-heading">
-
-      <span class="trfid-label">KEY AREAS</span>
-
-      <h2>
-        Contactless technology for identification needs.
-      </h2>
-
-      <p>
-        RFID technology can support identification workflows
-        across suitable connected applications.
-      </p>
-
-    </div>
-
-    <div class="trfid-card-grid">
-
-      <article class="trfid-card">
-
-        <span class="trfid-card-number">01</span>
-
-        <div class="trfid-card-icon">⌁</div>
-
-        <h3>Contactless Identification</h3>
-
-        <p>
-          Supports identification through compatible RFID
-          tags and reading equipment.
-        </p>
-
-      </article>
-
-
-      <article class="trfid-card">
-
-        <span class="trfid-card-number">02</span>
-
-        <div class="trfid-card-icon">◎</div>
-
-        <h3>Tracking Applications</h3>
-
-        <p>
-          Supports tracking-related workflows where RFID-based
-          identification is suitable.
-        </p>
-
-      </article>
-
-
-      <article class="trfid-card">
-
-        <span class="trfid-card-number">03</span>
-
-        <div class="trfid-card-icon">◇</div>
-
-        <h3>Connected Technology</h3>
-
-        <p>
-          Forms part of CTPL's broader connected mobility
-          and technology portfolio.
-        </p>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- TECHNOLOGY HIGHLIGHT -->
-<section class="trfid-highlight">
-
-  <div class="trfid-container trfid-highlight-inner">
-
-    <div>
-
-      <span class="trfid-label trfid-light-label">
-        TRANO RFID
+      <span class="trfid-eyebrow">
+        {{ eyebrow }}
       </span>
 
-      <h2>
-        Identification made contactless.
-      </h2>
+      <h1>{{ title }}</h1>
 
       <p>
-        Explore CTPL's RFID-based identification and
-        tracking solution for suitable applications.
+        Contactless identification and tracking
+        for connected applications.
       </p>
 
-    </div>
+      <div class="trfid-hero-actions">
 
-    <div class="trfid-highlight-symbol">
-      RFID
-      <span>⌁</span>
-    </div>
+        <a routerLink="/" class="trfid-back-link">
 
-  </div>
+          <span class="back-arrow">←</span>
 
-</section>
+          Back to homepage
 
+        </a>
 
-<!-- CONTACT -->
-<section class="trfid-contact">
-
-  <div class="trfid-container trfid-contact-inner">
-
-    <div>
-
-      <span class="trfid-label">GET IN TOUCH</span>
-
-      <h2>
-        Interested in Trano RFID?
-      </h2>
-
-      <p>
-        Connect with CTPL to discuss product information
-        and application requirements.
-      </p>
+      </div>
 
     </div>
 
-    <a routerLink="/page/customer-centre" class="trfid-contact-btn">
-      Contact CTPL ↗
-    </a>
+  </section>
 
-  </div>
+
+  <!-- PRODUCT OVERVIEW -->
+
+  <section class="trfid-section trfid-overview">
+
+    <div class="trfid-container trfid-overview-grid">
+
+      <div class="trfid-content">
+
+        <span class="trfid-label">
+          PRODUCT OVERVIEW
+        </span>
+
+        <h2>
+          Simplifying identification through
+          <span>RFID technology.</span>
+        </h2>
+
+        <p class="trfid-lead">
+          {{ summary }}
+        </p>
+
+        <p>
+          Radio Frequency Identification (RFID) uses radio waves
+          to identify compatible tags and exchange identification
+          information with suitable reading equipment.
+        </p>
+
+        <p>
+          Trano RFID represents CTPL's offering in contactless
+          identification and tracking applications.
+        </p>
+
+      </div>
+
+
+      <!-- PRODUCT IMAGE -->
+
+      <div class="trfid-image-panel">
+
+        <img
+          [src]="image"
+          alt="Trano RFID product"
+          loading="lazy"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- APPLICATIONS -->
+
+  <section class="trfid-section trfid-applications">
+
+    <div class="trfid-container">
+
+      <div class="trfid-section-heading">
+
+        <span class="trfid-label">
+          KEY AREAS
+        </span>
+
+        <h2>
+          Contactless technology for
+          <span>identification needs.</span>
+        </h2>
+
+        <p>
+          RFID technology can support identification workflows
+          across suitable connected applications.
+        </p>
+
+      </div>
+
+
+      <!-- APPLICATION CARDS -->
+
+      <div class="trfid-card-grid">
+
+        <!-- CONTACTLESS IDENTIFICATION -->
+
+        <article class="trfid-card">
+
+          <span class="trfid-card-number">
+            01
+          </span>
+
+          <div class="trfid-card-icon">
+            ⌁
+          </div>
+
+          <h3>Contactless Identification</h3>
+
+          <p>
+            Supports identification through compatible RFID
+            tags and reading equipment.
+          </p>
+
+        </article>
+
+
+        <!-- TRACKING APPLICATIONS -->
+
+        <article class="trfid-card">
+
+          <span class="trfid-card-number">
+            02
+          </span>
+
+          <div class="trfid-card-icon">
+            ◎
+          </div>
+
+          <h3>Tracking Applications</h3>
+
+          <p>
+            Supports tracking-related workflows where RFID-based
+            identification is suitable.
+          </p>
+
+        </article>
+
+
+        <!-- CONNECTED TECHNOLOGY -->
+
+        <article class="trfid-card">
+
+          <span class="trfid-card-number">
+            03
+          </span>
+
+          <div class="trfid-card-icon">
+            ◇
+          </div>
+
+          <h3>Connected Technology</h3>
+
+          <p>
+            Forms part of CTPL's broader connected mobility
+            and technology portfolio.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TECHNOLOGY HIGHLIGHT -->
+
+  <section class="trfid-highlight">
+
+    <div class="trfid-container trfid-highlight-inner">
+
+      <div>
+
+        <span class="trfid-label trfid-light-label">
+          TRANO RFID
+        </span>
+
+        <h2>
+          Identification made contactless.
+        </h2>
+
+        <p>
+          Explore CTPL's RFID-based identification and
+          tracking solution for suitable applications.
+        </p>
+
+      </div>
+
+      <div class="trfid-highlight-symbol">
+
+        RFID
+
+        <span>⌁</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+
+  <section class="trfid-contact">
+
+    <div class="trfid-container trfid-contact-inner">
+
+      <div>
+
+        <span class="trfid-label">
+          GET IN TOUCH
+        </span>
+
+        <h2>
+          Interested in Trano RFID?
+        </h2>
+
+        <p>
+          Connect with CTPL to discuss product information
+          and application requirements.
+        </p>
+
+      </div>
+
+      <a
+        routerLink="/page/customer-centre"
+        class="trfid-contact-btn">
+
+        Contact CTPL ↗
+
+      </a>
+
+    </div>
+
+  </section>
 
 </section>
