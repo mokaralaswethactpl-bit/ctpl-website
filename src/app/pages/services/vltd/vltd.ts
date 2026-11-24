@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-vltd',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './vltd.html',
   styleUrl: './vltd.scss'
 })
@@ -19,11 +25,17 @@ export class VltdComponent {
 
   source = 'https://containe.in/vltd/';
 
+
+  // MINING INTEGRATIONS
+
   miningStates = [
     'Andhra Pradesh',
     'Telangana',
     'Rajasthan'
   ];
+
+
+  // TRANSPORT INTEGRATIONS
 
   transportStates = [
     'Delhi',
@@ -43,7 +55,11 @@ export class VltdComponent {
     'West Bengal'
   ];
 
+
+  // FOOD CORPORATION
+
   foodCorporationStates = [
     'West Bengal'
   ];
+
 }

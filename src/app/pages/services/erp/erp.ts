@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-ctpl-erp',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './erp.html',
   styleUrl: './erp.scss'
 })
@@ -18,4 +24,5 @@ export class CtplErpComponent {
   image = '/assets/images/ctpl-erp.jpg';
 
   source = 'https://containe.in/services/';
+
 }

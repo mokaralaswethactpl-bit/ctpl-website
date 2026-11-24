@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-ums',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './ums.html',
   styleUrl: './ums.scss'
 })
@@ -20,4 +26,5 @@ export class UmisComponent {
   image = '/assets/images/ums.jpg';
 
   source = 'https://containe.in/services/';
+
 }

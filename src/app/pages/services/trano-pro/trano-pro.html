@@ -1,14 +1,36 @@
 
 <section class="tranopro-page">
 
-  <!-- HERO SECTION -->
-  <section class="tranopro-hero">
+  <!-- PAGE HEADER -->
+
+  <section class="tranopro-page-header">
 
     <div class="tranopro-container">
 
-      <div class="tranopro-breadcrumb">
-        CTPL / SERVICES / TRANOPRO
-      </div>
+      <span class="tranopro-page-header-label">
+        CTPL / SERVICES
+      </span>
+
+      <h1>{{ title }}</h1>
+
+      <a routerLink="/" class="back-home-btn">
+
+        <span class="back-arrow">←</span>
+
+        Back to Home
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="tranopro-hero">
+
+    <div class="tranopro-container">
 
       <div class="tranopro-hero-grid">
 
@@ -17,8 +39,6 @@
           <span class="tranopro-eyebrow">
             {{ eyebrow }}
           </span>
-
-          <h1>{{ title }}</h1>
 
           <h2>
             Intelligent tracking.
@@ -35,6 +55,9 @@
 
         </div>
 
+
+        <!-- SERVICE IMAGE -->
+
         <div class="tranopro-hero-visual">
 
           <div class="tranopro-image-glow"></div>
@@ -49,8 +72,11 @@
           </div>
 
           <div class="tranopro-image-label">
+
             <span class="tranopro-status-dot"></span>
+
             AIS-140 VEHICLE TRACKING PLATFORM
+
           </div>
 
         </div>
@@ -63,6 +89,7 @@
 
 
   <!-- OVERVIEW SECTION -->
+
   <section class="tranopro-overview">
 
     <div class="tranopro-container">
@@ -80,6 +107,9 @@
 
       </div>
 
+
+      <!-- OVERVIEW CARD -->
+
       <div class="tranopro-overview-content">
 
         <div class="tranopro-overview-icon">
@@ -87,9 +117,11 @@
         </div>
 
         <div>
+
           <h3>TRANOPRO AIS-140 Tracking Platform</h3>
 
           <p>{{ summary }}</p>
+
         </div>
 
       </div>
@@ -100,6 +132,7 @@
 
 
   <!-- CONTACT SECTION -->
+
   <section class="tranopro-contact">
 
     <div class="tranopro-container">
@@ -128,8 +161,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit CTPL Website
+
+          Explore Services
+
           <span>↗</span>
+
         </a>
 
       </div>

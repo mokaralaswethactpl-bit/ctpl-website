@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-trano',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './trano.html',
   styleUrl: './trano.scss'
 })
@@ -18,4 +24,5 @@ export class TranoComponent {
   image = '/assets/images/trano.jpg';
 
   source = 'https://containe.in/services/';
+
 }
