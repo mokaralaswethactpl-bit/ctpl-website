@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-geo-limits-gsld',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './gsld.html',
   styleUrl: './gsld.scss'
 })

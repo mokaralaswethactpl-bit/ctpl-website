@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-limits-epi',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './limits.html',
   styleUrl: './limits.scss'
 })

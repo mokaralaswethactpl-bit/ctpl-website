@@ -16,7 +16,7 @@ import {
 @Component({
   selector: 'app-customer-centre',
   standalone: true,
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './customer-centre.html',
   styleUrl: './customer-centre.scss'
 })

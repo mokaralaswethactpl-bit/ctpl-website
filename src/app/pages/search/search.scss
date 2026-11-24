@@ -2,37 +2,50 @@
 :host {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
-/* SEARCH ICON */
+/* HEADER SEARCH ICON */
 
 .ctpl-search-trigger {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
   padding: 0;
-  margin-left: 8px;
-  border: 0;
-  border-radius: 50%;
+  margin: 0;
+
   background: transparent;
-  color: #142d43;
+  color: #dce5ed;
+
+  border: none;
+  outline: none;
+  border-radius: 6px;
+
   cursor: pointer;
-  transition: color 250ms ease, transform 250ms ease;
-}
+  transition: color 0.25s ease;
 
-.ctpl-search-trigger:hover {
-  color: #0097d5;
-  transform: scale(1.1);
-}
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+  }
 
-.ctpl-search-trigger svg {
-  width: 22px;
-  height: 22px;
-}
+  &:hover {
+    color: #49c5dc;
+  }
 
+  &:focus-visible {
+    outline: 2px solid #49c5dc;
+    outline-offset: 3px;
+  }
+}
 /* FULL SCREEN OVERLAY */
 
 .ctpl-search-overlay {
