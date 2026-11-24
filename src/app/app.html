@@ -21,13 +21,7 @@
   >
 </a>
     <!-- Mobile Menu -->
-    <button
-      class="mobile-toggle"
-      (click)="toggleMobileMenu()"
-      aria-label="Toggle navigation"
-    >
-      ☰
-    </button>
+    
 
     <!-- Main Navigation -->
     <nav [class.mobile-open]="mobileMenu">
@@ -134,45 +128,186 @@
   <router-outlet></router-outlet>
 </main>
 
-<!-- Footer -->
+
+
+<!-- ======================================
+     CTPL FOOTER
+====================================== -->
+
 <footer class="main-footer">
 
-  <div class="footer-brand">
-    <h2>
-      Containe<br>
-      Technologies<br>
-      Limited
-    </h2>
+  <div class="footer-container">
 
-    <p>
-      Technology for connected mobility
-      and intelligent transportation.
-    </p>
-  </div>
+    <div class="footer-grid">
 
-  <div class="footer-links">
-    @for (menu of menus; track menu.path) {
-      <a
-        [routerLink]="menu.path"
-        (click)="closeNavigation()"
-      >
-        {{ menu.name }}
-      </a>
-    }
-  </div>
+      <!-- COMPANY BRAND -->
 
-  <div class="footer-bottom">
-    © Containe Technologies Limited.
-    All Rights Reserved.
+      <div class="footer-brand">
+
+        <a routerLink="/" class="footer-logo-link">
+
+          <img
+            src="/assets/images/ctpl-logo.png"
+            alt="CTPL Logo"
+            class="footer-logo"
+          />
+
+        </a>
+
+        <h3>Containe Technologies Limited</h3>
+
+        <p>
+          Technology for connected mobility and
+          intelligent transportation.
+        </p>
+
+        <p class="footer-tagline">
+          Building a safer, smarter future.
+        </p>
+
+      </div>
+
+
+      <!-- QUICK LINKS -->
+
+      <div class="footer-column">
+
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li>
+            <a routerLink="/page/about">About Us</a>
+          </li>
+
+          <li>
+            <a routerLink="/products">Products</a>
+          </li>
+
+          <li>
+            <a routerLink="/services">Services</a>
+          </li>
+
+          <li>
+            <a routerLink="/careers">Careers</a>
+          </li>
+
+          <li>
+            <a routerLink="/blogs">Blogs</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+      <!-- RESOURCES -->
+
+      <div class="footer-column">
+
+        <h4>Resources</h4>
+
+        <ul>
+          <li>
+            <a routerLink="/page/corporate-information">
+              Investors
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/page/dealer-enquiry">
+              Dealer Centre
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/page/customer-centre">
+              Customer Centre
+            </a>
+          </li>
+
+          <li>
+            <a routerLink="/page/approvals-sop">
+              Approvals &amp; SOP
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+      <!-- CONTACT DETAILS -->
+
+      <div class="footer-column footer-contact">
+
+        <h4>Contact Us</h4>
+
+        <address>
+          #3-13-142 / 341P &amp; 342,<br>
+          Gokul Nagar, Marriguda, Mallapur,<br>
+          Secunderabad, Hyderabad,<br>
+          Telangana - 500076, India.
+        </address>
+
+        <a
+          routerLink="/page/customer-centre"
+          class="footer-contact-btn">
+
+          Contact CTPL <span>↗</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+      <p>
+        © {{ currentYear }} Containe Technologies Limited.
+        All Rights Reserved.
+      </p>
+
+      <button
+        type="button"
+        class="back-top-btn"
+        (click)="scrollToTop()">
+
+        <span>↑</span>
+        Back to Top
+
+      </button>
+
+    </div>
+
   </div>
 
 </footer>
 
-<!-- Floating Contact Button -->
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
 <a
-  routerLink="/page/customer-centre"
   class="floating-contact"
-  aria-label="Contact us"
->
-  ☎
+  href="https://wa.me/YOUR_WHATSAPP_NUMBER"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with CTPL on WhatsApp"
+  title="Chat with us on WhatsApp">
+
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true">
+
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.793.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.214 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.004 0C5.373 0 .001 5.373.001 12c0 2.116.552 4.183 1.6 6.006L0 24l6.146-1.614A11.95 11.95 0 0012.004 24C18.627 24 24 18.627 24 12S18.627 0 12.004 0zm0 21.966a9.94 9.94 0 01-5.07-1.386l-.364-.216-3.647.957.973-3.555-.237-.365A9.94 9.94 0 012.034 12c0-5.494 4.472-9.966 9.97-9.966 5.494 0 9.962 4.472 9.962 9.966s-4.468 9.966-9.962 9.966z"/>
+
+  </svg>
+
 </a>
+

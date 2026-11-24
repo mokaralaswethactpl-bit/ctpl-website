@@ -1,1 +1,119 @@
-<p>products works!</p>
+
+<!-- ======================================
+     CTPL PRODUCTS PAGE
+====================================== -->
+
+<div class="ctpl-products-page">
+
+  <section class="ctpl-products-section">
+
+    <div class="container">
+
+      <!-- ======================================
+           PAGE HEADER
+      ====================================== -->
+
+      <div class="ctpl-products-heading" appReveal>
+
+        <span class="ctpl-products-label">
+          CTPL / PRODUCTS
+        </span>
+
+        <h1>Products</h1>
+
+        <p>
+          Explore reliable vehicle safety, tracking and
+          connectivity technologies.
+        </p>
+
+      </div>
+
+
+      <!-- ======================================
+           PRODUCT CARDS
+      ====================================== -->
+
+      <div class="ctpl-products-grid">
+
+        @for (
+          p of products;
+          track p.slug;
+          let i = $index
+        ) {
+
+          <a
+            appReveal
+            class="ctpl-product-card"
+            [style.--delay]="(i % 2) * 90 + 'ms'"
+            [routerLink]="getProductRoute(p.slug)">
+
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="ctpl-product-image">
+
+              @if (p.image) {
+
+                <img
+                  [src]="p.image"
+                  [alt]="p.title"
+                  loading="lazy"
+                />
+
+              } @else {
+
+                <div class="ctpl-product-placeholder">
+
+                  <strong>CTPL</strong>
+
+                  <small>TECHNOLOGY</small>
+
+                </div>
+
+              }
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="ctpl-product-content">
+
+              <span class="ctpl-product-category">
+
+                {{ p.eyebrow }}
+
+              </span>
+
+
+              <h2>{{ p.title }}</h2>
+
+
+              <p>{{ p.summary }}</p>
+
+
+              <!-- EXPLORE PRODUCT LINK -->
+
+              <span class="ctpl-product-link">
+
+                Explore product
+
+                <span class="ctpl-product-arrow">
+                  ↗
+                </span>
+
+              </span>
+
+            </div>
+
+          </a>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

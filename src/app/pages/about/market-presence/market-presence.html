@@ -4,7 +4,9 @@
   <div class="ctpl-about-detail-page">
 
     <!-- PAGE HERO -->
+
     <section class="ctpl-about-detail-hero">
+
       <div class="container">
 
         <span class="ctpl-about-detail-hero-label">
@@ -13,17 +15,28 @@
 
         <h1>{{ p.title }}</h1>
 
+        <!-- BACK TO HOME BUTTON -->
+
+        <a routerLink="/" class="back-home-btn">
+          <span class="back-arrow">←</span>
+          Back to Home
+        </a>
+
       </div>
+
     </section>
 
 
     <!-- PAGE CONTENT -->
+
     <section class="ctpl-about-detail-section">
+
       <div class="container">
 
         <div class="ctpl-about-detail-grid">
 
           <!-- TEXT CONTENT -->
+
           <div class="ctpl-about-detail-text">
 
             <span class="ctpl-about-detail-label">
@@ -38,28 +51,38 @@
 
 
             <!-- FIRST FEATURE -->
-            @if (p.bullets && p.bullets.length > 0) {
 
-              <h3>Features & Information</h3>
+@if (p.bullets; as bullets) {
 
-              <ul class="ctpl-about-first-point">
-                <li>{{ p.bullets[0] }}</li>
-              </ul>
+  @if (bullets.length > 0) {
 
-            }
+    <h3>Features & Information</h3>
+
+    <ul class="ctpl-about-first-point">
+
+      <li>{{ bullets[0] }}</li>
+
+    </ul>
+
+  }
+
+}
 
           </div>
 
 
           <!-- IMAGE -->
+
           <div class="ctpl-about-detail-image">
 
             @if (p.image) {
+
               <img
                 [src]="p.image"
                 [alt]="p.title"
                 loading="lazy"
               />
+
             }
 
           </div>
@@ -68,17 +91,22 @@
 
 
         <!-- REMAINING FEATURES -->
+
         @if (p.bullets && p.bullets.length > 1) {
 
           <div class="ctpl-about-detail-more">
 
             <ul>
+
               @for (
                 bullet of p.bullets.slice(1);
                 track $index
               ) {
+
                 <li>{{ bullet }}</li>
+
               }
+
             </ul>
 
           </div>
@@ -86,6 +114,7 @@
         }
 
       </div>
+
     </section>
 
   </div>

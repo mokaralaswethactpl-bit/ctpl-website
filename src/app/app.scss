@@ -3,6 +3,10 @@
   display: block;
 }
 
+/* =========================================
+   MAIN HEADER
+   ========================================= */
+
 .main-header {
   position: sticky;
   top: 0;
@@ -16,13 +20,18 @@
   min-height: 80px;
   margin: auto;
   padding: 12px 5%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 25px;
 }
 
-/* COMPANY LOGO */
+
+/* =========================================
+   COMPANY LOGO
+   ========================================= */
 
 .brand {
   display: flex;
@@ -38,6 +47,11 @@
   display: block;
 }
 
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
 nav {
   display: flex;
   align-items: center;
@@ -45,10 +59,14 @@ nav {
 
   a {
     position: relative;
+
     font-size: 13px;
     font-weight: 500;
     color: #dce5ed;
+
     white-space: nowrap;
+    text-decoration: none;
+
     transition: color 0.25s ease;
 
     &:hover,
@@ -69,12 +87,24 @@ nav {
   justify-content: center;
 }
 
+
+/* =========================================
+   INTRA BUTTON
+   ========================================= */
+
 .intra-button {
   padding: 12px 20px;
-  background: linear-gradient(120deg, #0789ba, #11b4d4);
+
+  background: linear-gradient(
+    120deg,
+    #0789ba,
+    #11b4d4
+  );
+
   color: white !important;
   border-radius: 5px;
   font-weight: 700 !important;
+
   transition: 0.3s ease;
 
   &:hover {
@@ -83,58 +113,155 @@ nav {
   }
 }
 
-/* Mega Menu */
+
+/* =========================================
+   CENTERED FLOATING MEGA MENU
+   ========================================= */
 
 .mega-menu {
   position: absolute;
+
   top: 100%;
-  left: 0;
-  right: 0;
-  padding: 30px 5% 45px;
+  left: 50%;
+  right: auto;
+
+  transform: translateX(-50%);
+
+  /* DROPDOWN WIDTH */
+  width: calc(100% - 40px);
+  max-width: 1000px;
+
+  /* DROPDOWN HEIGHT */
+  height: 420px;
+  min-height: 0;
+  max-height: calc(100dvh - 90px);
+
+  padding: 22px 24px 25px;
+
+  box-sizing: border-box;
+
   background: #101f2e;
-  border-top: 1px solid #294356;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+
+  border: 1px solid #294053;
+  border-radius: 0 0 14px 14px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
   animation: menuReveal 0.25s ease;
+
+  z-index: 1000;
+
+  /* DROPDOWN SCROLLBAR */
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #36546a;
+    border-radius: 10px;
+  }
 }
 
+
+/* =========================================
+   MEGA MENU HEADING
+   ========================================= */
+
 .mega-heading {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   h2 {
-    font-size: 32px;
-    margin: 10px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0f5fa;
+    margin: 8px 0;
   }
 
   p {
     color: #9eb1c3;
+    font-size: 13px;
+    line-height: 1.5;
     margin: 0;
-    font-size: 14px;
   }
 }
 
+
+/* =========================================
+   MEGA MENU CARD GRID
+   ========================================= */
+
 .mega-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 15px;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  grid-auto-rows: 85px;
+
+  align-content: start;
+  align-items: stretch;
+
+  width: 100%;
+
+  gap: 12px;
 }
+
+
+/* =========================================
+   MEGA MENU CARDS
+   ========================================= */
 
 .mega-card {
   position: relative;
+
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 22px;
-  min-height: 110px;
+
+  width: 100%;
+  min-width: 0;
+
+  height: 85px;
+  min-height: 85px;
+
+  padding: 12px 14px;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
   border-radius: 8px;
   border: 1px solid #294053;
+
   background: #172b3d;
+
+  text-decoration: none;
+  cursor: pointer;
+
   overflow: hidden;
-  transition: all 0.3s ease;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
     border-color: #35c5df;
     background: #1a3448;
-    transform: translateY(-4px);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 6px 18px rgba(0, 0, 0, 0.15);
 
     .menu-icon {
       background: #20b5d1;
@@ -146,145 +273,656 @@ nav {
       transform: translate(3px, -3px);
     }
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #49c5dc;
+    outline-offset: -3px;
+  }
 }
 
+
+/* =========================================
+   MEGA MENU ICON
+   ========================================= */
+
 .menu-icon {
-  width: 45px;
-  height: 45px;
+  width: 38px;
+  height: 38px;
+
   flex-shrink: 0;
+
   display: grid;
   place-items: center;
+
   border-radius: 8px;
+
   background: rgba(49, 190, 215, 0.1);
   color: #3bc8dc;
-  font-size: 24px;
+
+  font-size: 20px;
+
   transition: 0.3s ease;
 }
+
+
+/* =========================================
+   MEGA MENU CARD CONTENT
+   ========================================= */
 
 .menu-content {
   flex: 1;
+  min-width: 0;
 
   h3 {
-    margin: 0 0 8px;
-    font-size: 16px;
+    margin: 0 0 5px;
+
+    color: #f0f5fa;
+
+    font-size: 14px;
     font-weight: 600;
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
   }
 
   p {
-    font-size: 12px;
+    font-size: 11px;
     color: #9eb1c3;
+
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
+
+   display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+line-clamp: 2;
+overflow: hidden;
   }
 }
 
+
+/* =========================================
+   MEGA MENU ARROW
+   ========================================= */
+
 .menu-arrow {
+  flex-shrink: 0;
+
   color: #7b95a9;
+  font-size: 14px;
+
   transition: 0.3s ease;
 }
 
+
+/* =========================================
+   MAIN PAGE CONTENT
+   ========================================= */
+
 .main-content {
+  width: 100%;
+  min-width: 0;
   min-height: 70vh;
 }
 
-/* Footer */
+
+
+/* =========================================
+   CTPL PROFESSIONAL FOOTER
+========================================= */
 
 .main-footer {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 50px;
-  padding: 65px 5% 20px;
+  position: relative;
+
+  display: block;
+  width: 100%;
+
+  padding: 45px 0 0;
+
   background: linear-gradient(
     120deg,
     #091620,
     #10354a
   );
+
+  color: #ffffff;
+
   border-top: 1px solid #294053;
+
+  box-sizing: border-box;
 }
+
+
+/* FOOTER TOP ACCENT */
+
+.main-footer::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #11b4d4,
+    transparent
+  );
+}
+
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+  width: 90%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* FOOTER GRID */
+
+.footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.8fr)
+    minmax(0, 1fr)
+    minmax(0, 1.2fr);
+
+  align-items: start;
+
+  gap: 35px;
+
+  padding-bottom: 35px;
+}
+
+
+/* =========================================
+   COMPANY BRAND
+========================================= */
 
 .footer-brand {
+  min-width: 0;
+}
 
-  h2 {
-    font-size: 32px;
-    margin: 0;
-    line-height: 1.1;
-  }
+.footer-logo-link {
+  display: inline-block;
 
-  p {
-    max-width: 280px;
-    font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  display: block;
+
+  width: 165px;
+  height: 55px;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+.footer-brand h3 {
+  margin: 0 0 12px;
+
+  color: #f0f5fa;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.footer-brand p {
+  max-width: 280px;
+
+  margin: 0 0 10px;
+
+  color: #a1b3c3;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-brand .footer-tagline {
+  color: #55bad3;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   FOOTER NAVIGATION COLUMNS
+========================================= */
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-column h4 {
+  position: relative;
+
+  margin: 0 0 25px;
+  padding-bottom: 12px;
+
+  color: #f0f5fa;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+
+/* HEADING UNDERLINE */
+
+.footer-column h4::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 28px;
+  height: 2px;
+
+  border-radius: 4px;
+
+  background: #11b4d4;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer-column li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li a {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #b0c2d2;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    color: #49c5dc;
+
+    transform: translateX(4px);
   }
 }
 
-.footer-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-content: start;
-  gap: 25px;
 
-  a {
-    font-size: 14px;
-    color: #b0c2d2;
-    transition: 0.2s;
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
 
-    &:hover {
-      color: #49c5dc;
+.footer-contact address {
+  margin: 0 0 20px;
+
+  color: #b0c2d2;
+
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.9;
+
+  overflow-wrap: break-word;
+}
+
+
+/* CONTACT BUTTON */
+
+.footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 11px 18px;
+
+  background: linear-gradient(
+    120deg,
+    #0789ba,
+    #11b4d4
+  );
+
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  span {
+    display: inline-block;
+
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 8px 20px rgba(17, 180, 212, 0.2);
+
+    span {
+      transform: translate(3px, -3px);
     }
   }
 }
 
+
+/* =========================================
+   COPYRIGHT SECTION
+========================================= */
+
 .footer-bottom {
-  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
   border-top: 1px solid #294053;
-  padding-top: 20px;
-  font-size: 12px;
-  color: #9eb1c3;
 }
 
-/* Floating Contact */
+.footer-bottom p {
+  margin: 0;
 
-.floating-contact {
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  width: 55px;
-  height: 55px;
-  display: grid;
-  place-items: center;
-  background: #20cf70;
-  color: white;
-  border-radius: 50%;
-  font-size: 25px;
-  z-index: 999;
-  box-shadow: 0 8px 25px #0004;
-  transition: 0.3s;
+  color: #9eb1c3;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   BACK TO TOP BUTTON
+========================================= */
+
+.back-top-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 9px 15px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: #dceaf3;
+
+  border: 1px solid #365568;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  span {
+    display: inline-block;
+
+    color: #49c5dc;
+
+    font-size: 17px;
+
+    transition: transform 0.25s ease;
+  }
 
   &:hover {
-    transform: scale(1.1);
+    background: rgba(17, 180, 212, 0.1);
+
+    border-color: #49c5dc;
+    color: #ffffff;
+
+    span {
+      transform: translateY(-3px);
+    }
   }
 }
 
-.mobile-toggle {
-  display: none;
-  color: white;
-  background: transparent;
-  border: 0;
-  font-size: 26px;
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+  }
+
 }
 
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .main-footer {
+    padding-top: 35px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    padding-bottom: 25px;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .footer-column li a,
+  .footer-contact-btn,
+  .footer-contact-btn span,
+  .back-top-btn,
+  .back-top-btn span {
+    transition: none;
+  }
+
+}
+
+/* FLOATING WHATSAPP BUTTON */
+
+.floating-contact {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25D366;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  z-index: 999;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+  }
+
+  &:hover {
+    background: #20ba59;
+    color: #ffffff;
+    transform: scale(1.1);
+
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .floating-contact {
+    width: 48px;
+    height: 48px;
+
+    right: 18px;
+    bottom: 18px;
+
+    svg {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+}
+
+/* =========================================
+   DROPDOWN OPENING ANIMATION
+   ========================================= */
+
 @keyframes menuReveal {
+
   from {
     opacity: 0;
-    transform: translateY(-10px);
+
+    transform: translate(-50%, -8px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+
+    transform: translate(-50%, 0);
   }
+
 }
 
-/* Responsive Design */
+
+/* =========================================
+   DESKTOP RESPONSIVE
+   ========================================= */
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+
+  nav {
+    gap: 16px;
+  }
+
+  .navigation-container {
+    gap: 18px;
+  }
+
+  .mega-menu {
+    max-width: 1000px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
 
 @media (max-width: 1200px) {
 
@@ -297,15 +935,22 @@ nav {
 
     &.mobile-open {
       display: flex;
+
       position: absolute;
+
       top: 100%;
       left: 0;
       right: 0;
+
       align-items: stretch;
       flex-direction: column;
+
       background: #101f2e;
+
       padding: 25px;
+
       max-height: 80vh;
+
       overflow-y: auto;
     }
   }
@@ -313,9 +958,25 @@ nav {
   .mega-menu {
     display: none;
   }
+
 }
 
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
 @media (max-width: 768px) {
+
+  .navigation-container {
+    min-height: 70px;
+    padding: 10px 5%;
+  }
+
+  .company-logo {
+    width: 140px;
+    height: 48px;
+  }
 
   .main-footer {
     grid-template-columns: 1fr;
@@ -325,7 +986,113 @@ nav {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .brand .brand-name {
-    font-size: 20px;
+  .floating-contact {
+    width: 48px;
+    height: 48px;
+
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 22px;
   }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mega-menu {
+    animation: none;
+  }
+
+  .mega-card,
+  .menu-icon,
+  .menu-arrow,
+  .intra-button,
+  .floating-contact {
+    transition: none;
+  }
+
+}
+
+/* FOOTER ALIGNMENT CORRECTION */
+
+.main-footer {
+  display: block;
+  width: 100%;
+  padding: 45px 0 0;
+  box-sizing: border-box;
+}
+
+.main-footer .footer-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-footer .footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.8fr)
+    minmax(0, 1fr)
+    minmax(0, 1.2fr);
+
+  gap: 35px;
+  align-items: start;
+  padding-bottom: 35px;
+}
+
+.main-footer .footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer .footer-column li a {
+  display: inline-flex;
+  color: #b0c2d2;
+  font-size: 13px;
+}
+
+.main-footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  gap: 20px;
+  border-top: 1px solid #294053;
+}
+
+@media (max-width: 1024px) {
+  .main-footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .main-footer .footer-brand,
+  .main-footer .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .main-footer .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+ .mobile-toggle {
+  display: none !important;
 }

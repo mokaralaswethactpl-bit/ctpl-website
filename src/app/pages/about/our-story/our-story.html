@@ -4,13 +4,22 @@
   <div class="ctpl-about-detail-page">
 
     <section class="ctpl-about-detail-hero">
+
       <div class="container">
-        <span class="ctpl-about-detail-hero-label">
+
+        <div class="ctpl-about-detail-hero-label">
           CTPL / ABOUT
-        </span>
+        </div>
 
         <h1>{{ p.title }}</h1>
+
+        <a routerLink="/" class="back-home-btn">
+          <span class="back-arrow">←</span>
+          Back to Home
+        </a>
+
       </div>
+
     </section>
 
     <section class="ctpl-about-detail-section">
@@ -32,11 +41,19 @@
 
             <h3>Features & Information</h3>
 
-            <ul class="ctpl-about-first-point">
-              @if (p.bullets?.length) {
-                <li>{{ p.bullets?.[0] }}</li>
-              }
-            </ul>
+<ul class="ctpl-about-first-point">
+
+  @if (p.bullets; as bullets) {
+
+    @if (bullets.length > 0) {
+
+      <li>{{ bullets[0] }}</li>
+
+    }
+
+  }
+
+</ul>
 
           </div>
 
