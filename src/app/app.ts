@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+
 import {
   RouterOutlet,
   RouterLink,
@@ -23,82 +24,100 @@ export class App {
   mobileMenu = false;
 
   menus = [
+
+    // ABOUT
     {
       name: 'About',
-      path: 'about',
+      path: '/page/about',
       children: [
-        { name: 'Our Story', path: 'about/our-story' },
-        { name: 'Vision, Mission & Values', path: 'about/vision' },
-        { name: 'Strength & Infrastructure', path: 'about/strength' },
-        { name: 'Market Presence', path: 'about/market-presence' }
+        { name: 'Our Story', path: '/page/our-story' },
+        { name: 'Vision, Mission & Values', path: '/page/vision-mission-values' },
+        { name: 'Strength & Infrastructure', path: '/page/strength-infrastructure' },
+        { name: 'Market Presence', path: '/page/market-presence' }
       ]
     },
+
+    // PRODUCTS
     {
       name: 'Products',
-      path: 'products',
+      path: '/products',
       children: [
-        { name: 'AIS-140 / IS 16833', path: 'products/ais' },
-        { name: 'Embedded e-SIM', path: 'products/e-sim' },
-        { name: 'GSLD', path: 'products/gsld' },
-        { name: 'LIMITS', path: 'products/limits' },
-        { name: 'Motoreye', path: 'products/motoreye' },
-        { name: 'Trano RFID', path: 'products/rfid' }
+        { name: 'AIS-140 / IS 16833', path: '/products/ais' },
+        { name: 'Embedded e-SIM', path: '/products/e-sim' },
+        { name: 'GSLD', path: '/products/gsld' },
+        { name: 'LIMITS', path: '/products/limits' },
+        { name: 'Motoreye', path: '/products/motoreye' },
+        { name: 'Trano RFID', path: '/products/rfid' }
       ]
     },
+
+    // SERVICES
     {
       name: 'Services',
-      path: 'services',
+      path: '/services',
       children: [
-        { name: 'TRANO', path: 'services/trano' },
-        { name: 'TRANOPRO', path: 'services/trano-pro' },
-        { name: 'CTPL ERP', path: 'services/erp' },
-        { name: 'MIS - CONVERTZ', path: 'services/mis' },
-        { name: 'Unified Management System', path: 'services/ums' },
-        { name: 'CTPL Dialer', path: 'services/dialer' },
-        { name: 'VLTD State Integrations', path: 'services/vltd' },
-        { name: 'SLD Services', path: 'services/sld' }
+        { name: 'TRANO', path: '/services/trano' },
+        { name: 'TRANOPRO', path: '/services/trano-pro' },
+        { name: 'CTPL ERP', path: '/services/erp' },
+        { name: 'MIS - CONVERTZ', path: '/services/mis' },
+        { name: 'Unified Management System', path: '/services/ums' },
+        { name: 'CTPL Dialer', path: '/services/dialer' },
+        { name: 'VLTD State Integrations', path: '/services/vltd' },
+        { name: 'SLD Services', path: '/services/sld' }
       ]
     },
+
+    // INVESTORS
     {
       name: 'Investors',
-      path: 'investors',
+      path: '/page/investors',
       children: [
-        { name: 'Corporate Governance', path: 'investors/corporate-governance' },
-        { name: 'Corporate Information', path: 'investors/corporate-information' },
-        { name: 'IPO', path: 'investors/ipo' },
-        { name: 'Results', path: 'investors/results' },
-        { name: 'Rights Issue', path: 'investors/rights-issue' },
-        { name: 'Shareholdings', path: 'investors/shareholdings' }
+        { name: 'Corporate Governance', path: '/page/corporate-governance' },
+        { name: 'Corporate Information', path: '/page/corporate-information' },
+        { name: 'IPO', path: '/page/ipo' },
+        { name: 'Results', path: '/page/results-reports' },
+        { name: 'Rights Issue', path: '/page/rights-issue' },
+        { name: 'Shareholdings', path: '/page/shareholdings' }
       ]
     },
+
+    // DEALER CENTRE
     {
       name: 'Dealer Centre',
-      path: 'dealer-centre',
+      path: '/page/dealer-centre',
       children: [
-        { name: 'Approvals', path: 'dealer-centre/approvals' },
-        { name: 'Dealer Enquiry', path: 'dealer-centre/dealer-enquiry' },
-        { name: 'e-SIM Validity', path: 'dealer-centre/esim-validity' },
-        { name: 'RFC', path: 'dealer-centre/rfc' },
-        { name: 'SMS Commands', path: 'dealer-centre/sms-commands' },
-        { name: 'VLT Data Validity', path: 'dealer-centre/vlt-data-validity' }
+        { name: 'Approvals', path: '/page/approvals-sop' },
+        { name: 'Dealer Enquiry', path: '/page/dealer-enquiry' },
+        { name: 'e-SIM Validity', path: '/page/esim-validity' },
+        { name: 'RFC', path: '/page/rfc' },
+        { name: 'SMS Commands', path: '/page/tranopro-sms-commands' },
+        { name: 'VLT Data Validity', path: '/page/vltd-data-validity' }
       ]
     },
+
+    // CUSTOMER CENTRE
     {
       name: 'Customer Centre',
-      path: 'customer-centre',
+      path: '/page/customer-centre',
       children: []
     },
+
+    // CAREERS
     {
       name: 'Careers',
-      path: 'careers',
+      path: '/careers',
       children: []
     },
+
+    // BLOGS
     {
       name: 'Blogs',
-      path: 'blogs',
+      path: '/blogs',
       children: []
     }
+
   ];
+
 
   openMenu(path: string): void {
     this.activeMenu = path;
@@ -116,4 +135,5 @@ export class App {
     this.activeMenu = '';
     this.mobileMenu = false;
   }
+
 }

@@ -22,20 +22,20 @@
   gap: 25px;
 }
 
+/* COMPANY LOGO */
+
 .brand {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+  text-decoration: none;
+}
 
-  .brand-name {
-    font-size: 24px;
-    font-weight: 750;
-    line-height: 1.05;
-    letter-spacing: -1px;
-    color: #ffffff;
-  }
-
-  small {
-    font-size: 12px;
-  }
+.company-logo {
+  width: 165px;
+  height: 55px;
+  object-fit: contain;
+  display: block;
 }
 
 nav {

@@ -8,18 +8,18 @@
   <div class="navigation-container">
 
     <!-- Company Logo -->
-    <a
-      class="brand"
-      routerLink="/"
-      (click)="closeNavigation()"
-    >
-      <div class="brand-name">
-        Containe<br>
-        Technologies
-        <small>Limited</small>
-      </div>
-    </a>
-
+    <!-- Company Logo -->
+<a
+  class="brand"
+  routerLink="/"
+  (click)="closeNavigation()"
+>
+  <img
+    src="/assets/images/ctpl-logo.png"
+    alt="Containe Technologies Limited"
+    class="company-logo"
+  >
+</a>
     <!-- Mobile Menu -->
     <button
       class="mobile-toggle"
@@ -44,7 +44,7 @@
 
       @for (menu of menus; track menu.path) {
         <a
-          [routerLink]="['/', menu.path]"
+          [routerLink]="menu.path"
           routerLinkActive="active"
           (mouseenter)="openMenu(menu.children.length ? menu.path : '')"
           (focus)="openMenu(menu.children.length ? menu.path : '')"
@@ -105,7 +105,7 @@
           @for (child of menu.children; track child.path) {
             <a
               class="mega-card"
-              [routerLink]="['/', child.path]"
+              [routerLink]="child.path"
               (click)="closeNavigation()"
             >
               <div class="menu-icon">◈</div>
@@ -152,7 +152,10 @@
 
   <div class="footer-links">
     @for (menu of menus; track menu.path) {
-      <a [routerLink]="['/', menu.path]">
+      <a
+        [routerLink]="menu.path"
+        (click)="closeNavigation()"
+      >
         {{ menu.name }}
       </a>
     }
@@ -167,7 +170,7 @@
 
 <!-- Floating Contact Button -->
 <a
-  routerLink="/customer-centre"
+  routerLink="/page/customer-centre"
   class="floating-contact"
   aria-label="Contact us"
 >
