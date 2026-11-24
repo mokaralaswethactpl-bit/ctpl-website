@@ -1,16 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
-#body{
-    margin: 0;
-    padding: 0;
+
+:root {
+  --primary: #11b4d4;
+  --primary-dark: #0789ba;
+  --background: #091620;
+  --header-background: #0d1d2a;
+  --surface: #112536;
+  --surface-hover: #172b3d;
+  --border: #254053;
+  --text-primary: #f0f5fa;
+  --text-secondary: #a1b3c3;
+  --accent: #81cbd9;
 }
 
-.theame-light{
-    color: white;
+* {
+  box-sizing: border-box;
 }
 
-
-.theame-dark {
-    color: darkblue;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.035em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: linear-gradient(
+    110deg,
+    var(--primary-dark),
+    var(--primary)
+  );
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #11b4d430;
+  }
+}
+
+.eyebrow {
+  color: #55bad3;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+::selection {
+  background: #11b4d4;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #091620;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #36546a;
+  border-radius: 10px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #58d6e7;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

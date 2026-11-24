@@ -1,1 +1,175 @@
-<router-outlet></router-outlet>
+
+<!-- HEADER -->
+<header
+  class="main-header"
+  (mouseleave)="closeMenu()"
+  (keydown.escape)="closeNavigation()"
+>
+  <div class="navigation-container">
+
+    <!-- Company Logo -->
+    <a
+      class="brand"
+      routerLink="/"
+      (click)="closeNavigation()"
+    >
+      <div class="brand-name">
+        Containe<br>
+        Technologies
+        <small>Limited</small>
+      </div>
+    </a>
+
+    <!-- Mobile Menu -->
+    <button
+      class="mobile-toggle"
+      (click)="toggleMobileMenu()"
+      aria-label="Toggle navigation"
+    >
+      ☰
+    </button>
+
+    <!-- Main Navigation -->
+    <nav [class.mobile-open]="mobileMenu">
+
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (mouseenter)="closeMenu()"
+        (click)="closeNavigation()"
+      >
+        Home
+      </a>
+
+      @for (menu of menus; track menu.path) {
+        <a
+          [routerLink]="['/', menu.path]"
+          routerLinkActive="active"
+          (mouseenter)="openMenu(menu.children.length ? menu.path : '')"
+          (focus)="openMenu(menu.children.length ? menu.path : '')"
+          (click)="closeNavigation()"
+        >
+          {{ menu.name }}
+
+          @if (menu.children.length) {
+            <span class="dropdown-arrow">⌄</span>
+          }
+        </a>
+      }
+
+      <!-- Search Button -->
+      <a
+        routerLink="/search"
+        class="search-button"
+        aria-label="Search"
+        (click)="closeNavigation()"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+        >
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </a>
+
+      <a href="/intra" class="intra-button">
+        INTRA
+      </a>
+
+    </nav>
+  </div>
+
+  <!-- Mega Menu -->
+  @for (menu of menus; track menu.path) {
+    @if (activeMenu === menu.path && menu.children.length) {
+      <section class="mega-menu">
+
+        <div class="mega-heading">
+          <span class="eyebrow">CTPL / EXPLORE</span>
+
+          <h2>{{ menu.name }}</h2>
+
+          <p>
+            Explore our {{ menu.name.toLowerCase() }}.
+          </p>
+        </div>
+
+        <div class="mega-grid">
+
+          @for (child of menu.children; track child.path) {
+            <a
+              class="mega-card"
+              [routerLink]="['/', child.path]"
+              (click)="closeNavigation()"
+            >
+              <div class="menu-icon">◈</div>
+
+              <div class="menu-content">
+                <h3>{{ child.name }}</h3>
+
+                <p>
+                  Explore {{ child.name }} and learn more.
+                </p>
+              </div>
+
+              <span class="menu-arrow">↗</span>
+            </a>
+          }
+
+        </div>
+      </section>
+    }
+  }
+
+</header>
+
+<!-- Dynamic Page Content -->
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Footer -->
+<footer class="main-footer">
+
+  <div class="footer-brand">
+    <h2>
+      Containe<br>
+      Technologies<br>
+      Limited
+    </h2>
+
+    <p>
+      Technology for connected mobility
+      and intelligent transportation.
+    </p>
+  </div>
+
+  <div class="footer-links">
+    @for (menu of menus; track menu.path) {
+      <a [routerLink]="['/', menu.path]">
+        {{ menu.name }}
+      </a>
+    }
+  </div>
+
+  <div class="footer-bottom">
+    © Containe Technologies Limited.
+    All Rights Reserved.
+  </div>
+
+</footer>
+
+<!-- Floating Contact Button -->
+<a
+  routerLink="/customer-centre"
+  class="floating-contact"
+  aria-label="Contact us"
+>
+  ☎
+</a>
