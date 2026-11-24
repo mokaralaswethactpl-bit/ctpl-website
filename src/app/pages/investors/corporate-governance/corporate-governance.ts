@@ -11,13 +11,20 @@ import { RouterLink } from '@angular/router';
 })
 export class CorporateGovernanceComponent {
 
+  // Currently selected tab
   activeTab = signal(0);
 
+  // Corporate Governance tabs
   tabs = [
     'Investor Information',
     'Share holding pattern',
     'Compliance Report on CG',
     'Investor Grievances Report'
   ];
+
+  // Change active tab when clicked
+  selectTab(index: number) {
+    this.activeTab.set(index);
+  }
 
 }
