@@ -7,7 +7,7 @@ import { RevealDirective } from '../../../reveal.directive';
   selector: 'app-vltd-data-validity',
   standalone: true,
   imports: [RouterLink, RevealDirective],
-  templateUrl: './vltd-data-validity.html',
-  styleUrl: './vltd-data-validity.scss'
+  templateUrl: './vlt-data-validity.html',
+  styleUrl: './vlt-data-validity.scss'
 })
 export class VltdDataValidityComponent {}
