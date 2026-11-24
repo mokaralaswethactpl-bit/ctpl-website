@@ -1,3 +1,4 @@
+
 /* ==========================================
    CTPL HOME PAGE STYLES
    home.scss
@@ -32,21 +33,16 @@
 .hero-photo {
   position: absolute;
   inset: 0;
-
-  background-image:
-    url('/assets/images/vehicle-hero.png');
-
+  background-image: url('/assets/images/vehicle-hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   animation: heroPan 22s ease-in-out infinite alternate;
 }
 
 .hero-scrim {
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     90deg,
     rgba(7, 27, 47, 0.98) 0%,
@@ -59,14 +55,12 @@
   position: relative;
   display: flex;
   align-items: center;
-
   min-height: 670px;
   padding: 105px 0 85px;
 }
 
 .hero-copy {
   max-width: 720px;
-
   animation: fadeRise 0.75s ease both;
 }
 
@@ -102,7 +96,6 @@
   position: absolute;
   right: 0;
   bottom: 32px;
-
   font-size: 10px;
   letter-spacing: 2px;
   color: #c7e0e6;
@@ -121,15 +114,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   gap: 20px;
   min-height: 50px;
   padding: 15px 22px;
-
   border-radius: 9px;
   font-size: 14px;
   font-weight: 700;
-
   transition: background-color 0.25s ease;
 }
 
@@ -160,10 +150,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   padding: 35px 20px;
-
   background: transparent;
   border: none;
 }
@@ -177,26 +165,20 @@
 .stat-strip .stat-inner {
   width: 100%;
   max-width: 1200px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 35px;
-
   padding: 35px 40px;
   margin: 0 auto;
-
   border-radius: 18px;
-
   background: linear-gradient(
     135deg,
     #173d53,
     #0b263a,
     #071b2c
   );
-
   border: 1px solid rgba(80, 210, 245, 0.35);
-
   box-shadow:
     0 25px 45px rgba(0, 0, 0, 0.3),
     0 10px 20px rgba(0, 0, 0, 0.2);
@@ -225,7 +207,6 @@
 .stat-inner p {
   flex: 1;
   margin: 0;
-
   color: #eaf6fc;
   line-height: 1.8;
 }
@@ -250,7 +231,6 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 35px;
-
   margin-bottom: 42px;
 }
 
@@ -268,7 +248,6 @@
 .section-heading > p {
   max-width: 310px;
   margin: 0 0 5px;
-
   color: var(--home-muted);
   font-size: 15px;
   line-height: 1.7;
@@ -279,42 +258,40 @@
 ========================================== */
 
 .product-portfolio-section {
-  padding: 100px 0;
+  padding: 70px 0;
   background: var(--home-soft);
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .product-card {
   display: block;
   overflow: hidden;
-
   background: #ffffff;
   border: 1px solid var(--home-border);
-  border-radius: 14px;
-
+  border-radius: 12px;
   transition:
     border-color 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .product-card:hover {
   border-color: #b9d5dc;
-  box-shadow: 0 15px 35px rgba(16, 40, 63, 0.1);
+  box-shadow: 0 12px 25px rgba(16, 40, 63, 0.1);
+  transform: translateY(-4px);
 }
 
 .product-image {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 230px;
-  padding: 24px;
-
+  height: 155px;
+  padding: 16px;
   background: #edf3f4;
   overflow: hidden;
 }
@@ -325,10 +302,8 @@
   max-height: 100%;
   width: auto;
   height: auto;
-
   object-fit: contain;
   object-position: center;
-
   filter: none;
   opacity: 1;
 }
@@ -343,7 +318,7 @@
 
 .product-placeholder {
   color: #b0c9d2;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 800;
 }
 
@@ -355,39 +330,36 @@
 }
 
 .card-body {
-  padding: 22px;
+  padding: 16px;
 }
 
 .card-tag {
   display: block;
-  margin-bottom: 12px;
-
+  margin-bottom: 8px;
   color: var(--home-teal);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 .card-body h3 {
-  margin: 0 0 9px;
-  font-size: 18px;
+  margin: 0 0 7px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .card-body p {
   color: var(--home-muted);
-  font-size: 13px;
-  line-height: 1.7;
-
-  min-height: 62px;
+  font-size: 12px;
+  line-height: 1.5;
+  min-height: 45px;
 }
 
 .card-link {
   display: inline-block;
   color: var(--home-teal);
-
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
 }
 
@@ -403,7 +375,6 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-
   padding: 100px 0;
   background: #eaf5fa;
 }
@@ -412,11 +383,9 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, 60px);
   grid-auto-rows: 60px;
-
   pointer-events: auto;
   background: transparent;
 }
@@ -424,10 +393,8 @@
 .interactive-grid-section .grid-cell {
   width: 60px;
   height: 60px;
-
   background: transparent;
   border: 1px solid rgba(0, 174, 239, 0.12);
-
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
@@ -459,13 +426,10 @@
 .service-card {
   display: flex;
   gap: 16px;
-
   padding: 27px 23px;
-
   background: #ffffff;
   border: 1px solid var(--home-border);
   border-radius: 12px;
-
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease;
@@ -479,15 +443,12 @@
 .service-icon {
   display: grid;
   place-items: center;
-
   flex: 0 0 50px;
   width: 50px;
   height: 50px;
-
   background: #e2f2f5;
   color: var(--home-teal);
   border-radius: 12px;
-
   font-size: 24px;
 }
 
@@ -515,7 +476,6 @@
 .feature {
   padding: 90px 0;
   overflow: hidden;
-
   background: var(--home-navy);
   color: #ffffff;
 }
@@ -535,7 +495,6 @@
 .feature p {
   max-width: 580px;
   margin-bottom: 25px;
-
   color: #cadce5;
   line-height: 1.8;
 }
@@ -543,16 +502,13 @@
 .feature-visual {
   display: grid;
   place-items: center;
-
   min-height: 320px;
   padding: 24px;
-
   background: linear-gradient(
     130deg,
     #244965,
     #0a253b
   );
-
   border: 1px solid #34576c;
   border-radius: 22px;
 }
@@ -572,12 +528,8 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-
   padding: 180px 0 70px;
-
-  background-image:
-    url('/assets/images/ctpl-building.jpg');
-
+  background-image: url('/assets/images/ctpl-building.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -588,13 +540,11 @@
 .explore-ctpl-section::before {
   content: "";
   display: block;
-
   position: absolute;
   top: 120px;
   right: 0;
   bottom: 0;
   left: 0;
-
   background: rgba(100, 100, 100, 0.3);
   pointer-events: none;
   z-index: 0;
@@ -626,11 +576,9 @@
 
 .pathway {
   display: block;
-
   padding: 30px;
   border: 1px solid #294459;
   border-radius: 13px;
-
   background: #142a3e;
   color: #ffffff;
 }
@@ -662,7 +610,6 @@
 
 .cta-section {
   padding: 65px 0;
-
   background: #0c2944;
   color: #ffffff;
 }
@@ -693,11 +640,9 @@
 :host ::ng-deep .will-reveal {
   opacity: 0;
   transform: translateY(24px);
-
   transition:
     opacity 0.6s ease,
     transform 0.6s ease;
-
   transition-delay: var(--delay, 0ms);
 }
 
@@ -803,7 +748,11 @@
 
 @media (max-width: 1120px) {
 
-  .product-grid,
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
   .service-grid {
     gap: 14px;
   }
@@ -873,7 +822,6 @@
   .stat-strip .stat-inner {
     flex-direction: column;
     align-items: flex-start;
-
     padding: 25px;
     gap: 20px;
   }
