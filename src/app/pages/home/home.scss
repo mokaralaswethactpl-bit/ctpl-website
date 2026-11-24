@@ -970,3 +970,516 @@
   }
 
 }
+ 
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* HERO SECTION ALIGNMENT */
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero .hero-inner {
+  position: relative;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 0 100px;
+  box-sizing: border-box;
+}
+
+.hero .hero-copy {
+  width: 100%;
+  max-width: 740px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.hero-copy h1 {
+  font-size: clamp(42px, 5.5vw, 78px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  margin: 24px 0 30px;
+}
+
+.hero-copy h1 em {
+  font-style: normal;
+}
+
+.hero-copy .hero-description {
+  width: 100%;
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 30px;
+}
+
+.hero-copy .button-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-label {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+  .hero .hero-inner {
+    width: 90%;
+    padding: 65px 0 85px;
+  }
+
+  .hero .hero-copy {
+    max-width: 85%;
+  }
+
+  .hero-copy h1 {
+    font-size: 58px;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .hero .hero-inner {
+    width: 90%;
+    padding: 45px 0 75px;
+  }
+
+  .hero .hero-copy {
+    max-width: 100%;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(36px, 8vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-copy .hero-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-label {
+    font-size: 9px;
+    bottom: 20px;
+  }
+}
+
+
+/* =========================================
+   CTPL HOMEPAGE ALIGNMENT
+   ========================================= */
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   COMMON CONTAINER
+   ========================================= */
+
+:host .container {
+  width: calc(100% - 2 * var(--container-spacing, 5%));
+  max-width: var(--container-width, 1440px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero .hero-inner {
+  position: relative;
+  margin-inline: auto;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 740px;
+  min-width: 0;
+  text-align: left;
+}
+
+.hero-copy h1 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.hero-description {
+  width: 100%;
+  max-width: 740px;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* =========================================
+   EXPERIENCE SECTION
+   ========================================= */
+
+.stat-strip {
+  width: 100%;
+}
+
+.stat-inner {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.stat-figure {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stat-inner p {
+  min-width: 0;
+  margin: 0;
+}
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  min-width: 0;
+}
+
+.section-heading > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-heading > p {
+  flex: 0 1 340px;
+  max-width: 340px;
+  min-width: 0;
+  margin: 0;
+}
+
+.section-heading h2 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* =========================================
+   PRODUCT PORTFOLIO
+   ========================================= */
+
+.product-portfolio-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  width: 100%;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.product-image {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.card-body h3,
+.card-body p {
+  overflow-wrap: break-word;
+}
+
+.card-body .card-link {
+  margin-top: auto;
+}
+
+/* =========================================
+   DIGITAL SERVICES
+   ========================================= */
+
+.interactive-grid-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  width: 100%;
+}
+
+.service-card {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.service-card > div {
+  min-width: 0;
+}
+
+.service-card h3,
+.service-card p {
+  overflow-wrap: break-word;
+}
+
+.section-cta {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* BACKGROUND SHOULD NOT BLOCK CARD CLICKS */
+
+.grid-hover-layer,
+.grid-cell,
+.grid-glow-square {
+  pointer-events: none;
+}
+
+/* =========================================
+   VLTD / SAFETY FIRST SECTION
+   ========================================= */
+
+.feature {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.feature-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 60px;
+}
+
+.feature-layout > div {
+  min-width: 0;
+}
+
+.feature-visual {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-visual img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* =========================================
+   STAKEHOLDER SECTION
+   ========================================= */
+
+.explore-ctpl-section {
+  width: 100%;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  width: 100%;
+}
+
+.pathway {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.pathway .card-link {
+  margin-top: auto;
+}
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.connect-section {
+  width: 100%;
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cta-inner > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.cta-inner > a {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+  .hero-copy {
+    max-width: 85%;
+  }
+
+  .product-grid,
+  .service-grid,
+  .pathway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .stat-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .stat-inner > .text-link {
+    grid-column: 2;
+  }
+
+  .feature-layout {
+    gap: 30px;
+  }
+
+  .section-heading {
+    gap: 25px;
+  }
+
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .section-heading > p {
+    flex: auto;
+    max-width: 100%;
+  }
+
+  .product-grid,
+  .service-grid,
+  .pathway-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .stat-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .stat-inner > .text-link {
+    grid-column: auto;
+  }
+
+  .feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .section-cta {
+    justify-content: flex-start;
+  }
+
+}

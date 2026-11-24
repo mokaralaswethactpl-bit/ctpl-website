@@ -129,3 +129,74 @@ button:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================================
+   GLOBAL WEBSITE ALIGNMENT
+   ========================================= */
+
+:root {
+  --container-width: 1440px;
+  --container-spacing: 5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+}
+
+/* GLOBAL CONTAINER */
+
+.container {
+  width: calc(100% - 2 * var(--container-spacing));
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+/* PAGE SECTIONS */
+
+main,
+.main-content {
+  width: 100%;
+  min-width: 0;
+}
+
+section {
+  max-width: 100%;
+}
+
+/* RESPONSIVE CONTAINER */
+
+@media (max-width: 1024px) {
+  :root {
+    --container-spacing: 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-spacing: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-spacing: 5%;
+  }
+}
