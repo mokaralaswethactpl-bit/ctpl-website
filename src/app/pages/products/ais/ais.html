@@ -1,14 +1,37 @@
 
+
 <section class="ais-page">
 
-  <!-- HERO SECTION -->
-  <section class="ais-hero">
+  <!-- PAGE HEADER -->
+
+  <section class="ais-page-header">
 
     <div class="ais-container">
 
-      <div class="ais-breadcrumb">
-        CTPL / PRODUCTS / AIS-140 / IS 16833
-      </div>
+      <span class="ais-page-header-label">
+        CTPL / PRODUCTS
+      </span>
+
+      <h1>AIS-140 / IS 16833</h1>
+
+      <a routerLink="/" class="back-home-btn">
+
+        <span class="back-arrow">←</span>
+
+        Back to Home
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCT HERO SECTION -->
+
+  <section class="ais-hero">
+
+    <div class="ais-container">
 
       <div class="ais-hero-grid">
 
@@ -17,11 +40,6 @@
           <span class="ais-eyebrow">
             {{ eyebrow }}
           </span>
-
-          <h1>
-            AIS-140
-            <span>/ IS 16833</span>
-          </h1>
 
           <h2>
             Connected vehicle
@@ -38,6 +56,9 @@
 
         </div>
 
+
+        <!-- PRODUCT IMAGE -->
+
         <div class="ais-visual">
 
           <div class="ais-glow"></div>
@@ -45,15 +66,18 @@
           <div class="ais-image-frame">
 
             <img
-              [src]="image"
+              src="/assets/images/tranopro.png"
               alt="AIS-140 vehicle location tracking product"
             >
 
           </div>
 
           <div class="ais-image-label">
+
             <span class="ais-dot"></span>
+
             AIS-140 · IS 16833
+
           </div>
 
         </div>
@@ -64,8 +88,8 @@
 
   </section>
 
+  <!-- PRODUCT OVERVIEW -->
 
-  <!-- OVERVIEW -->
   <section class="ais-overview">
 
     <div class="ais-container">
@@ -112,7 +136,8 @@
   </section>
 
 
-  <!-- APPLICATIONS -->
+  <!-- TECHNOLOGY APPLICATIONS -->
+
   <section class="ais-applications">
 
     <div class="ais-container">
@@ -136,8 +161,9 @@
 
       </div>
 
-
       <div class="ais-card-grid">
+
+        <!-- LOCATION TRACKING -->
 
         <article class="ais-card">
 
@@ -159,6 +185,8 @@
         </article>
 
 
+        <!-- CONNECTED SYSTEMS -->
+
         <article class="ais-card">
 
           <span class="ais-card-number">02</span>
@@ -178,6 +206,8 @@
 
         </article>
 
+
+        <!-- TRANSPORT MONITORING -->
 
         <article class="ais-card">
 
@@ -206,6 +236,7 @@
 
 
   <!-- CONNECTED ECOSYSTEM -->
+
   <section class="ais-ecosystem">
 
     <div class="ais-container">
@@ -240,16 +271,22 @@
         </div>
 
 
+        <!-- NETWORK DIAGRAM -->
+
         <div class="ais-ecosystem-visual">
 
           <div class="ais-network">
 
             <div class="ais-network-ring ais-network-ring-one"></div>
+
             <div class="ais-network-ring ais-network-ring-two"></div>
 
             <div class="ais-network-center">
+
               <span>🚘</span>
+
               <small>VEHICLE</small>
+
             </div>
 
             <div class="ais-network-node ais-node-one">
@@ -279,64 +316,8 @@
   </section>
 
 
-  <!-- HIGHLIGHT -->
-  <section class="ais-highlight">
+  <!-- CONTACT SECTION -->
 
-    <div class="ais-container">
-
-      <div class="ais-highlight-inner">
-
-        <div class="ais-highlight-content">
-
-          <span class="ais-section-label">
-            CONTAINE PRODUCT PORTFOLIO
-          </span>
-
-          <h2>
-            Technology for
-            <span>connected transportation.</span>
-          </h2>
-
-          <p>
-            CTPL works with vehicle tracking technology
-            and connected mobility solutions to support
-            transport and monitoring requirements.
-          </p>
-
-          <a
-            href="https://containe.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="ais-button"
-          >
-            Explore CTPL
-            <span>↗</span>
-          </a>
-
-        </div>
-
-        <div class="ais-highlight-visual">
-
-          <div class="ais-circle">
-
-            <div class="ais-circle-inner">
-              <span>CTPL</span>
-              <strong>AIS</strong>
-              <small>CONNECTED MOBILITY</small>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
   <section class="ais-contact">
 
     <div class="ais-container">
@@ -361,12 +342,12 @@
         </div>
 
         <a
-          href="https://containe.in/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit CTPL Website
+        class="btn btn-primary"
+          routerLink="/products">
+          Explore Products
+
           <span>↗</span>
+
         </a>
 
       </div>

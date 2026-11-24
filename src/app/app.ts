@@ -19,6 +19,20 @@ import {
   styleUrl: './app.scss'
 })
 export class App {
+   // ======================================
+// FOOTER FUNCTIONALITY
+// ======================================
+
+currentYear = new Date().getFullYear();
+
+scrollToTop(): void {
+  if (typeof window !== 'undefined') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+}
 
   activeMenu = '';
   mobileMenu = false;

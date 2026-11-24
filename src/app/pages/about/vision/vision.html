@@ -3,22 +3,41 @@
 
   <div class="ctpl-about-detail-page">
 
+    <!-- =====================================
+         HERO HEADER
+         ===================================== -->
+
     <section class="ctpl-about-detail-hero">
+
       <div class="container">
 
-        <span class="ctpl-about-detail-hero-label">
+        <div class="ctpl-about-detail-hero-label">
           CTPL / ABOUT
-        </span>
+        </div>
 
         <h1>{{ p.title }}</h1>
 
+        <a routerLink="/" class="back-home-btn">
+          <span class="back-arrow">←</span>
+          Back to Home
+        </a>
+
       </div>
+
     </section>
 
+
+    <!-- =====================================
+         DETAIL CONTENT SECTION
+         ===================================== -->
+
     <section class="ctpl-about-detail-section">
+
       <div class="container">
 
         <div class="ctpl-about-detail-grid">
+
+          <!-- TEXT CONTENT -->
 
           <div class="ctpl-about-detail-text">
 
@@ -34,38 +53,63 @@
 
             <h3>Features & Information</h3>
 
-            <ul class="ctpl-about-first-point">
-              @if (p.bullets?.length) {
-                <li>{{ p.bullets?.[0] }}</li>
-              }
-            </ul>
+<ul class="ctpl-about-first-point">
+
+  @if (p.bullets; as bullets) {
+
+    @if (bullets.length > 0) {
+
+      <li>{{ bullets[0] }}</li>
+
+    }
+
+  }
+
+</ul>
 
           </div>
 
+
+          <!-- DETAIL IMAGE -->
+
           <div class="ctpl-about-detail-image">
+
             @if (p.image) {
+
               <img
                 [src]="p.image"
                 [alt]="p.title"
                 loading="lazy"
               />
+
             }
+
           </div>
 
         </div>
 
+
+        <!-- ADDITIONAL INFORMATION -->
+
         <div class="ctpl-about-detail-more">
+
           <ul>
+
             @for (
               bullet of p.bullets?.slice(1) ?? [];
               track $index
             ) {
+
               <li>{{ bullet }}</li>
+
             }
+
           </ul>
+
         </div>
 
       </div>
+
     </section>
 
   </div>

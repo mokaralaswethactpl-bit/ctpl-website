@@ -1,0 +1,487 @@
+
+/* ==========================================
+   CTPL SERVICES PAGE
+========================================== */
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  --service-background: #ffffff;
+  --service-surface: #f5f8fa;
+  --service-visual-bg: #eaf3f6;
+  --service-border: #dbe5ec;
+  --service-title: #10283f;
+  --service-text: #475569;
+  --service-accent: #009bd4;
+}
+
+
+/* ==========================================
+   COMMON PAGE STYLING
+========================================== */
+
+.ctpl-services-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--service-background);
+  color: var(--service-title);
+}
+
+.ctpl-services-section {
+  width: 100%;
+
+  padding: 70px 0 90px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE CONTAINER
+========================================== */
+
+.ctpl-services-section .container {
+  width: 90%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE HEADING
+========================================== */
+
+.ctpl-services-heading {
+  margin-bottom: 48px;
+}
+
+.ctpl-services-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--service-accent);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.ctpl-services-heading h1 {
+  margin: 0 0 18px;
+
+  color: var(--service-title);
+
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 800;
+  line-height: 1.15;
+
+  letter-spacing: -1.8px;
+}
+
+.ctpl-services-heading p {
+  margin: 0;
+
+  color: var(--service-text);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   SERVICE CARD GRID
+========================================== */
+
+.ctpl-services-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+
+/* ==========================================
+   SERVICE CARD
+========================================== */
+
+.ctpl-service-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  background: var(--service-surface);
+
+  border: 1px solid var(--service-border);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ctpl-service-card:hover {
+  border-color: #35c5df;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ctpl-service-card:focus-visible {
+  outline: 2px solid var(--service-accent);
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   SERVICE IMAGE SECTION
+========================================== */
+
+.ctpl-service-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 165px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--service-visual-bg);
+}
+
+.ctpl-service-visual img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.ctpl-service-card:hover
+.ctpl-service-visual img {
+  transform: scale(1.05);
+}
+
+
+/* ==========================================
+   SERVICE ICON
+========================================== */
+
+.ctpl-service-symbol {
+  display: grid;
+  place-items: center;
+
+  width: 85px;
+  height: 85px;
+
+  background: rgba(17, 180, 212, 0.1);
+
+  color: var(--service-accent);
+
+  border: 1px solid rgba(17, 180, 212, 0.2);
+  border-radius: 20px;
+
+  font-size: 45px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ctpl-service-card:hover
+.ctpl-service-symbol {
+  background: #11b4d4;
+  color: #ffffff;
+
+  transform: translateY(-4px);
+}
+
+
+/* ==========================================
+   SERVICE CARD CONTENT
+========================================== */
+
+.ctpl-service-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 20px 24px;
+}
+
+
+/* SERVICE CATEGORY */
+
+.ctpl-service-category {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--service-accent);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+
+  line-height: 1.5;
+}
+
+
+/* SERVICE TITLE */
+
+.ctpl-service-content h2 {
+  margin: 0 0 12px;
+
+  color: var(--service-title);
+
+  font-size: 22px;
+  font-weight: 750;
+  line-height: 1.35;
+
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================
+   COMPACT SERVICE DESCRIPTION
+========================================== */
+
+.ctpl-service-content p {
+  margin: 0 0 18px;
+
+  min-height: 0;
+
+  color: var(--service-text);
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+
+  line-clamp: 4;
+
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================
+   READ MORE LINK
+========================================== */
+
+.ctpl-service-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  color: var(--service-accent);
+
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+
+  transition: color 0.25s ease;
+}
+
+.ctpl-service-arrow {
+  display: inline-block;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.ctpl-service-card:hover
+.ctpl-service-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+
+    --service-background: #081725;
+
+    --service-surface: #142a3e;
+
+    --service-visual-bg: #10283f;
+
+    --service-border: #294459;
+
+    --service-title: #f1f5f9;
+
+    --service-text: #b8c9d9;
+
+    --service-accent: #35c5df;
+
+  }
+
+  .ctpl-service-card:hover {
+    border-color: #35c5df;
+
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .ctpl-services-section {
+    padding: 55px 0 70px;
+  }
+
+  .ctpl-services-grid {
+    gap: 20px;
+  }
+
+  .ctpl-service-visual {
+    height: 150px;
+  }
+
+  .ctpl-service-content {
+    padding: 18px 20px;
+  }
+
+  .ctpl-service-content h2 {
+    font-size: 20px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-services-section {
+    padding: 40px 0 55px;
+  }
+
+  .ctpl-services-heading {
+    margin-bottom: 30px;
+  }
+
+  .ctpl-services-heading h1 {
+    font-size: 38px;
+  }
+
+  .ctpl-services-heading p {
+    font-size: 14px;
+  }
+
+  .ctpl-services-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 18px;
+  }
+
+  .ctpl-service-visual {
+    height: 140px;
+  }
+
+  .ctpl-service-content {
+    padding: 18px;
+  }
+
+  .ctpl-service-content h2 {
+    font-size: 19px;
+  }
+
+  .ctpl-service-content p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ctpl-service-card,
+  .ctpl-service-symbol,
+  .ctpl-service-visual img,
+  .ctpl-service-link,
+  .ctpl-service-arrow {
+    transition: none;
+  }
+
+  .ctpl-service-card:hover
+  .ctpl-service-symbol,
+
+  .ctpl-service-card:hover
+  .ctpl-service-visual img,
+
+  .ctpl-service-card:hover
+  .ctpl-service-arrow {
+    transform: none;
+  }
+
+}

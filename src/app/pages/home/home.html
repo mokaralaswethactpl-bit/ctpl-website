@@ -1,8 +1,12 @@
+
 <!-- ======================================
      CTPL HOME PAGE
 ====================================== -->
 
-<!-- HERO SECTION -->
+
+<!-- ======================================
+     HERO SECTION
+====================================== -->
 
 <section class="hero">
 
@@ -43,14 +47,18 @@
 
         <a
           class="btn btn-primary"
-          routerLink="/page/ais-140-is16833">
+          routerLink="/products/ais">
+
           Explore solutions <span>↗</span>
+
         </a>
 
         <a
           class="btn btn-ghost"
-          routerLink="/page/our-story">
+          routerLink="/page/about">
+
           Discover our story ↗
+
         </a>
 
       </div>
@@ -93,8 +101,10 @@
 
     <a
       class="text-link"
-      routerLink="/page/our-story">
+      routerLink="/page/about">
+
       About CTPL ↗
+
     </a>
 
   </div>
@@ -109,6 +119,8 @@
 <section class="section section-soft product-portfolio-section">
 
   <div class="container">
+
+    <!-- SECTION HEADING -->
 
     <div appReveal class="section-heading">
 
@@ -132,6 +144,9 @@
 
     </div>
 
+
+    <!-- PRODUCT GRID -->
+
     <div class="product-grid">
 
       @for (p of products; track p.slug; let i = $index) {
@@ -140,7 +155,9 @@
           appReveal
           class="product-card"
           [style.--delay]="(i % 3) * 90 + 'ms'"
-          [routerLink]="['/page', p.slug]">
+          [routerLink]="getProductRoute(p.slug)">
+
+          <!-- PRODUCT IMAGE -->
 
           <div
             class="product-image"
@@ -156,13 +173,19 @@
             } @else {
 
               <span class="product-placeholder">
+
                 CTPL
+
                 <small>TECHNOLOGY</small>
+
               </span>
 
             }
 
           </div>
+
+
+          <!-- PRODUCT CONTENT -->
 
           <div class="card-body">
 
@@ -197,15 +220,22 @@
 
 <section class="section home-tech-bg interactive-grid-section">
 
+  <!-- INTERACTIVE GRID BACKGROUND -->
+
   <div class="grid-hover-layer" aria-hidden="true">
 
     @for (cell of gridCells; track cell) {
+
       <span class="grid-cell"></span>
+
     }
 
   </div>
 
+
   <div class="container">
+
+    <!-- SECTION HEADING -->
 
     <div appReveal class="section-heading">
 
@@ -224,19 +254,33 @@
 
     </div>
 
+
+    <!-- SERVICE GRID -->
+
     <div class="service-grid">
 
-      @for (s of services.slice(0, 6); track s.slug; let i = $index) {
+      @for (
+        s of services.slice(0, 6);
+        track s.slug;
+        let i = $index
+      ) {
 
         <a
           appReveal
           class="service-card"
           [style.--delay]="(i % 3) * 90 + 'ms'"
-          [routerLink]="['/page', s.slug]">
+          [routerLink]="getServiceRoute(s.slug)">
+
+          <!-- SERVICE ICON -->
 
           <div class="service-icon">
+
             {{ ['◎', '◇', '▤', '◈', '⌘', '◉'][i] }}
+
           </div>
+
+
+          <!-- SERVICE CONTENT -->
 
           <div>
 
@@ -260,10 +304,17 @@
 
     </div>
 
+
+    <!-- VLTD INTEGRATION LINK -->
+
     <div class="section-cta">
 
-      <a class="text-link" routerLink="/page/vltd">
+      <a
+        class="text-link"
+        routerLink="/services/vltd">
+
         Explore VLTD state integrations ↗
+
       </a>
 
     </div>
@@ -280,6 +331,8 @@
 <section class="feature home-tech-bg">
 
   <div class="container feature-layout">
+
+    <!-- FEATURE CONTENT -->
 
     <div appReveal>
 
@@ -299,11 +352,16 @@
 
       <a
         class="btn btn-primary"
-        routerLink="/page/ais-140-is16833">
+        routerLink="/products/ais">
+
         Explore VLTD technology ↗
+
       </a>
 
     </div>
+
+
+    <!-- FEATURE IMAGE -->
 
     <div class="feature-visual" appReveal>
 
@@ -327,6 +385,8 @@
 
   <div class="container">
 
+    <!-- SECTION HEADING -->
+
     <div appReveal class="section-heading">
 
       <div>
@@ -342,6 +402,9 @@
       </div>
 
     </div>
+
+
+    <!-- STAKEHOLDER GRID -->
 
     <div class="pathway-grid">
 
@@ -401,7 +464,9 @@
     <a
       class="btn btn-primary"
       routerLink="/page/customer-centre">
+
       Contact CTPL ↗
+
     </a>
 
   </div>

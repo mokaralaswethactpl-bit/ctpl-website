@@ -25,6 +25,49 @@ import { RevealDirective } from '../../reveal.directive';
 export class HomeComponent
   implements AfterViewInit, OnDestroy {
 
+ // =====================================
+// PRODUCT PAGE NAVIGATION
+// =====================================
+
+productRoutes: Record<string, string> = {
+  'motoreye-efrt': '/products/motoreye',
+  'limits-epi': '/products/limits',
+  'geo-limits-gsld': '/products/gsld',
+  'ais-140-is16833': '/products/ais',
+  'embedded-esim': '/products/e-sim',
+  'trano-rfid': '/products/rfid'
+};
+
+getProductRoute(slug: string): string {
+  return this.productRoutes[slug] ?? '/page/' + slug;
+}
+
+// =====================================
+// SERVICE PAGE NAVIGATION
+// =====================================
+
+serviceRoutes: Record<string, string> = {
+  'trano': '/services/trano',
+  'tranopro': '/services/trano-pro',
+  'ctpl-erp': '/services/erp',
+  'mis-convertz': '/services/mis',
+  'unified-management-system': '/services/ums',
+  'ctpl-dialer': '/services/dialer',
+  'vltd': '/services/vltd',
+  'sld-services': '/services/sld',
+
+  // Alternative slug names
+  'trano-pro': '/services/trano-pro',
+  'erp': '/services/erp',
+  'mis': '/services/mis',
+  'ums': '/services/ums',
+  'dialer': '/services/dialer',
+  'sld': '/services/sld'
+};
+
+getServiceRoute(slug: string): string {
+  return this.serviceRoutes[slug] ?? '/page/' + slug;
+}
   // =====================================
   // PRODUCT AND SERVICE DATA
   // =====================================
