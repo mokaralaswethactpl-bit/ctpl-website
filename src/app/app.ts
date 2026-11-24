@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-
+import { SearchComponent } from './pages/search/search';
 import {
   RouterOutlet,
   RouterLink,
@@ -9,11 +9,11 @@ import {
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    SearchComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

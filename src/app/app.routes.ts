@@ -59,10 +59,14 @@ import { BlogsComponent } from './pages/blogs/blogs';
 
 export const routes: Routes = [
 
+  // =========================================
   // HOME
+  // =========================================
+
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    pathMatch: 'full'
   },
 
 
@@ -257,6 +261,129 @@ export const routes: Routes = [
   {
     path: 'blogs',
     component: BlogsComponent
+  },
+
+
+  // =========================================
+  // MAIN PAGE REDIRECT ALIASES
+  // =========================================
+
+  {
+    path: 'home',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
+    path: 'about',
+    redirectTo: 'page/about',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/products',
+    redirectTo: 'products',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/services',
+    redirectTo: 'services',
+    pathMatch: 'full'
+  },
+  {
+    path: 'investors',
+    redirectTo: 'page/investors',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dealer-centre',
+    redirectTo: 'page/dealer-centre',
+    pathMatch: 'full'
+  },
+  {
+    path: 'customer-centre',
+    redirectTo: 'page/customer-centre',
+    pathMatch: 'full'
+  },
+
+
+  // =========================================
+  // OLD PRODUCT ROUTE COMPATIBILITY
+  // =========================================
+
+  {
+    path: 'page/ais-140-is16833',
+    redirectTo: 'products/ais',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/embedded-esim',
+    redirectTo: 'products/e-sim',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/geo-limits-gsld',
+    redirectTo: 'products/gsld',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/limits-epi',
+    redirectTo: 'products/limits',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/motoreye-efrt',
+    redirectTo: 'products/motoreye',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/trano-rfid',
+    redirectTo: 'products/rfid',
+    pathMatch: 'full'
+  },
+
+
+  // =========================================
+  // OLD SERVICE ROUTE COMPATIBILITY
+  // =========================================
+
+  {
+    path: 'page/trano',
+    redirectTo: 'services/trano',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/tranopro',
+    redirectTo: 'services/trano-pro',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/ctpl-erp',
+    redirectTo: 'services/erp',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/mis-convertz',
+    redirectTo: 'services/mis',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/umis',
+    redirectTo: 'services/ums',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/ctpl-dialer',
+    redirectTo: 'services/dialer',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/vltd',
+    redirectTo: 'services/vltd',
+    pathMatch: 'full'
+  },
+  {
+    path: 'page/sld',
+    redirectTo: 'services/sld',
+    pathMatch: 'full'
   },
 
 
