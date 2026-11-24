@@ -1,7 +1,7 @@
 
 /* ==========================================
    CTPL CORPORATE GOVERNANCE
-   PURPLE GLASSMORPHISM DESIGN
+   LIGHT BLUE-PURPLE GLASSMORPHISM DESIGN
 ========================================== */
 
 .cg-section {
@@ -19,7 +19,9 @@
   margin: 0 auto;
 }
 
-/* MAIN CARD */
+/* ==========================================
+   MAIN CARD
+========================================== */
 
 .cg-card {
   position: relative;
@@ -28,32 +30,35 @@
   padding: 40px;
   min-height: 380px;
 
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  background: rgba(35, 55, 80, 0.88);
+  border: 1px solid rgba(100, 160, 210, 0.25);
   border-radius: 22px;
 
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
   box-shadow:
-    0 10px 35px rgba(91, 0, 255, 0.10),
+    0 10px 35px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 
   transition: all 0.3s ease;
 }
 
-/* LAYOUT */
+/* ==========================================
+   LAYOUT
+========================================== */
 
 .cg-layout {
   display: grid;
   grid-template-columns: 310px minmax(0, 1fr);
   gap: 35px;
   align-items: stretch;
-
   min-height: 300px;
 }
 
-/* LEFT SIDE TABS */
+/* ==========================================
+   LEFT SIDE TABS
+========================================== */
 
 .cg-tabs {
   display: flex;
@@ -71,14 +76,13 @@
 
   width: 100%;
   min-height: 60px;
-
   padding: 16px 20px;
 
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(130, 175, 215, 0.22);
   border-radius: 12px;
 
-  background: var(--glass-bg);
-  color: var(--text-primary);
+  background: rgba(49, 72, 100, 0.75);
+  color: #eaf4ff;
 
   font-family: inherit;
   font-size: 14px;
@@ -100,47 +104,116 @@
 .cg-tabs button:hover {
   transform: translateX(5px);
 
-  border-color: var(--accent-glow);
+  background: rgba(67, 96, 130, 0.9);
+  border-color: #56cfe8;
 
   box-shadow:
-    0 6px 20px rgba(121, 0, 255, 0.13);
+    0 6px 20px rgba(86, 207, 232, 0.15);
 }
 
 /* ACTIVE TAB */
 
 .cg-tabs button.active {
-  background: var(--accent);
-  color: #ffffff;
+  background: linear-gradient(
+    120deg,
+    #087e9c,
+    #176b9b
+  );
 
-  border-color: var(--accent-glow);
+  color: #ffffff;
+  border-color: #56cfe8;
 
   box-shadow:
-    0 8px 25px rgba(121, 0, 255, 0.25);
+    0 8px 25px rgba(8, 126, 156, 0.30);
 }
 
 /* ACTIVE TAB HOVER */
 
 .cg-tabs button.active:hover {
-  background: var(--accent-glow);
+  background: linear-gradient(
+    120deg,
+    #0798b8,
+    #087e9c
+  );
+
   color: #ffffff;
 }
 
-/* RIGHT CONTENT AREA */
+/* ==========================================
+   RIGHT CONTENT AREA
+========================================== */
 
 .cg-content {
   min-width: 0;
   min-height: 300px;
 
-  border: 1px solid var(--glass-border);
+  padding: 30px;
+
+  border: 1px solid rgba(100, 160, 210, 0.25);
   border-radius: 15px;
 
-  background: var(--glass-bg);
+  background: rgba(35, 55, 80, 0.65);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
-/* KEYBOARD ACCESSIBILITY */
+/* CONTENT PANEL */
+
+.cg-panel {
+  width: 100%;
+  animation: cgFadeIn 0.35s ease;
+}
+
+/* CONTENT HEADING */
+
+.cg-content h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* CONTENT PARAGRAPH */
+
+.cg-content p {
+  margin: 0;
+
+  color: #c5d6e7;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   CONTENT ANIMATION
+========================================== */
+
+@keyframes cgFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   KEYBOARD ACCESSIBILITY
+========================================== */
 
 .cg-tabs button:focus-visible {
-  outline: 3px solid var(--accent-glow);
+  outline: 3px solid #56cfe8;
   outline-offset: 4px;
 }
 
@@ -157,6 +230,10 @@
 
   .cg-card {
     padding: 28px;
+  }
+
+  .cg-content {
+    padding: 24px;
   }
 
 }
@@ -196,13 +273,24 @@
     font-size: 13px;
   }
 
+  .cg-tabs button:hover {
+    transform: translateX(3px);
+  }
+
   .cg-content {
     min-height: 180px;
+    padding: 20px;
+  }
+
+  .cg-content h2 {
+    font-size: 20px;
   }
 
 }
 
-/* SMALL MOBILE */
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
 @media (max-width: 480px) {
 
@@ -215,15 +303,28 @@
     padding: 13px;
   }
 
+  .cg-content {
+    padding: 17px;
+  }
+
+  .cg-content h2 {
+    font-size: 18px;
+  }
+
 }
 
-/* REDUCED MOTION */
+/* ==========================================
+   REDUCED MOTION
+========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
   .cg-card,
-  .cg-tabs button {
+  .cg-tabs button,
+  .cg-content,
+  .cg-panel {
     transition: none;
+    animation: none;
   }
 
   .cg-tabs button:hover {
