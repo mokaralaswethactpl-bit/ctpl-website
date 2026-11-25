@@ -18,20 +18,32 @@
 }
 
 /* ==========================================
-   PAGE HEADER
+   PAGE HEADER - IMAGE BACKGROUND
 ========================================== */
 
 .ctpl-sop-image-hero {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
 
+  display: flex;
+  align-items: center;
+
+  min-height: 335px;
   padding: 65px 0;
 
-  background: linear-gradient(
-    110deg,
-    #0b2745 0%,
-    #123d62 55%,
-    #0785a5 100%
-  );
+  background:
+    linear-gradient(
+      100deg,
+      rgba(5, 29, 55, 0.96) 0%,
+      rgba(8, 52, 88, 0.82) 45%,
+      rgba(0, 126, 164, 0.42) 100%
+    ),
+    url('/assets/images/approvals-sop-banner.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   color: #ffffff;
 }
@@ -75,7 +87,7 @@
   background: transparent;
   color: #ffffff;
 
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 7px;
 
   font-size: 14px;
@@ -86,7 +98,7 @@
 }
 
 .ctpl-sop-image-hero .btn-outline-light:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 /* ==========================================
@@ -95,14 +107,12 @@
 
 .sop-section {
   padding: 70px 20px 90px;
-
   background: var(--sop-bg);
 }
 
 .sop-container {
   width: 100%;
   max-width: 1240px;
-
   margin: 0 auto;
 }
 
@@ -125,9 +135,7 @@
 
 .sop-states-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 
   gap: 14px;
   margin-bottom: 40px;
@@ -160,6 +168,7 @@
   cursor: pointer;
 
   transform: none !important;
+
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease,
@@ -167,7 +176,7 @@
 }
 
 .sop-state-button:hover {
-  background: rgba(0,155,212,0.08);
+  background: rgba(0, 155, 212, 0.08);
   border-color: var(--sop-blue);
 }
 
@@ -178,7 +187,6 @@
   color: #ffffff;
 
   border-color: var(--sop-blue);
-
   font-weight: 700;
 }
 
@@ -227,7 +235,7 @@
 
   text-align: center;
 
-  box-shadow: 0 8px 25px rgba(16,40,63,0.04);
+  box-shadow: 0 8px 25px rgba(16, 40, 63, 0.04);
 }
 
 .sop-map-icon {
@@ -239,7 +247,7 @@
 
   margin-bottom: 22px;
 
-  background: rgba(0,155,212,0.09);
+  background: rgba(0, 155, 212, 0.09);
   border-radius: 50%;
 }
 
@@ -258,7 +266,6 @@
 
 .sop-state-panel p {
   max-width: 280px;
-
   margin: 0;
 
   color: var(--sop-text);
@@ -280,7 +287,7 @@
   border: 1px solid var(--sop-border);
   border-radius: 14px;
 
-  box-shadow: 0 8px 25px rgba(16,40,63,0.04);
+  box-shadow: 0 8px 25px rgba(16, 40, 63, 0.04);
 }
 
 .sop-documents-panel h3 {
@@ -340,7 +347,7 @@
 }
 
 .sop-document-link:hover {
-  background: rgba(0,155,212,0.08);
+  background: rgba(0, 155, 212, 0.08);
   border-color: var(--sop-blue);
 }
 
@@ -351,13 +358,13 @@
 
 .sop-document-title {
   flex: 1;
-
   min-width: 0;
 
   color: var(--sop-heading);
 
   font-size: 15px;
   font-weight: 600;
+
   overflow-wrap: anywhere;
 }
 
@@ -397,7 +404,6 @@
   .sop-state-button {
     background: #142a3e;
     color: #f1f5f9;
-
     border-color: #294459;
   }
 
@@ -409,12 +415,11 @@
   .sop-state-button.selected,
   .sop-state-button.selected:hover {
     background: #009bd4;
-
     color: #ffffff;
     border-color: #009bd4;
   }
 
-  /* LEFT PANEL - NO WHITE BACKGROUND */
+  /* LEFT PANEL */
 
   .sop-state-panel {
     background: #142a3e !important;
@@ -480,8 +485,7 @@
 @media (max-width: 1100px) {
 
   .sop-states-grid {
-    grid-template-columns:
-      repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
 }
@@ -489,8 +493,7 @@
 @media (max-width: 900px) {
 
   .sop-states-grid {
-    grid-template-columns:
-      repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sop-detail-grid {
@@ -506,7 +509,10 @@
 @media (max-width: 768px) {
 
   .ctpl-sop-image-hero {
+    min-height: 280px;
     padding: 45px 0;
+
+    background-position: 65% center;
   }
 
   .sop-section {
@@ -514,8 +520,7 @@
   }
 
   .sop-states-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 10px;
     margin-bottom: 30px;
@@ -541,6 +546,10 @@
   }
 
 }
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
 @media (max-width: 480px) {
 
@@ -574,4 +583,18 @@
     transition: none;
   }
 
+}
+.page-hero.ctpl-sop-image-hero {
+  background:
+    linear-gradient(
+      110deg,
+    rgba(11, 39, 69, 0.85) 0%,
+    rgba(18, 61, 98, 0.35) 55%,
+    transparent 100%
+    ),
+    url('/assets/images/approvals-sop-banner.jpg')
+    center / cover no-repeat !important;
+
+  min-height: 335px;
+  padding: 65px 0;
 }
