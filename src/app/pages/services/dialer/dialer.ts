@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-ctpl-dialer',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './dialer.html',
   styleUrl: './dialer.scss'
 })
@@ -18,4 +24,5 @@ export class CtplDialerComponent {
   image = '/assets/images/ctpl-dialer.png';
 
   source = 'https://containe.in/services/';
+
 }

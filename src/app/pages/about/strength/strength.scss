@@ -10,8 +10,31 @@
 }
 
 .ctpl-about-detail-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 280px;
   padding: 48px 0;
-  background: linear-gradient(110deg, #0b2745, #123d62 55%, #0785a5);
+
+  background-color: #0b2745;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(11, 39, 69, 0.95) 0%,
+      rgba(18, 61, 98, 0.65) 40%,
+      rgba(7, 133, 165, 0.15) 100%
+    ),
+    url('/assets/images/strength-background.jpg');
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  overflow: hidden;
 }
 
 .ctpl-about-detail-hero-label {

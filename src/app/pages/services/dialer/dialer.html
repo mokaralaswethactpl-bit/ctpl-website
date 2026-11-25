@@ -1,14 +1,36 @@
 
 <section class="dialer-page">
 
-  <!-- HERO SECTION -->
-  <section class="dialer-hero">
+  <!-- PAGE HEADER -->
+
+  <section class="dialer-page-header">
 
     <div class="dialer-container">
 
-      <div class="dialer-breadcrumb">
-        CTPL / SERVICES / CTPL DIALER
-      </div>
+      <span class="dialer-page-header-label">
+        CTPL / SERVICES
+      </span>
+
+      <h1>{{ title }}</h1>
+
+      <a routerLink="/" class="back-home-btn">
+
+        <span class="back-arrow">←</span>
+
+        Back to Home
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="dialer-hero">
+
+    <div class="dialer-container">
 
       <div class="dialer-hero-grid">
 
@@ -17,8 +39,6 @@
           <span class="dialer-eyebrow">
             {{ eyebrow }}
           </span>
-
-          <h1>{{ title }}</h1>
 
           <h2>
             Better communication.
@@ -35,6 +55,9 @@
 
         </div>
 
+
+        <!-- SERVICE IMAGE -->
+
         <div class="dialer-hero-visual">
 
           <div class="dialer-image-glow"></div>
@@ -49,8 +72,11 @@
           </div>
 
           <div class="dialer-image-label">
+
             <span class="dialer-status-dot"></span>
+
             CUSTOMER COMMUNICATION & SUPPORT
+
           </div>
 
         </div>
@@ -63,6 +89,7 @@
 
 
   <!-- OVERVIEW SECTION -->
+
   <section class="dialer-overview">
 
     <div class="dialer-container">
@@ -80,6 +107,9 @@
 
       </div>
 
+
+      <!-- OVERVIEW CARD -->
+
       <div class="dialer-overview-content">
 
         <div class="dialer-overview-icon">
@@ -88,7 +118,9 @@
 
         <div>
 
-          <h3>Customer Communication & Technical Assistance</h3>
+          <h3>
+            Customer Communication & Technical Assistance
+          </h3>
 
           <p>{{ summary }}</p>
 
@@ -102,6 +134,7 @@
 
 
   <!-- SERVICE FOCUS SECTION -->
+
   <section class="dialer-features">
 
     <div class="dialer-container">
@@ -124,11 +157,35 @@
 
       </div>
 
+
+      <!-- SERVICE FOCUS CARDS -->
+
       <div class="dialer-feature-grid">
+
+        <!-- CUSTOMER COMMUNICATION -->
 
         <div class="dialer-feature-card">
 
           <div class="dialer-feature-number">01</div>
+
+          <div class="dialer-feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              width="25"
+              height="25"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 14v-3a9 9 0 0 1 18 0v3"/>
+              <rect x="3" y="11" width="4" height="7" rx="2"/>
+              <rect x="17" y="11" width="4" height="7" rx="2"/>
+              <path d="M21 18c0 3-4 3-7 3"/>
+            </svg>
+          </div>
 
           <h3>Customer Communication</h3>
 
@@ -137,11 +194,20 @@
             teams and customers.
           </p>
 
+          <div class="dialer-feature-line"></div>
+
         </div>
+
+
+        <!-- TECHNICAL ASSISTANCE -->
 
         <div class="dialer-feature-card">
 
           <div class="dialer-feature-number">02</div>
+
+          <div class="dialer-feature-icon">
+            ⚙
+          </div>
 
           <h3>Technical Assistance</h3>
 
@@ -150,11 +216,20 @@
             requirements associated with CTPL solutions.
           </p>
 
+          <div class="dialer-feature-line"></div>
+
         </div>
+
+
+        <!-- SUPPORT COORDINATION -->
 
         <div class="dialer-feature-card">
 
           <div class="dialer-feature-number">03</div>
+
+          <div class="dialer-feature-icon">
+            ◈
+          </div>
 
           <h3>Support Coordination</h3>
 
@@ -162,6 +237,8 @@
             Helps organize customer interactions and support
             activities through established workflows.
           </p>
+
+          <div class="dialer-feature-line"></div>
 
         </div>
 
@@ -173,6 +250,7 @@
 
 
   <!-- CONTACT SECTION -->
+
   <section class="dialer-contact">
 
     <div class="dialer-container">
@@ -201,8 +279,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit CTPL Website
+
+          Explore Services
+
           <span>↗</span>
+
         </a>
 
       </div>

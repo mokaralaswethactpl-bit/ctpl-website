@@ -1,9 +1,15 @@
 
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mis-convertz',
   standalone: true,
+
+  imports: [
+    RouterLink
+  ],
+
   templateUrl: './mis.html',
   styleUrl: './mis.scss'
 })
@@ -18,4 +24,5 @@ export class MisConvertzComponent {
   image = '/assets/images/mis-convertz.jpg';
 
   source = 'https://containe.in/services/';
+
 }

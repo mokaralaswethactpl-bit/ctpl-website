@@ -1,7 +1,23 @@
 
+/* ==========================================
+   CTPL VLTD STATE INTEGRATIONS PAGE
+========================================== */
+
 :host {
   display: block;
-  font-family: Arial, sans-serif;
+  width: 100%;
+  min-width: 0;
+
+  --vltd-background: #081725;
+  --vltd-section-bg: #0d2032;
+  --vltd-surface: #142a3e;
+  --vltd-image-bg: #10283f;
+  --vltd-border: #294459;
+  --vltd-heading: #f1f5f9;
+  --vltd-text: #b8c9d9;
+  --vltd-accent: #11b4d4;
+  --vltd-accent-light: #81cbd9;
+  --vltd-icon-bg: #173d50;
 }
 
 .vltd-page,
@@ -11,657 +27,1372 @@
 
 .vltd-page {
   width: 100%;
+  min-width: 0;
   overflow: hidden;
-  color: #102c45;
-  background: #ffffff;
+
+  background: var(--vltd-background);
+  color: var(--vltd-heading);
 }
+
+
+/* ==========================================
+   COMMON CONTAINER
+========================================== */
 
 .vltd-container {
-  width: min(1160px, calc(100% - 48px));
+  width: 90%;
+  max-width: 1440px;
+
   margin: 0 auto;
+  padding: 0;
 }
 
-/* HERO SECTION */
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.vltd-page-header {
+  width: 100%;
+  padding: 48px 0;
+
+  background: linear-gradient(
+    110deg,
+    #0b2745,
+    #123d62 55%,
+    #0785a5
+  );
+}
+
+.vltd-page-header .vltd-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vltd-page-header-label {
+  display: block;
+
+  color: #60d8f0;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vltd-page-header h1 {
+  margin: 12px 0;
+
+  color: #ffffff;
+
+  font-size: clamp(34px, 4.5vw, 60px);
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+
+/* ==========================================
+   BACK TO HOME BUTTON
+========================================== */
+
+.vltd-page-header .back-home-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: fit-content;
+
+  margin-top: 12px;
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #60d8f0;
+    color: #ffffff;
+
+    .back-arrow {
+      transform: translateX(-4px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.vltd-page-header .back-arrow {
+  display: inline-block;
+
+  font-size: 20px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
 
 .vltd-hero {
   position: relative;
-  padding: 55px 0 90px;
-  background:
-    radial-gradient(
-      circle at 85% 40%,
-      rgba(0, 155, 212, 0.10),
-      transparent 35%
-    ),
-    linear-gradient(135deg, #ffffff, #f3f9fc);
-}
 
-.vltd-breadcrumb {
-  margin-bottom: 55px;
-  color: #078ba9;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  padding: 50px 0 60px;
+
+  background: var(--vltd-background);
 }
 
 .vltd-hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   align-items: center;
-  gap: 65px;
+
+  gap: 40px;
 }
+
+.vltd-hero-content {
+  min-width: 0;
+}
+
+
+/* ==========================================
+   COMMON SECTION LABELS
+========================================== */
 
 .vltd-eyebrow,
 .vltd-section-label {
   display: inline-block;
-  color: #009bb8;
+
+  color: var(--vltd-accent);
+
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
+  line-height: 1.5;
 }
 
-.vltd-hero-content h1 {
-  margin: 18px 0;
-  color: #102c45;
-  font-size: clamp(48px, 6vw, 76px);
-  font-weight: 800;
-  letter-spacing: -3px;
-  line-height: 1.1;
-}
 
-.vltd-hero-content h1 span {
-  display: block;
-  color: #009fc2;
-  font-size: 0.65em;
+/* ==========================================
+   COMMON SECTION HEADINGS
+========================================== */
+
+.vltd-hero-content h2,
+.vltd-overview-heading h2,
+.vltd-integrations-heading h2,
+.vltd-ais-content h2 {
+  margin: 15px 0 20px;
+
+  color: var(--vltd-heading);
+
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.3;
   letter-spacing: -1px;
+
+  span {
+    color: var(--vltd-accent);
+  }
 }
 
 .vltd-hero-content h2 {
-  max-width: 550px;
-  margin: 25px 0 20px;
-  color: #183b55;
-  font-size: clamp(25px, 3vw, 37px);
-  line-height: 1.3;
+  max-width: 650px;
 }
 
-.vltd-hero-content h2 span {
-  color: #009fc2;
+
+/* COMMON DESCRIPTIONS */
+
+.vltd-hero-content p,
+.vltd-integrations-heading p,
+.vltd-ais-content p,
+.vltd-contact p {
+  margin: 0;
+
+  color: var(--vltd-text);
+
+  font-size: 15px;
+  line-height: 1.85;
+
+  overflow-wrap: break-word;
 }
 
-.vltd-hero-content p {
-  max-width: 570px;
-  color: #627585;
-  font-size: 16px;
-  line-height: 1.9;
-}
+
+/* DECORATIVE LINE */
 
 .vltd-hero-line {
-  width: 75px;
-  height: 4px;
-  margin: 32px 0 20px;
+  width: 65px;
+  height: 3px;
+
+  margin: 25px 0 15px;
+
+  background: var(--vltd-accent);
+
   border-radius: 10px;
-  background: #00a4c7;
 }
 
+
+/* COMPANY LABEL */
+
 .vltd-company {
-  color: #78909e;
+  color: #8ca6b8;
+
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
+  line-height: 1.6;
 }
 
-/* HERO IMAGE */
+
+/* ==========================================
+   SERVICE IMAGE SECTION
+========================================== */
 
 .vltd-hero-visual {
   position: relative;
+
+  width: 100%;
   min-width: 0;
 }
 
 .vltd-image-glow {
   position: absolute;
+
   inset: 10%;
+
+  background: rgba(0, 166, 204, 0.15);
+
   border-radius: 50%;
-  background: rgba(0, 166, 204, 0.20);
+
   filter: blur(65px);
+
+  pointer-events: none;
 }
+
+
+/* IMAGE FRAME */
 
 .vltd-image-frame {
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 390px;
-  padding: 25px;
+
+  width: 100%;
+  min-height: 330px;
+
+  padding: 22px;
+
   overflow: hidden;
-  border: 1px solid rgba(0, 155, 190, 0.15);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 25px 65px rgba(17, 61, 86, 0.12);
+
+  background: linear-gradient(
+    145deg,
+    #142f43,
+    #10283f
+  );
+
+  border: 1px solid var(--vltd-border);
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: var(--vltd-accent);
+
+    box-shadow:
+      0 15px 35px rgba(17, 180, 212, 0.08);
+
+    img {
+      transform: scale(1.03);
+    }
+  }
 }
+
+
+/* SERVICE IMAGE */
 
 .vltd-image-frame img {
   display: block;
+
   width: 100%;
-  max-height: 350px;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 300px;
+
   object-fit: contain;
+  object-position: center;
+
+  border-radius: 8px;
+
+  color: var(--vltd-text);
+
   transition: transform 0.6s ease;
 }
 
-.vltd-image-frame:hover img {
-  transform: scale(1.04);
-}
+
+/* IMAGE LABEL */
 
 .vltd-image-label {
   position: relative;
+
   display: flex;
   align-items: center;
+
   gap: 10px;
-  margin-top: 20px;
-  color: #527083;
+
+  margin-top: 15px;
+
+  color: var(--vltd-text);
+
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
+  line-height: 1.6;
 }
 
 .vltd-status-dot {
+  flex-shrink: 0;
+
   width: 9px;
   height: 9px;
-  border-radius: 50%;
+
   background: #00b78a;
-  box-shadow: 0 0 12px rgba(0, 183, 138, 0.5);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 12px rgba(0, 183, 138, 0.5);
 }
 
-/* OVERVIEW */
+
+/* ==========================================
+   OVERVIEW SECTION
+========================================== */
 
 .vltd-overview {
-  padding: 95px 0;
-  background: #ffffff;
+  padding: 60px 0;
+
+  background: var(--vltd-section-bg);
+
+  border-top: 1px solid var(--vltd-border);
+  border-bottom: 1px solid var(--vltd-border);
 }
 
 .vltd-overview-heading {
-  max-width: 720px;
-  margin-bottom: 45px;
+  max-width: 850px;
+
+  margin-bottom: 30px;
 }
 
-.vltd-overview-heading h2 {
-  margin: 16px 0 0;
-  color: #102c45;
-  font-size: clamp(30px, 4vw, 45px);
-  line-height: 1.25;
-}
 
-.vltd-overview-heading h2 span {
-  color: #009bb8;
-}
+/* OVERVIEW CARD */
 
 .vltd-overview-content {
   display: grid;
-  grid-template-columns: 75px 1fr;
-  gap: 25px;
-  padding: 35px;
-  border: 1px solid #e5eff4;
-  border-radius: 18px;
-  background: #f7fafc;
+
+  grid-template-columns:
+    55px minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 20px;
+
+  width: 100%;
+
+  padding: 24px;
+
+  background: var(--vltd-surface);
+
+  border: 1px solid var(--vltd-border);
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--vltd-accent);
+
+    box-shadow:
+      0 15px 30px rgba(0, 0, 0, 0.15);
+
+    .vltd-overview-icon {
+      background: var(--vltd-accent);
+      color: #081725;
+    }
+  }
+
+  h3 {
+    margin: 0 0 12px;
+
+    color: var(--vltd-heading);
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  p {
+    margin: 0;
+
+    color: var(--vltd-text);
+
+    font-size: 14px;
+    line-height: 1.85;
+
+    overflow-wrap: break-word;
+  }
 }
+
+
+/* OVERVIEW ICON */
 
 .vltd-overview-icon {
   display: flex;
+
   align-items: center;
   justify-content: center;
-  width: 65px;
-  height: 65px;
-  border-radius: 16px;
-  background: #e1f5fa;
-  color: #009bb8;
-  font-size: 35px;
+
+  width: 55px;
+  height: 55px;
+
+  background: var(--vltd-icon-bg);
+  color: var(--vltd-accent);
+
+  border-radius: 12px;
+
+  font-size: 29px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
-.vltd-overview-content h3 {
-  margin: 5px 0 15px;
-  color: #173950;
-  font-size: 22px;
-}
 
-.vltd-overview-content p {
-  margin: 0;
-  color: #647987;
-  font-size: 15px;
-  line-height: 1.9;
-}
-
-/* STATE INTEGRATIONS */
+/* ==========================================
+   GOVERNMENT INTEGRATIONS SECTION
+========================================== */
 
 .vltd-integrations {
-  padding: 95px 0;
-  background: #f5f9fb;
+  padding: 60px 0;
+
+  background: var(--vltd-background);
 }
 
 .vltd-integrations-heading {
-  max-width: 750px;
-  margin-bottom: 45px;
+  max-width: 850px;
+
+  margin-bottom: 30px;
 }
 
-.vltd-integrations-heading h2 {
-  margin: 16px 0;
-  color: #102c45;
-  font-size: clamp(30px, 4vw, 45px);
-  line-height: 1.25;
-}
 
-.vltd-integrations-heading h2 span {
-  color: #009bb8;
-}
-
-.vltd-integrations-heading p {
-  color: #647987;
-  font-size: 15px;
-  line-height: 1.8;
-}
+/* ==========================================
+   GOVERNMENT SECTOR CARD
+========================================== */
 
 .vltd-sector-card {
-  margin-bottom: 24px;
-  padding: 32px;
-  border: 1px solid #e2edf2;
-  border-radius: 18px;
-  background: #ffffff;
-  box-shadow: 0 12px 35px rgba(17, 61, 86, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
+  width: 100%;
+
+  margin-bottom: 20px;
+  padding: 24px;
+
+  background: var(--vltd-surface);
+
+  border: 1px solid var(--vltd-border);
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: var(--vltd-accent);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.15);
+
+    .vltd-sector-icon {
+      background: var(--vltd-accent);
+      color: #081725;
+    }
+  }
 }
 
-.vltd-sector-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(17, 61, 86, 0.09);
-}
+
+/* SECTOR HEADER */
 
 .vltd-sector-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 22px;
-  margin-bottom: 28px;
+  display: grid;
+
+  grid-template-columns:
+    55px minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 18px;
+
+  margin-bottom: 20px;
 }
+
+
+/* SECTOR ICON */
 
 .vltd-sector-icon {
   display: flex;
-  flex-shrink: 0;
+
   align-items: center;
   justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 15px;
-  background: #e1f5fa;
-  color: #009bb8;
-  font-size: 18px;
+
+  width: 55px;
+  height: 55px;
+
+  background: var(--vltd-icon-bg);
+  color: var(--vltd-accent);
+
+  border-radius: 12px;
+
+  font-size: 24px;
   font-weight: 800;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
+
+
+/* SECTOR LABEL */
 
 .vltd-sector-label {
-  color: #009bb8;
+  display: inline-block;
+
+  margin-bottom: 6px;
+
+  color: var(--vltd-accent);
+
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
 }
 
+
+/* SECTOR TITLE */
+
 .vltd-sector-top h3 {
-  margin: 8px 0;
-  color: #173950;
-  font-size: 23px;
+  margin: 0 0 8px;
+
+  color: var(--vltd-heading);
+
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
 }
+
+
+/* SECTOR DESCRIPTION */
 
 .vltd-sector-top p {
   margin: 0;
-  color: #647987;
+
+  color: var(--vltd-text);
+
   font-size: 14px;
   line-height: 1.7;
 }
 
+
+/* ==========================================
+   STATE LIST
+========================================== */
+
 .vltd-state-list {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 12px;
-  padding-top: 23px;
-  border-top: 1px solid #eaf0f3;
+  align-items: center;
+
+  gap: 10px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid var(--vltd-border);
 }
+
+
+/* STATE CHIPS */
 
 .vltd-state-chip {
   display: inline-flex;
+
   align-items: center;
-  padding: 10px 16px;
-  border: 1px solid #dcecf2;
-  border-radius: 30px;
-  background: #f5fafc;
-  color: #31566d;
+
+  gap: 8px;
+
+  min-height: 36px;
+
+  padding: 8px 14px;
+
+  background: #10283f;
+  color: #dce5ed;
+
+  border: 1px solid #294459;
+  border-radius: 6px;
+
   font-size: 13px;
-  font-weight: 600;
-  transition: 0.25s ease;
+  font-weight: 500;
+  line-height: 1.5;
+
+  cursor: default;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    background: #173d50;
+
+    color: #60d8f0;
+    border-color: var(--vltd-accent);
+
+    transform: translateY(-2px);
+  }
 }
 
-.vltd-state-chip:hover {
-  border-color: #009bb8;
-  background: #e5f7fb;
-  color: #007e9c;
-  transform: translateY(-2px);
+
+/* STATE DECORATIVE DOT */
+
+.vltd-state-dot {
+  display: inline-block;
+
+  flex-shrink: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background: var(--vltd-accent);
+
+  border-radius: 50%;
 }
 
-/* NOTE */
+
+/* ==========================================
+   INFORMATION NOTE
+========================================== */
 
 .vltd-note {
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  margin-top: 30px;
-  padding: 22px 25px;
-  border: 1px solid #dcecf2;
-  border-radius: 12px;
-  background: #ffffff;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+  padding: 16px 20px;
+
+  background: rgba(17, 180, 212, 0.06);
+
+  border: 1px solid rgba(17, 180, 212, 0.2);
+  border-left: 3px solid var(--vltd-accent);
+  border-radius: 8px;
+
+  p {
+    margin: 0;
+
+    color: var(--vltd-text);
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
 }
 
 .vltd-note-icon {
   display: flex;
+
   flex-shrink: 0;
+
   align-items: center;
   justify-content: center;
-  width: 27px;
-  height: 27px;
+
+  width: 24px;
+  height: 24px;
+
+  color: var(--vltd-accent);
+
+  border: 1px solid var(--vltd-accent);
   border-radius: 50%;
-  background: #e1f5fa;
-  color: #008da9;
-  font-size: 15px;
-  font-weight: 800;
+
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.vltd-note p {
-  margin: 2px 0 0;
-  color: #647987;
-  font-size: 13px;
-  line-height: 1.7;
-}
 
-/* AIS-140 SECTION */
+/* ==========================================
+   AIS-140 SECTION
+========================================== */
 
 .vltd-ais {
-  padding: 90px 0;
-  background: #ffffff;
+  padding: 50px 0;
+
+  background: var(--vltd-section-bg);
+
+  border-top: 1px solid var(--vltd-border);
 }
 
 .vltd-ais-inner {
+  position: relative;
+
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+
+  grid-template-columns:
+    minmax(0, 1fr) 280px;
+
   align-items: center;
-  gap: 60px;
-  padding: 50px;
+
+  gap: 35px;
+
+  padding: 35px 40px;
+
   overflow: hidden;
-  border-radius: 24px;
-  background: linear-gradient(120deg, #071c35, #103d63, #087e9c);
+
+  background: linear-gradient(
+    120deg,
+    #10283f,
+    #103d53
+  );
+
+  border: 1px solid var(--vltd-border);
+  border-radius: 16px;
 }
 
-.vltd-ais-content .vltd-section-label {
-  color: #69d9ed;
+.vltd-ais-content {
+  min-width: 0;
+
+  h2 {
+    max-width: 750px;
+    margin: 14px 0;
+  }
+
+  p {
+    max-width: 700px;
+  }
 }
 
-.vltd-ais-content h2 {
-  max-width: 600px;
-  margin: 18px 0;
+
+/* ==========================================
+   VLTD PORTAL BUTTON
+========================================== */
+
+.vltd-portal-button,
+.vltd-contact a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  gap: 12px;
+
+  padding: 13px 22px;
+
+  background: linear-gradient(
+    120deg,
+    #06799f,
+    #087e9d
+  );
+
   color: #ffffff;
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.3;
-}
 
-.vltd-ais-content h2 span {
-  color: #69d9ed;
-}
+  border: 1px solid transparent;
+  border-radius: 7px;
 
-.vltd-ais-content p {
-  max-width: 550px;
-  color: #c4d9e7;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  span {
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: #087e9d;
+    color: #ffffff;
+
+    border-color: #60d8f0;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 8px 20px rgba(17, 180, 212, 0.25);
+
+    span {
+      transform: translate(3px, -3px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
 }
 
 .vltd-portal-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-  padding: 15px 23px;
-  border-radius: 7px;
-  background: #00a2c7;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s ease;
+  margin-top: 24px;
 }
 
-.vltd-portal-button:hover {
-  background: #ffffff;
-  color: #087e9c;
-  transform: translateY(-3px);
+
+/* KEYBOARD FOCUS */
+
+.vltd-page a:focus-visible {
+  outline: 2px solid #60d8f0;
+  outline-offset: 4px;
 }
 
-/* AIS CIRCLE */
+
+/* ==========================================
+   AIS-140 VISUAL
+========================================== */
 
 .vltd-ais-visual {
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  min-width: 0;
+  min-height: 230px;
 }
 
 .vltd-ais-circle {
+  position: relative;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  width: 240px;
-  height: 240px;
-  border: 2px solid rgba(105, 217, 237, 0.45);
+
+  width: 200px;
+  height: 200px;
+
+  background: rgba(17, 180, 212, 0.06);
+
+  border: 1px solid rgba(96, 216, 240, 0.35);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.04);
+
   box-shadow:
-    0 0 0 18px rgba(105, 217, 237, 0.05),
-    0 0 55px rgba(0, 190, 220, 0.15);
+    0 0 35px rgba(17, 180, 212, 0.1);
+
+  &::before {
+    content: '';
+
+    position: absolute;
+
+    inset: -12px;
+
+    border: 1px dashed rgba(96, 216, 240, 0.35);
+    border-radius: 50%;
+
+    animation: vltdRingRotate 25s linear infinite;
+
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(96, 216, 240, 0.15);
+    border-radius: 50%;
+
+    pointer-events: none;
+  }
 }
 
+
+/* INNER AIS CIRCLE */
+
 .vltd-ais-inner-circle {
+  position: relative;
+
+  z-index: 1;
+
   display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 175px;
-  height: 175px;
-  border: 1px solid rgba(105, 217, 237, 0.5);
+
+  width: 145px;
+  height: 145px;
+
+  background: rgba(0, 166, 204, 0.09);
+
+  border: 1px solid rgba(96, 216, 240, 0.35);
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.12);
+
+  span {
+    color: #60d8f0;
+
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 5px;
+  }
+
+  strong {
+    color: #ffffff;
+
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  small {
+    margin-top: 5px;
+
+    color: var(--vltd-accent-light);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
 }
 
-.vltd-ais-inner-circle span {
-  color: #69d9ed;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 4px;
+
+/* AIS CIRCLE ANIMATION */
+
+@keyframes vltdRingRotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
 }
 
-.vltd-ais-inner-circle strong {
-  color: #ffffff;
-  font-size: 55px;
-  line-height: 1.1;
-}
 
-.vltd-ais-inner-circle small {
-  margin-top: 8px;
-  color: #a9dce7;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-/* CONTACT */
+/* ==========================================
+   CONTACT SECTION
+========================================== */
 
 .vltd-contact {
-  padding: 80px 0;
-  background: #f5f9fb;
+  padding: 45px 0;
+
+  background: linear-gradient(
+    120deg,
+    #10283f,
+    #103d53
+  );
+
+  border-top: 1px solid var(--vltd-border);
 }
 
 .vltd-contact-inner {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-}
 
-.vltd-contact .vltd-section-label {
-  color: #009bb8;
+  gap: 35px;
+
+  > div {
+    flex: 1;
+
+    min-width: 0;
+  }
 }
 
 .vltd-contact h2 {
-  max-width: 650px;
-  margin: 18px 0;
-  color: #102c45;
-  font-size: clamp(28px, 4vw, 42px);
+  max-width: 800px;
+
+  margin: 12px 0;
+
+  color: var(--vltd-heading);
+
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 750;
   line-height: 1.3;
 }
 
 .vltd-contact p {
-  max-width: 600px;
-  margin: 0;
-  color: #647987;
-  font-size: 15px;
-  line-height: 1.8;
+  max-width: 700px;
 }
 
-.vltd-contact a {
-  display: inline-flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 15px;
-  padding: 16px 25px;
-  border-radius: 7px;
-  background: #00a2c7;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
 
-.vltd-contact a:hover {
-  background: #087e9c;
-  transform: translateY(-3px);
-}
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
 
-/* RESPONSIVE */
+@media (max-width: 1024px) {
 
-@media (max-width: 900px) {
   .vltd-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 30px;
   }
 
-  .vltd-hero-visual {
-    max-width: 650px;
-    width: 100%;
+  .vltd-image-frame {
+    min-height: 300px;
+  }
+
+  .vltd-image-frame img {
+    max-height: 270px;
+  }
+
+  .vltd-sector-card {
+    padding: 20px;
   }
 
   .vltd-ais-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
+    grid-template-columns:
+      minmax(0, 1fr) 230px;
+
+    padding: 30px;
   }
 
-  .vltd-ais-content p {
-    margin-left: auto;
-    margin-right: auto;
+}
+
+
+/* ==========================================
+   SMALL TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .vltd-hero-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 30px;
   }
 
   .vltd-contact-inner {
-    align-items: flex-start;
     flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
   }
+
 }
 
-@media (max-width: 600px) {
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
   .vltd-container {
-    width: calc(100% - 32px);
+    width: 90%;
+  }
+
+  .vltd-page-header {
+    padding: 40px 0;
+  }
+
+  .vltd-page-header h1 {
+    font-size: 36px;
+  }
+
+  .vltd-page-header .back-home-btn {
+    padding: 9px 15px;
+
+    font-size: 12px;
   }
 
   .vltd-hero {
-    padding: 35px 0 60px;
+    padding: 35px 0 40px;
   }
 
-  .vltd-breadcrumb {
-    margin-bottom: 35px;
-    line-height: 1.7;
+  .vltd-hero-content h2,
+  .vltd-overview-heading h2,
+  .vltd-integrations-heading h2,
+  .vltd-ais-content h2 {
+    font-size: 29px;
   }
 
-  .vltd-hero-content h1 {
-    letter-spacing: -1.5px;
+  .vltd-hero-content p,
+  .vltd-integrations-heading p,
+  .vltd-ais-content p,
+  .vltd-contact p {
+    font-size: 14px;
+    line-height: 1.8;
   }
 
   .vltd-image-frame {
     min-height: 260px;
+
     padding: 15px;
   }
 
   .vltd-image-frame img {
-    max-height: 240px;
+    max-height: 230px;
   }
 
   .vltd-overview,
   .vltd-integrations {
-    padding: 65px 0;
+    padding: 40px 0;
+  }
+
+  .vltd-overview-heading,
+  .vltd-integrations-heading {
+    margin-bottom: 24px;
   }
 
   .vltd-overview-content {
-    grid-template-columns: 1fr;
-    padding: 24px;
+    padding: 20px;
+
+    gap: 15px;
   }
 
   .vltd-sector-card {
-    padding: 23px;
+    padding: 20px;
   }
 
   .vltd-sector-top {
     gap: 15px;
+
+    grid-template-columns:
+      45px minmax(0, 1fr);
+  }
+
+  .vltd-sector-icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 20px;
   }
 
   .vltd-sector-top h3 {
     font-size: 20px;
   }
 
+  .vltd-state-list {
+    gap: 8px;
+  }
+
   .vltd-state-chip {
-    padding: 9px 12px;
+    min-height: 32px;
+
+    padding: 7px 11px;
+
     font-size: 12px;
   }
 
   .vltd-ais {
-    padding: 60px 0;
+    padding: 35px 0;
   }
 
   .vltd-ais-inner {
-    padding: 30px 22px;
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    padding: 25px;
+
+    gap: 25px;
+  }
+
+  .vltd-ais-visual {
+    min-height: 200px;
   }
 
   .vltd-ais-circle {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
   }
 
   .vltd-ais-inner-circle {
-    width: 145px;
-    height: 145px;
-  }
+    width: 125px;
+    height: 125px;
 
-  .vltd-ais-inner-circle strong {
-    font-size: 45px;
+    strong {
+      font-size: 40px;
+    }
   }
 
   .vltd-contact {
-    padding: 60px 0;
+    padding: 35px 0;
   }
+
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .vltd-image-frame img,
-  .vltd-sector-card,
-  .vltd-state-chip,
+
+/* ==========================================
+   SMALL MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .vltd-overview-content {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .vltd-overview-content h3 {
+    font-size: 19px;
+  }
+
+  .vltd-overview-content p {
+    font-size: 13px;
+  }
+
+  .vltd-sector-top {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .vltd-sector-top h3 {
+    font-size: 19px;
+  }
+
+  .vltd-sector-top p {
+    font-size: 13px;
+  }
+
+  .vltd-note {
+    align-items: flex-start;
+
+    padding: 14px;
+  }
+
+  .vltd-image-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .vltd-company {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
   .vltd-portal-button,
   .vltd-contact a {
-    transition: none;
+    padding: 12px 16px;
+
+    font-size: 13px;
   }
+
+}
+
+
+/* ==========================================
+   VERY SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+  .vltd-page-header h1 {
+    font-size: 32px;
+  }
+
+  .vltd-hero-content h2,
+  .vltd-overview-heading h2,
+  .vltd-integrations-heading h2,
+  .vltd-ais-content h2 {
+    font-size: 25px;
+  }
+
+  .vltd-image-frame {
+    min-height: 220px;
+
+    padding: 12px;
+  }
+
+  .vltd-image-frame img {
+    max-height: 190px;
+  }
+
+  .vltd-sector-card {
+    padding: 16px;
+  }
+
+  .vltd-ais-inner {
+    padding: 20px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vltd-page *,
+  .vltd-page *::before,
+  .vltd-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .vltd-image-frame:hover img,
+  .vltd-overview-content:hover,
+  .vltd-sector-card:hover,
+  .vltd-state-chip:hover,
+  .vltd-portal-button:hover,
+  .vltd-portal-button:hover span,
+  .vltd-contact a:hover,
+  .vltd-contact a:hover span,
+  .vltd-page-header .back-home-btn:hover .back-arrow {
+    transform: none;
+  }
+
 }

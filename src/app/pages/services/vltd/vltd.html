@@ -1,14 +1,33 @@
 
 <section class="vltd-page">
 
-  <!-- HERO SECTION -->
-  <section class="vltd-hero">
+  <!-- PAGE HEADER -->
+
+  <section class="vltd-page-header">
 
     <div class="vltd-container">
 
-      <div class="vltd-breadcrumb">
-        CTPL / SERVICES / VLTD STATE INTEGRATIONS
-      </div>
+      <span class="vltd-page-header-label">
+        CTPL / SERVICES
+      </span>
+
+      <h1>{{ title }}</h1>
+
+      <a routerLink="/" class="back-home-btn">
+        <span class="back-arrow">←</span>
+        Back to Home
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="vltd-hero">
+
+    <div class="vltd-container">
 
       <div class="vltd-hero-grid">
 
@@ -17,11 +36,6 @@
           <span class="vltd-eyebrow">
             {{ eyebrow }}
           </span>
-
-          <h1>
-            VLTD
-            <span>State Integrations</span>
-          </h1>
 
           <h2>
             Connected vehicles.
@@ -38,6 +52,9 @@
 
         </div>
 
+
+        <!-- SERVICE IMAGE -->
+
         <div class="vltd-hero-visual">
 
           <div class="vltd-image-glow"></div>
@@ -52,8 +69,11 @@
           </div>
 
           <div class="vltd-image-label">
+
             <span class="vltd-status-dot"></span>
+
             AIS-140 VEHICLE LOCATION TRACKING
+
           </div>
 
         </div>
@@ -66,6 +86,7 @@
 
 
   <!-- OVERVIEW SECTION -->
+
   <section class="vltd-overview">
 
     <div class="vltd-container">
@@ -105,6 +126,7 @@
 
 
   <!-- GOVERNMENT INTEGRATIONS -->
+
   <section class="vltd-integrations">
 
     <div class="vltd-container">
@@ -129,7 +151,8 @@
       </div>
 
 
-      <!-- MINING -->
+      <!-- MINING INTEGRATIONS -->
+
       <div class="vltd-sector-card">
 
         <div class="vltd-sector-top">
@@ -139,6 +162,7 @@
           </div>
 
           <div>
+
             <span class="vltd-sector-label">
               SECTOR 01
             </span>
@@ -149,6 +173,7 @@
               State-level vehicle tracking integrations
               associated with mining operations.
             </p>
+
           </div>
 
         </div>
@@ -156,9 +181,12 @@
         <div class="vltd-state-list">
 
           @for (state of miningStates; track state) {
+
             <span class="vltd-state-chip">
+              <span class="vltd-state-dot"></span>
               {{ state }}
             </span>
+
           }
 
         </div>
@@ -166,7 +194,8 @@
       </div>
 
 
-      <!-- TRANSPORT -->
+      <!-- TRANSPORT INTEGRATIONS -->
+
       <div class="vltd-sector-card">
 
         <div class="vltd-sector-top">
@@ -176,6 +205,7 @@
           </div>
 
           <div>
+
             <span class="vltd-sector-label">
               SECTOR 02
             </span>
@@ -186,6 +216,7 @@
               Vehicle location tracking integrations
               associated with state transport departments.
             </p>
+
           </div>
 
         </div>
@@ -193,9 +224,12 @@
         <div class="vltd-state-list">
 
           @for (state of transportStates; track state) {
+
             <span class="vltd-state-chip">
+              <span class="vltd-state-dot"></span>
               {{ state }}
             </span>
+
           }
 
         </div>
@@ -204,6 +238,7 @@
 
 
       <!-- FOOD CORPORATION -->
+
       <div class="vltd-sector-card">
 
         <div class="vltd-sector-top">
@@ -213,6 +248,7 @@
           </div>
 
           <div>
+
             <span class="vltd-sector-label">
               SECTOR 03
             </span>
@@ -223,6 +259,7 @@
               Integration activities associated with
               Food Corporation operations.
             </p>
+
           </div>
 
         </div>
@@ -230,22 +267,30 @@
         <div class="vltd-state-list">
 
           @for (state of foodCorporationStates; track state) {
+
             <span class="vltd-state-chip">
+              <span class="vltd-state-dot"></span>
               {{ state }}
             </span>
+
           }
 
         </div>
 
       </div>
 
+
+      <!-- INFORMATION NOTE -->
+
       <div class="vltd-note">
+
         <span class="vltd-note-icon">i</span>
 
         <p>
           State backend links and portal access must be
           checked individually before migration.
         </p>
+
       </div>
 
     </div>
@@ -254,6 +299,7 @@
 
 
   <!-- AIS-140 SECTION -->
+
   <section class="vltd-ais">
 
     <div class="vltd-container">
@@ -289,14 +335,23 @@
 
         </div>
 
+
+        <!-- AIS-140 VISUAL -->
+
         <div class="vltd-ais-visual">
 
           <div class="vltd-ais-circle">
+
             <div class="vltd-ais-inner-circle">
+
               <span>AIS</span>
+
               <strong>140</strong>
+
               <small>COMPLIANT</small>
+
             </div>
+
           </div>
 
         </div>
@@ -309,6 +364,7 @@
 
 
   <!-- CONTACT SECTION -->
+
   <section class="vltd-contact">
 
     <div class="vltd-container">
@@ -337,7 +393,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit CTPL Website
+          Explore Services
           <span>↗</span>
         </a>
 

@@ -1,37 +1,265 @@
 
+/* =========================================
+   CTPL GLOBAL DESIGN SYSTEM
+   ROYAL VIOLET GLASS THEME
+========================================= */
+
+/* =========================================
+   LIGHT MODE
+========================================= */
+
 :root {
-  --primary: #11b4d4;
-  --primary-dark: #0789ba;
-  --background: #091620;
-  --header-background: #0d1d2a;
-  --surface: #112536;
-  --surface-hover: #172b3d;
-  --border: #254053;
-  --text-primary: #f0f5fa;
-  --text-secondary: #a1b3c3;
-  --accent: #81cbd9;
+  color-scheme: light;
+
+  /* BRAND COLOURS */
+
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --primary-light: #a78bfa;
+  --accent: #6d28d9;
+
+  /* BACKGROUNDS */
+
+  --background: #f8f7fc;
+  --section-background: #f5f3ff;
+  --header-background: rgba(250, 248, 255, 0.88);
+  --footer-background: #ede9fe;
+
+  /* SURFACES */
+
+  --surface: #ffffff;
+  --surface-hover: #f0ebff;
+
+  /* TEXT */
+
+  --text-primary: #211638;
+  --text-secondary: #625675;
+  --text-muted: #756887;
+
+  /* BORDERS */
+
+  --border: #ddd6ee;
+
+  /* GLASS SYSTEM */
+
+  --glass-background: rgba(255, 255, 255, 0.72);
+  --glass-hover: rgba(237, 233, 254, 0.85);
+  --glass-border: rgba(124, 58, 237, 0.18);
+  --glass-highlight: rgba(255, 255, 255, 0.85);
+
+  --glass-blur: 20px;
+
+  --glass-shadow:
+    0 8px 32px rgba(76, 29, 149, 0.08);
+
+  --glass-hover-shadow:
+    0 12px 35px rgba(124, 58, 237, 0.16);
+
+  /* GRADIENTS */
+
+  --page-gradient: linear-gradient(
+    135deg,
+    #faf9ff 0%,
+    #f5f0ff 55%,
+    #ede9fe 100%
+  );
+
+  --primary-gradient: linear-gradient(
+    135deg,
+    #7c3aed,
+    #6d28d9
+  );
+
+  --hero-gradient: linear-gradient(
+    110deg,
+    rgba(245, 243, 255, 0.97) 0%,
+    rgba(237, 233, 254, 0.85) 50%,
+    rgba(221, 214, 254, 0.40) 100%
+  );
+
+  /* STATUS COLOURS */
+
+  --success: #15803d;
+  --warning: #b45309;
+  --danger: #dc2626;
+  --info: #2563eb;
+
+  /* LAYOUT */
+
+  --container-width: 1440px;
+  --container-spacing: 5%;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --transition: 0.3s ease;
 }
 
-* {
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    color-scheme: dark;
+
+    /* BRAND COLOURS */
+
+    --primary: #a78bfa;
+    --primary-dark: #7c3aed;
+    --primary-light: #c4b5fd;
+    --accent: #c4b5fd;
+
+    /* BACKGROUNDS */
+
+    --background: #100b1c;
+    --section-background: #160f26;
+    --header-background: rgba(20, 13, 34, 0.85);
+    --footer-background: #140d22;
+
+    /* SURFACES */
+
+    --surface: #201535;
+    --surface-hover: #2b1d43;
+
+    /* TEXT */
+
+    --text-primary: #f5f3ff;
+    --text-secondary: #beb3d4;
+    --text-muted: #a89abb;
+
+    /* BORDERS */
+
+    --border: #443064;
+
+    /* GLASS SYSTEM */
+
+    --glass-background: rgba(40, 25, 65, 0.60);
+    --glass-hover: rgba(57, 35, 88, 0.75);
+    --glass-border: rgba(167, 139, 250, 0.20);
+    --glass-highlight: rgba(255, 255, 255, 0.07);
+
+    --glass-shadow:
+      0 10px 35px rgba(0, 0, 0, 0.25);
+
+    --glass-hover-shadow:
+      0 12px 40px rgba(124, 58, 237, 0.18);
+
+    /* GRADIENTS */
+
+    --page-gradient: linear-gradient(
+      135deg,
+      #100b1c 0%,
+      #19102b 55%,
+      #24133e 100%
+    );
+
+    --primary-gradient: linear-gradient(
+      135deg,
+      #7c3aed,
+      #6d28d9
+    );
+
+    --hero-gradient: linear-gradient(
+      110deg,
+      rgba(16, 11, 28, 0.98) 0%,
+      rgba(32, 21, 53, 0.82) 50%,
+      rgba(76, 29, 149, 0.30) 100%
+    );
+
+    /* STATUS COLOURS */
+
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #f87171;
+    --info: #60a5fa;
+  }
+
+}
+
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
+  min-height: 100vh;
+
   margin: 0;
   padding: 0;
-  background: var(--background);
+
+  background-color: var(--background);
+  background-image: var(--page-gradient);
+
   color: var(--text-primary);
+
   font-family: 'Inter', Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   GLOBAL TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  letter-spacing: -0.035em;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+small {
+  color: var(--text-muted);
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 button,
@@ -45,131 +273,21 @@ button {
   cursor: pointer;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-p {
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: -0.035em;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 24px;
-  background: linear-gradient(
-    110deg,
-    var(--primary-dark),
-    var(--primary)
-  );
-  color: white;
-  border: 0;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 650;
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px #11b4d430;
-  }
-}
-
-.eyebrow {
-  color: #55bad3;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-::selection {
-  background: #11b4d4;
-  color: white;
-}
-
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: #091620;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #36546a;
-  border-radius: 10px;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #58d6e7;
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 
 /* =========================================
-   GLOBAL WEBSITE ALIGNMENT
-   ========================================= */
-
-:root {
-  --container-width: 1440px;
-  --container-spacing: 5%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-app-root {
-  display: block;
-  width: 100%;
-}
-
-/* GLOBAL CONTAINER */
+   GLOBAL CONTAINER
+========================================= */
 
 .container {
-  width: calc(100% - 2 * var(--container-spacing));
-  max-width: var(--container-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  box-sizing: border-box;
-}
+  width: calc(
+    100% - 2 * var(--container-spacing)
+  );
 
-/* PAGE SECTIONS */
+  max-width: var(--container-width);
+
+  margin-inline: auto;
+  padding: 0;
+}
 
 main,
 .main-content {
@@ -181,30 +299,287 @@ section {
   max-width: 100%;
 }
 
-/* RESPONSIVE CONTAINER */
 
-@media (max-width: 1024px) {
-  :root {
-    --container-spacing: 4%;
-  }
+/* =========================================
+   REUSABLE GLASS SURFACE
+========================================= */
+
+.glass-panel,
+.glass-card {
+  position: relative;
+
+  background: var(--glass-background);
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+
+  box-shadow:
+    var(--glass-shadow),
+    inset 0 1px 0 var(--glass-highlight);
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
 }
 
-@media (max-width: 768px) {
-  :root {
-    --container-spacing: 5%;
-  }
+.glass-card:hover {
+  background: var(--glass-hover);
+
+  border-color: var(--primary-light);
+
+  box-shadow: var(--glass-hover-shadow);
+
+  transform: translateY(-4px);
 }
 
-@media (max-width: 480px) {
-  :root {
-    --container-spacing: 5%;
+
+/* =========================================
+   GLASS NAVIGATION BAR
+========================================= */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: var(--header-background);
+
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+
+  border-bottom: 1px solid var(--glass-border);
+
+  box-shadow:
+    0 4px 24px rgba(76, 29, 149, 0.06);
+
+  color: var(--text-primary);
+}
+
+.main-header nav a {
+  color: var(--text-primary);
+
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+
+.main-header nav a:hover,
+.main-header nav a.active {
+  color: var(--primary);
+}
+
+.dropdown-arrow {
+  color: var(--text-primary);
+}
+
+.main-header .intra-button {
+  background: var(--primary-gradient);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+
+  box-shadow:
+    0 4px 15px rgba(124, 58, 237, 0.20);
+}
+
+.main-header .intra-button:hover {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   GLASS MEGA MENU
+========================================= */
+
+.mega-menu {
+  background: var(--glass-background);
+
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+
+  border: 1px solid var(--glass-border);
+
+  box-shadow: var(--glass-shadow);
+
+  color: var(--text-primary);
+}
+
+.mega-menu h2,
+.mega-menu h3 {
+  color: var(--text-primary);
+}
+
+.mega-menu p {
+  color: var(--text-secondary);
+}
+
+.mega-menu .mega-card {
+  background: transparent;
+
+  border: 1px solid transparent;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.mega-menu .mega-card:hover {
+  background: var(--glass-hover);
+  border-color: var(--glass-border);
+}
+
+.mega-menu .menu-icon,
+.mega-menu .menu-arrow {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   PRIMARY BUTTONS
+========================================= */
+
+.btn,
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 14px 24px;
+
+  background: var(--primary-gradient);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+
+  font-size: 14px;
+  font-weight: 650;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 16px rgba(124, 58, 237, 0.20);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+
+  &:hover {
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 8px 24px rgba(124, 58, 237, 0.30);
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 }
 
 
 /* =========================================
-   COMMON BACK TO HOME BUTTON
-   ========================================= */
+   SECONDARY GLASS BUTTON
+========================================= */
+
+.btn-secondary,
+.btn-glass {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 13px 22px;
+
+  background: var(--glass-background);
+  color: var(--primary);
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  font-size: 14px;
+  font-weight: 650;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+
+  &:hover {
+    background: var(--glass-hover);
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+  }
+}
+
+
+/* =========================================
+   EYEBROW LABELS
+========================================= */
+
+.eyebrow {
+  color: var(--primary);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   COMMON PAGE HERO
+========================================= */
+
+.page-hero,
+.ctpl-about-detail-hero,
+.ais-page-header,
+.ctpl-rfc-image-hero {
+  position: relative;
+
+  background-color: var(--section-background);
+
+  background-image:
+    var(--hero-gradient),
+    var(--hero-image, none);
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  border-bottom: 1px solid var(--glass-border);
+
+  color: var(--text-primary);
+}
+
+.page-hero h1,
+.ctpl-about-detail-hero h1,
+.ais-page-header h1,
+.ctpl-rfc-image-hero h1 {
+  color: var(--text-primary);
+}
+
+.ctpl-about-detail-hero-label,
+.ais-page-header-label {
+  color: var(--primary);
+}
 
 .ctpl-about-detail-hero .container {
   display: flex;
@@ -212,38 +587,48 @@ section {
   align-items: flex-start;
 }
 
+
+/* =========================================
+   BACK TO HOME GLASS BUTTON
+========================================= */
+
 .back-home-btn {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
   width: fit-content;
-  margin-top: 10px;
+
+  margin-top: 12px;
   padding: 10px 18px;
 
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  background: var(--glass-background);
 
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
   font-size: 13px;
   font-weight: 600;
   line-height: 1.5;
 
   text-decoration: none;
-  cursor: pointer;
 
   transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
 
   &:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.18);
-    border-color: #60d8f0;
+    color: var(--primary);
+    background: var(--glass-hover);
+    border-color: var(--primary);
 
     .back-arrow {
       transform: translateX(-4px);
@@ -253,23 +638,182 @@ section {
   &:active {
     transform: scale(0.97);
   }
-
-  &:focus-visible {
-    outline: 2px solid #60d8f0;
-    outline-offset: 4px;
-  }
 }
 
 .back-arrow {
   display: inline-block;
+
   font-size: 20px;
   line-height: 1;
-  transition: transform 0.3s ease;
+
+  transition: transform var(--transition);
 }
 
-/* MOBILE RESPONSIVE */
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+input:not([type="checkbox"]):not([type="radio"])
+:not([type="range"]):not([type="submit"])
+:not([type="button"]):not([type="file"]),
+select,
+textarea {
+  color: var(--text-primary);
+  background: var(--glass-background);
+
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+select option {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+
+/* =========================================
+   COMMON CONTENT SECTIONS
+========================================= */
+
+.ctpl-about-detail-page,
+.ctpl-about-detail-section {
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.ctpl-about-detail-text h2,
+.ctpl-about-detail-text h3 {
+  color: var(--text-primary);
+}
+
+.ctpl-about-detail-summary,
+.ctpl-about-first-point li,
+.ctpl-about-detail-more li {
+  color: var(--text-secondary);
+}
+
+.ctpl-about-detail-label {
+  color: var(--primary);
+}
+
+.ctpl-about-detail-more {
+  border-color: var(--border);
+}
+
+
+/* =========================================
+   GLASS FOOTER
+========================================= */
+
+.main-footer {
+  background: var(--footer-background);
+
+  border-top: 1px solid var(--glass-border);
+
+  color: var(--text-primary);
+}
+
+.main-footer h3,
+.main-footer h4 {
+  color: var(--text-primary);
+}
+
+.main-footer p,
+.main-footer address,
+.main-footer li a {
+  color: var(--text-secondary);
+}
+
+.main-footer a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  border-color: var(--glass-border);
+}
+
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+
+  :root {
+    --container-spacing: 4%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
 
 @media (max-width: 768px) {
+
+  :root {
+    --container-spacing: 5%;
+    --glass-blur: 12px;
+  }
 
   .back-home-btn {
     margin-top: 8px;
@@ -277,80 +821,26 @@ section {
     font-size: 12px;
   }
 
+  .main-header {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
 }
 
-/* REDUCED MOTION */
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .back-home-btn,
-  .back-arrow {
-    transition: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 
-}
-
-
-/* =====================================
-   COMMON BACK TO HOME BUTTON
-   ===================================== */
-
-.ctpl-about-detail-hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.ctpl-about-detail-hero .back-home-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  width: fit-content;
-  margin-top: 12px;
-  padding: 10px 18px;
-
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
-
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 6px;
-
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.5;
-
-  text-decoration: none;
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-
-  &:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.18);
-    border-color: #60d8f0;
-
-    .back-arrow {
-      transform: translateX(-4px);
-    }
-  }
-
-  &:active {
-    transform: scale(0.97);
-  }
-}
-
-.back-home-btn .back-arrow {
-  display: inline-block;
-  font-size: 20px;
-  line-height: 1;
-  transition: transform 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .ctpl-about-detail-hero .back-home-btn {
-    padding: 9px 15px;
-    font-size: 12px;
-  }
 }

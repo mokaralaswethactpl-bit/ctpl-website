@@ -1,14 +1,40 @@
 
 <section class="trano-page">
 
-  <!-- HERO SECTION -->
-  <section class="trano-hero">
+  <!-- ======================================
+       PAGE HEADER
+  ====================================== -->
+
+  <section class="trano-page-header">
 
     <div class="trano-container">
 
-      <div class="trano-breadcrumb">
-        CTPL / SERVICES / TRANO
-      </div>
+      <span class="trano-page-header-label">
+        CTPL / SERVICES
+      </span>
+
+      <h1>{{ title }}</h1>
+
+      <a routerLink="/" class="back-home-btn">
+
+        <span class="back-arrow">←</span>
+
+        Back to Home
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       HERO SECTION
+  ====================================== -->
+
+  <section class="trano-hero">
+
+    <div class="trano-container">
 
       <div class="trano-hero-grid">
 
@@ -17,10 +43,6 @@
           <span class="trano-eyebrow">
             {{ eyebrow }}
           </span>
-
-          <h1>
-            {{ title }}
-          </h1>
 
           <h2>
             Fleet visibility.
@@ -39,6 +61,9 @@
 
         </div>
 
+
+        <!-- SERVICE IMAGE -->
+
         <div class="trano-hero-visual">
 
           <div class="trano-image-glow"></div>
@@ -53,8 +78,11 @@
           </div>
 
           <div class="trano-image-label">
+
             <span class="trano-status-dot"></span>
+
             CONNECTED MOBILITY PLATFORM
+
           </div>
 
         </div>
@@ -66,7 +94,10 @@
   </section>
 
 
-  <!-- OVERVIEW SECTION -->
+  <!-- ======================================
+       OVERVIEW SECTION
+  ====================================== -->
+
   <section class="trano-overview">
 
     <div class="trano-container">
@@ -84,6 +115,9 @@
 
       </div>
 
+
+      <!-- OVERVIEW CARD -->
+
       <div class="trano-overview-content">
 
         <div class="trano-overview-icon">
@@ -91,11 +125,13 @@
         </div>
 
         <div>
+
           <h3>TRANO Vehicle Tracking Platform</h3>
 
           <p>
             {{ summary }}
           </p>
+
         </div>
 
       </div>
@@ -105,7 +141,10 @@
   </section>
 
 
-  <!-- CONTACT SECTION -->
+  <!-- ======================================
+       CONTACT SECTION
+  ====================================== -->
+
   <section class="trano-contact">
 
     <div class="trano-container">
@@ -113,6 +152,7 @@
       <div class="trano-contact-inner">
 
         <div>
+
           <span class="trano-section-label">
             CONTAINE TECHNOLOGIES LIMITED
           </span>
@@ -125,11 +165,19 @@
             Discover CTPL's technology platforms and solutions
             for vehicle tracking and fleet monitoring.
           </p>
+
         </div>
 
-        <a href="https://containe.in/" target="_blank" rel="noopener noreferrer">
-          Visit CTPL Website
+        <a
+          href="https://containe.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Explore Services
+
           <span>↗</span>
+
         </a>
 
       </div>
