@@ -1,6 +1,7 @@
 
 /* ==========================================
-   CTPL PREMIUM PRODUCT SLIDESHOW
+   CTPL 360° CIRCULAR PRODUCT CAROUSEL
+   WARM WHITE PREMIUM DESIGN
 ========================================== */
 
 :host {
@@ -12,7 +13,7 @@
 }
 
 /* ==========================================
-   MAIN SECTION
+   WARM WHITE SECTION BACKGROUND
 ========================================== */
 
 .ctpl-product-showcase {
@@ -20,86 +21,23 @@
   isolation: isolate;
 
   width: 100%;
-
-  padding: 65px 20px 65px;
-
-  background: linear-gradient(
-    115deg,
-    #CF65D7 0%,
-    #A446E2 33%,
-    #7736E8 65%,
-    #3E49E6 100%
-  );
-
-  color: #FFFFFF;
+  padding: 60px 20px 35px;
 
   overflow: hidden;
+
+  background: #FAF9F6;
+  color: #24183F;
 }
 
 /* ==========================================
-   MOVING BACKGROUND LIGHT
+   REMOVE OLD PURPLE BACKGROUND GLOW
 ========================================== */
 
-.showcase-glow {
-  position: absolute;
-  z-index: -1;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-
-  filter: blur(85px);
-
-  animation: showcaseGlowMove 12s ease-in-out infinite alternate;
-}
-
-.showcase-glow-one {
-  width: 480px;
-  height: 480px;
-
-  top: -170px;
-  left: -150px;
-
-  background: rgba(255, 190, 246, 0.45);
-}
-
-.showcase-glow-two {
-  width: 540px;
-  height: 540px;
-
-  right: -180px;
-  bottom: -240px;
-
-  background: rgba(141, 170, 255, 0.35);
-
-  animation-delay: -5s;
-}
-
-/* LIGHT TRACK */
-
+.showcase-glow,
+.showcase-glow-one,
+.showcase-glow-two,
 .showcase-light-track {
-  position: absolute;
-  z-index: -1;
-
-  left: -25%;
-  bottom: 45px;
-
-  width: 150%;
-  height: 140px;
-
-  border-top: 2px solid rgba(255, 255, 255, 0.45);
-
-  border-radius: 50%;
-
-  transform: rotate(-7deg);
-
-  box-shadow:
-    0 -5px 28px rgba(255, 255, 255, 0.2),
-    0 -12px 40px rgba(226, 166, 255, 0.18);
-
-  pointer-events: none;
-
-  animation: showcaseTrackFloat 9s ease-in-out infinite alternate;
+  display: none !important;
 }
 
 /* ==========================================
@@ -108,10 +46,9 @@
 
 .showcase-container {
   position: relative;
-  z-index: 1;
 
   width: 100%;
-  max-width: 1450px;
+  max-width: 1350px;
 
   margin: 0 auto;
 }
@@ -121,9 +58,12 @@
 ========================================== */
 
 .showcase-heading {
-  text-align: center;
+  position: relative;
+  z-index: 20;
 
-  margin-bottom: 44px;
+  margin-bottom: 15px;
+
+  text-align: center;
 }
 
 .showcase-eyebrow {
@@ -131,313 +71,256 @@
 
   margin-bottom: 12px;
 
-  color: #FFFFFF;
-
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 4px;
-}
-
-.showcase-heading h2 {
-  margin: 0 0 16px;
-
-  color: #FFFFFF;
-
-  font-size: clamp(35px, 4vw, 60px);
-  font-weight: 800;
-  line-height: 1.15;
-
-  letter-spacing: -0.035em;
-}
-
-.showcase-heading p {
-  margin: 0 auto;
-
-  max-width: 750px;
-
-  color: #F5E9FF;
-
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* ==========================================
-   SLIDESHOW STAGE
-========================================== */
-
-.showcase-stage {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  min-height: 400px;
-}
-
-/* ==========================================
-   SIDE PREVIEW CARDS
-========================================== */
-
-.showcase-side-card {
-  position: absolute;
-
-  top: 50%;
-  z-index: 1;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 29%;
-  height: 335px;
-
-  padding: 0;
-
-  overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.84);
-
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 26px;
-
-  box-shadow:
-    0 15px 35px rgba(39, 20, 100, 0.16);
-
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-
-  text-align: left;
-  font-family: inherit;
-
-  cursor: pointer;
-
-  transform: translateY(-50%) scale(0.92);
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-.showcase-side-left {
-  left: 0;
-}
-
-.showcase-side-right {
-  right: 0;
-}
-
-.showcase-side-card:hover {
-  transform: translateY(-50%) scale(0.96);
-
-  box-shadow:
-    0 20px 45px rgba(39, 20, 100, 0.24);
-}
-
-/* SIDE IMAGE */
-
-.showcase-side-image {
-  display: grid;
-  place-items: center;
-
-  flex: 1;
-  min-height: 0;
-
-  padding: 22px;
-
-  background: linear-gradient(
-    140deg,
-    #FAF5FF,
-    #EDE9FE
-  );
-}
-
-.showcase-side-image img {
-  display: block;
-
-  width: 100%;
-  height: 180px;
-
-  object-fit: contain;
-}
-
-/* SIDE TEXT */
-
-.showcase-side-information {
-  padding: 20px 24px 24px;
-
-  background: rgba(255, 255, 255, 0.96);
-}
-
-.showcase-side-information h3 {
-  margin: 0 0 7px;
-
-  color: #20163C;
-
-  font-size: 19px;
-  font-weight: 800;
-}
-
-.showcase-side-information p {
-  margin: 0;
-
-  color: #675B7C;
-
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-/* ==========================================
-   MAIN GLASS PRODUCT CARD
-========================================== */
-
-.showcase-main-card {
-  position: relative;
-  z-index: 3;
-
-  width: 64%;
-  min-height: 395px;
-
-  overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.95);
-
-  border: 3px solid rgba(255, 255, 255, 0.95);
-  border-radius: 34px;
-
-  box-shadow:
-    0 0 35px rgba(255, 255, 255, 0.36),
-    0 24px 60px rgba(57, 21, 112, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 1);
-
-  backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-}
-
-/* LAYOUT INSIDE FEATURED CARD */
-
-.showcase-main-inner {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 0.95fr);
-
-  align-items: center;
-
-  min-height: 395px;
-
-  animation: showcaseSlideIn 0.62s
-    cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-/* ==========================================
-   MAIN PRODUCT IMAGE
-========================================== */
-
-.showcase-product-visual {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 0;
-  min-height: 390px;
-
-  padding: 35px;
-
-  background: radial-gradient(
-    circle at 50% 65%,
-    #FFFFFF 0%,
-    #FAF5FF 52%,
-    #F0E5FF 100%
-  );
-}
-
-.showcase-product-visual::after {
-  content: '';
-
-  position: absolute;
-
-  left: 17%;
-  right: 17%;
-  bottom: 40px;
-
-  height: 24px;
-
-  border-radius: 50%;
-
-  background: rgba(70, 35, 110, 0.12);
-
-  filter: blur(15px);
-}
-
-/* PRODUCT IMAGE */
-
-.showcase-product-image {
-  position: relative;
-  z-index: 1;
-
-  display: block;
-
-  width: 100%;
-  max-width: 400px;
-  height: 290px;
-
-  object-fit: contain;
-
-  animation: showcaseImageEnter 0.7s
-    cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-/* ==========================================
-   MAIN PRODUCT INFORMATION
-========================================== */
-
-.showcase-product-content {
-  min-width: 0;
-
-  padding: 40px 38px;
-
-  border-left: 1px solid #DDD6FE;
-}
-
-.showcase-product-category {
-  display: block;
-
-  margin-bottom: 13px;
-
   color: #7C3AED;
 
   font-size: 12px;
   font-weight: 800;
+  letter-spacing: 3px;
+}
 
-  line-height: 1.5;
-  letter-spacing: 1.5px;
+.showcase-heading h2 {
+  margin: 0 0 15px;
 
+  color: #24183F;
+
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.showcase-heading p {
+  max-width: 750px;
+  margin: 0 auto;
+
+  color: #625773;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   CIRCULAR ORBIT STAGE
+========================================== */
+
+.ctpl-orbit-stage {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  height: 600px;
+
+  perspective: 1300px;
+  transform-style: preserve-3d;
+}
+
+/* ==========================================
+   SUBTLE OVAL ORBIT RING
+========================================== */
+
+.ctpl-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 79%;
+  height: 245px;
+
+  transform: translate(-50%, -50%);
+
+  border: 2px solid rgba(124, 58, 237, 0.12);
+  border-radius: 50%;
+
+  box-shadow: none;
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   ROTATING PRODUCT CARDS
+========================================== */
+
+.ctpl-orbit-card {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 370px;
+  height: 370px;
+
+  overflow: hidden;
+
+  background: #FFFFFF;
+
+  border: 2px solid #EDE9FE;
+  border-radius: 24px;
+
+  box-shadow:
+    0 12px 32px rgba(90, 60, 130, 0.10);
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.6);
+
+  transform-origin: center center;
+
+  backface-visibility: hidden;
+
+  will-change: transform, opacity;
+
+  /*
+   * Circular motion is controlled
+   * by product-slideshow.ts.
+   *
+   * Do not add CSS transform animations
+   * to this card.
+   */
+}
+
+/* ==========================================
+   FRONT FEATURED CARD
+========================================== */
+
+.ctpl-orbit-card.is-front {
+  border-color: #DDD6FE;
+
+  box-shadow:
+    0 0 25px rgba(124, 58, 237, 0.06),
+    0 16px 45px rgba(90, 60, 130, 0.13);
+}
+
+/* ==========================================
+   CARD CLICK AREA
+========================================== */
+
+.ctpl-orbit-card-select {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.ctpl-orbit-card-select:focus-visible {
+  outline: 3px solid #7C3AED;
+  outline-offset: -5px;
+  border-radius: 24px;
+}
+
+/* ==========================================
+   PRODUCT IMAGE PANEL
+========================================== */
+
+.ctpl-orbit-image-panel {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 190px;
+
+  min-width: 0;
+  padding: 18px;
+
+  background: linear-gradient(
+    145deg,
+    #FDFBFF 0%,
+    #F3EEFC 100%
+  );
+}
+
+/* PRODUCT IMAGE */
+
+.ctpl-orbit-image-panel img {
+  display: block;
+
+  width: 100%;
+  max-width: 280px;
+  height: 160px;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+/* IMAGE ZOOM ON HOVER */
+
+.ctpl-orbit-card.is-front:hover
+.ctpl-orbit-image-panel img {
+  transform: scale(1.04);
+}
+
+/* ==========================================
+   PRODUCT DETAILS
+========================================== */
+
+.ctpl-orbit-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 1;
+
+  min-width: 0;
+  padding: 18px 22px;
+
+  background: #FFFFFF;
+}
+
+/* SMALL PURPLE PRODUCT CATEGORY */
+
+.ctpl-orbit-category {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #7C3AED;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.showcase-product-content h3 {
-  margin: 0 0 18px;
+/* PRODUCT TITLE */
 
-  color: #20163C;
+.ctpl-orbit-information h3 {
+  margin: 0 0 8px;
 
-  font-size: clamp(25px, 2.5vw, 39px);
+  color: #24183F;
+
+  font-size: 23px;
   font-weight: 800;
   line-height: 1.2;
-
-  letter-spacing: -0.03em;
 }
 
-.showcase-product-content p {
-  margin: 0 0 28px;
+/* PRODUCT DESCRIPTION */
 
-  color: #5C5271;
+.ctpl-orbit-information p {
+  display: -webkit-box;
 
-  font-size: 15px;
-  line-height: 1.75;
+  margin: 0 0 12px;
+
+  overflow: hidden;
+
+  color: #625773;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 /* ==========================================
@@ -445,14 +328,17 @@
 ========================================== */
 
 .showcase-explore-button {
+  position: relative;
+  z-index: 3;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  gap: 15px;
+  gap: 12px;
 
-  min-height: 48px;
-  padding: 14px 24px;
+  margin-top: auto;
+  padding: 10px 16px;
 
   background: linear-gradient(
     110deg,
@@ -462,41 +348,48 @@
 
   color: #FFFFFF;
 
-  border-radius: 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
 
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   text-decoration: none;
 
   box-shadow:
-    0 9px 24px rgba(124, 58, 237, 0.22);
+    0 8px 20px rgba(124, 58, 237, 0.20);
 
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
+/* BUTTON HOVER */
+
 .showcase-explore-button:hover {
-  transform: translateY(-3px);
+  background: #5B21B6;
+
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
 
   box-shadow:
-    0 14px 30px rgba(124, 58, 237, 0.3);
+    0 12px 24px rgba(124, 58, 237, 0.28);
 }
 
 .showcase-explore-button:focus-visible {
   outline: 3px solid #A78BFA;
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
 /* ==========================================
-   PREVIOUS AND NEXT ARROWS
+   PREVIOUS / NEXT NAVIGATION
 ========================================== */
 
 .showcase-arrow {
   position: absolute;
-
   top: 50%;
-  z-index: 5;
+  z-index: 200;
 
   display: grid;
   place-items: center;
@@ -514,7 +407,7 @@
   border-radius: 50%;
 
   box-shadow:
-    0 8px 25px rgba(42, 16, 90, 0.17);
+    0 8px 24px rgba(90, 60, 130, 0.12);
 
   cursor: pointer;
 
@@ -522,280 +415,124 @@
 
   transition:
     background 0.25s ease,
-    transform 0.25s ease;
+    box-shadow 0.25s ease;
 }
 
 .showcase-arrow span {
-  font-size: 36px;
-  font-weight: 400;
+  font-size: 34px;
   line-height: 1;
 }
 
+/* LEFT ARROW */
+
 .showcase-arrow-left {
-  left: -15px;
+  left: 0;
 }
 
+/* RIGHT ARROW */
+
 .showcase-arrow-right {
-  right: -15px;
+  right: 0;
 }
+
+/* ARROW HOVER */
 
 .showcase-arrow:hover {
   background: #F3E8FF;
 
-  transform: translateY(-50%) scale(1.08);
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.18);
 }
 
-.showcase-arrow:focus-visible,
-.showcase-side-card:focus-visible {
-  outline: 3px solid #FFFFFF;
-  outline-offset: 4px;
+.showcase-arrow:focus-visible {
+  outline: 3px solid #A78BFA;
+  outline-offset: 3px;
 }
 
 /* ==========================================
-   SLIDESHOW CONTROLS
+   PLAY / PAUSE BUTTON
 ========================================== */
 
-.showcase-controls {
+.ctpl-orbit-footer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 
-  gap: 22px;
-
-  margin-top: 34px;
+  margin-top: 0;
 }
 
-/* PAGINATION */
-
-.showcase-pagination {
-  display: flex;
+.ctpl-orbit-play-button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  flex-wrap: wrap;
-  gap: 12px;
-}
+  gap: 10px;
 
-.showcase-page-button {
-  display: grid;
-  place-items: center;
+  min-height: 40px;
+  padding: 10px 18px;
 
-  width: 42px;
-  height: 42px;
+  background: rgba(255, 255, 255, 0.85);
 
-  background: rgba(255, 255, 255, 0.12);
+  color: #7C3AED;
 
-  color: #FFFFFF;
-
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 50%;
+  border: 1px solid #DDD6FE;
+  border-radius: 30px;
 
   font-family: inherit;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 5px 18px rgba(124, 58, 237, 0.10);
 
   cursor: pointer;
 
   transition:
     background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+    box-shadow 0.25s ease;
 }
 
-.showcase-page-button:hover {
-  background: rgba(255, 255, 255, 0.25);
-}
+/* PLAY / PAUSE HOVER */
 
-.showcase-page-button.active {
-  background: #FFFFFF;
-
-  color: #6D28D9;
-
-  transform: scale(1.1);
+.ctpl-orbit-play-button:hover {
+  background: #F3E8FF;
 
   box-shadow:
-    0 5px 18px rgba(34, 14, 88, 0.15);
+    0 8px 24px rgba(124, 58, 237, 0.15);
 }
 
-/* PLAY / PAUSE + PROGRESS */
-
-.showcase-playback {
-  display: flex;
-  align-items: center;
-
-  width: min(100%, 720px);
-
-  gap: 18px;
-}
-
-.showcase-play-button {
-  display: grid;
-  place-items: center;
-
-  flex-shrink: 0;
-
-  width: 44px;
-  height: 44px;
-
-  background: #6D28D9;
-
-  color: #FFFFFF;
-
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 50%;
-
-  font-size: 18px;
-  font-weight: 800;
-
-  cursor: pointer;
-}
-
-.showcase-progress-track {
-  position: relative;
-  flex: 1;
-
-  height: 6px;
-
-  overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.28);
-
-  border-radius: 99px;
-}
-
-.showcase-progress-fill {
-  position: absolute;
-  inset: 0;
-
-  width: 0%;
-
-  background: #FFFFFF;
-
-  border-radius: inherit;
-
-  box-shadow:
-    0 0 14px rgba(255, 255, 255, 0.8);
-
-  animation: showcaseProgress linear forwards;
-}
-
-/* ==========================================
-   ANIMATIONS
-========================================== */
-
-@keyframes showcaseProgress {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes showcaseSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(25px) scale(0.98);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-@keyframes showcaseImageEnter {
-  from {
-    opacity: 0;
-    transform: translateY(16px) scale(0.92);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes showcaseGlowMove {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(35px, -25px, 0);
-  }
-}
-
-@keyframes showcaseTrackFloat {
-  from {
-    transform: rotate(-7deg) translateY(0);
-  }
-
-  to {
-    transform: rotate(-5deg) translateY(-15px);
-  }
+.ctpl-orbit-play-button:focus-visible {
+  outline: 3px solid #A78BFA;
+  outline-offset: 3px;
 }
 
 /* ==========================================
    TABLET
 ========================================== */
 
-@media (max-width: 1100px) {
+@media (max-width: 950px) {
 
-  .showcase-main-card {
-    width: 73%;
+  .ctpl-orbit-stage {
+    height: 540px;
   }
 
-  .showcase-side-card {
-    width: 25%;
+  .ctpl-orbit-card {
+    width: 330px;
+    height: 350px;
   }
 
-  .showcase-product-visual {
-    padding: 20px;
+  .ctpl-orbit-image-panel {
+    flex-basis: 175px;
   }
 
-  .showcase-product-image {
-    height: 250px;
+  .ctpl-orbit-image-panel img {
+    height: 145px;
   }
 
-  .showcase-product-content {
-    padding: 30px 25px;
-  }
-}
-
-/* ==========================================
-   SMALL TABLET
-========================================== */
-
-@media (max-width: 850px) {
-
-  .showcase-side-card {
-    display: none;
-  }
-
-  .showcase-main-card {
-    width: calc(100% - 50px);
-  }
-
-  .showcase-main-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .showcase-product-visual {
-    min-height: 340px;
-  }
-
-  .showcase-product-image {
-    height: 235px;
-  }
-
-  .showcase-arrow-left {
-    left: 0;
-  }
-
-  .showcase-arrow-right {
-    right: 0;
+  .ctpl-orbit-information h3 {
+    font-size: 21px;
   }
 }
 
@@ -806,11 +543,11 @@
 @media (max-width: 650px) {
 
   .ctpl-product-showcase {
-    padding: 50px 15px 55px;
+    padding: 48px 12px 32px;
   }
 
   .showcase-heading {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .showcase-heading h2 {
@@ -818,124 +555,185 @@
   }
 
   .showcase-heading p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  .showcase-stage {
-    min-height: 0;
+  .ctpl-orbit-stage {
+    height: 480px;
   }
 
-  .showcase-main-card {
-    width: calc(100% - 28px);
+  .ctpl-orbit-card {
+    width: 280px;
+    height: 345px;
 
-    border-radius: 23px;
-    border-width: 2px;
+    border-radius: 20px;
   }
 
-  .showcase-main-inner {
-    grid-template-columns: 1fr;
-    min-height: 0;
+  .ctpl-orbit-image-panel {
+    flex-basis: 170px;
+    padding: 14px;
   }
 
-  .showcase-product-visual {
-    min-height: 235px;
-    padding: 25px;
+  .ctpl-orbit-image-panel img {
+    height: 145px;
   }
 
-  .showcase-product-image {
-    height: 195px;
+  .ctpl-orbit-information {
+    padding: 15px 18px;
   }
 
-  .showcase-product-content {
-    padding: 25px;
-    border-left: none;
-    border-top: 1px solid #DDD6FE;
+  .ctpl-orbit-information h3 {
+    font-size: 20px;
   }
 
-  .showcase-product-content h3 {
-    font-size: 27px;
+  .ctpl-orbit-information p {
+    font-size: 11px;
   }
 
-  .showcase-product-content p {
-    font-size: 14px;
-    line-height: 1.65;
+  .ctpl-orbit-ring {
+    width: 85%;
+    height: 190px;
   }
 
   .showcase-arrow {
-    width: 37px;
-    height: 37px;
+    width: 36px;
+    height: 36px;
   }
 
   .showcase-arrow span {
-    font-size: 28px;
-  }
-
-  .showcase-arrow-left {
-    left: -5px;
-  }
-
-  .showcase-arrow-right {
-    right: -5px;
-  }
-
-  .showcase-page-button {
-    width: 35px;
-    height: 35px;
-    font-size: 12px;
-  }
-
-  .showcase-pagination {
-    gap: 7px;
-  }
-
-  .showcase-playback {
-    gap: 12px;
+    font-size: 27px;
   }
 }
 
 /* ==========================================
-   REDUCED MOTION
+   ACCESSIBILITY — REDUCED MOTION
 ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .showcase-glow,
-  .showcase-light-track,
-  .showcase-main-inner,
-  .showcase-product-image,
-  .showcase-progress-fill {
-    animation: none !important;
+  .ctpl-orbit-card {
+    will-change: auto;
   }
 
-  .showcase-side-card,
+  .ctpl-orbit-image-panel img,
   .showcase-arrow,
-  .showcase-explore-button,
-  .showcase-page-button {
+  .ctpl-orbit-play-button,
+  .showcase-explore-button {
     transition: none !important;
   }
 
-  .showcase-side-card:hover,
-  .showcase-arrow:hover,
-  .showcase-explore-button:hover {
+  .showcase-explore-button:hover,
+  .ctpl-orbit-card.is-front:hover
+  .ctpl-orbit-image-panel img {
     transform: none !important;
   }
 }
 
 
 /* =====================================
-   HIDE SLIDESHOW BOTTOM CONTROLS
+   INCREASE ROTATING PRODUCT CARD HEIGHT
 ===================================== */
 
-.showcase-controls,
-.showcase-pagination,
-.showcase-playback,
-.showcase-progress-track,
-.showcase-play-button {
-  display: none !important;
+/* Desktop: taller cards */
+
+.ctpl-orbit-card {
+  height: 450px !important;
 }
 
-/* Remove extra bottom spacing */
+/* Increase product image area */
 
-.ctpl-product-showcase {
-  padding-bottom: 45px !important;
+.ctpl-orbit-image-panel {
+  flex: 0 0 235px;
+  padding: 22px;
+}
+
+/* Larger product image */
+
+.ctpl-orbit-image-panel img {
+  height: 205px;
+  max-width: 300px;
+}
+
+/* More space for descriptions */
+
+.ctpl-orbit-information {
+  padding: 22px 24px;
+}
+
+/* Increase carousel section height
+   so cards do not get cut off */
+
+.ctpl-orbit-stage {
+  height: 720px;
+}
+
+/* Tablet */
+
+@media (max-width: 950px) {
+  .ctpl-orbit-card {
+    height: 420px !important;
+  }
+
+  .ctpl-orbit-stage {
+    height: 650px;
+  }
+
+  .ctpl-orbit-image-panel {
+    flex-basis: 215px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .ctpl-orbit-card {
+    height: 390px !important;
+  }
+
+  .ctpl-orbit-stage {
+    height: 560px;
+  }
+
+  .ctpl-orbit-image-panel {
+    flex-basis: 185px;
+  }
+
+  .ctpl-orbit-image-panel img {
+    height: 160px;
+  }
+}
+
+
+/* =====================================
+   CTPL PRODUCT CARDS — PURPLE BORDERS
+===================================== */
+
+/* All rotating cards */
+
+.ctpl-orbit-card {
+  border: 2px solid #7C3AED !important;
+  border-radius: 24px;
+
+  box-shadow:
+    0 10px 30px rgba(124, 58, 237, 0.12);
+}
+
+/* Featured card — stronger purple border */
+
+.ctpl-orbit-card.is-front {
+  border: 3px solid #7C3AED !important;
+
+  box-shadow:
+    0 0 22px rgba(124, 58, 237, 0.20),
+    0 18px 45px rgba(124, 58, 237, 0.16);
+}
+
+/* Hover — purple glow */
+
+.ctpl-orbit-card:hover {
+  border-color: #7C3AED !important;
+
+  box-shadow:
+    0 0 28px rgba(124, 58, 237, 0.30),
+    0 20px 50px rgba(124, 58, 237, 0.18);
 }
