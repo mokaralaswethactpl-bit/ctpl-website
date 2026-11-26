@@ -1,0 +1,539 @@
+
+/* ==========================================
+   CTPL INVESTORS PAGE
+========================================== */
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  --investor-background: #ffffff;
+  --investor-surface: #F8F5FF;
+  --investor-visual-bg: #F3E8FF;
+  --investor-border: #E7DEF4;
+  --investor-title: #241438;
+  --investor-text: #475569;
+  --investor-accent: #7C3AED;
+}
+
+
+/* ==========================================
+   COMMON PAGE STYLING
+========================================== */
+
+.ctpl-investors-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--investor-background);
+  color: var(--investor-title);
+}
+
+.ctpl-investors-section {
+  width: 100%;
+
+  padding: 70px 0 90px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE CONTAINER
+========================================== */
+
+.ctpl-investors-section .container {
+  width: 90%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   PAGE HEADING
+========================================== */
+
+.ctpl-investors-heading {
+  margin-bottom: 48px;
+}
+
+.ctpl-investors-label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--investor-accent);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.ctpl-investors-heading h1 {
+  margin: 0 0 18px;
+
+  color: var(--investor-title);
+
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 800;
+
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+}
+
+.ctpl-investors-heading p {
+  margin: 0;
+
+  color: var(--investor-text);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   INVESTOR CARD GRID
+========================================== */
+
+.ctpl-investors-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+
+/* ==========================================
+   INVESTOR CARD
+========================================== */
+
+.ctpl-investor-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+
+  background: var(--investor-surface);
+
+  border: 1px solid var(--investor-border);
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  color: inherit;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ctpl-investor-card:hover {
+  border-color: #A78BFA;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ctpl-investor-card:focus-visible {
+  outline: 2px solid var(--investor-accent);
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   INVESTOR VISUAL SECTION
+========================================== */
+
+.ctpl-investor-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 150px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--investor-visual-bg);
+}
+
+
+/* ==========================================
+   INVESTOR ICON
+========================================== */
+
+.ctpl-investor-icon {
+  display: grid;
+  place-items: center;
+
+  width: 75px;
+  height: 75px;
+
+  background: rgba(124, 58, 237, 0.1);
+
+  color: var(--investor-accent);
+
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 18px;
+
+  font-size: 40px;
+  font-weight: 600;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ctpl-investor-card:hover
+.ctpl-investor-icon {
+  background: #7C3AED;
+  color: #ffffff;
+
+  transform: translateY(-4px);
+}
+
+
+/* ==========================================
+   INVESTOR CARD CONTENT
+========================================== */
+
+.ctpl-investor-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 20px 24px;
+}
+
+
+/* INVESTOR CATEGORY */
+
+.ctpl-investor-category {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--investor-accent);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+
+  line-height: 1.5;
+}
+
+
+/* INVESTOR TITLE */
+
+.ctpl-investor-content h2 {
+  margin: 0 0 12px;
+
+  color: var(--investor-title);
+
+  font-size: 22px;
+  font-weight: 750;
+  line-height: 1.35;
+
+  overflow-wrap: break-word;
+}
+
+
+/* INVESTOR DESCRIPTION */
+
+.ctpl-investor-content p {
+  margin: 0 0 18px;
+
+  color: var(--investor-text);
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================
+   EXPLORE SECTION LINK
+========================================== */
+
+.ctpl-investor-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  color: var(--investor-accent);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  line-height: 1.5;
+
+  transition: color 0.25s ease;
+}
+
+.ctpl-investor-arrow {
+  display: inline-block;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.ctpl-investor-card:hover
+.ctpl-investor-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+
+    --investor-background: #140B24;
+
+    --investor-surface: #241438;
+
+    --investor-visual-bg: #241438;
+
+    --investor-border: #493568;
+
+    --investor-title: #f1f5f9;
+
+    --investor-text: #CBBBE5;
+
+    --investor-accent: #A78BFA;
+
+  }
+
+  .ctpl-investor-card:hover {
+
+    border-color: #A78BFA;
+
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.25);
+
+  }
+
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .ctpl-investors-section {
+    padding: 55px 0 70px;
+  }
+
+  .ctpl-investors-grid {
+    gap: 20px;
+  }
+
+  .ctpl-investor-visual {
+    height: 140px;
+  }
+
+  .ctpl-investor-content {
+    padding: 18px 20px;
+  }
+
+  .ctpl-investor-content h2 {
+    font-size: 20px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-investors-section {
+    padding: 40px 0 55px;
+  }
+
+  .ctpl-investors-heading {
+    margin-bottom: 30px;
+  }
+
+  .ctpl-investors-heading h1 {
+    font-size: 38px;
+  }
+
+  .ctpl-investors-heading p {
+    font-size: 14px;
+  }
+
+  .ctpl-investors-grid {
+
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 18px;
+  }
+
+  .ctpl-investor-visual {
+    height: 130px;
+  }
+
+  .ctpl-investor-content {
+    padding: 18px;
+  }
+
+  .ctpl-investor-content h2 {
+    font-size: 19px;
+  }
+
+  .ctpl-investor-content p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ctpl-investor-card,
+  .ctpl-investor-icon,
+  .ctpl-investor-link,
+  .ctpl-investor-arrow {
+
+    transition: none;
+
+  }
+
+  .ctpl-investor-card:hover
+  .ctpl-investor-icon,
+
+  .ctpl-investor-card:hover
+  .ctpl-investor-arrow {
+
+    transform: none;
+
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.ctpl-investor-card { background:#562677; border-color:#704490; border-radius:16px; box-shadow:0 12px 30px rgba(68,27,104,.12); color:#FFF; transition:background-color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease; }
+.ctpl-investor-card:hover { background:#632C89; border-color:#B58BE8; transform:translateY(-3px); box-shadow:0 18px 38px rgba(68,27,104,.19); }
+.ctpl-investor-card h2, .ctpl-investor-card h3, .ctpl-investor-card h4, .ctpl-investor-card strong { color:#FFF; }
+.ctpl-investor-card p, .ctpl-investor-card li { color:#F0E6FA; }
+.ctpl-investor-card a, .ctpl-investor-card .card-link, .ctpl-investor-card .ctpl-service-link, .ctpl-investor-card .ctpl-investor-link { color:#FFF; }
+.ctpl-investor-visual { color:#7C3AED; background:#F2E8FF; }
+.ctpl-investor-category { color:#7C3AED; }
+.ctpl-investor-link { color:#7C3AED; }
+@media (prefers-reduced-motion: reduce) { .ctpl-investor-card, .ctpl-investor-card:hover { transform:none; transition:none; } }
+
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.ctpl-investors-page { background:#FBF9FF; }
+.ctpl-investor-content h2,.ctpl-investor-content h3,.ctpl-investor-content p { color:#FFF; }
+.ctpl-investor-icon { color:#7C3AED; }
+.ctpl-investor-category,.ctpl-investor-link { color:#EDD5FF; }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.ctpl-investor-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.ctpl-investor-card h2,.ctpl-investor-card h3,.ctpl-investor-card h4,.ctpl-investor-card strong{color:#0F1830;}
+.ctpl-investor-card p,.ctpl-investor-card li{color:#475569;}
+.ctpl-investor-card a,.ctpl-investor-card .card-link,.ctpl-investor-card .ctpl-service-link,.ctpl-investor-card .ctpl-investor-link{color:#0877E8;}
+
+.ctpl-investor-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.ctpl-investor-icon{color:#885CF6;background:#EDE9FE;border-color:#DDD6FE;}
+
+.ctpl-investors-section{background-color:#F8FAFF;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.ctpl-investor-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.ctpl-investor-card h2, .ctpl-investor-card h3 {color:#24183F;}
+.ctpl-investor-card p {color:#5D5872;}
+.ctpl-investor-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.ctpl-investor-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.ctpl-investor-card:hover{transform:none;}}
+.ctpl-investor-icon {color:#7C3AED!important;}
+.ctpl-investor-icon {background-color:#F1EAFE!important;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --investor-accent: #7C3AED;
+  --investor-background: #FAF8FF;
+  --investor-border: #E7DEFA;
+  --investor-surface: #FFFFFF;
+  --investor-text: #5D5872;
+  --investor-visual-bg: #FAF8FF;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}

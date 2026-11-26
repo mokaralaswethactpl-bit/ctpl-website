@@ -1,0 +1,432 @@
+
+<!-- ======================================
+     CTPL HOME PAGE
+====================================== -->
+
+
+
+<!-- ======================================
+     PREMIUM CTPL HOME HERO
+====================================== -->
+
+<section class="hero">
+
+  <!-- EXISTING HERO IMAGE -->
+  <div class="hero-photo" aria-hidden="true"></div>
+
+  <!-- LAVENDER OVERLAY -->
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow hero-eyebrow">
+        CONNECTED MOBILITY · ROAD SAFETY
+      </div>
+
+      <h1>
+        Technology that moves
+        <em>transport forward.</em>
+      </h1>
+
+      <p class="hero-description">
+        Vehicle Tracking Device AIS-140 compliant SOS system is a
+        vital tool for enhancing the safety and security of women
+        and girl children across India. Integrated into public and
+        private vehicles, the system features an easily accessible
+        emergency panic button that, when activated, instantly
+        transmits real-time location data to designated State
+        Command and Control Centers and emergency response
+        authorities. This rapid alert mechanism ensures timely
+        intervention during distress situations—such as harassment,
+        abduction, or accidents—providing vulnerable passengers
+        with a reliable lifeline. By leveraging government-mandated
+        telematics standards, CTPL's technology empowers women
+        and girls with greater mobility, confidence, and protection
+        in everyday travel.
+      </p>
+
+      <div class="button-row">
+
+        <a
+          class="btn btn-primary"
+          routerLink="/products/ais"
+        >
+          Explore Solutions
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          class="btn btn-ghost"
+          routerLink="/page/about"
+        >
+          Discover Our Story
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-label">
+      CTPL / CONTAINE TECHNOLOGIES LIMITED
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CTPL PREMIUM EXPERIENCE CARD
+========================================== -->
+
+<section class="stat-strip">
+
+  <div class="container">
+
+    <div class="experience-glass-card">
+
+      <!-- ANIMATED PURPLE TOP LINE -->
+      <div
+        class="experience-shine"
+        aria-hidden="true"
+      ></div>
+
+      <!-- 18 EXPERIENCE COUNTER -->
+      <div class="experience-number">
+
+        <strong class="experience-counter">
+          {{ experience() }}
+        </strong>
+
+        <span>YEARS</span>
+
+      </div>
+
+      <!-- VERTICAL DIVIDER -->
+      <div
+        class="experience-divider"
+        aria-hidden="true"
+      ></div>
+
+      <!-- COMPANY INFORMATION -->
+      <div class="experience-info">
+
+        <h2>
+          Recognized for technology and reliability
+        </h2>
+
+        <p>
+          Vehicle safety, connected mobility and smart
+          IoT solutions.
+        </p>
+
+      </div>
+
+      <!-- CERTIFICATION AND TECHNOLOGY -->
+      <div class="experience-highlights">
+
+        <span>
+          <i aria-hidden="true">✦</i>
+          ISO 9001:2015 Certified
+        </span>
+
+        <span>
+          <i aria-hidden="true">◎</i>
+          IoT + M2M
+        </span>
+
+      </div>
+
+      <!-- GLASS ABOUT BUTTON -->
+      <a
+        routerLink="/page/about"
+        class="experience-about"
+      >
+
+        <span>About CTPL</span>
+
+        <span
+          class="about-arrow"
+          aria-hidden="true"
+        >
+          ↗
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================
+     CTPL ANIMATED PRODUCT PORTFOLIO
+====================================== -->
+
+<app-product-slideshow></app-product-slideshow>
+
+<!-- ======================================
+     CONNECTED DIGITAL SERVICES
+====================================== -->
+
+<section class="section home-tech-bg interactive-grid-section">
+
+  <!-- INTERACTIVE GRID BACKGROUND -->
+
+  <div class="grid-hover-layer" aria-hidden="true">
+
+    @for (cell of gridCells; track cell) {
+
+      <span class="grid-cell"></span>
+
+    }
+
+  </div>
+
+
+  <div class="container">
+
+    <!-- SECTION HEADING -->
+
+    <div appReveal class="section-heading">
+
+      <div>
+
+        <div class="eyebrow">
+          CONNECTED DIGITAL SERVICES
+        </div>
+
+        <h2>
+          Platforms built to<br>
+          <span>support your operations.</span>
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <!-- SERVICE GRID -->
+
+    <div class="service-grid">
+
+      @for (
+        s of services.slice(0, 6);
+        track s.slug;
+        let i = $index
+      ) {
+
+        <a
+          appReveal
+          class="service-card"
+          [style.--delay]="(i % 3) * 90 + 'ms'"
+          [routerLink]="getServiceRoute(s.slug)">
+
+          <!-- SERVICE ICON -->
+
+          <div class="service-icon">
+
+            {{ ['◎', '◇', '▤', '◈', '⌘', '◉'][i] }}
+
+          </div>
+
+
+          <!-- SERVICE CONTENT -->
+
+          <div>
+
+            <span class="card-tag">
+              {{ s.eyebrow }}
+            </span>
+
+            <h3>{{ s.title }}</h3>
+
+            <p>{{ s.summary }}</p>
+
+            <span class="card-link">
+              Read more... ↗
+            </span>
+
+          </div>
+
+        </a>
+
+      }
+
+    </div>
+
+
+    <!-- VLTD INTEGRATION LINK -->
+
+    <div class="section-cta">
+
+      <a
+        class="text-link"
+        routerLink="/services/vltd">
+
+        Explore VLTD state integrations ↗
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+     SAFETY FIRST
+====================================== -->
+
+<section class="feature">
+
+  <div class="container feature-layout">
+
+    <!-- FEATURE CONTENT -->
+
+    <div appReveal>
+
+      <div class="eyebrow eyebrow-light">
+        SAFETY FIRST
+      </div>
+
+      <h2>
+        Technology that helps protect every journey.
+      </h2>
+
+      <p>
+        AIS-140 compliant vehicle tracking and panic-button
+        solutions can connect emergency alerts and vehicle
+        location information to designated response systems.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        routerLink="/products/ais">
+
+        Explore VLTD technology ↗
+
+      </a>
+
+    </div>
+
+
+    <!-- FEATURE IMAGE -->
+
+    <div class="feature-visual" appReveal>
+
+      <img
+        src="/assets/images/tranopro.png"
+        alt="CTPL vehicle tracking hardware"
+        loading="lazy">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+     EXPLORE CTPL
+====================================== -->
+
+<section class="pathways-section stakeholder-bg">
+
+  <div class="container">
+
+    <!-- SECTION HEADING -->
+
+    <div appReveal class="section-heading">
+
+      <div>
+
+        <div class="eyebrow">
+          EXPLORE CTPL
+        </div>
+
+        <h2>
+          Information for every stakeholder.
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <!-- STAKEHOLDER GRID -->
+
+    <div class="pathway-grid">
+
+      @for (item of pathways; track item.slug) {
+
+        <a
+          appReveal
+          [routerLink]="['/page', item.slug]"
+          class="pathway">
+
+          <span>{{ item.no }}</span>
+
+          <h3>{{ item.name }}</h3>
+
+          <p>{{ item.desc }}</p>
+
+          <span class="card-link">
+            View section ↗
+          </span>
+
+        </a>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================
+     CONTACT SECTION
+====================================== -->
+
+<section class="cta-section home-tech-bg">
+
+  <div class="container cta-inner" appReveal>
+
+    <div>
+
+      <div class="eyebrow eyebrow-light">
+        LET’S CONNECT
+      </div>
+
+      <h2>
+        Let’s build safer mobility together.
+      </h2>
+
+      <p>
+        Explore our solutions or connect with CTPL
+        to discuss your requirements.
+      </p>
+
+    </div>
+
+    <a
+      class="btn btn-primary"
+      routerLink="/page/customer-centre">
+
+      Contact CTPL ↗
+
+    </a>
+
+  </div>
+
+</section>

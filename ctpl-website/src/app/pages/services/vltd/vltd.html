@@ -1,0 +1,406 @@
+
+<section class="vltd-page">
+
+  <!-- PAGE HEADER -->
+
+  <section class="vltd-page-header">
+
+    <div class="vltd-container">
+
+      <span class="vltd-page-header-label">
+        CTPL / SERVICES
+      </span>
+
+      <h1>{{ title }}</h1>
+
+      <a routerLink="/" class="back-home-btn">
+        <span class="back-arrow">←</span>
+        Back to Home
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="vltd-hero">
+
+    <div class="vltd-container">
+
+      <div class="vltd-hero-grid">
+
+        <div class="vltd-hero-content">
+
+          <span class="vltd-eyebrow">
+            {{ eyebrow }}
+          </span>
+
+          <h2>
+            Connected vehicles.
+            <span>Smarter governance.</span>
+          </h2>
+
+          <p>{{ summary }}</p>
+
+          <div class="vltd-hero-line"></div>
+
+          <span class="vltd-company">
+            CONTAINE TECHNOLOGIES LIMITED
+          </span>
+
+        </div>
+
+
+        <!-- SERVICE IMAGE -->
+
+        <div class="vltd-hero-visual">
+
+          <div class="vltd-image-glow"></div>
+
+          <div class="vltd-image-frame">
+
+            <img
+              [src]="image"
+              alt="CTPL VLTD state integration services"
+            >
+
+          </div>
+
+          <div class="vltd-image-label">
+
+            <span class="vltd-status-dot"></span>
+
+            AIS-140 VEHICLE LOCATION TRACKING
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- OVERVIEW SECTION -->
+
+  <section class="vltd-overview">
+
+    <div class="vltd-container">
+
+      <div class="vltd-overview-heading">
+
+        <span class="vltd-section-label">
+          ABOUT THE SERVICE
+        </span>
+
+        <h2>
+          Connecting vehicle tracking
+          <span>with government systems.</span>
+        </h2>
+
+      </div>
+
+      <div class="vltd-overview-content">
+
+        <div class="vltd-overview-icon">
+          ◈
+        </div>
+
+        <div>
+
+          <h3>Vehicle Location Tracking Device Integrations</h3>
+
+          <p>{{ summary }}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GOVERNMENT INTEGRATIONS -->
+
+  <section class="vltd-integrations">
+
+    <div class="vltd-container">
+
+      <div class="vltd-integrations-heading">
+
+        <span class="vltd-section-label">
+          GOVERNMENT INTEGRATIONS
+        </span>
+
+        <h2>
+          State-wise integration
+          <span>coverage.</span>
+        </h2>
+
+        <p>
+          CTPL's VLTD integration activities cover multiple
+          government departments and sectors. The following
+          states are included in the supplied integration list.
+        </p>
+
+      </div>
+
+
+      <!-- MINING INTEGRATIONS -->
+
+      <div class="vltd-sector-card">
+
+        <div class="vltd-sector-top">
+
+          <div class="vltd-sector-icon">
+            <span>01</span>
+          </div>
+
+          <div>
+
+            <span class="vltd-sector-label">
+              SECTOR 01
+            </span>
+
+            <h3>Mining Integrations</h3>
+
+            <p>
+              State-level vehicle tracking integrations
+              associated with mining operations.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="vltd-state-list">
+
+          @for (state of miningStates; track state) {
+
+            <span class="vltd-state-chip">
+              <span class="vltd-state-dot"></span>
+              {{ state }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+
+      <!-- TRANSPORT INTEGRATIONS -->
+
+      <div class="vltd-sector-card">
+
+        <div class="vltd-sector-top">
+
+          <div class="vltd-sector-icon">
+            <span>02</span>
+          </div>
+
+          <div>
+
+            <span class="vltd-sector-label">
+              SECTOR 02
+            </span>
+
+            <h3>Transport Integrations</h3>
+
+            <p>
+              Vehicle location tracking integrations
+              associated with state transport departments.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="vltd-state-list">
+
+          @for (state of transportStates; track state) {
+
+            <span class="vltd-state-chip">
+              <span class="vltd-state-dot"></span>
+              {{ state }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOD CORPORATION -->
+
+      <div class="vltd-sector-card">
+
+        <div class="vltd-sector-top">
+
+          <div class="vltd-sector-icon">
+            <span>03</span>
+          </div>
+
+          <div>
+
+            <span class="vltd-sector-label">
+              SECTOR 03
+            </span>
+
+            <h3>Food Corporation</h3>
+
+            <p>
+              Integration activities associated with
+              Food Corporation operations.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="vltd-state-list">
+
+          @for (state of foodCorporationStates; track state) {
+
+            <span class="vltd-state-chip">
+              <span class="vltd-state-dot"></span>
+              {{ state }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMATION NOTE -->
+
+      <div class="vltd-note">
+
+        <span class="vltd-note-icon">i</span>
+
+        <p>
+          State backend links and portal access must be
+          checked individually before migration.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AIS-140 SECTION -->
+
+  <section class="vltd-ais">
+
+    <div class="vltd-container">
+
+      <div class="vltd-ais-inner">
+
+        <div class="vltd-ais-content">
+
+          <span class="vltd-section-label">
+            CONNECTED MOBILITY
+          </span>
+
+          <h2>
+            Supporting AIS-140
+            <span>vehicle tracking requirements.</span>
+          </h2>
+
+          <p>
+            VLTD solutions support vehicle monitoring requirements
+            through approved backend integrations and applicable
+            technical specifications.
+          </p>
+
+          <a
+            href="https://containe.in/vltd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="vltd-portal-button"
+          >
+            Explore VLTD Portals
+            <span>↗</span>
+          </a>
+
+        </div>
+
+
+        <!-- AIS-140 VISUAL -->
+
+        <div class="vltd-ais-visual">
+
+          <div class="vltd-ais-circle">
+
+            <div class="vltd-ais-inner-circle">
+
+              <span>AIS</span>
+
+              <strong>140</strong>
+
+              <small>COMPLIANT</small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+
+  <section class="vltd-contact">
+
+    <div class="vltd-container">
+
+      <div class="vltd-contact-inner">
+
+        <div>
+
+          <span class="vltd-section-label">
+            CONTAINE TECHNOLOGIES LIMITED
+          </span>
+
+          <h2>
+            Enabling connected vehicle monitoring across states.
+          </h2>
+
+          <p>
+            Explore CTPL's VLTD solutions and government
+            integration services.
+          </p>
+
+        </div>
+
+        <a
+          href="https://containe.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Services
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>

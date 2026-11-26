@@ -1,0 +1,674 @@
+
+/* ==========================================
+   CTPL APPROVALS & SOP PAGE
+========================================== */
+
+:host {
+  display: block;
+
+  --sop-blue: #7C3AED;
+  --sop-blue-hover: #6D28D9;
+
+  --sop-heading: #241438;
+  --sop-text: #475569;
+
+  --sop-bg: #F8F5FF;
+  --sop-card: #ffffff;
+  --sop-border: #E7DEF4;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.ctpl-sop-image-hero {
+  position: relative;
+
+  padding: 65px 0;
+
+  background: linear-gradient(
+    110deg,
+    #241438 0%,
+    #4C1D95 55%,
+    #7C3AED 100%
+  );
+
+  color: #ffffff;
+}
+
+.ctpl-sop-image-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ctpl-sop-image-hero .eyebrow {
+  color: #C4B5FD;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ctpl-sop-image-hero h1 {
+  margin: 15px 0 25px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ctpl-sop-image-hero .page-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ctpl-sop-image-hero .btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 12px 20px;
+
+  background: transparent;
+  color: #ffffff;
+
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.ctpl-sop-image-hero .btn-outline-light:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.sop-section {
+  padding: 70px 20px 90px;
+
+  background: var(--sop-bg);
+}
+
+.sop-container {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: 0 auto;
+}
+
+.sop-heading {
+  margin-bottom: 32px;
+}
+
+.sop-heading h2 {
+  margin: 0;
+
+  color: var(--sop-heading);
+
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+}
+
+/* ==========================================
+   STATE BUTTONS GRID
+========================================== */
+
+.sop-states-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+/* DEFAULT STATE BUTTON */
+
+.sop-state-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 56px;
+
+  padding: 12px 15px;
+
+  background: var(--sop-card);
+  color: var(--sop-heading);
+
+  border: 1px solid var(--sop-border);
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+
+  cursor: pointer;
+
+  transform: none !important;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.sop-state-button:hover {
+  background: rgba(124, 58, 237,0.08);
+  border-color: var(--sop-blue);
+}
+
+/* SELECTED STATE */
+
+.sop-state-button.selected {
+  background: var(--sop-blue);
+  color: #ffffff;
+
+  border-color: var(--sop-blue);
+
+  font-weight: 700;
+}
+
+.sop-state-button.selected:hover {
+  background: var(--sop-blue-hover);
+}
+
+.sop-state-button:focus-visible {
+  outline: 3px solid #C4B5FD;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   STATE AND DOCUMENT PANELS
+========================================== */
+
+.sop-detail-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.85fr)
+    minmax(0, 1.5fr);
+
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* ==========================================
+   LEFT STATE PANEL
+========================================== */
+
+.sop-state-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 285px;
+  padding: 35px 25px;
+
+  background: var(--sop-card);
+  color: var(--sop-heading);
+
+  border: 1px solid var(--sop-border);
+  border-radius: 14px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(36, 20, 56,0.04);
+}
+
+.sop-map-icon {
+  display: grid;
+  place-items: center;
+
+  width: 78px;
+  height: 78px;
+
+  margin-bottom: 22px;
+
+  background: rgba(124, 58, 237,0.09);
+  border-radius: 50%;
+}
+
+.sop-map-icon svg {
+  display: block;
+}
+
+.sop-state-panel h3 {
+  margin: 0 0 12px;
+
+  color: var(--sop-heading);
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.sop-state-panel p {
+  max-width: 280px;
+
+  margin: 0;
+
+  color: var(--sop-text);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   RIGHT DOCUMENTS PANEL
+========================================== */
+
+.sop-documents-panel {
+  min-height: 285px;
+  padding: 30px;
+
+  background: var(--sop-card);
+
+  border: 1px solid var(--sop-border);
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(36, 20, 56,0.04);
+}
+
+.sop-documents-panel h3 {
+  margin: 0 0 22px;
+
+  color: var(--sop-heading);
+
+  font-size: 23px;
+  font-weight: 800;
+}
+
+/* EMPTY STATE */
+
+.sop-documents-content {
+  width: 100%;
+}
+
+.sop-empty-message {
+  padding: 20px 0;
+
+  color: var(--sop-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   DOCUMENT LINKS
+========================================== */
+
+.sop-documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.sop-document-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;
+  min-height: 65px;
+
+  padding: 15px 18px;
+
+  background: var(--sop-bg);
+
+  border: 1px solid var(--sop-border);
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sop-document-link:hover {
+  background: rgba(124, 58, 237,0.08);
+  border-color: var(--sop-blue);
+}
+
+.sop-document-icon {
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+.sop-document-title {
+  flex: 1;
+
+  min-width: 0;
+
+  color: var(--sop-heading);
+
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.sop-view-label {
+  flex-shrink: 0;
+
+  color: var(--sop-blue);
+
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --sop-heading: #f1f5f9;
+    --sop-text: #CBBBE5;
+
+    --sop-bg: #140B24;
+    --sop-card: #241438;
+    --sop-border: #493568;
+  }
+
+  .sop-section {
+    background: #140B24;
+  }
+
+  .sop-heading h2 {
+    color: #f1f5f9;
+  }
+
+  .sop-state-button {
+    background: #241438;
+    color: #f1f5f9;
+
+    border-color: #493568;
+  }
+
+  .sop-state-button:hover {
+    background: #33204B;
+    border-color: #7C3AED;
+  }
+
+  .sop-state-button.selected,
+  .sop-state-button.selected:hover {
+    background: #7C3AED;
+
+    color: #ffffff;
+    border-color: #7C3AED;
+  }
+
+  /* LEFT PANEL - NO WHITE BACKGROUND */
+
+  .sop-state-panel {
+    background: #241438 !important;
+    background-image: none !important;
+
+    color: #f1f5f9;
+
+    border-color: #493568;
+    box-shadow: none;
+  }
+
+  .sop-state-panel h3 {
+    color: #f1f5f9;
+  }
+
+  .sop-state-panel p {
+    color: #CBBBE5;
+  }
+
+  .sop-map-icon {
+    background: #3B2857;
+  }
+
+  /* DOCUMENTS PANEL */
+
+  .sop-documents-panel {
+    background: #241438;
+    border-color: #493568;
+    box-shadow: none;
+  }
+
+  .sop-documents-panel h3 {
+    color: #f1f5f9;
+  }
+
+  .sop-empty-message {
+    color: #CBBBE5;
+  }
+
+  .sop-document-link {
+    background: #1E1035;
+    border-color: #493568;
+  }
+
+  .sop-document-link:hover {
+    background: #33204B;
+  }
+
+  .sop-document-title {
+    color: #f1f5f9;
+  }
+
+  .sop-view-label {
+    color: #C4B5FD;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+  .sop-states-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .sop-states-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .sop-detail-grid {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-sop-image-hero {
+    padding: 45px 0;
+  }
+
+  .sop-section {
+    padding: 45px 15px 65px;
+  }
+
+  .sop-states-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .sop-state-button {
+    min-height: 50px;
+    font-size: 13px;
+  }
+
+  .sop-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sop-state-panel {
+    min-height: 220px;
+  }
+
+  .sop-documents-panel {
+    min-height: 220px;
+    padding: 25px 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .sop-states-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sop-state-button {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .sop-document-link {
+    flex-wrap: wrap;
+  }
+
+  .sop-view-label {
+    margin-left: 39px;
+  }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .sop-state-button,
+  .sop-document-link {
+    transition: none;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.sop-state-button { background:#562677; border-color:#704490; border-radius:16px; box-shadow:0 12px 30px rgba(68,27,104,.12); color:#FFF; transition:background-color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease; }
+.sop-state-button:hover { background:#632C89; border-color:#B58BE8; transform:translateY(-3px); box-shadow:0 18px 38px rgba(68,27,104,.19); }
+.sop-state-button h2, .sop-state-button h3, .sop-state-button h4, .sop-state-button strong { color:#FFF; }
+.sop-state-button p, .sop-state-button li { color:#F0E6FA; }
+.sop-state-button a, .sop-state-button .card-link, .sop-state-button .ctpl-service-link, .sop-state-button .ctpl-investor-link { color:#FFF; }
+.sop-map-icon { color:#7C3AED; background:#F2E8FF; }
+.sop-heading { color:#7C3AED; }
+.sop-view-label { color:#7C3AED; }
+@media (prefers-reduced-motion: reduce) { .sop-state-button, .sop-state-button:hover { transform:none; transition:none; } }
+
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+:host { --de-primary:#7C3AED; --sop-blue:#7C3AED; --vlt-primary:#7C3AED; --esim-primary:#7C3AED; --sms-primary:#7C3AED; --rfc-blue:#7C3AED; }
+.de-form-section,.vlt-info-section,.esim-validity-info,.sms-guide-section,.sop-section,.ctpl-rfc-overview,.cc-office-section,.cc-contact-section { background:#FBF9FF; }
+.de-form-card,.vlt-info-card,.sms-guide-card,.sop-documents-panel,.sop-state-panel { border-radius:18px; border-color:#E8DCF9; box-shadow:0 12px 34px rgba(71,27,120,.08); }
+.de-submit,.vlt-support-button,.sms-support-button,.de-contact-button,.ctpl-get-in-touch,.cc-submit { background:#7C3AED; border-color:#7C3AED; }
+.de-submit:hover,.vlt-support-button:hover,.sms-support-button:hover,.de-contact-button:hover,.ctpl-get-in-touch:hover { background:#6827C1; }
+.de-partner-section,.vlt-support-section,.sms-support-section,.ctpl-service-contact { background:linear-gradient(115deg,#31164D,#6932A4 65%,#8544BD); }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.sop-state-panel,.sop-documents-panel,.sms-guide-card,.vlt-info-card,.de-form-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.sop-state-panel h2,.sop-state-panel h3,.sop-state-panel h4,.sop-state-panel strong,.sop-documents-panel h2,.sop-documents-panel h3,.sop-documents-panel h4,.sop-documents-panel strong,.sms-guide-card h2,.sms-guide-card h3,.sms-guide-card h4,.sms-guide-card strong,.vlt-info-card h2,.vlt-info-card h3,.vlt-info-card h4,.vlt-info-card strong,.de-form-card h2,.de-form-card h3,.de-form-card h4,.de-form-card strong{color:#0F1830;}
+.sop-state-panel p,.sop-state-panel li,.sop-documents-panel p,.sop-documents-panel li,.sms-guide-card p,.sms-guide-card li,.vlt-info-card p,.vlt-info-card li,.de-form-card p,.de-form-card li{color:#475569;}
+.sop-state-panel a,.sop-state-panel .card-link,.sop-state-panel .ctpl-service-link,.sop-state-panel .ctpl-investor-link,.sop-documents-panel a,.sop-documents-panel .card-link,.sop-documents-panel .ctpl-service-link,.sop-documents-panel .ctpl-investor-link,.sms-guide-card a,.sms-guide-card .card-link,.sms-guide-card .ctpl-service-link,.sms-guide-card .ctpl-investor-link,.vlt-info-card a,.vlt-info-card .card-link,.vlt-info-card .ctpl-service-link,.vlt-info-card .ctpl-investor-link,.de-form-card a,.de-form-card .card-link,.de-form-card .ctpl-service-link,.de-form-card .ctpl-investor-link{color:#0877E8;}
+
+.sop-state-panel:hover,.sop-documents-panel:hover,.sms-guide-card:hover,.vlt-info-card:hover,.de-form-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.sop-map-icon{color:#885CF6;background:#EDE9FE;border-color:#DDD6FE;}
+
+.ctpl-sop-image-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+.ctpl-service-contact,.de-partner-section,.vlt-support-section,.sms-support-section{background:linear-gradient(112deg,#132C54,#155E9B 70%,#6547BE);}
+
+.cc-office-section,.sop-section,.sms-guide-section,.vlt-info-section,.esim-validity-info,.de-form-section{background-color:#F8FAFF;}
+
+.sop-state-button {background:#FFFFFF;color:#0F1830;border-color:#DCE7F2;}.sop-state-button.selected,.sop-state-button[aria-pressed="true"]{background:#885CF6;color:#FFFFFF;border-color:#885CF6;}.sop-state-button:hover:not(.selected){background:#EDE9FE;border-color:#A78BFA;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card h2, .de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card h3 {color:#24183F;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card p {color:#5D5872;}
+.sop-document-icon,
+.sop-map-icon {color:#7C3AED!important;}
+.sop-document-icon, .sop-map-icon {background-color:#F1EAFE!important;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-bg: #FAF8FF;
+  --sop-blue: #7C3AED;
+  --sop-border: #E7DEFA;
+  --sop-card: #FFFFFF;
+  --sop-heading: #24183F;
+  --sop-text: #5D5872;
+  --vlt-primary: #7C3AED;
+}

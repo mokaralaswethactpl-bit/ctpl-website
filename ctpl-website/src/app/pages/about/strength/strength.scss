@@ -1,0 +1,193 @@
+
+:host {
+  display: block;
+}
+
+.ctpl-about-detail-page {
+  background: #ffffff;
+  color: #241438;
+  min-height: 100vh;
+}
+
+.ctpl-about-detail-hero {
+  padding: 48px 0;
+  background: linear-gradient(110deg, #241438, #4C1D95 55%, #7C3AED);
+}
+
+.ctpl-about-detail-hero-label {
+  color: #C4B5FD;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ctpl-about-detail-hero h1 {
+  margin: 12px 0;
+  color: #ffffff;
+  font-size: clamp(34px, 4.5vw, 60px);
+  line-height: 1.15;
+}
+
+.ctpl-about-detail-section {
+  padding: 65px 0 90px;
+}
+
+.ctpl-about-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 45px;
+  align-items: start;
+}
+
+.ctpl-about-detail-text {
+  min-width: 0;
+}
+
+.ctpl-about-detail-label {
+  display: block;
+  margin-bottom: 15px;
+  color: #7C3AED;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.ctpl-about-detail-text h2 {
+  margin: 0 0 22px;
+  color: #241438;
+  font-size: clamp(28px, 3vw, 42px);
+}
+
+.ctpl-about-detail-summary {
+  margin: 0 0 25px;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.ctpl-about-detail-text h3 {
+  margin: 0 0 20px;
+  color: #241438;
+  font-size: 19px;
+}
+
+.ctpl-about-first-point {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.ctpl-about-first-point li {
+  padding-left: 5px;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.ctpl-about-detail-image {
+  min-width: 0;
+}
+
+.ctpl-about-detail-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.ctpl-about-detail-more {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid #E7DEF4;
+}
+
+.ctpl-about-detail-more ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.ctpl-about-detail-more li {
+  color: #475569;
+  line-height: 1.9;
+  font-size: 16px;
+  margin-bottom: 19px;
+  padding-left: 5px;
+}
+
+.ctpl-about-detail-more li:last-child {
+  margin-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ctpl-about-detail-page,
+  .ctpl-about-detail-section {
+    background: #140B24;
+    color: #f1f5f9;
+  }
+
+  .ctpl-about-detail-text h2,
+  .ctpl-about-detail-text h3 {
+    color: #f1f5f9;
+  }
+
+  .ctpl-about-detail-summary,
+  .ctpl-about-first-point li,
+  .ctpl-about-detail-more li {
+    color: #CBBBE5;
+  }
+
+  .ctpl-about-detail-more {
+    border-top-color: #493568;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctpl-about-detail-hero {
+    padding: 40px 0;
+  }
+
+  .ctpl-about-detail-section {
+    padding: 45px 0 60px;
+  }
+
+  .ctpl-about-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ctpl-about-detail-image img {
+    max-height: 340px;
+  }
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.ctpl-about-detail-page,.ctpl-about-detail-section { background:#FBF9FF; color:#2A1843; }
+.ctpl-about-detail-hero { background:linear-gradient(115deg,#3B1A5A,#6933A5 67%,#9D71D9); }
+.ctpl-about-detail-text h2,.ctpl-about-detail-text h3 { color:#2A1843; }
+.ctpl-about-detail-summary,.ctpl-about-first-point li,.ctpl-about-detail-more li { color:#635474; }
+.ctpl-about-detail-label { color:#7C3AED; }
+.ctpl-about-detail-image img { border:1px solid #E5D7F6; border-radius:18px; box-shadow:0 18px 40px rgba(60,25,95,.12); }
+.ctpl-about-detail-more { border-top-color:#E4D7F4; }
+.ctpl-about-detail-more li::marker,.ctpl-about-first-point li::marker { color:#7C3AED; }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+.ctpl-about-detail-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+.ctpl-about-detail-section,.ctpl-about-detail-page{background-color:#F8FAFF;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+.ctpl-about-detail-page,.ctpl-about-detail-section{background:#FAF8FF;color:#24183F;}
+.ctpl-about-detail-text h2,.ctpl-about-detail-text h3{color:#24183F;}
+.ctpl-about-detail-summary,.ctpl-about-first-point li,.ctpl-about-detail-more li{color:#5D5872;}

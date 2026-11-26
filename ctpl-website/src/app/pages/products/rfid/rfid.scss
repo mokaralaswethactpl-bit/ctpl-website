@@ -1,0 +1,1183 @@
+
+/* ==========================================
+   CTPL TRANO RFID PRODUCT PAGE
+========================================== */
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  --trfid-background: #140B24;
+  --trfid-section-bg: #1E1035;
+  --trfid-surface: #241438;
+  --trfid-image-bg: #241438;
+  --trfid-border: #493568;
+  --trfid-heading: #f1f5f9;
+  --trfid-text: #CBBBE5;
+  --trfid-accent: #7C3AED;
+  --trfid-accent-light: #C4B5FD;
+  --trfid-icon-bg: #3B2359;
+}
+
+
+.trfid-page,
+.trfid-page * {
+  box-sizing: border-box;
+}
+
+.trfid-page {
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: var(--trfid-background);
+  color: var(--trfid-heading);
+}
+
+
+/* ==========================================
+   COMMON CONTAINER
+========================================== */
+
+.trfid-container {
+  width: 90%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/* ==========================================
+   PRODUCT HERO HEADER
+========================================== */
+
+.trfid-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 0;
+
+  padding: 48px 0;
+
+  background: linear-gradient(
+    110deg,
+    #241438,
+    #4C1D95 55%,
+    #7C3AED
+  );
+
+  color: #ffffff;
+}
+
+.trfid-hero .trfid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* HERO EYEBROW */
+
+.trfid-eyebrow {
+  display: block;
+
+  color: #C4B5FD;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+
+/* HERO TITLE */
+
+.trfid-hero h1 {
+  margin: 12px 0;
+
+  color: #ffffff;
+
+  font-size: clamp(34px, 4.5vw, 60px);
+  font-weight: 750;
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* HERO DESCRIPTION */
+
+.trfid-hero p {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: #EDE5F8;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+   BACK TO HOME BUTTON
+========================================== */
+
+.trfid-hero-actions {
+  display: flex;
+  align-items: center;
+
+  margin-top: 22px;
+}
+
+.trfid-back-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: fit-content;
+
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+
+    border-color: #C4B5FD;
+    color: #ffffff;
+
+    .back-arrow {
+      transform: translateX(-4px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #C4B5FD;
+    outline-offset: 4px;
+  }
+}
+
+.trfid-back-link .back-arrow {
+  display: inline-block;
+
+  font-size: 20px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* ==========================================
+   COMMON SECTION STYLING
+========================================== */
+
+.trfid-section {
+  width: 100%;
+
+  padding: 60px 0;
+
+  background: var(--trfid-background);
+}
+
+
+/* COMMON SECTION LABEL */
+
+.trfid-label {
+  display: inline-block;
+
+  color: var(--trfid-accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   PRODUCT OVERVIEW
+========================================== */
+
+.trfid-overview {
+  background: var(--trfid-background);
+}
+
+.trfid-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.trfid-content {
+  min-width: 0;
+}
+
+
+/* OVERVIEW HEADING */
+
+.trfid-content h2 {
+  margin: 15px 0 22px;
+
+  color: var(--trfid-heading);
+
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.3;
+
+  letter-spacing: -1px;
+}
+
+.trfid-content h2 span {
+  color: var(--trfid-accent);
+}
+
+
+/* OVERVIEW DESCRIPTION */
+
+.trfid-content p {
+  margin: 0 0 16px;
+
+  color: var(--trfid-text);
+
+  font-size: 15px;
+  line-height: 1.85;
+
+  overflow-wrap: break-word;
+}
+
+.trfid-content .trfid-lead {
+  color: var(--trfid-text);
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.trfid-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE PANEL
+========================================== */
+
+.trfid-image-panel {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 330px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #2C1945,
+    #241438
+  );
+
+  border: 1px solid var(--trfid-border);
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.trfid-image-panel:hover {
+  border-color: var(--trfid-accent);
+
+  box-shadow:
+    0 15px 35px rgba(124, 58, 237, 0.08);
+}
+
+
+/* PRODUCT IMAGE */
+
+.trfid-image-panel img {
+  position: relative;
+
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 300px;
+
+  object-fit: contain;
+  object-position: center;
+
+  color: var(--trfid-text);
+
+  border-radius: 5px;
+
+  transition: transform 0.6s ease;
+}
+
+.trfid-image-panel:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ==========================================
+   KEY APPLICATION AREAS
+========================================== */
+
+.trfid-applications {
+  padding: 60px 0;
+
+  background: var(--trfid-section-bg);
+
+  border-top: 1px solid var(--trfid-border);
+  border-bottom: 1px solid var(--trfid-border);
+}
+
+
+/* SECTION HEADING */
+
+.trfid-section-heading {
+  max-width: 850px;
+
+  margin-bottom: 30px;
+}
+
+.trfid-section-heading h2 {
+  margin: 14px 0;
+
+  color: var(--trfid-heading);
+
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.25;
+
+  letter-spacing: -1px;
+}
+
+.trfid-section-heading h2 span {
+  color: var(--trfid-accent);
+}
+
+.trfid-section-heading p {
+  margin: 0;
+
+  color: var(--trfid-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   APPLICATION CARD GRID
+========================================== */
+
+.trfid-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* ==========================================
+   APPLICATION CARDS
+========================================== */
+
+.trfid-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  background: var(--trfid-surface);
+
+  border: 1px solid var(--trfid-border);
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--trfid-accent);
+
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+
+}
+
+
+/* APPLICATION CARD NUMBER */
+
+.trfid-card-number {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  color: #584672;
+
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+
+/* APPLICATION CARD ICON */
+
+.trfid-card-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 20px;
+
+  background: var(--trfid-icon-bg);
+  color: var(--trfid-accent);
+
+  border-radius: 12px;
+
+  font-size: 25px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.trfid-card:hover .trfid-card-icon {
+  background: var(--trfid-accent);
+  color: #140B24;
+}
+
+
+/* APPLICATION CARD TITLE */
+
+.trfid-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--trfid-heading);
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+
+/* APPLICATION CARD DESCRIPTION */
+
+.trfid-card p {
+  flex: 1;
+
+  margin: 0;
+
+  color: var(--trfid-text);
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  overflow-wrap: break-word;
+}
+
+
+/* DECORATIVE CARD LINE */
+
+.trfid-card::after {
+  content: '';
+
+  display: block;
+
+  width: 40px;
+  height: 3px;
+
+  margin-top: 20px;
+
+  background: var(--trfid-accent);
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.trfid-card:hover::after {
+  width: 65px;
+}
+
+
+/* ==========================================
+   TECHNOLOGY HIGHLIGHT
+========================================== */
+
+.trfid-highlight {
+  padding: 50px 0;
+
+  background: var(--trfid-background);
+}
+
+.trfid-highlight-inner {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) 220px;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 35px 40px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    120deg,
+    #241438,
+    #34204F
+  );
+
+  border: 1px solid var(--trfid-border);
+  border-radius: 16px;
+}
+
+.trfid-highlight-inner > div:first-child {
+  min-width: 0;
+}
+
+
+/* HIGHLIGHT LABEL */
+
+.trfid-light-label {
+  color: #C4B5FD;
+}
+
+
+/* HIGHLIGHT TITLE */
+
+.trfid-highlight h2 {
+  margin: 14px 0;
+
+  color: #ffffff;
+
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+
+/* HIGHLIGHT DESCRIPTION */
+
+.trfid-highlight p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--trfid-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   RFID TECHNOLOGY SYMBOL
+========================================== */
+
+.trfid-highlight-symbol {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 155px;
+  height: 155px;
+
+  margin: 12px auto;
+
+  background: rgba(124, 58, 237, 0.08);
+
+  color: #ffffff;
+
+  border: 1px solid rgba(96, 216, 240, 0.4);
+  border-radius: 50%;
+
+  font-size: 36px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  box-shadow:
+    0 0 35px rgba(124, 58, 237, 0.1);
+}
+
+.trfid-highlight-symbol::before {
+  content: '';
+
+  position: absolute;
+
+  inset: -12px;
+
+  border: 1px dashed rgba(96, 216, 240, 0.3);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.trfid-highlight-symbol span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--trfid-accent-light);
+
+  font-size: 32px;
+  line-height: 1;
+
+  animation: trfidSignal 2.5s ease-in-out infinite;
+}
+
+
+/* RFID SIGNAL ANIMATION */
+
+@keyframes trfidSignal {
+
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+}
+
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.trfid-contact {
+  padding: 45px 0;
+
+  background: linear-gradient(
+    120deg,
+    #241438,
+    #34204F
+  );
+
+  border-top: 1px solid var(--trfid-border);
+}
+
+.trfid-contact-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+.trfid-contact-inner > div {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* CONTACT TITLE */
+
+.trfid-contact h2 {
+  max-width: 800px;
+
+  margin: 12px 0;
+
+  color: var(--trfid-heading);
+
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+
+/* CONTACT DESCRIPTION */
+
+.trfid-contact p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--trfid-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   CONTACT BUTTON
+========================================== */
+
+.trfid-contact-btn {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 13px 22px;
+
+  background: linear-gradient(
+    120deg,
+    #6D28D9,
+    #7C3AED
+  );
+
+  color: #ffffff;
+
+  border: 0;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+      0 8px 20px rgba(124, 58, 237, 0.25);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #C4B5FD;
+    outline-offset: 4px;
+  }
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .trfid-overview-grid {
+    gap: 30px;
+  }
+
+  .trfid-card-grid {
+    gap: 16px;
+  }
+
+  .trfid-card {
+    padding: 20px;
+  }
+
+  .trfid-image-panel {
+    min-height: 300px;
+  }
+
+  .trfid-image-panel img {
+    max-height: 270px;
+  }
+
+  .trfid-highlight-inner {
+    padding: 30px;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .trfid-overview-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 30px;
+  }
+
+  .trfid-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .trfid-contact-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .trfid-container {
+    width: 90%;
+  }
+
+  .trfid-hero {
+    padding: 40px 0;
+  }
+
+  .trfid-hero h1 {
+    font-size: 36px;
+  }
+
+  .trfid-hero p {
+    font-size: 14px;
+  }
+
+  .trfid-hero-actions {
+    margin-top: 18px;
+  }
+
+  .trfid-back-link {
+    padding: 9px 15px;
+
+    font-size: 12px;
+  }
+
+  .trfid-section {
+    padding: 40px 0;
+  }
+
+  .trfid-content h2,
+  .trfid-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .trfid-content p,
+  .trfid-content .trfid-lead,
+  .trfid-section-heading p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .trfid-image-panel {
+    min-height: 260px;
+
+    padding: 15px;
+  }
+
+  .trfid-image-panel img {
+    max-height: 230px;
+  }
+
+  .trfid-section-heading {
+    margin-bottom: 24px;
+  }
+
+  .trfid-card {
+    padding: 20px;
+  }
+
+  .trfid-highlight {
+    padding: 35px 0;
+  }
+
+  .trfid-highlight-inner {
+    padding: 24px;
+
+    grid-template-columns:
+      minmax(0, 1fr) 160px;
+
+    gap: 20px;
+  }
+
+  .trfid-highlight-symbol {
+    width: 120px;
+    height: 120px;
+
+    font-size: 28px;
+  }
+
+  .trfid-contact {
+    padding: 35px 0;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .trfid-card-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+  .trfid-card-number {
+    font-size: 32px;
+  }
+
+  .trfid-card-icon {
+    margin-bottom: 16px;
+  }
+
+  .trfid-card h3 {
+    font-size: 18px;
+  }
+
+  .trfid-card p {
+    font-size: 13px;
+  }
+
+  .trfid-highlight-inner {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 25px;
+  }
+
+  .trfid-highlight h2 {
+    font-size: 26px;
+  }
+
+  .trfid-highlight p {
+    font-size: 14px;
+  }
+
+  .trfid-highlight-symbol {
+    margin: 12px auto;
+  }
+
+}
+
+
+/* ==========================================
+   VERY SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+  .trfid-hero h1 {
+    font-size: 32px;
+  }
+
+  .trfid-content h2,
+  .trfid-section-heading h2 {
+    font-size: 26px;
+  }
+
+  .trfid-image-panel {
+    min-height: 220px;
+
+    padding: 12px;
+  }
+
+  .trfid-image-panel img {
+    max-height: 190px;
+  }
+
+  .trfid-card {
+    padding: 18px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .trfid-back-link,
+  .trfid-back-link .back-arrow,
+  .trfid-image-panel,
+  .trfid-image-panel img,
+  .trfid-card,
+  .trfid-card-icon,
+  .trfid-card::after,
+  .trfid-contact-btn {
+    transition: none;
+  }
+
+  .trfid-highlight-symbol span {
+    animation: none;
+  }
+
+  .trfid-card:hover,
+  .trfid-image-panel:hover img,
+  .trfid-contact-btn:hover,
+  .trfid-contact-btn:active,
+  .trfid-back-link:active,
+  .trfid-back-link:hover .back-arrow {
+    transform: none;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.trfid-page { background:#FBF9FF; color:#281742; }
+.trfid-page-header { background:linear-gradient(115deg,#391955,#7134A9 70%,#9C6ADA); }
+.trfid-hero { background:linear-gradient(130deg,#FCFAFF,#F1E6FD); }
+.trfid-eyebrow, .trfid-section-label { color:#7C3AED; }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.trfid-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.trfid-card h2,.trfid-card h3,.trfid-card h4,.trfid-card strong{color:#0F1830;}
+.trfid-card p,.trfid-card li{color:#475569;}
+.trfid-card a,.trfid-card .card-link,.trfid-card .ctpl-service-link,.trfid-card .ctpl-investor-link{color:#0877E8;}
+
+.trfid-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.trfid-card-icon{color:#885CF6;background:#EDE9FE;border-color:#DDD6FE;}
+
+.trfid-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.trfid-card,
+.trfid-image-panel {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.trfid-card,
+.trfid-image-panel h2, .trfid-card,
+.trfid-image-panel h3 {color:#24183F;}
+.trfid-card,
+.trfid-image-panel p {color:#5D5872;}
+.trfid-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.trfid-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.trfid-card:hover{transform:none;}}
+.trfid-card-icon {color:#7C3AED!important;}
+.trfid-card-icon {background-color:#F1EAFE!important;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --trfid-accent: #7C3AED;
+  --trfid-accent-light: #A78BFA;
+  --trfid-background: #FAF8FF;
+  --trfid-border: #E7DEFA;
+  --trfid-heading: #24183F;
+  --trfid-icon-bg: #FAF8FF;
+  --trfid-image-bg: #FAF8FF;
+  --trfid-section-bg: #FAF8FF;
+  --trfid-surface: #FFFFFF;
+  --trfid-text: #5D5872;
+  --vlt-primary: #7C3AED;
+}

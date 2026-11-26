@@ -1,0 +1,278 @@
+
+<!-- ======================================
+     CTPL ANIMATED PRODUCT SLIDESHOW
+====================================== -->
+
+<section
+  class="ctpl-product-showcase"
+  aria-label="CTPL Product Portfolio"
+>
+
+  <!-- DECORATIVE BACKGROUND -->
+
+  <div
+    class="showcase-glow showcase-glow-one"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="showcase-glow showcase-glow-two"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="showcase-light-track"
+    aria-hidden="true"
+  ></div>
+
+
+  <div class="showcase-container">
+
+    <!-- ======================================
+         SECTION HEADING
+    ====================================== -->
+
+    <div class="showcase-heading">
+
+      <span class="showcase-eyebrow">
+        CTPL PRODUCT PORTFOLIO
+      </span>
+
+      <h2>
+        Explore Our Products
+      </h2>
+
+      <p>
+        Advanced vehicle electronics for safer,
+        smarter and more connected mobility.
+      </p>
+
+    </div>
+
+
+    <!-- ======================================
+         SLIDESHOW STAGE
+    ====================================== -->
+
+    @if (activeProduct(); as product) {
+
+      <div class="showcase-stage">
+
+        <!-- PREVIOUS ARROW -->
+
+        <button
+          type="button"
+          class="showcase-arrow showcase-arrow-left"
+          (click)="previousSlide()"
+          aria-label="Previous product"
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+
+
+        <!-- ======================================
+             LEFT PREVIEW CARD
+        ====================================== -->
+
+        @if (previousProduct(); as previous) {
+
+          <button
+            type="button"
+            class="showcase-side-card showcase-side-left"
+            (click)="previousSlide()"
+            [attr.aria-label]="'View ' + previous.title"
+          >
+
+            <div class="showcase-side-image">
+
+              @if (previous.image) {
+
+                <img
+                  [src]="previous.image"
+                  [alt]="previous.title"
+                  loading="lazy"
+                />
+
+              }
+
+            </div>
+
+            <div class="showcase-side-information">
+
+              <h3>{{ previous.title }}</h3>
+
+              <p>{{ previous.eyebrow }}</p>
+
+            </div>
+
+          </button>
+
+        }
+
+
+        <!-- ======================================
+             MAIN FEATURED PRODUCT
+        ====================================== -->
+
+        <div class="showcase-main-card">
+
+          @for (
+            item of products;
+            track item.slug;
+            let i = $index
+          ) {
+
+            @if (i === activeIndex()) {
+
+              <div class="showcase-main-inner">
+
+                <!-- PRODUCT IMAGE -->
+
+                <div class="showcase-product-visual">
+
+                  @if (item.image) {
+
+                    <img
+                      class="showcase-product-image"
+                      [src]="item.image"
+                      [alt]="item.title"
+                    />
+
+                  }
+
+                </div>
+
+
+                <!-- PRODUCT INFORMATION -->
+
+                <div class="showcase-product-content">
+
+                  <span class="showcase-product-category">
+                    {{ item.eyebrow }}
+                  </span>
+
+                  <h3>
+                    {{ item.title }}
+                  </h3>
+
+                  <p>
+                    {{ item.summary }}
+                  </p>
+
+                  <a
+                    class="showcase-explore-button"
+                    [routerLink]="getProductRoute(item.slug)"
+                  >
+                    Explore Product
+                    <span aria-hidden="true">↗</span>
+                  </a>
+
+                </div>
+
+              </div>
+
+            }
+
+          }
+
+        </div>
+
+
+        <!-- ======================================
+             RIGHT PREVIEW CARD
+        ====================================== -->
+
+        @if (nextProduct(); as next) {
+
+          <button
+            type="button"
+            class="showcase-side-card showcase-side-right"
+            (click)="nextSlide()"
+            [attr.aria-label]="'View ' + next.title"
+          >
+
+            <div class="showcase-side-image">
+
+              @if (next.image) {
+
+                <img
+                  [src]="next.image"
+                  [alt]="next.title"
+                  loading="lazy"
+                />
+
+              }
+
+            </div>
+
+            <div class="showcase-side-information">
+
+              <h3>{{ next.title }}</h3>
+
+              <p>{{ next.eyebrow }}</p>
+
+            </div>
+
+          </button>
+
+        }
+
+
+        <!-- NEXT ARROW -->
+
+        <button
+          type="button"
+          class="showcase-arrow showcase-arrow-right"
+          (click)="nextSlide()"
+          aria-label="Next product"
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+
+      </div>
+
+
+      <!-- ======================================
+           SLIDESHOW CONTROLS
+      ====================================== -->
+
+      <div class="showcase-controls">
+
+        <!-- PAGINATION -->
+
+        <div
+          class="showcase-pagination"
+          aria-label="Select a product"
+        >
+
+          @for (
+            item of products;
+            track item.slug;
+            let i = $index
+          ) {
+
+            <button
+              type="button"
+              class="showcase-page-button"
+              [class.active]="activeIndex() === i"
+              [attr.aria-current]="activeIndex() === i ? 'true' : null"
+              [attr.aria-label]="'Show product ' + (i + 1) + ': ' + item.title"
+              (click)="goToSlide(i)"
+            >
+              {{ (i + 1).toString().padStart(2, '0') }}
+            </button>
+
+          }
+
+        </div>
+
+
+        
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

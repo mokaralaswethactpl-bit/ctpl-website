@@ -1,0 +1,281 @@
+
+/* =========================================
+   CTPL RESULTS & REPORTS
+========================================= */
+
+.rr-section {
+  background: #f1f1f1;
+  padding: 50px 0 90px;
+}
+
+.rr-card {
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  padding: 40px 24px;
+  min-height: 450px;
+}
+
+.rr-layout {
+  display: grid;
+  grid-template-columns: 203px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* =========================================
+   LEFT NAVIGATION MENU
+========================================= */
+
+.rr-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rr-tabs button {
+  width: 100%;
+  display: block;
+  background: #F8F4FF;
+  border: 0;
+  border-radius: 0;
+  padding: 14px 16px;
+  min-height: 41px;
+  color: #008fd0;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.rr-tabs button.active,
+.rr-tabs button:hover {
+  background: #7C3AED;
+  color: #ffffff;
+}
+
+.rr-tabs button:focus-visible {
+  outline: 2px solid #291740;
+  outline-offset: 2px;
+}
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.rr-content {
+  min-width: 0;
+  min-height: 340px;
+}
+
+.rr-empty {
+  min-height: 340px;
+  background: #ffffff;
+}
+
+/* =========================================
+   TABLE BACKGROUND
+========================================= */
+
+.rr-table-panel {
+  background: #FAF8FF;
+  border-radius: 16px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+/* =========================================
+   REPORT TABLE
+========================================= */
+
+.rr-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 7px 15px rgba(22, 55, 75, 0.09);
+  color: #445671;
+  font-size: 13px;
+}
+
+.rr-table th {
+  background: #ecf7fb;
+  padding: 17px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #243448;
+  letter-spacing: 0.3px;
+  text-align: center;
+  border-bottom: 1px solid #cddde6;
+}
+
+.rr-table th + th,
+.rr-table td + td {
+  border-left: 1px solid #d3dde5;
+}
+
+.rr-table td {
+  height: 64px;
+  padding: 13px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e3edf4;
+}
+
+.rr-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.rr-table th:last-child,
+.rr-table td:last-child {
+  width: 160px;
+}
+
+/* =========================================
+   PDF BUTTONS
+========================================= */
+
+.rr-pdf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 103px;
+  min-height: 34px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid #d5eaf6;
+  border-radius: 6px;
+  color: #0079bc;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rr-pdf-button:hover:not(:disabled) {
+  background: #7C3AED;
+  color: #ffffff;
+}
+
+.rr-pdf-button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.rr-dot {
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+  .rr-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .rr-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rr-content,
+  .rr-empty {
+    min-height: 280px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .rr-section {
+    padding: 30px 0 60px;
+  }
+
+  .rr-card {
+    padding: 20px 14px;
+  }
+
+  .rr-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .rr-table-panel {
+    padding: 10px;
+  }
+
+  .rr-table th:last-child,
+  .rr-table td:last-child {
+    width: 125px;
+  }
+
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rr-tabs button {
+    transition: none;
+  }
+
+}
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.rr-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.rr-card h2,.rr-card h3,.rr-card h4,.rr-card strong{color:#0F1830;}
+.rr-card p,.rr-card li{color:#475569;}
+.rr-card a,.rr-card .card-link,.rr-card .ctpl-service-link,.rr-card .ctpl-investor-link{color:#0877E8;}
+
+.rr-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.rr-card,
+.rr-table-panel {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.rr-card,
+.rr-table-panel h2, .rr-card,
+.rr-table-panel h3 {color:#24183F;}
+.rr-card,
+.rr-table-panel p {color:#5D5872;}
+.rr-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.rr-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.rr-card:hover{transform:none;}}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}

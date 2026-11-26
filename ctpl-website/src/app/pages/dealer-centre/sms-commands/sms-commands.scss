@@ -1,0 +1,622 @@
+
+/* ==========================================
+   CTPL TRANO PRO VLTD SMS COMMANDS
+========================================== */
+
+:host {
+  display: block;
+
+  --sms-primary: #7C3AED;
+  --sms-primary-hover: #6D28D9;
+  --sms-navy: #241438;
+  --sms-text: #475569;
+  --sms-background: #F8F5FF;
+  --sms-card: #ffffff;
+  --sms-border: #E7DEF4;
+  --sms-table-head: #e8f5fa;
+  --sms-table-row: #ffffff;
+  --sms-table-alt: #f7fafc;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.sms-image-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 280px;
+  padding: 65px 20px;
+
+  background: linear-gradient(
+    110deg,
+    #241438 0%,
+    #4C1D95 55%,
+    #7C3AED 100%
+  );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.sms-image-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  color: #ffffff !important;
+
+  font-size: clamp(34px, 4.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   COMMAND GUIDE SECTION
+========================================== */
+
+.sms-guide-section {
+  padding: 75px 20px 90px;
+  background: var(--sms-background);
+}
+
+.sms-guide-card {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 45px;
+
+  background: var(--sms-card);
+  color: var(--sms-navy);
+
+  border: 1px solid var(--sms-border);
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(36, 20, 56, 0.06);
+}
+
+.sms-guide-card h2 {
+  margin: 0 0 25px;
+
+  color: var(--sms-navy);
+  font-size: clamp(27px, 3vw, 40px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   GUIDE INTRODUCTION
+========================================== */
+
+.sms-guide-introduction {
+  margin-bottom: 35px;
+}
+
+.sms-guide-introduction p {
+  color: var(--sms-text);
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0 0 18px;
+}
+
+.sms-guide-introduction p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   RESPONSIVE TABLE CONTAINER
+========================================== */
+
+.sms-table-scroll {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: visible;
+
+  border: 1px solid var(--sms-border);
+  border-radius: 10px;
+}
+
+/* ==========================================
+   SMS COMMAND TABLE
+========================================== */
+
+.sms-command-table {
+  width: 100%;
+  min-width: 850px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  background: var(--sms-table-row);
+  color: var(--sms-navy);
+
+  table-layout: auto;
+}
+
+/* TABLE HEADER */
+
+.sms-command-table thead {
+  background: var(--sms-table-head);
+}
+
+.sms-command-table th {
+  padding: 18px 16px;
+
+  background: var(--sms-table-head);
+  color: var(--sms-navy);
+
+  border-bottom: 2px solid var(--sms-border);
+
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/* TABLE BODY */
+
+.sms-command-table td {
+  padding: 18px 16px;
+
+  color: var(--sms-text);
+  background: var(--sms-table-row);
+
+  border-bottom: 1px solid var(--sms-border);
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.sms-command-table tbody tr:nth-child(even) td {
+  background: var(--sms-table-alt);
+}
+
+.sms-command-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* FIELD COLUMN */
+
+.sms-command-table td:first-child {
+  color: var(--sms-navy);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* DESCRIPTION COLUMN */
+
+.sms-command-table th:nth-child(2) {
+  min-width: 175px;
+}
+
+/* COMMAND COLUMN */
+
+.sms-command-table th:nth-child(3) {
+  min-width: 145px;
+}
+
+.sms-command-text {
+  display: inline-block;
+
+  padding: 8px 12px;
+
+  background: rgba(124, 58, 237, 0.09);
+  color: #6D28D9;
+
+  border: 1px solid rgba(124, 58, 237, 0.16);
+  border-radius: 6px;
+
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* RESPONSE COLUMN */
+
+.sms-command-table th:nth-child(4) {
+  min-width: 350px;
+}
+
+.sms-response-cell {
+  color: var(--sms-text);
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   TECHNICAL SUPPORT SECTION
+========================================== */
+
+.sms-support-section {
+  position: relative;
+  isolation: isolate;
+
+  padding: 90px 20px;
+
+  background: linear-gradient(
+    115deg,
+    #140B24 0%,
+    #3B2359 65%,
+    #5B21B6 100%
+  );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* NETWORK SVG */
+
+.sms-network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sms-network-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.7;
+}
+
+/* SUPPORT TEXT */
+
+.sms-support-content {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.sms-support-content h2 {
+  max-width: 950px;
+  margin: 0 auto 24px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.sms-support-content p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+
+  color: #DED4F0 !important;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* SUPPORT BUTTON */
+
+.sms-support-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 49px;
+  padding: 14px 28px;
+
+  background: var(--sms-primary);
+  color: #ffffff !important;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.sms-support-button:hover {
+  background: var(--sms-primary-hover);
+}
+
+.sms-support-button:focus-visible {
+  outline: 3px solid #C4B5FD;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --sms-navy: #f1f5f9;
+    --sms-text: #CBBBE5;
+    --sms-background: #140B24;
+    --sms-card: #241438;
+    --sms-border: #493568;
+    --sms-table-head: #33204B;
+    --sms-table-row: #241438;
+    --sms-table-alt: #241438;
+  }
+
+  /* MAIN SECTION */
+
+  .sms-guide-section {
+    background: #140B24;
+  }
+
+  /* MAIN GUIDE CARD */
+
+  .sms-guide-card {
+    background: #241438 !important;
+    background-image: none !important;
+
+    color: #f1f5f9;
+
+    border-color: #493568;
+    box-shadow: none;
+  }
+
+  .sms-guide-card h2 {
+    color: #f1f5f9 !important;
+  }
+
+  .sms-guide-introduction p {
+    color: #CBBBE5 !important;
+  }
+
+  /* TABLE */
+
+  .sms-table-scroll {
+    background: #241438;
+    border-color: #493568;
+  }
+
+  .sms-command-table {
+    background: #241438;
+    color: #f1f5f9;
+  }
+
+  .sms-command-table thead,
+  .sms-command-table th {
+    background: #33204B !important;
+    color: #f1f5f9 !important;
+
+    border-color: #493568;
+  }
+
+  .sms-command-table td {
+    background: #241438 !important;
+    color: #CBBBE5 !important;
+
+    border-color: #493568;
+  }
+
+  .sms-command-table tbody tr:nth-child(even) td {
+    background: #241438 !important;
+  }
+
+  .sms-command-table td:first-child {
+    color: #f1f5f9 !important;
+  }
+
+  .sms-command-table .sms-response-cell {
+    color: #CBBBE5 !important;
+  }
+
+  /* COMMAND LABELS */
+
+  .sms-command-text {
+    background: #0d3850;
+    color: #C4B5FD !important;
+
+    border-color: #235a74;
+  }
+
+  /* TECHNICAL SUPPORT */
+
+  .sms-support-section {
+    background: linear-gradient(
+      115deg,
+      #10091E,
+      #26173D 65%,
+      #4C1D95
+    );
+  }
+
+  .sms-support-content h2 {
+    color: #ffffff !important;
+  }
+
+  .sms-support-content p {
+    color: #DED4F0 !important;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .sms-guide-section {
+    padding: 60px 18px 75px;
+  }
+
+  .sms-guide-card {
+    padding: 30px;
+  }
+
+  .sms-support-section {
+    padding: 70px 18px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .sms-image-hero {
+    min-height: 220px;
+    padding: 55px 20px;
+  }
+
+  .sms-guide-section {
+    padding: 45px 15px 60px;
+  }
+
+  .sms-guide-card {
+    padding: 22px 16px;
+    border-radius: 12px;
+  }
+
+  .sms-guide-card h2 {
+    font-size: 26px;
+  }
+
+  .sms-guide-introduction p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* Table scrolls horizontally */
+
+  .sms-table-scroll {
+    overflow-x: auto;
+  }
+
+  .sms-command-table {
+    min-width: 760px;
+  }
+
+  .sms-command-table th,
+  .sms-command-table td {
+    padding: 13px 12px;
+    font-size: 13px;
+  }
+
+  .sms-support-section {
+    padding: 60px 15px;
+  }
+
+  .sms-support-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .sms-support-button {
+    max-width: 100%;
+    text-align: center;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .sms-support-button {
+    transition: none;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+:host { --de-primary:#7C3AED; --sop-blue:#7C3AED; --vlt-primary:#7C3AED; --esim-primary:#7C3AED; --sms-primary:#7C3AED; --rfc-blue:#7C3AED; }
+.de-form-section,.vlt-info-section,.esim-validity-info,.sms-guide-section,.sop-section,.ctpl-rfc-overview,.cc-office-section,.cc-contact-section { background:#FBF9FF; }
+.de-form-card,.vlt-info-card,.sms-guide-card,.sop-documents-panel,.sop-state-panel { border-radius:18px; border-color:#E8DCF9; box-shadow:0 12px 34px rgba(71,27,120,.08); }
+.de-submit,.vlt-support-button,.sms-support-button,.de-contact-button,.ctpl-get-in-touch,.cc-submit { background:#7C3AED; border-color:#7C3AED; }
+.de-submit:hover,.vlt-support-button:hover,.sms-support-button:hover,.de-contact-button:hover,.ctpl-get-in-touch:hover { background:#6827C1; }
+.de-partner-section,.vlt-support-section,.sms-support-section,.ctpl-service-contact { background:linear-gradient(115deg,#31164D,#6932A4 65%,#8544BD); }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.sop-state-panel,.sop-documents-panel,.sms-guide-card,.vlt-info-card,.de-form-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.sop-state-panel h2,.sop-state-panel h3,.sop-state-panel h4,.sop-state-panel strong,.sop-documents-panel h2,.sop-documents-panel h3,.sop-documents-panel h4,.sop-documents-panel strong,.sms-guide-card h2,.sms-guide-card h3,.sms-guide-card h4,.sms-guide-card strong,.vlt-info-card h2,.vlt-info-card h3,.vlt-info-card h4,.vlt-info-card strong,.de-form-card h2,.de-form-card h3,.de-form-card h4,.de-form-card strong{color:#0F1830;}
+.sop-state-panel p,.sop-state-panel li,.sop-documents-panel p,.sop-documents-panel li,.sms-guide-card p,.sms-guide-card li,.vlt-info-card p,.vlt-info-card li,.de-form-card p,.de-form-card li{color:#475569;}
+.sop-state-panel a,.sop-state-panel .card-link,.sop-state-panel .ctpl-service-link,.sop-state-panel .ctpl-investor-link,.sop-documents-panel a,.sop-documents-panel .card-link,.sop-documents-panel .ctpl-service-link,.sop-documents-panel .ctpl-investor-link,.sms-guide-card a,.sms-guide-card .card-link,.sms-guide-card .ctpl-service-link,.sms-guide-card .ctpl-investor-link,.vlt-info-card a,.vlt-info-card .card-link,.vlt-info-card .ctpl-service-link,.vlt-info-card .ctpl-investor-link,.de-form-card a,.de-form-card .card-link,.de-form-card .ctpl-service-link,.de-form-card .ctpl-investor-link{color:#0877E8;}
+
+.sop-state-panel:hover,.sop-documents-panel:hover,.sms-guide-card:hover,.vlt-info-card:hover,.de-form-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.sms-image-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+.ctpl-service-contact,.de-partner-section,.vlt-support-section,.sms-support-section{background:linear-gradient(112deg,#132C54,#155E9B 70%,#6547BE);}
+
+.cc-office-section,.sop-section,.sms-guide-section,.vlt-info-section,.esim-validity-info,.de-form-section{background-color:#F8FAFF;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card h2, .de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card h3 {color:#24183F;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card p {color:#5D5872;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-background: #FAF8FF;
+  --sms-border: #E7DEFA;
+  --sms-card: #FFFFFF;
+  --sms-navy: #24183F;
+  --sms-primary: #7C3AED;
+  --sms-text: #5D5872;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}

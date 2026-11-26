@@ -1,0 +1,602 @@
+
+/* ==========================================
+   CTPL CAREERS PAGE
+========================================== */
+
+:host {
+  display: block;
+
+  --careers-navy: #241438;
+  --careers-blue: #7C3AED;
+  --careers-teal: #7C3AED;
+  --careers-text: #475569;
+  --careers-bg: #ffffff;
+  --careers-soft: #F8F5FF;
+  --careers-card: #ffffff;
+  --careers-border: #E7DEF4;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.ctpl-careers-hero {
+  position: relative;
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 75px 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(20, 11, 36, 0.88),
+      rgba(20, 11, 36, 0.55)
+    ),
+    url('/assets/images/careers-background.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
+
+.ctpl-careers-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ctpl-careers-eyebrow {
+  margin-bottom: 16px;
+
+  color: #C4B5FD;
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.ctpl-careers-hero h1 {
+  color: #ffffff;
+
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: 1.15;
+
+  margin: 0 0 20px;
+}
+
+.ctpl-careers-hero p {
+  max-width: 730px;
+
+  color: #dce9f2;
+  font-size: 17px;
+  line-height: 1.8;
+
+  margin: 0 0 30px;
+}
+
+.ctpl-careers-hero-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  min-height: 48px;
+  padding: 12px 24px;
+
+  background: var(--careers-blue);
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: background-color 0.25s ease;
+}
+
+.ctpl-careers-hero-button:hover {
+  background: #6D28D9;
+  color: #ffffff;
+}
+
+/* ==========================================
+   GROW WITH INNOVATION
+========================================== */
+
+.ctpl-careers-intro {
+  padding: 80px 0;
+  background: var(--careers-bg);
+}
+
+.ctpl-careers-intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(0, 1fr);
+
+  gap: 50px;
+  align-items: stretch;
+}
+
+.ctpl-careers-intro-text {
+  min-width: 0;
+}
+
+.ctpl-careers-label {
+  margin-bottom: 16px;
+
+  color: var(--careers-teal);
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.ctpl-careers-intro-text h2 {
+  color: var(--careers-navy);
+
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.2;
+
+  margin: 0 0 25px;
+}
+
+.ctpl-careers-intro-text p {
+  color: var(--careers-text);
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  margin: 0 0 20px;
+}
+
+.ctpl-careers-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Team image aligned to text height */
+
+.ctpl-careers-intro-image {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.ctpl-careers-intro-image img {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 14px;
+}
+
+/* ==========================================
+   CAREER OPPORTUNITIES
+========================================== */
+
+.ctpl-careers-opportunities {
+  padding: 80px 0;
+
+  background: var(--careers-soft);
+
+  scroll-margin-top: 90px;
+}
+
+.ctpl-careers-opportunities h2 {
+  color: var(--careers-navy);
+
+  font-size: clamp(30px, 3vw, 42px);
+
+  margin-bottom: 16px;
+}
+
+.ctpl-careers-section-intro {
+  max-width: 700px;
+
+  color: var(--careers-text);
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+.ctpl-careers-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.ctpl-careers-card {
+  padding: 30px 25px;
+
+  background: var(--careers-card);
+
+  border: 1px solid var(--careers-border);
+  border-radius: 14px;
+}
+
+.ctpl-careers-card-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 20px;
+
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--careers-blue);
+
+  border-radius: 12px;
+  font-size: 25px;
+}
+
+.ctpl-careers-card h3 {
+  color: var(--careers-navy);
+
+  font-size: 18px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.ctpl-careers-card p {
+  color: var(--careers-text);
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* ==========================================
+   CURRENT OPENINGS
+========================================== */
+
+.ctpl-careers-openings {
+  padding: 80px 0;
+
+  background: var(--careers-bg);
+}
+
+.ctpl-careers-openings-inner {
+  max-width: 880px;
+}
+
+.ctpl-careers-openings h2 {
+  color: var(--careers-navy);
+
+  font-size: clamp(30px, 3vw, 42px);
+
+  margin-bottom: 20px;
+}
+
+.ctpl-careers-openings-inner > p {
+  color: var(--careers-text);
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  margin-bottom: 30px;
+}
+
+.ctpl-careers-empty {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 25px;
+
+  background: var(--careers-soft);
+
+  border: 1px solid var(--careers-border);
+  border-radius: 12px;
+}
+
+.ctpl-careers-empty > span {
+  color: var(--careers-blue);
+  font-size: 32px;
+}
+
+.ctpl-careers-empty strong {
+  display: block;
+
+  color: var(--careers-navy);
+
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.ctpl-careers-empty p {
+  margin: 0;
+
+  color: var(--careers-text);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.ctpl-careers-contact {
+  padding: 75px 0;
+
+  text-align: center;
+
+  background: #241438;
+  color: #ffffff;
+}
+
+.ctpl-careers-contact h2 {
+  color: #ffffff;
+
+  font-size: clamp(28px, 3vw, 42px);
+
+  margin-bottom: 20px;
+}
+
+.ctpl-careers-contact p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+
+  color: #d1e1ea;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.ctpl-careers-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  min-width: 180px;
+  min-height: 48px;
+  padding: 13px 25px;
+
+  background: var(--careers-blue);
+  color: #ffffff;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.ctpl-careers-contact-button:hover {
+  background: #6D28D9;
+  color: #ffffff;
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --careers-navy: #f1f5f9;
+    --careers-text: #CBBBE5;
+    --careers-bg: #140B24;
+    --careers-soft: #1E1035;
+    --careers-card: #241438;
+    --careers-border: #493568;
+    --careers-teal: #C4B5FD;
+  }
+
+  .ctpl-careers-intro,
+  .ctpl-careers-openings {
+    background: #140B24;
+  }
+
+  .ctpl-careers-opportunities {
+    background: #1E1035;
+  }
+
+  .ctpl-careers-card {
+    background: #241438;
+    border-color: #493568;
+  }
+
+  .ctpl-careers-empty {
+    background: #241438;
+    border-color: #493568;
+  }
+
+  .ctpl-careers-intro-text h2,
+  .ctpl-careers-opportunities h2,
+  .ctpl-careers-openings h2,
+  .ctpl-careers-card h3,
+  .ctpl-careers-empty strong {
+    color: #f1f5f9;
+  }
+
+  .ctpl-careers-intro-text p,
+  .ctpl-careers-section-intro,
+  .ctpl-careers-card p,
+  .ctpl-careers-openings-inner > p,
+  .ctpl-careers-empty p {
+    color: #CBBBE5;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .ctpl-careers-intro-grid {
+    gap: 30px;
+  }
+
+  .ctpl-careers-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-careers-hero {
+    min-height: 320px;
+    padding: 60px 0;
+  }
+
+  .ctpl-careers-hero h1 {
+    font-size: 36px;
+  }
+
+  .ctpl-careers-hero p {
+    font-size: 15px;
+  }
+
+  .ctpl-careers-intro {
+    padding: 55px 0;
+  }
+
+  .ctpl-careers-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ctpl-careers-intro-image {
+    min-height: 280px;
+  }
+
+  .ctpl-careers-intro-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ctpl-careers-opportunities,
+  .ctpl-careers-openings {
+    padding: 55px 0;
+  }
+
+  .ctpl-careers-contact {
+    padding: 60px 0;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .ctpl-careers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctpl-careers-card {
+    padding: 25px 20px;
+  }
+
+  .ctpl-careers-empty {
+    align-items: flex-start;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.ctpl-careers-card { background:#562677; border-color:#704490; border-radius:16px; box-shadow:0 12px 30px rgba(68,27,104,.12); color:#FFF; transition:background-color .22s ease, border-color .22s ease, transform .22s ease, box-shadow .22s ease; }
+.ctpl-careers-card:hover { background:#632C89; border-color:#B58BE8; transform:translateY(-3px); box-shadow:0 18px 38px rgba(68,27,104,.19); }
+.ctpl-careers-card h2, .ctpl-careers-card h3, .ctpl-careers-card h4, .ctpl-careers-card strong { color:#FFF; }
+.ctpl-careers-card p, .ctpl-careers-card li { color:#F0E6FA; }
+.ctpl-careers-card a, .ctpl-careers-card .card-link, .ctpl-careers-card .ctpl-service-link, .ctpl-careers-card .ctpl-investor-link { color:#FFF; }
+.ctpl-careers-card-icon { color:#7C3AED; background:#F2E8FF; }
+.ctpl-careers-label { color:#7C3AED; }
+.ctpl-careers-hero-button { color:#7C3AED; }
+@media (prefers-reduced-motion: reduce) { .ctpl-careers-card, .ctpl-careers-card:hover { transform:none; transition:none; } }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.ctpl-careers-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.ctpl-careers-card h2,.ctpl-careers-card h3,.ctpl-careers-card h4,.ctpl-careers-card strong{color:#0F1830;}
+.ctpl-careers-card p,.ctpl-careers-card li{color:#475569;}
+.ctpl-careers-card a,.ctpl-careers-card .card-link,.ctpl-careers-card .ctpl-service-link,.ctpl-careers-card .ctpl-investor-link{color:#0877E8;}
+
+.ctpl-careers-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.ctpl-careers-card-icon{color:#885CF6;background:#EDE9FE;border-color:#DDD6FE;}
+
+.ctpl-careers-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+.ctpl-careers-section-intro{background-color:#F8FAFF;}
+
+.ctpl-careers-card h3 {color:#0F1830;}.ctpl-careers-card p{color:#475569;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.ctpl-careers-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.ctpl-careers-card h2, .ctpl-careers-card h3 {color:#24183F;}
+.ctpl-careers-card p {color:#5D5872;}
+.ctpl-careers-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.ctpl-careers-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.ctpl-careers-card:hover{transform:none;}}
+.ctpl-careers-card-icon {color:#7C3AED!important;}
+.ctpl-careers-card-icon {background-color:#F1EAFE!important;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --careers-bg: #FAF8FF;
+  --careers-blue: #7C3AED;
+  --careers-border: #E7DEFA;
+  --careers-card: #FFFFFF;
+  --careers-navy: #24183F;
+  --careers-soft: #FAF8FF;
+  --careers-teal: #7C3AED;
+  --careers-text: #5D5872;
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}

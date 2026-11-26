@@ -1,0 +1,941 @@
+
+/* ==========================================
+   CTPL PREMIUM PRODUCT SLIDESHOW
+========================================== */
+
+:host {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.ctpl-product-showcase {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+
+  padding: 65px 20px 65px;
+
+  background: linear-gradient(
+    115deg,
+    #CF65D7 0%,
+    #A446E2 33%,
+    #7736E8 65%,
+    #3E49E6 100%
+  );
+
+  color: #FFFFFF;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   MOVING BACKGROUND LIGHT
+========================================== */
+
+.showcase-glow {
+  position: absolute;
+  z-index: -1;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(85px);
+
+  animation: showcaseGlowMove 12s ease-in-out infinite alternate;
+}
+
+.showcase-glow-one {
+  width: 480px;
+  height: 480px;
+
+  top: -170px;
+  left: -150px;
+
+  background: rgba(255, 190, 246, 0.45);
+}
+
+.showcase-glow-two {
+  width: 540px;
+  height: 540px;
+
+  right: -180px;
+  bottom: -240px;
+
+  background: rgba(141, 170, 255, 0.35);
+
+  animation-delay: -5s;
+}
+
+/* LIGHT TRACK */
+
+.showcase-light-track {
+  position: absolute;
+  z-index: -1;
+
+  left: -25%;
+  bottom: 45px;
+
+  width: 150%;
+  height: 140px;
+
+  border-top: 2px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  transform: rotate(-7deg);
+
+  box-shadow:
+    0 -5px 28px rgba(255, 255, 255, 0.2),
+    0 -12px 40px rgba(226, 166, 255, 0.18);
+
+  pointer-events: none;
+
+  animation: showcaseTrackFloat 9s ease-in-out infinite alternate;
+}
+
+/* ==========================================
+   CONTENT CONTAINER
+========================================== */
+
+.showcase-container {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.showcase-heading {
+  text-align: center;
+
+  margin-bottom: 44px;
+}
+
+.showcase-eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #FFFFFF;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.showcase-heading h2 {
+  margin: 0 0 16px;
+
+  color: #FFFFFF;
+
+  font-size: clamp(35px, 4vw, 60px);
+  font-weight: 800;
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+}
+
+.showcase-heading p {
+  margin: 0 auto;
+
+  max-width: 750px;
+
+  color: #F5E9FF;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   SLIDESHOW STAGE
+========================================== */
+
+.showcase-stage {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 400px;
+}
+
+/* ==========================================
+   SIDE PREVIEW CARDS
+========================================== */
+
+.showcase-side-card {
+  position: absolute;
+
+  top: 50%;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 29%;
+  height: 335px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 26px;
+
+  box-shadow:
+    0 15px 35px rgba(39, 20, 100, 0.16);
+
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+
+  text-align: left;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transform: translateY(-50%) scale(0.92);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.showcase-side-left {
+  left: 0;
+}
+
+.showcase-side-right {
+  right: 0;
+}
+
+.showcase-side-card:hover {
+  transform: translateY(-50%) scale(0.96);
+
+  box-shadow:
+    0 20px 45px rgba(39, 20, 100, 0.24);
+}
+
+/* SIDE IMAGE */
+
+.showcase-side-image {
+  display: grid;
+  place-items: center;
+
+  flex: 1;
+  min-height: 0;
+
+  padding: 22px;
+
+  background: linear-gradient(
+    140deg,
+    #FAF5FF,
+    #EDE9FE
+  );
+}
+
+.showcase-side-image img {
+  display: block;
+
+  width: 100%;
+  height: 180px;
+
+  object-fit: contain;
+}
+
+/* SIDE TEXT */
+
+.showcase-side-information {
+  padding: 20px 24px 24px;
+
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.showcase-side-information h3 {
+  margin: 0 0 7px;
+
+  color: #20163C;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.showcase-side-information p {
+  margin: 0;
+
+  color: #675B7C;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   MAIN GLASS PRODUCT CARD
+========================================== */
+
+.showcase-main-card {
+  position: relative;
+  z-index: 3;
+
+  width: 64%;
+  min-height: 395px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  border-radius: 34px;
+
+  box-shadow:
+    0 0 35px rgba(255, 255, 255, 0.36),
+    0 24px 60px rgba(57, 21, 112, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+/* LAYOUT INSIDE FEATURED CARD */
+
+.showcase-main-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.95fr);
+
+  align-items: center;
+
+  min-height: 395px;
+
+  animation: showcaseSlideIn 0.62s
+    cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* ==========================================
+   MAIN PRODUCT IMAGE
+========================================== */
+
+.showcase-product-visual {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 390px;
+
+  padding: 35px;
+
+  background: radial-gradient(
+    circle at 50% 65%,
+    #FFFFFF 0%,
+    #FAF5FF 52%,
+    #F0E5FF 100%
+  );
+}
+
+.showcase-product-visual::after {
+  content: '';
+
+  position: absolute;
+
+  left: 17%;
+  right: 17%;
+  bottom: 40px;
+
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: rgba(70, 35, 110, 0.12);
+
+  filter: blur(15px);
+}
+
+/* PRODUCT IMAGE */
+
+.showcase-product-image {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  max-width: 400px;
+  height: 290px;
+
+  object-fit: contain;
+
+  animation: showcaseImageEnter 0.7s
+    cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* ==========================================
+   MAIN PRODUCT INFORMATION
+========================================== */
+
+.showcase-product-content {
+  min-width: 0;
+
+  padding: 40px 38px;
+
+  border-left: 1px solid #DDD6FE;
+}
+
+.showcase-product-category {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #7C3AED;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.showcase-product-content h3 {
+  margin: 0 0 18px;
+
+  color: #20163C;
+
+  font-size: clamp(25px, 2.5vw, 39px);
+  font-weight: 800;
+  line-height: 1.2;
+
+  letter-spacing: -0.03em;
+}
+
+.showcase-product-content p {
+  margin: 0 0 28px;
+
+  color: #5C5271;
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   EXPLORE PRODUCT BUTTON
+========================================== */
+
+.showcase-explore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  min-height: 48px;
+  padding: 14px 24px;
+
+  background: linear-gradient(
+    110deg,
+    #7C3AED,
+    #6D28D9
+  );
+
+  color: #FFFFFF;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  box-shadow:
+    0 9px 24px rgba(124, 58, 237, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.showcase-explore-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(124, 58, 237, 0.3);
+}
+
+.showcase-explore-button:focus-visible {
+  outline: 3px solid #A78BFA;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   PREVIOUS AND NEXT ARROWS
+========================================== */
+
+.showcase-arrow {
+  position: absolute;
+
+  top: 50%;
+  z-index: 5;
+
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  background: #FFFFFF;
+
+  color: #7C3AED;
+
+  border: 1px solid #EDE9FE;
+  border-radius: 50%;
+
+  box-shadow:
+    0 8px 25px rgba(42, 16, 90, 0.17);
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.showcase-arrow span {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.showcase-arrow-left {
+  left: -15px;
+}
+
+.showcase-arrow-right {
+  right: -15px;
+}
+
+.showcase-arrow:hover {
+  background: #F3E8FF;
+
+  transform: translateY(-50%) scale(1.08);
+}
+
+.showcase-arrow:focus-visible,
+.showcase-side-card:focus-visible {
+  outline: 3px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   SLIDESHOW CONTROLS
+========================================== */
+
+.showcase-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 22px;
+
+  margin-top: 34px;
+}
+
+/* PAGINATION */
+
+.showcase-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.showcase-page-button {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #FFFFFF;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.showcase-page-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.showcase-page-button.active {
+  background: #FFFFFF;
+
+  color: #6D28D9;
+
+  transform: scale(1.1);
+
+  box-shadow:
+    0 5px 18px rgba(34, 14, 88, 0.15);
+}
+
+/* PLAY / PAUSE + PROGRESS */
+
+.showcase-playback {
+  display: flex;
+  align-items: center;
+
+  width: min(100%, 720px);
+
+  gap: 18px;
+}
+
+.showcase-play-button {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  background: #6D28D9;
+
+  color: #FFFFFF;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.showcase-progress-track {
+  position: relative;
+  flex: 1;
+
+  height: 6px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.28);
+
+  border-radius: 99px;
+}
+
+.showcase-progress-fill {
+  position: absolute;
+  inset: 0;
+
+  width: 0%;
+
+  background: #FFFFFF;
+
+  border-radius: inherit;
+
+  box-shadow:
+    0 0 14px rgba(255, 255, 255, 0.8);
+
+  animation: showcaseProgress linear forwards;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes showcaseProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes showcaseSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(25px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes showcaseImageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes showcaseGlowMove {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(35px, -25px, 0);
+  }
+}
+
+@keyframes showcaseTrackFloat {
+  from {
+    transform: rotate(-7deg) translateY(0);
+  }
+
+  to {
+    transform: rotate(-5deg) translateY(-15px);
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+  .showcase-main-card {
+    width: 73%;
+  }
+
+  .showcase-side-card {
+    width: 25%;
+  }
+
+  .showcase-product-visual {
+    padding: 20px;
+  }
+
+  .showcase-product-image {
+    height: 250px;
+  }
+
+  .showcase-product-content {
+    padding: 30px 25px;
+  }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 850px) {
+
+  .showcase-side-card {
+    display: none;
+  }
+
+  .showcase-main-card {
+    width: calc(100% - 50px);
+  }
+
+  .showcase-main-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .showcase-product-visual {
+    min-height: 340px;
+  }
+
+  .showcase-product-image {
+    height: 235px;
+  }
+
+  .showcase-arrow-left {
+    left: 0;
+  }
+
+  .showcase-arrow-right {
+    right: 0;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+  .ctpl-product-showcase {
+    padding: 50px 15px 55px;
+  }
+
+  .showcase-heading {
+    margin-bottom: 30px;
+  }
+
+  .showcase-heading h2 {
+    font-size: 34px;
+  }
+
+  .showcase-heading p {
+    font-size: 14px;
+  }
+
+  .showcase-stage {
+    min-height: 0;
+  }
+
+  .showcase-main-card {
+    width: calc(100% - 28px);
+
+    border-radius: 23px;
+    border-width: 2px;
+  }
+
+  .showcase-main-inner {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .showcase-product-visual {
+    min-height: 235px;
+    padding: 25px;
+  }
+
+  .showcase-product-image {
+    height: 195px;
+  }
+
+  .showcase-product-content {
+    padding: 25px;
+    border-left: none;
+    border-top: 1px solid #DDD6FE;
+  }
+
+  .showcase-product-content h3 {
+    font-size: 27px;
+  }
+
+  .showcase-product-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .showcase-arrow {
+    width: 37px;
+    height: 37px;
+  }
+
+  .showcase-arrow span {
+    font-size: 28px;
+  }
+
+  .showcase-arrow-left {
+    left: -5px;
+  }
+
+  .showcase-arrow-right {
+    right: -5px;
+  }
+
+  .showcase-page-button {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .showcase-pagination {
+    gap: 7px;
+  }
+
+  .showcase-playback {
+    gap: 12px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .showcase-glow,
+  .showcase-light-track,
+  .showcase-main-inner,
+  .showcase-product-image,
+  .showcase-progress-fill {
+    animation: none !important;
+  }
+
+  .showcase-side-card,
+  .showcase-arrow,
+  .showcase-explore-button,
+  .showcase-page-button {
+    transition: none !important;
+  }
+
+  .showcase-side-card:hover,
+  .showcase-arrow:hover,
+  .showcase-explore-button:hover {
+    transform: none !important;
+  }
+}
+
+
+/* =====================================
+   HIDE SLIDESHOW BOTTOM CONTROLS
+===================================== */
+
+.showcase-controls,
+.showcase-pagination,
+.showcase-playback,
+.showcase-progress-track,
+.showcase-play-button {
+  display: none !important;
+}
+
+/* Remove extra bottom spacing */
+
+.ctpl-product-showcase {
+  padding-bottom: 45px !important;
+}

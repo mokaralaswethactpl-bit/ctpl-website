@@ -417,19 +417,31 @@
   pointer-events: auto;
 }
 
+
+/* =====================================
+   SERVICES GRID
+===================================== */
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  align-items: stretch;
 }
+
+/* COMPACT SERVICE CARD */
 
 .service-card {
   display: flex;
   gap: 16px;
-  padding: 27px 23px;
+  padding: 20px 18px;
   background: #ffffff;
   border: 1px solid var(--home-border);
   border-radius: 12px;
+
+  min-height: 0;
+  height: auto;
+
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease;
@@ -439,6 +451,8 @@
   border-color: #a9d7e4;
   box-shadow: 0 12px 30px rgba(16, 40, 63, 0.08);
 }
+
+/* SERVICE ICON */
 
 .service-icon {
   display: grid;
@@ -452,22 +466,70 @@
   font-size: 24px;
 }
 
+/* SERVICE TITLE */
+
 .service-card h3 {
   margin: 0 0 9px;
   font-size: 18px;
 }
 
+/* SERVICE DESCRIPTION - ONLY 4 LINES */
+
 .service-card p {
   color: var(--home-muted);
   font-size: 13px;
   line-height: 1.7;
-  min-height: 62px;
+
+  min-height: 0;
+  margin: 0 0 14px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+
+  overflow: hidden;
 }
+
+/* READ MORE LINK */
+
+.service-card a {
+  display: inline-block;
+  color: var(--home-teal);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+/* SECTION CTA */
 
 .section-cta {
   text-align: right;
   margin-top: 30px;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+}
+
 
 /* ==========================================
    SAFETY FIRST

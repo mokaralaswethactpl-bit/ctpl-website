@@ -1,0 +1,2446 @@
+
+/* ==========================================
+   CTPL HOME PAGE STYLES
+   home.scss
+========================================== */
+
+/* HOMEPAGE VARIABLES */
+
+:host {
+  display: block;
+
+  --home-navy: #241438;
+  --home-deep: #140B24;
+  --home-teal: #7C3AED;
+  --home-blue: #7C3AED;
+  --home-muted: #736985;
+  --home-border: #E7DEF4;
+  --home-soft: #F8F5FF;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+  position: relative;
+  min-height: 670px;
+  background: var(--home-deep);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/vehicle-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: heroPan 22s ease-in-out infinite alternate;
+}
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 11, 36, 0.98) 0%,
+    rgba(76, 29, 149, 0.73) 42%,
+    rgba(124, 58, 237, 0.20) 100%
+  );
+}
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 670px;
+  padding: 105px 0 85px;
+}
+
+.hero-copy {
+  max-width: 720px;
+  animation: fadeRise 0.75s ease both;
+}
+
+.hero-eyebrow {
+  color: #C4B5FD;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: clamp(42px, 5.6vw, 86px);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.hero h1 em {
+  display: block;
+  font-style: normal;
+  color: #C4B5FD;
+}
+
+.hero .hero-description {
+  max-width: 850px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #EBE3F5;
+  margin: 20px 0 25px;
+}
+
+.hero-label {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #E9DFFF;
+}
+
+/* HERO BUTTONS */
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 50px;
+  padding: 15px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.25s ease;
+}
+
+.hero .btn-primary {
+  background: var(--home-blue);
+  color: #ffffff;
+}
+
+.hero .btn-primary:hover {
+  background: #6D28D9;
+}
+
+.hero .btn-ghost {
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.hero .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================
+   EXPERIENCE SECTION
+========================================== */
+
+.stat-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 35px 20px;
+  background: transparent;
+  border: none;
+}
+
+.stat-strip::before,
+.stat-strip::after {
+  content: none;
+  display: none;
+}
+
+.stat-strip .stat-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 35px 40px;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #173d53,
+    #291740,
+    #140B24
+  );
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.3),
+    0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-figure {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 255px;
+}
+
+.stat-figure strong {
+  color: #A78BFA;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-figure span {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.stat-inner p {
+  flex: 1;
+  margin: 0;
+  color: #F2EAFE;
+  line-height: 1.8;
+}
+
+.stat-inner p strong {
+  color: #C4B5FD;
+  font-weight: 700;
+}
+
+.stat-inner .text-link {
+  color: #C4B5FD;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   HOMEPAGE SECTION HEADINGS
+========================================== */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 35px;
+  margin-bottom: 42px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.65vw, 58px);
+  line-height: 1.18;
+  font-weight: 800;
+}
+
+.section-heading h2 span {
+  color: #9180AA;
+}
+
+.section-heading > p {
+  max-width: 310px;
+  margin: 0 0 5px;
+  color: var(--home-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   PRODUCT PORTFOLIO
+========================================== */
+
+.product-portfolio-section {
+  padding: 70px 0;
+  background: var(--home-soft);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.product-card {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--home-border);
+  border-radius: 12px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.product-card:hover {
+  border-color: #C4B5FD;
+  box-shadow: 0 12px 25px rgba(36, 20, 56, 0.1);
+  transform: translateY(-4px);
+}
+
+.product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 155px;
+  padding: 16px;
+  background: #F8F4FF;
+  overflow: hidden;
+}
+
+.product-image img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+  opacity: 1;
+}
+
+.product-image.no-image {
+  background: linear-gradient(
+    145deg,
+    #eaf1f3,
+    #d6e5e9
+  );
+}
+
+.product-placeholder {
+  color: #b0c9d2;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.product-placeholder small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-tag {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--home-teal);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.card-body h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-body p {
+  color: var(--home-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  min-height: 45px;
+}
+
+.card-link {
+  display: inline-block;
+  color: var(--home-teal);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.card-link span {
+  margin-left: 5px;
+}
+
+/* ==========================================
+   CONNECTED DIGITAL SERVICES
+========================================== */
+
+.interactive-grid-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 100px 0;
+  background: #eaf5fa;
+}
+
+.interactive-grid-section .grid-hover-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  grid-auto-rows: 60px;
+  pointer-events: auto;
+  background: transparent;
+}
+
+.interactive-grid-section .grid-cell {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid rgba(0, 174, 239, 0.12);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.interactive-grid-section .grid-cell:hover {
+  border-color: #00c8ff;
+  box-shadow:
+    inset 0 0 5px rgba(0, 200, 255, 0.3),
+    0 0 9px rgba(0, 200, 255, 0.4);
+}
+
+.interactive-grid-section > .container {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.interactive-grid-section a {
+  pointer-events: auto;
+}
+
+
+/* =====================================
+   SERVICES GRID
+===================================== */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* COMPACT SERVICE CARD */
+
+.service-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px 18px;
+  background: #ffffff;
+  border: 1px solid var(--home-border);
+  border-radius: 12px;
+
+  min-height: 0;
+  height: auto;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: #C4B5FD;
+  box-shadow: 0 12px 30px rgba(36, 20, 56, 0.08);
+}
+
+/* SERVICE ICON */
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  background: #F3E8FF;
+  color: var(--home-teal);
+  border-radius: 12px;
+  font-size: 24px;
+}
+
+/* SERVICE TITLE */
+
+.service-card h3 {
+  margin: 0 0 9px;
+  font-size: 18px;
+}
+
+/* SERVICE DESCRIPTION - ONLY 4 LINES */
+
+.service-card p {
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.7;
+
+  min-height: 0;
+  margin: 0 0 14px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+
+  overflow: hidden;
+}
+
+/* READ MORE LINK */
+
+.service-card a {
+  display: inline-block;
+  color: var(--home-teal);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.service-card a:hover {
+  text-decoration: underline;
+}
+
+/* SECTION CTA */
+
+.section-cta {
+  text-align: right;
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+}
+
+
+/* ==========================================
+   SAFETY FIRST
+========================================== */
+
+.feature {
+  padding: 90px 0;
+  overflow: hidden;
+  background: var(--home-navy);
+  color: #ffffff;
+}
+
+.feature-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.feature h2 {
+  max-width: 600px;
+  color: #ffffff;
+}
+
+.feature p {
+  max-width: 580px;
+  margin-bottom: 25px;
+  color: #cadce5;
+  line-height: 1.8;
+}
+
+.feature-visual {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: 24px;
+  background: linear-gradient(
+    130deg,
+    #244965,
+    #0a253b
+  );
+  border: 1px solid #34576c;
+  border-radius: 22px;
+}
+
+.feature-visual img {
+  display: block;
+  max-width: 80%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   EXPLORE CTPL
+========================================== */
+
+.explore-ctpl-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 180px 0 70px;
+  background-image: url('/assets/images/ctpl-building.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Transparent layer over the building */
+
+.explore-ctpl-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 120px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(100, 100, 100, 0.3);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.explore-ctpl-section::after {
+  content: none;
+  display: none;
+}
+
+.explore-ctpl-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.explore-ctpl-section h2 {
+  color: #ffffff;
+}
+
+.explore-ctpl-section .eyebrow {
+  color: #C4B5FD;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pathway {
+  display: block;
+  padding: 30px;
+  border: 1px solid #493568;
+  border-radius: 13px;
+  background: #241438;
+  color: #ffffff;
+}
+
+.pathway > span:first-child {
+  color: #A78BFA;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.pathway h3 {
+  margin-top: 28px;
+  color: #ffffff;
+}
+
+.pathway p {
+  color: #CBBBE5;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.pathway .card-link {
+  color: #A78BFA;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.cta-section {
+  padding: 65px 0;
+  background: #0c2944;
+  color: #ffffff;
+}
+
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.cta-inner h2 {
+  color: #ffffff;
+  font-size: clamp(29px, 3vw, 48px);
+  margin-bottom: 14px;
+}
+
+.cta-inner p {
+  margin: 0;
+  color: #cbdce5;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+========================================== */
+
+:host ::ng-deep .will-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+:host ::ng-deep .will-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroPan {
+  from {
+    transform: scale(1.025) translateX(0);
+  }
+
+  to {
+    transform: scale(1.08) translateX(-0.8%);
+  }
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --home-soft: #140B24;
+    --home-muted: #CBBBE5;
+    --home-border: #493568;
+  }
+
+  .product-portfolio-section {
+    background: #140B24;
+  }
+
+  .product-card,
+  .service-card,
+  .pathway {
+    background: #241438;
+    border-color: #493568;
+  }
+
+  .product-image {
+    background: #241438;
+  }
+
+  .product-image.no-image {
+    background: #241438;
+  }
+
+  .card-body h3,
+  .service-card h3,
+  .section-heading h2 {
+    color: #f1f5f9;
+  }
+
+  .card-body p,
+  .service-card p,
+  .section-heading > p {
+    color: #CBBBE5;
+  }
+
+  .interactive-grid-section {
+    background: #140B24;
+  }
+
+  .feature {
+    background: #1E1035;
+  }
+
+  .stat-strip {
+    background: transparent;
+  }
+
+  .explore-ctpl-section h2 {
+    color: #ffffff;
+  }
+
+  .explore-ctpl-section .pathway h3 {
+    color: #ffffff;
+  }
+
+  .explore-ctpl-section .pathway p {
+    color: #CBBBE5;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1120px) {
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .service-grid {
+    gap: 14px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .hero,
+  .hero-inner {
+    min-height: 600px;
+  }
+
+  .hero-scrim {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 27, 46, 0.96),
+      rgba(8, 27, 46, 0.7)
+    );
+  }
+
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-heading > p {
+    max-width: 650px;
+  }
+
+  .product-grid,
+  .service-grid,
+  .pathway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .stat-strip .stat-inner {
+    gap: 25px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .hero-inner {
+    padding: 80px 0 70px;
+  }
+
+  .hero .hero-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .stat-strip {
+    padding: 25px 15px;
+  }
+
+  .stat-strip .stat-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .interactive-grid-section .grid-hover-layer {
+    grid-template-columns: repeat(auto-fill, 48px);
+    grid-auto-rows: 48px;
+  }
+
+  .interactive-grid-section .grid-cell {
+    width: 48px;
+    height: 48px;
+  }
+
+  .explore-ctpl-section {
+    padding: 100px 0 40px;
+  }
+
+  .explore-ctpl-section::before {
+    top: 60px;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .hero,
+  .hero-inner {
+    min-height: 570px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-label {
+    display: none;
+  }
+
+  .stat-figure {
+    min-width: 100%;
+  }
+
+  .stat-figure strong {
+    font-size: 65px;
+  }
+
+  .product-grid,
+  .service-grid,
+  .pathway-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .feature-visual {
+    min-height: 260px;
+  }
+
+  .cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-photo,
+  .hero-copy {
+    animation: none !important;
+  }
+
+  :host ::ng-deep .will-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .product-card,
+  .service-card,
+  .pathway {
+    transition: none !important;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+:host { --home-navy:#281541; --home-deep:#261445; --home-teal:#7C3AED; --home-blue:#7C3AED; --home-muted:#665878; --home-border:#E7D9F8; --home-soft:#FBF9FF; }
+.hero { background: #E9D6FF; color: #25123D; }
+.hero-photo { animation: heroPan 26s ease-in-out infinite alternate; }
+.hero-scrim { background: linear-gradient(90deg, rgba(250,245,255,.97) 0%, rgba(245,231,255,.94) 36%, rgba(231,203,255,.54) 64%, rgba(124,58,237,.10) 100%); }
+.hero h1 { color: #24133D; }
+.hero h1 em { color: #7226BD; }
+.hero .hero-description { color: #4B3D61; }
+.hero-eyebrow, .hero-label { color: #6F2CBD; }
+.hero .btn-primary { background: #7C3AED; box-shadow: 0 10px 25px rgba(124,58,237,.23); }
+.hero .btn-ghost { color: #6626AF; background: rgba(255,255,255,.60); border: 1.5px solid #9A60DA; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.hero .btn-ghost:hover { background: rgba(255,255,255,.86); }
+.stat-strip { background: #FBF9FF; }
+.stat-strip .stat-inner { background: linear-gradient(110deg, #3D1B60, #5F2A8A); border: 1px solid #8E57B9; box-shadow: 0 16px 38px rgba(52,22,85,.14); }
+.stat-figure strong, .stat-inner p strong, .stat-inner .text-link { color: #E2C3FF; }
+.product-portfolio-section { background: #FBF9FF; }
+.section-heading h2 { color: #261340; }
+.section-heading h2 span { color: #7C3AED; }
+.product-card { background: #562677; border: 1px solid #6D3B8A; color: white; border-radius: 16px; box-shadow: 0 12px 28px rgba(66,27,101,.11); }
+.product-card:hover { background: #632C89; border-color: #A78BFA; box-shadow: 0 20px 42px rgba(66,27,101,.19); transform: translateY(-4px); }
+.product-image, .product-image.no-image { background: #F3EAFD; }
+.product-card h3, .product-card .card-body h3 { color: #FFF; }
+.product-card .card-tag { color: #E1C5FF; }
+.product-card p, .product-card .card-body p { color: #F0E5FA; }
+.product-card .card-link { color: #FFF; }
+.product-card .card-body p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp:3; line-clamp:3; overflow:hidden; min-height:0; }
+.interactive-grid-section { background: linear-gradient(135deg, #F6EFFF 0%, #F0E5FC 48%, #FCFAFF 100%); }
+.interactive-grid-section .grid-cell { border-color: rgba(124,58,237,.09); }
+.interactive-grid-section .grid-cell:hover { border-color: rgba(124,58,237,.35); box-shadow: inset 0 0 8px rgba(124,58,237,.11); }
+.service-card {
+  background: #562677;
+  color: #FFF;
+  border: 1px solid #6D3B8A;
+  border-radius: 16px;
+  padding: 24px 20px;
+  min-height: 0;
+  box-shadow: 0 12px 28px rgba(66,27,101,.10);
+  transition: background .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.service-card:hover { background: #632C89; border-color: #A78BFA; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(66,27,101,.19); }
+.service-card .service-icon { flex:0 0 50px; color:#7C3AED; background:#F2E6FF; border:1px solid #E8D6FC; }
+.service-card .card-tag { color:#E5C9FF; }
+.service-card h3 { color:#FFF; }
+.service-card p { color:#F1E8FA; min-height:0; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:4; line-clamp:4; overflow:hidden; }
+.service-card .card-link, .service-card a { color:#FFF; }
+.service-card:focus-visible, .product-card:focus-visible { outline:3px solid #A78BFA; outline-offset:4px; }
+.explore-ctpl-section { background: #FCFAFF; }
+.pathway { border-radius:16px; }
+@media (prefers-reduced-motion: reduce) { .hero-photo { animation:none !important; } .product-card:hover,.service-card:hover { transform:none; } }
+
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+/* Restrained editorial movement, not distracting parallax everywhere */
+.hero-copy { animation:ctpl-enter .8s cubic-bezier(.2,.75,.2,1) both; }
+@keyframes ctpl-enter { from {opacity:0; transform:translateY(16px);} to {opacity:1;transform:translateY(0);} }
+.hero .btn-ghost { box-shadow:0 8px 24px rgba(68,27,104,.07); }
+.pathway { transition:transform .25s ease, box-shadow .25s ease; }
+.pathway:hover { transform:translateY(-3px); box-shadow:0 15px 36px rgba(71,27,120,.12); }
+@media (prefers-reduced-motion:reduce) { .hero-copy { animation:none; } .pathway:hover { transform:none; } }
+
+
+
+/* INTRA screenshot — airy tracking hero, blue CTA, white product/service cards */
+:host {--home-navy:#0F1830;--home-deep:#142746;--home-teal:#885CF6;--home-blue:#0877E8;--home-muted:#475569;--home-border:#DCE7F2;--home-soft:#F8FAFF;}
+.hero {background:#EFF5FF;color:#0F1830;}
+.hero-scrim {background:linear-gradient(90deg,rgba(248,250,255,.97) 0%,rgba(245,248,255,.93) 37%,rgba(234,243,255,.48) 69%,rgba(136,92,246,.07) 100%);}
+.hero h1 {color:#0F1830;}.hero h1 em {color:#885CF6;}
+.hero .hero-description {color:#334155;}.hero-eyebrow,.hero-label {color:#7751D9;}
+.hero .btn-primary {background:linear-gradient(105deg,#06B6D4,#0877E8);box-shadow:0 8px 22px rgba(8,119,232,.2);}
+.hero .btn-ghost {color:#0877E8;background:rgba(255,255,255,.77);border-color:#A5BDEA;}
+.stat-strip,.product-portfolio-section,.explore-ctpl-section {background:#F8FAFF;}
+.stat-strip .stat-inner {background:linear-gradient(110deg,#132E5D,#185A9D);border-color:#4A83CB;}
+.section-heading h2 {color:#0F1830;}.section-heading h2 span {color:#885CF6;}
+.product-card,.service-card {background:#FFFFFF;color:#0F1830;border:1px solid #DCE7F2;box-shadow:0 10px 28px rgba(16,58,111,.07);}
+.product-card:hover,.service-card:hover {background:#F8FBFF;border-color:#A78BFA;box-shadow:0 16px 36px rgba(67,64,133,.12);}
+.product-card h3,.product-card .card-body h3,.service-card h3 {color:#0F1830;}
+.product-card p,.product-card .card-body p,.service-card p {color:#475569;}
+.product-card .card-tag,.service-card .card-tag {color:#7751D9;}
+.product-card .card-link,.service-card .card-link,.service-card a {color:#0877E8;}
+.service-card .service-icon {color:#885CF6;background:#EDE9FE;border-color:#DDD6FE;}
+.product-image,.product-image.no-image {background:#F1F7FF;}
+.interactive-grid-section {background:linear-gradient(135deg,#F4F9FF,#EDF5FF 55%,#F9F8FF);}
+.interactive-grid-section .grid-cell {border-color:rgba(8,119,232,.10);}
+@media (prefers-color-scheme:dark) {
+ .product-card,.service-card {background:#172B47;border-color:#354A69;color:#F8FAFF;}
+ .product-card h3,.product-card .card-body h3,.service-card h3 {color:#F8FAFF;}
+ .product-card p,.product-card .card-body p,.service-card p {color:#CFD8E6;}
+ .product-card .card-link,.service-card .card-link,.service-card a {color:#83C5FF;}
+}
+
+
+/* APPROVED CTPL HOMEPAGE • lavender hero / WHITE GLASS cards */
+:host {--home-navy:#22163E;--home-deep:#F7F0FF;--home-teal:#7C3AED;--home-blue:#7C3AED;--home-muted:#625B78;--home-border:#E7DEFA;--home-soft:#FAF8FF;}
+.hero {background:#F7F0FF;color:#20143E;}
+.hero-scrim {background:linear-gradient(90deg,rgba(250,247,255,.99) 0%,rgba(248,243,255,.95) 34%,rgba(231,209,255,.54) 67%,rgba(157,100,239,.09) 100%);}
+.hero h1 {color:#1E153B;letter-spacing:-.048em;}
+.hero h1 em {color:#7C3AED;}
+.hero .hero-description {color:#4E4763;}
+.hero-eyebrow,.hero-label {color:#7C3AED;}
+.hero .btn-primary {background:linear-gradient(115deg,#7C3AED,#6D28D9);box-shadow:0 12px 26px rgba(124,58,237,.18);}
+.hero .btn-ghost {background:rgba(255,255,255,.75);color:#6D28D9;border:1px solid #AD90EF;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);}
+.stat-strip,.product-portfolio-section,.explore-ctpl-section {background:#FAF8FF;}
+.section-heading h2 {color:#1F163C;}.section-heading h2 span {color:#7C3AED;}
+.interactive-grid-section {background:linear-gradient(140deg,#FBFAFF 0%,#F5EFFF 55%,#FAF8FF 100%);}
+.product-card,.service-card,.pathway {
+ background:rgba(255,255,255,.94)!important;
+ color:#21183B!important;
+ border:1px solid rgba(135,91,211,.17)!important;
+ border-radius:19px!important;
+ box-shadow:0 12px 34px rgba(68,36,116,.07),inset 0 1px 0 rgba(255,255,255,.98)!important;
+ -webkit-backdrop-filter:blur(14px) saturate(150%);
+ backdrop-filter:blur(14px) saturate(150%);
+ transition:transform .28s cubic-bezier(.2,.75,.2,1),border-color .28s ease,box-shadow .28s ease;
+}
+.product-card:hover,.service-card:hover,.pathway:hover {
+ background:#fff!important;transform:translateY(-5px);border-color:#B8A1F3!important;
+ box-shadow:0 20px 44px rgba(82,42,142,.13)!important;
+}
+.product-card h3,.product-card .card-body h3,.service-card h3,.pathway h3 {color:#24183F!important;}
+.product-card p,.product-card .card-body p,.service-card p,.pathway p {color:#5D5872!important;}
+.product-card .card-tag,.service-card .card-tag {color:#7C3AED!important;}
+.product-card .card-link,.service-card .card-link,.service-card a,.pathway .card-link {color:#6D28D9!important;}
+.product-image,.product-image.no-image {background:#F7F2FF!important;}
+.service-card .service-icon {color:#7C3AED!important;background:#F1EAFE!important;border:1px solid #E6D7FF!important;}
+.service-card {padding:21px 19px!important;min-height:0!important;}
+.service-card p,.product-card .card-body p {display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden;min-height:0!important;margin-bottom:12px;}
+@media(prefers-reduced-motion:reduce){.product-card:hover,.service-card:hover,.pathway:hover{transform:none;}}
+
+
+
+/* ==========================================
+   CTPL HOMEPAGE — FINAL PURPLE REFINEMENTS
+   PRIMARY PURPLE: #7C3AED
+========================================== */
+
+:host {
+  --home-teal: #7C3AED;
+  --home-blue: #7C3AED;
+  --home-navy: #24183F;
+  --home-muted: #574E67;
+  --home-border: #E9DDFB;
+}
+
+/* ==========================================
+   1. HERO — FIT DESKTOP SCREEN
+========================================== */
+
+.hero {
+  position: relative;
+
+  height: calc(100vh - 76px) !important;
+  height: calc(100svh - 76px) !important;
+
+  min-height: 0 !important;
+  max-height: 900px;
+
+  background: #F8F5FF !important;
+  color: #24183F !important;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* FULL HERO BACKGROUND IMAGE */
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background-image: url('/assets/images/vehicle-hero.png');
+
+  background-size: cover !important;
+  background-position: 65% center !important;
+  background-repeat: no-repeat;
+
+  animation: none !important;
+}
+
+/* SOFT PURPLE GLASS GRADIENT */
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(253, 250, 255, 0.98) 0%,
+    rgba(250, 245, 255, 0.97) 32%,
+    rgba(237, 225, 255, 0.79) 55%,
+    rgba(124, 58, 237, 0.06) 100%
+  ) !important;
+}
+
+/* HERO CONTENT POSITION */
+
+.hero-inner {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: min(90%, 1440px);
+  height: 100% !important;
+  min-height: 0 !important;
+
+  margin-inline: auto;
+  padding: 20px 0 !important;
+  box-sizing: border-box;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: min(670px, 55vw) !important;
+
+  animation: homeHeroFade 0.75s ease-out both;
+}
+
+/* TOP LABEL */
+
+.hero-eyebrow {
+  display: block;
+  margin-bottom: 16px;
+
+  color: #7C3AED !important;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* HERO HEADING — SMALLER */
+
+.hero h1 {
+  margin: 0 0 16px !important;
+
+  color: #201735 !important;
+
+  font-size: clamp(32px, 3.4vw, 54px) !important;
+  font-weight: 800;
+  line-height: 1.1 !important;
+  letter-spacing: -0.045em;
+}
+
+/* DARK PURPLE TO LIGHT PURPLE TEXT */
+
+.hero h1 em {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+
+  font-style: normal;
+  font-weight: 800;
+
+  background: linear-gradient(
+    100deg,
+    #4C1D95 0%,
+    #7C3AED 50%,
+    #C4B5FD 100%
+  ) !important;
+
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+/* COMPLETE DESCRIPTION — COMPACT */
+
+.hero .hero-description {
+  display: block !important;
+
+  max-width: 650px;
+
+  margin: 12px 0 18px !important;
+
+  color: #453A58 !important;
+
+  font-size: clamp(12px, 1.05vw, 14px) !important;
+  font-weight: 450;
+  line-height: 1.48 !important;
+
+  letter-spacing: 0;
+
+  /* Do not truncate your original paragraph */
+  overflow: visible;
+}
+
+/* HERO BUTTONS */
+
+.hero .button-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 17px !important;
+}
+
+.hero .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 44px !important;
+  padding: 11px 20px !important;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* PRIMARY BUTTON */
+
+.hero .btn-primary {
+  background: linear-gradient(
+    110deg,
+    #7C3AED,
+    #6D28D9
+  ) !important;
+
+  color: #FFFFFF !important;
+
+  border: 1px solid #7C3AED;
+
+  box-shadow:
+    0 9px 23px rgba(124, 58, 237, 0.2);
+}
+
+.hero .btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(124, 58, 237, 0.27);
+}
+
+/* SECONDARY GLASS BUTTON */
+
+.hero .btn-ghost {
+  background: rgba(255, 255, 255, 0.75) !important;
+
+  color: #6D28D9 !important;
+
+  border: 1px solid #A78BFA !important;
+
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+
+  box-shadow:
+    0 6px 18px rgba(84, 39, 139, 0.08);
+}
+
+.hero .btn-ghost:hover {
+  background: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* SMALL BOTTOM LABEL */
+
+.hero-label {
+  position: absolute;
+
+  right: 0;
+  bottom: 13px;
+
+  color: #6D28D9 !important;
+
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+/* ==========================================
+   2. WHITE EXPERIENCE CARD
+========================================== */
+
+.stat-strip {
+  padding: 40px 20px !important;
+
+  background: #FAF8FF !important;
+
+  border: none;
+}
+
+.stat-strip .stat-inner {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+
+  margin-inline: auto;
+  padding: 30px 35px !important;
+
+  background: rgba(255, 255, 255, 0.96) !important;
+
+  border: 1px solid #E8DEFB !important;
+  border-radius: 20px;
+
+  color: #24183F !important;
+
+  box-shadow:
+    0 14px 40px rgba(71, 35, 121, 0.08) !important;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.stat-figure {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 210px;
+}
+
+.stat-figure strong {
+  color: #7C3AED !important;
+
+  font-size: clamp(54px, 5vw, 74px);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.stat-figure span {
+  color: #4D4164 !important;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* TRUST INFORMATION */
+
+.stat-trust-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-trust-content h2 {
+  margin: 0 0 13px;
+
+  color: #24183F !important;
+
+  font-size: clamp(17px, 1.5vw, 22px);
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.stat-trust-content h2 span {
+  color: #7C3AED !important;
+}
+
+.stat-trust-points {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px 18px;
+}
+
+.stat-trust-points span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #574E67 !important;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.stat-trust-points b {
+  color: #7C3AED;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* ABOUT CTPL LINK */
+
+.stat-about-link {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #7C3AED !important;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.stat-about-link:hover {
+  color: #5B21B6 !important;
+}
+
+/* ==========================================
+   3. SAFETY FIRST — LAVENDER BACKGROUND
+========================================== */
+
+.feature,
+.feature.home-tech-bg {
+  position: relative;
+
+  background: #EDE9FE !important;
+  color: #24183F !important;
+
+  overflow: hidden;
+}
+
+.feature h2 {
+  color: #24183F !important;
+}
+
+.feature p {
+  color: #504463 !important;
+
+  line-height: 1.8;
+}
+
+.feature .eyebrow {
+  color: #7C3AED !important;
+}
+
+/* REMOVE IMAGE CARD BACKGROUND */
+
+.feature .feature-visual {
+  background: transparent !important;
+  background-image: none !important;
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+
+  overflow: visible;
+}
+
+.feature .feature-visual::before,
+.feature .feature-visual::after {
+  content: none !important;
+  display: none !important;
+}
+
+.feature .feature-visual img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 440px;
+
+  width: auto;
+  height: auto;
+
+  margin: auto;
+
+  object-fit: contain;
+
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none;
+}
+
+/* ==========================================
+   4. LET'S CONNECT — LAVENDER BACKGROUND
+========================================== */
+
+.cta-section,
+.cta-section.home-tech-bg {
+  position: relative;
+
+  padding: 65px 0 !important;
+
+  background: #EDE9FE !important;
+  color: #24183F !important;
+
+  overflow: hidden;
+}
+
+/* SUBTLE DECORATIVE GLOW */
+
+.cta-section::before {
+  content: '';
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -90px;
+  top: -100px;
+
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.32),
+    transparent 70%
+  );
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  animation: ctplSoftFloat 9s ease-in-out infinite alternate;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section h2 {
+  color: #24183F !important;
+}
+
+.cta-section p {
+  color: #514663 !important;
+}
+
+.cta-section .eyebrow {
+  color: #7C3AED !important;
+}
+
+.cta-section .btn-primary {
+  background: linear-gradient(
+    110deg,
+    #7C3AED,
+    #6D28D9
+  ) !important;
+
+  color: white !important;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 10px 25px rgba(124, 58, 237, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cta-section .btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(124, 58, 237, 0.24);
+}
+
+/* ==========================================
+   5. PROFESSIONAL ANIMATIONS
+========================================== */
+
+@keyframes homeHeroFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ctplSoftFloat {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-25px, 20px, 0);
+  }
+}
+
+/* ==========================================
+   6. RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    height: auto !important;
+    min-height: 610px !important;
+    max-height: none;
+  }
+
+  .hero-inner {
+    min-height: 610px !important;
+    padding: 55px 0 !important;
+  }
+
+  .hero-copy {
+    max-width: 670px !important;
+  }
+
+  .hero-scrim {
+    background: linear-gradient(
+      90deg,
+      rgba(253, 250, 255, 0.99),
+      rgba(248, 242, 255, 0.94) 65%,
+      rgba(237, 225, 255, 0.55)
+    ) !important;
+  }
+
+  .stat-strip .stat-inner {
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================
+   7. RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+
+  .hero {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none;
+  }
+
+  .hero-inner {
+    width: 90%;
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 55px 0 48px !important;
+  }
+
+  .hero-copy {
+    max-width: 100% !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 8vw, 42px) !important;
+  }
+
+  .hero h1 em {
+    display: block;
+  }
+
+  .hero .hero-description {
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+
+  .hero-label {
+    display: none;
+  }
+
+  .hero-photo {
+    background-position: 70% center !important;
+  }
+
+  .stat-strip {
+    padding: 25px 15px !important;
+  }
+
+  .stat-strip .stat-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+    padding: 25px !important;
+  }
+
+  .stat-figure {
+    min-width: 0;
+  }
+
+  .stat-about-link {
+    margin-top: 3px;
+  }
+
+  .feature .feature-visual img {
+    max-height: 300px;
+  }
+
+  .cta-section {
+    padding: 50px 0 !important;
+  }
+}
+
+/* ==========================================
+   8. SHORT LAPTOP SCREENS
+========================================== */
+
+@media (min-width: 1001px) and (max-height: 760px) {
+
+  .hero {
+    height: auto !important;
+    min-height: calc(100svh - 76px) !important;
+    max-height: none;
+  }
+
+  .hero-inner {
+    height: auto !important;
+    min-height: calc(100svh - 76px) !important;
+    padding: 28px 0 !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 3vw, 45px) !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero .hero-description {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin: 9px 0 12px !important;
+  }
+}
+
+/* ==========================================
+   9. ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-copy,
+  .cta-section::before {
+    animation: none !important;
+  }
+
+  .hero .btn,
+  .cta-section .btn {
+    transition: none !important;
+  }
+}
+
+
+/* =====================================
+   EXPERIENCE COUNTER STYLE
+===================================== */
+
+.experience-counter {
+  display: inline-block;
+
+  min-width: 2.2ch;
+
+  color: #7C3AED !important;
+
+  font-size: clamp(54px, 5vw, 74px);
+  font-weight: 800;
+  line-height: 1;
+
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ==========================================
+   CTPL PRODUCT PORTFOLIO
+   PURPLE GRADIENT DESIGN
+========================================== */
+
+/* SECTION BACKGROUND */
+
+.products-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  padding: 75px 0 95px !important;
+
+  background: linear-gradient(
+    115deg,
+    #C66FD3 0%,
+    #A569DB 35%,
+    #7C3AED 70%,
+    #4F46E5 100%
+  ) !important;
+}
+
+/* SOFT BACKGROUND GLASS EFFECT */
+
+.products-section::before {
+  content: "";
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  top: -200px;
+  right: -120px;
+
+  background: rgba(255, 255, 255, 0.12);
+  filter: blur(70px);
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.products-section::after {
+  content: "";
+  position: absolute;
+
+  width: 500px;
+  height: 300px;
+
+  bottom: -180px;
+  left: -100px;
+
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(65px);
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.products-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.products-section .eyebrow {
+  color: #FFFFFF !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.products-section h2 {
+  color: #FFFFFF !important;
+}
+
+.products-section h2 span,
+.products-section h2 em {
+  color: #E9D5FF !important;
+  -webkit-text-fill-color: #E9D5FF !important;
+}
+
+.products-section .section-heading p,
+.products-section .section-head p {
+  color: #F3E8FF !important;
+}
+
+/* ==========================================
+   PRODUCT GRID
+========================================== */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+  align-items: stretch;
+
+  margin-top: 35px;
+}
+
+/* ==========================================
+   WHITE PRODUCT CARDS
+========================================== */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #FFFFFF !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: 20px !important;
+
+  box-shadow:
+    0 12px 30px rgba(40, 19, 80, 0.14);
+
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* CARD HOVER ANIMATION */
+
+.product-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #DDD6FE !important;
+
+  box-shadow:
+    0 22px 45px rgba(40, 19, 80, 0.24);
+}
+
+/* ==========================================
+   PRODUCT IMAGE AREA
+========================================== */
+
+.product-card .product-image,
+.product-card .product-media,
+.product-card .product-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 185px;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #FAF5FF 0%,
+    #EDE9FE 100%
+  ) !important;
+
+  overflow: hidden;
+}
+
+/* PRODUCT IMAGE */
+
+.product-card img {
+  display: block;
+
+  width: 100%;
+  max-width: 235px;
+  height: 145px;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* ==========================================
+   CARD INFORMATION
+========================================== */
+
+.product-card .product-body,
+.product-card .product-card-body,
+.product-card .product-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  min-width: 0;
+
+  padding: 22px 20px;
+  background: #FFFFFF !important;
+}
+
+/* CATEGORY LABEL */
+
+.product-card .eyebrow,
+.product-card .product-eyebrow,
+.product-card .product-category {
+  color: #7C3AED !important;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* PRODUCT TITLE */
+
+.product-card h3 {
+  margin: 8px 0 12px;
+
+  color: #1E1B4B !important;
+
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* DESCRIPTION — MAXIMUM 3 LINES */
+
+.product-card p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+
+  overflow: hidden;
+
+  margin: 0 0 18px;
+
+  color: #596078 !important;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   EXPLORE PRODUCT LINK
+========================================== */
+
+.product-card a,
+.product-card .product-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: auto;
+
+  color: #7C3AED !important;
+
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    gap 0.25s ease,
+    color 0.25s ease;
+}
+
+.product-card a:hover,
+.product-card .product-link:hover {
+  gap: 13px;
+  color: #5B21B6 !important;
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-section {
+    padding: 60px 0 75px !important;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE
+========================================== */
+
+@media (max-width: 580px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .product-card .product-image,
+  .product-card .product-media,
+  .product-card .product-card-image {
+    height: 200px;
+  }
+
+  .product-card img {
+    height: 155px;
+  }
+
+  .products-section {
+    padding: 50px 0 65px !important;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-card img,
+  .product-card a {
+    transition: none !important;
+  }
+
+  .product-card:hover,
+  .product-card:hover img {
+    transform: none !important;
+  }
+}
+
+
+/* ==========================================
+   SAFETY FIRST — PINK / PURPLE GRADIENT
+========================================== */
+
+section.feature {
+  position: relative;
+  isolation: isolate;
+
+  background: linear-gradient(
+    115deg,
+    #F05BAF 0%,
+    #DD43D8 32%,
+    #B23CED 65%,
+    #9245E8 100%
+  ) !important;
+
+  overflow: hidden;
+}
+
+/* Keep the layout above decorative layers */
+
+section.feature .feature-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* White text for contrast */
+
+section.feature h2 {
+  color: #FFFFFF !important;
+}
+
+section.feature p {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+section.feature .eyebrow {
+  color: #FFFFFF !important;
+}
+
+/* White glass-style button */
+
+section.feature a {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: #7C3AED !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 24px rgba(64, 16, 110, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+section.feature a:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(64, 16, 110, 0.25);
+}
+
+
+/* SAFETY FIRST — INCREASE LABEL SIZE */
+
+section.feature .eyebrow {
+  font-size: 30px !important;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 2.5;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  section.feature .eyebrow {
+    font-size: 13px !important;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* =====================================
+   SAFETY FIRST — REMOVE TOP SPACE
+===================================== */
+
+section.feature {
+  padding-top: 25px !important;
+  padding-bottom: 35px !important;
+}
+
+/* Move content upward */
+
+section.feature .feature-layout {
+  align-items: start !important;
+}
+
+/* Remove extra heading spacing */
+
+section.feature .eyebrow {
+  margin-top: 2 !important;
+  margin-bottom: 14px !important;
+}
+
+/* Keep image and text aligned */
+
+section.feature .feature-layout > div {
+  align-self: start;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  section.feature {
+    padding-top: 20px !important;
+    padding-bottom: 30px !important;
+  }
+}
+
+
+/* ==========================================
+   CTPL STAKEHOLDER SECTION
+   OFFICE BUILDING BACKGROUND
+========================================== */
+
+section.stakeholder-bg {
+  position: relative;
+  isolation: isolate;
+
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(30, 16, 65, 0.65),
+      rgba(55, 28, 110, 0.36)
+    ),
+    url('/assets/images/ctpl-office-bg.jpg') !important;
+
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  overflow: hidden;
+}
+
+/* Keep text and cards above the background */
+
+section.stakeholder-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Main heading */
+
+section.stakeholder-bg h2 {
+  color: #FFFFFF !important;
+
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Small purple label becomes white */
+
+section.stakeholder-bg .eyebrow {
+  color: #F3E8FF !important;
+}
+
+/* Keep the three cards white */
+
+section.stakeholder-bg article {
+  background: rgba(255, 255, 255, 0.96) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px rgba(20, 10, 50, 0.17);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover effect */
+
+section.stakeholder-bg article:hover {
+  transform: translateY(-7px) scale(1.02);
+
+  box-shadow:
+    0 20px 45px rgba(24, 10, 75, 0.28);
+}
+
+/* Card text stays dark */
+
+section.stakeholder-bg article h3 {
+  color: #24183F !important;
+}
+
+section.stakeholder-bg article p {
+  color: #625773 !important;
+}
+
+/* Purple card links */
+
+section.stakeholder-bg article a {
+  color: #7C3AED !important;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  section.stakeholder-bg {
+    background-position: 58% center !important;
+
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  section.stakeholder-bg article {
+    transition: none;
+  }
+
+  section.stakeholder-bg article:hover {
+    transform: none;
+  }
+}

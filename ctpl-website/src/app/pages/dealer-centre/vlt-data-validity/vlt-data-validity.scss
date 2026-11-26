@@ -1,0 +1,530 @@
+
+/* ==========================================
+   CTPL VLT DATA VALIDITY PAGE
+========================================== */
+
+:host {
+  display: block;
+
+  --vlt-primary: #7C3AED;
+  --vlt-navy: #241438;
+  --vlt-text: #475569;
+  --vlt-background: #F8F5FF;
+  --vlt-card: #ffffff;
+  --vlt-logo-background: #FAF8FF;
+  --vlt-border: #E7DEF4;
+}
+
+/* ==========================================
+   VLT TOP BANNER
+========================================== */
+
+.vlt-image-hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 280px;
+  padding: 65px 20px;
+
+  background: linear-gradient(
+    110deg,
+    #241438 0%,
+    #4C1D95 55%,
+    #7C3AED 100%
+  );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.vlt-image-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  color: #ffffff !important;
+
+  font-size: clamp(34px, 4.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   DATA VALIDITY INFORMATION SECTION
+========================================== */
+
+.vlt-info-section {
+  padding: 75px 20px 90px;
+  background: var(--vlt-background);
+}
+
+.vlt-info-card {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+  padding: 45px;
+
+  background: var(--vlt-card);
+  color: var(--vlt-navy);
+
+  border: 1px solid var(--vlt-border);
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(36, 20, 56, 0.06);
+}
+
+.vlt-info-card h2 {
+  margin: 0 0 22px;
+
+  color: var(--vlt-navy);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+
+  text-align: center;
+}
+
+.vlt-description {
+  max-width: 980px;
+  margin: 0 auto 38px;
+
+  color: var(--vlt-text);
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ==========================================
+   THREE LOGO CARDS
+========================================== */
+
+.vlt-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+  gap: 25px;
+}
+
+.vlt-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 220px;
+
+  padding: 25px;
+
+  background: var(--vlt-logo-background);
+  border: 1px solid var(--vlt-border);
+  border-radius: 14px;
+
+  box-shadow: none;
+
+  /* No card hover movement */
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* LOGO IMAGE */
+
+.vlt-logo-card img {
+  display: block;
+
+  width: 100%;
+  max-width: 235px;
+  height: 145px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: transparent;
+
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.vlt-logo-card.will-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.vlt-logo-card.will-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* No zoom or movement on hover */
+
+.vlt-logo-card:hover {
+  box-shadow: none;
+}
+
+/* ==========================================
+   SUPPORT SECTION
+========================================== */
+
+.vlt-support-section {
+  position: relative;
+  isolation: isolate;
+
+  padding: 90px 20px;
+
+  background: linear-gradient(
+    115deg,
+    #140B24 0%,
+    #3B2359 65%,
+    #5B21B6 100%
+  );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* NETWORK BACKGROUND */
+
+.vlt-network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.vlt-network-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+/* SUPPORT CONTENT */
+
+.vlt-support-content {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.vlt-support-content h2 {
+  max-width: 950px;
+  margin: 0 auto 24px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.vlt-support-content p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+
+  color: #DED4F0 !important;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* GET SUPPORT BUTTON */
+
+.vlt-support-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 49px;
+  padding: 14px 28px;
+
+  background: var(--vlt-primary);
+  color: #ffffff !important;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.vlt-support-button:hover {
+  background: #6D28D9;
+}
+
+.vlt-support-button:focus-visible {
+  outline: 3px solid #C4B5FD;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --vlt-navy: #f1f5f9;
+    --vlt-text: #CBBBE5;
+    --vlt-background: #140B24;
+    --vlt-card: #241438;
+    --vlt-logo-background: #1E1035;
+    --vlt-border: #493568;
+  }
+
+  .vlt-info-section {
+    background: #140B24;
+  }
+
+  /* REMOVE WHITE INFORMATION BACKGROUND */
+
+  .vlt-info-card {
+    background: #241438 !important;
+    background-image: none !important;
+
+    border-color: #493568;
+    box-shadow: none;
+  }
+
+  .vlt-info-card h2 {
+    color: #f1f5f9 !important;
+  }
+
+  .vlt-description {
+    color: #CBBBE5 !important;
+  }
+
+  /* REMOVE WHITE LOGO CARD BACKGROUNDS */
+
+  .vlt-logo-grid .vlt-logo-card {
+    background: #1E1035 !important;
+    background-image: none !important;
+
+    border-color: #493568 !important;
+    box-shadow: none !important;
+  }
+
+  /* KEEP ORIGINAL LOGO COLOURS */
+
+  .vlt-logo-grid .vlt-logo-card img {
+    background: transparent !important;
+
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  .vlt-support-section {
+    background: linear-gradient(
+      115deg,
+      #10091E,
+      #26173D 65%,
+      #4C1D95
+    );
+  }
+
+  .vlt-support-content h2 {
+    color: #ffffff !important;
+  }
+
+  .vlt-support-content p {
+    color: #DED4F0 !important;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .vlt-info-card {
+    padding: 35px;
+  }
+
+  .vlt-logo-grid {
+    gap: 15px;
+  }
+
+  .vlt-logo-card {
+    min-height: 195px;
+    padding: 18px;
+  }
+
+  .vlt-logo-card img {
+    height: 120px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .vlt-image-hero {
+    min-height: 220px;
+    padding: 55px 20px;
+  }
+
+  .vlt-info-section {
+    padding: 45px 15px 60px;
+  }
+
+  .vlt-info-card {
+    padding: 25px 20px;
+  }
+
+  .vlt-info-card h2 {
+    font-size: 27px;
+  }
+
+  .vlt-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .vlt-logo-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .vlt-logo-card {
+    min-height: 180px;
+  }
+
+  .vlt-logo-card img {
+    max-width: 230px;
+    height: 120px;
+  }
+
+  .vlt-support-section {
+    padding: 60px 15px;
+  }
+
+  .vlt-support-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vlt-logo-card,
+  .vlt-support-button {
+    transition: none !important;
+  }
+
+  .vlt-logo-card.will-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+:host { --de-primary:#7C3AED; --sop-blue:#7C3AED; --vlt-primary:#7C3AED; --esim-primary:#7C3AED; --sms-primary:#7C3AED; --rfc-blue:#7C3AED; }
+.de-form-section,.vlt-info-section,.esim-validity-info,.sms-guide-section,.sop-section,.ctpl-rfc-overview,.cc-office-section,.cc-contact-section { background:#FBF9FF; }
+.de-form-card,.vlt-info-card,.sms-guide-card,.sop-documents-panel,.sop-state-panel { border-radius:18px; border-color:#E8DCF9; box-shadow:0 12px 34px rgba(71,27,120,.08); }
+.de-submit,.vlt-support-button,.sms-support-button,.de-contact-button,.ctpl-get-in-touch,.cc-submit { background:#7C3AED; border-color:#7C3AED; }
+.de-submit:hover,.vlt-support-button:hover,.sms-support-button:hover,.de-contact-button:hover,.ctpl-get-in-touch:hover { background:#6827C1; }
+.de-partner-section,.vlt-support-section,.sms-support-section,.ctpl-service-contact { background:linear-gradient(115deg,#31164D,#6932A4 65%,#8544BD); }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.sop-state-panel,.sop-documents-panel,.sms-guide-card,.vlt-info-card,.de-form-card,.vlt-logo-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.sop-state-panel h2,.sop-state-panel h3,.sop-state-panel h4,.sop-state-panel strong,.sop-documents-panel h2,.sop-documents-panel h3,.sop-documents-panel h4,.sop-documents-panel strong,.sms-guide-card h2,.sms-guide-card h3,.sms-guide-card h4,.sms-guide-card strong,.vlt-info-card h2,.vlt-info-card h3,.vlt-info-card h4,.vlt-info-card strong,.de-form-card h2,.de-form-card h3,.de-form-card h4,.de-form-card strong,.vlt-logo-card h2,.vlt-logo-card h3,.vlt-logo-card h4,.vlt-logo-card strong{color:#0F1830;}
+.sop-state-panel p,.sop-state-panel li,.sop-documents-panel p,.sop-documents-panel li,.sms-guide-card p,.sms-guide-card li,.vlt-info-card p,.vlt-info-card li,.de-form-card p,.de-form-card li,.vlt-logo-card p,.vlt-logo-card li{color:#475569;}
+.sop-state-panel a,.sop-state-panel .card-link,.sop-state-panel .ctpl-service-link,.sop-state-panel .ctpl-investor-link,.sop-documents-panel a,.sop-documents-panel .card-link,.sop-documents-panel .ctpl-service-link,.sop-documents-panel .ctpl-investor-link,.sms-guide-card a,.sms-guide-card .card-link,.sms-guide-card .ctpl-service-link,.sms-guide-card .ctpl-investor-link,.vlt-info-card a,.vlt-info-card .card-link,.vlt-info-card .ctpl-service-link,.vlt-info-card .ctpl-investor-link,.de-form-card a,.de-form-card .card-link,.de-form-card .ctpl-service-link,.de-form-card .ctpl-investor-link,.vlt-logo-card a,.vlt-logo-card .card-link,.vlt-logo-card .ctpl-service-link,.vlt-logo-card .ctpl-investor-link{color:#0877E8;}
+
+.sop-state-panel:hover,.sop-documents-panel:hover,.sms-guide-card:hover,.vlt-info-card:hover,.de-form-card:hover,.vlt-logo-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.vlt-image-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+.ctpl-service-contact,.de-partner-section,.vlt-support-section,.sms-support-section{background:linear-gradient(112deg,#132C54,#155E9B 70%,#6547BE);}
+
+.cc-office-section,.sop-section,.sms-guide-section,.vlt-info-section,.esim-validity-info,.de-form-section{background-color:#F8FAFF;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card,
+.vlt-logo-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card,
+.vlt-logo-card h2, .de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card,
+.vlt-logo-card h3 {color:#24183F;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card,
+.vlt-logo-card p {color:#5D5872;}
+.vlt-logo-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.vlt-logo-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.vlt-logo-card:hover{transform:none;}}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-background: #FAF8FF;
+  --vlt-border: #E7DEFA;
+  --vlt-card: #FFFFFF;
+  --vlt-logo-background: #FAF8FF;
+  --vlt-navy: #24183F;
+  --vlt-primary: #7C3AED;
+  --vlt-text: #5D5872;
+}

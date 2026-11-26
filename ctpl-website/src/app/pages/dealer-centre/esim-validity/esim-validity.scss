@@ -1,0 +1,513 @@
+
+/* ==========================================
+   CTPL E-SIM VALIDITY PAGE
+========================================== */
+
+:host {
+  display: block;
+
+  --esim-primary: #7C3AED;
+  --esim-navy: #241438;
+  --esim-text: #475569;
+  --esim-bg: #F8F5FF;
+  --esim-card: #ffffff;
+  --esim-border: #E7DEF4;
+}
+
+/* ==========================================
+   E-SIM TOP BANNER
+========================================== */
+
+.esim-validity-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 280px;
+  padding: 65px 20px;
+
+  background: linear-gradient(
+    110deg,
+    #241438 0%,
+    #4C1D95 55%,
+    #7C3AED 100%
+  );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.esim-validity-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  color: #ffffff !important;
+
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   E-SIM INFORMATION SECTION
+========================================== */
+
+.esim-validity-info {
+  padding: 75px 20px 90px;
+  background: var(--esim-bg);
+}
+
+.esim-validity-info .vlt-info-card {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  padding: 45px;
+
+  background: var(--esim-card);
+  border: 1px solid var(--esim-border);
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(36, 20, 56, 0.06);
+}
+
+.esim-validity-info .vlt-info-card h2 {
+  margin: 0 0 22px;
+
+  color: var(--esim-navy);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.esim-validity-info .vlt-description {
+  max-width: 980px;
+  margin: 0 auto 38px;
+
+  color: var(--esim-text);
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ==========================================
+   THREE LOGO CARDS
+========================================== */
+
+.esim-validity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+  align-items: stretch;
+}
+
+.esim-validity-grid .esim-validity-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  min-width: 0;
+  min-height: 250px;
+
+  padding: 30px 20px 24px;
+
+  background: #FAF8FF;
+  border: 1px solid var(--esim-border);
+  border-radius: 14px;
+
+  text-align: center;
+  box-shadow: none;
+
+  transform: none !important;
+}
+
+/* Original logo colours are preserved */
+
+.esim-validity-grid .esim-validity-logo img {
+  display: block;
+
+  width: 100%;
+  max-width: 230px;
+  height: 140px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: transparent;
+
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* GO label - original non-clickable element */
+
+.esim-validity-grid .esim-go-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 85px;
+  min-height: 39px;
+  padding: 9px 20px;
+
+  margin-top: 22px;
+
+  background: var(--esim-primary);
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ==========================================
+   SUPPORT SECTION
+========================================== */
+
+.esim-validity-support {
+  position: relative;
+  isolation: isolate;
+
+  padding: 90px 20px;
+
+  background: linear-gradient(
+    115deg,
+    #140B24 0%,
+    #3B2359 65%,
+    #5B21B6 100%
+  );
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* NETWORK GRAPHIC */
+
+.esim-validity-support .vlt-network-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.esim-validity-support .vlt-network-background svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.7;
+}
+
+/* SUPPORT INFORMATION */
+
+.esim-validity-support .vlt-support-content {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+}
+
+.esim-validity-support .vlt-support-content h2 {
+  max-width: 950px;
+  margin: 0 auto 24px;
+
+  color: #ffffff !important;
+
+  font-size: clamp(28px, 3.4vw, 46px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.esim-validity-support .vlt-support-content p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+
+  color: #DED4F0 !important;
+
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* GET SUPPORT BUTTON */
+
+.esim-validity-support .vlt-support-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 13px 28px;
+
+  background: var(--esim-primary);
+  color: #ffffff !important;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.esim-validity-support .vlt-support-button:hover {
+  background: #6D28D9;
+}
+
+.esim-validity-support .vlt-support-button:focus-visible {
+  outline: 3px solid #C4B5FD;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   AUTOMATIC DARK MODE
+========================================== */
+
+@media (prefers-color-scheme: dark) {
+
+  :host {
+    --esim-navy: #f1f5f9;
+    --esim-text: #CBBBE5;
+    --esim-bg: #140B24;
+    --esim-card: #241438;
+    --esim-border: #493568;
+  }
+
+  .esim-validity-info {
+    background: #140B24;
+  }
+
+  /* MAIN INFORMATION PANEL */
+
+  .esim-validity-info .vlt-info-card {
+    background: #241438 !important;
+    background-image: none !important;
+
+    border-color: #493568;
+    box-shadow: none;
+  }
+
+  .esim-validity-info .vlt-info-card h2 {
+    color: #f1f5f9 !important;
+  }
+
+  .esim-validity-info .vlt-description {
+    color: #CBBBE5 !important;
+  }
+
+  /* LOGO CARDS */
+
+  .esim-validity-grid .esim-validity-logo {
+    background: #1E1035 !important;
+    background-image: none !important;
+
+    border-color: #493568 !important;
+
+    box-shadow: none !important;
+  }
+
+  .esim-validity-grid .esim-validity-logo img {
+    background: transparent !important;
+
+    filter: none !important;
+    opacity: 1 !important;
+  }
+
+  .esim-validity-grid .esim-go-label {
+    background: #7C3AED;
+    color: #ffffff !important;
+  }
+
+  /* SUPPORT AREA */
+
+  .esim-validity-support {
+    background: linear-gradient(
+      115deg,
+      #10091E,
+      #26173D 65%,
+      #4C1D95
+    );
+  }
+
+  .esim-validity-support .vlt-support-content h2 {
+    color: #ffffff !important;
+  }
+
+  .esim-validity-support .vlt-support-content p {
+    color: #DED4F0 !important;
+  }
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+
+  .esim-validity-info .vlt-info-card {
+    padding: 35px;
+  }
+
+  .esim-validity-grid {
+    gap: 15px;
+  }
+
+  .esim-validity-grid .esim-validity-logo {
+    min-height: 220px;
+    padding: 24px 14px;
+  }
+
+  .esim-validity-grid .esim-validity-logo img {
+    height: 120px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .esim-validity-hero {
+    min-height: 220px;
+    padding: 55px 20px;
+  }
+
+  .esim-validity-info {
+    padding: 45px 15px 60px;
+  }
+
+  .esim-validity-info .vlt-info-card {
+    padding: 25px 20px;
+  }
+
+  .esim-validity-info .vlt-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .esim-validity-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .esim-validity-grid .esim-validity-logo {
+    min-height: 200px;
+  }
+
+  .esim-validity-grid .esim-validity-logo img {
+    max-width: 230px;
+    height: 120px;
+  }
+
+  .esim-validity-support {
+    padding: 60px 15px;
+  }
+
+  .esim-validity-support .vlt-support-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .esim-validity-support .vlt-support-button {
+    transition: none;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+:host { --de-primary:#7C3AED; --sop-blue:#7C3AED; --vlt-primary:#7C3AED; --esim-primary:#7C3AED; --sms-primary:#7C3AED; --rfc-blue:#7C3AED; }
+.de-form-section,.vlt-info-section,.esim-validity-info,.sms-guide-section,.sop-section,.ctpl-rfc-overview,.cc-office-section,.cc-contact-section { background:#FBF9FF; }
+.de-form-card,.vlt-info-card,.sms-guide-card,.sop-documents-panel,.sop-state-panel { border-radius:18px; border-color:#E8DCF9; box-shadow:0 12px 34px rgba(71,27,120,.08); }
+.de-submit,.vlt-support-button,.sms-support-button,.de-contact-button,.ctpl-get-in-touch,.cc-submit { background:#7C3AED; border-color:#7C3AED; }
+.de-submit:hover,.vlt-support-button:hover,.sms-support-button:hover,.de-contact-button:hover,.ctpl-get-in-touch:hover { background:#6827C1; }
+.de-partner-section,.vlt-support-section,.sms-support-section,.ctpl-service-contact { background:linear-gradient(115deg,#31164D,#6932A4 65%,#8544BD); }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.sop-state-panel,.sop-documents-panel,.sms-guide-card,.vlt-info-card,.de-form-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.sop-state-panel h2,.sop-state-panel h3,.sop-state-panel h4,.sop-state-panel strong,.sop-documents-panel h2,.sop-documents-panel h3,.sop-documents-panel h4,.sop-documents-panel strong,.sms-guide-card h2,.sms-guide-card h3,.sms-guide-card h4,.sms-guide-card strong,.vlt-info-card h2,.vlt-info-card h3,.vlt-info-card h4,.vlt-info-card strong,.de-form-card h2,.de-form-card h3,.de-form-card h4,.de-form-card strong{color:#0F1830;}
+.sop-state-panel p,.sop-state-panel li,.sop-documents-panel p,.sop-documents-panel li,.sms-guide-card p,.sms-guide-card li,.vlt-info-card p,.vlt-info-card li,.de-form-card p,.de-form-card li{color:#475569;}
+.sop-state-panel a,.sop-state-panel .card-link,.sop-state-panel .ctpl-service-link,.sop-state-panel .ctpl-investor-link,.sop-documents-panel a,.sop-documents-panel .card-link,.sop-documents-panel .ctpl-service-link,.sop-documents-panel .ctpl-investor-link,.sms-guide-card a,.sms-guide-card .card-link,.sms-guide-card .ctpl-service-link,.sms-guide-card .ctpl-investor-link,.vlt-info-card a,.vlt-info-card .card-link,.vlt-info-card .ctpl-service-link,.vlt-info-card .ctpl-investor-link,.de-form-card a,.de-form-card .card-link,.de-form-card .ctpl-service-link,.de-form-card .ctpl-investor-link{color:#0877E8;}
+
+.sop-state-panel:hover,.sop-documents-panel:hover,.sms-guide-card:hover,.vlt-info-card:hover,.de-form-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.esim-validity-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+.ctpl-service-contact,.de-partner-section,.vlt-support-section,.esim-validity-support,.sms-support-section{background:linear-gradient(112deg,#132C54,#155E9B 70%,#6547BE);}
+
+.cc-office-section,.sop-section,.sms-guide-section,.vlt-info-section,.esim-validity-info,.de-form-section{background-color:#F8FAFF;}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card h2, .de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card h3 {color:#24183F;}
+.de-form-card,
+.sms-guide-card,
+.sop-documents-panel,
+.sop-state-panel,
+.vlt-info-card p {color:#5D5872;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-bg: #FAF8FF;
+  --esim-border: #E7DEFA;
+  --esim-card: #FFFFFF;
+  --esim-navy: #24183F;
+  --esim-primary: #7C3AED;
+  --esim-text: #5D5872;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}

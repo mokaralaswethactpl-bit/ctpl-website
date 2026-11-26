@@ -1,0 +1,115 @@
+
+<!-- ======================================
+     CTPL SERVICES PAGE
+====================================== -->
+
+<div class="ctpl-services-page">
+
+  <section class="ctpl-services-section">
+
+    <div class="container">
+
+      <!-- ======================================
+           PAGE HEADER
+      ====================================== -->
+
+      <div class="ctpl-services-heading" appReveal>
+
+        <span class="ctpl-services-label">
+          CTPL / SERVICES
+        </span>
+
+        <h1>Services</h1>
+
+        <p>
+          Explore our connected digital platforms and
+          services designed to support your operations.
+        </p>
+
+      </div>
+
+
+      <!-- ======================================
+           SERVICE CARDS
+      ====================================== -->
+
+      <div class="ctpl-services-grid">
+
+        @for (
+          s of services;
+          track s.slug;
+          let i = $index
+        ) {
+
+          <a
+            appReveal
+            class="ctpl-service-card"
+            [style.--delay]="(i % 2) * 90 + 'ms'"
+            [routerLink]="getServiceRoute(s.slug)">
+
+
+            <!-- SERVICE IMAGE / ICON -->
+
+            <div class="ctpl-service-visual">
+
+              @if (s.image) {
+
+                <img
+                  [src]="s.image"
+                  [alt]="s.title"
+                  loading="lazy"
+                />
+
+              } @else {
+
+                <div class="ctpl-service-symbol">
+
+                  {{ serviceIcons[i % serviceIcons.length] }}
+
+                </div>
+
+              }
+
+            </div>
+
+
+            <!-- SERVICE INFORMATION -->
+
+            <div class="ctpl-service-content">
+
+              <span class="ctpl-service-category">
+
+                {{ s.eyebrow }}
+
+              </span>
+
+              <h2>{{ s.title }}</h2>
+
+              <p>{{ s.summary }}</p>
+
+
+              <!-- READ MORE LINK -->
+
+              <span class="ctpl-service-link">
+
+                Read more...
+
+                <span class="ctpl-service-arrow">
+                  ↗
+                </span>
+
+              </span>
+
+            </div>
+
+          </a>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

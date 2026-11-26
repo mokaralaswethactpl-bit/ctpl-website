@@ -1,0 +1,150 @@
+
+<!-- SEARCH ICON -->
+
+<button
+  type="button"
+  class="ctpl-search-trigger"
+  (click)="openSearch()"
+  aria-label="Open website search"
+  title="Search CTPL website"
+>
+  <svg
+    viewBox="0 0 24 24"
+    width="23"
+    height="23"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="10.8" cy="10.8" r="7.3"/>
+    <path d="M16.3 16.3L22 22"/>
+  </svg>
+</button>
+
+<!-- FULL SCREEN SEARCH OVERLAY -->
+
+@if (searchOpen) {
+
+  <div
+    class="ctpl-search-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Search CTPL website"
+    (click)="closeSearch()"
+  >
+
+    <!-- CLOSE BUTTON -->
+
+    <button
+      type="button"
+      class="ctpl-search-close"
+      aria-label="Close search"
+      (click)="closeSearch()"
+    >
+      ×
+    </button>
+
+    <!-- SEARCH PANEL -->
+
+    <div
+      class="ctpl-search-panel"
+      (click)="$event.stopPropagation()"
+    >
+
+      <form
+        class="ctpl-search-form"
+        (ngSubmit)="submitSearch()"
+        role="search"
+      >
+
+        <input
+          type="search"
+          name="siteSearch"
+          [(ngModel)]="searchQuery"
+          placeholder="Search..."
+          aria-label="Search website pages"
+          autocomplete="off"
+        />
+
+        <button
+          type="submit"
+          class="ctpl-search-submit"
+          aria-label="Search"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="10.8" cy="10.8" r="7.3"/>
+            <path d="M16.3 16.3L22 22"/>
+          </svg>
+        </button>
+
+      </form>
+
+      <!-- LIVE SEARCH RESULTS -->
+
+      @if (searchQuery.trim()) {
+
+        <div
+          class="ctpl-search-results"
+          aria-label="Search results"
+        >
+
+          @if (searchResults.length > 0) {
+
+            <p class="ctpl-search-results-label">
+              SEARCH RESULTS
+            </p>
+
+            @for (
+              result of searchResults;
+              track result.slug
+            ) {
+
+              <a
+                [routerLink]="getSearchResultLink(result.slug)"
+                class="ctpl-search-result"
+                (click)="closeSearch()"
+              >
+
+                <span class="ctpl-search-result-text">
+                  <strong>{{ result.title }}</strong>
+                  <small>{{ result.group }}</small>
+                </span>
+
+                <span aria-hidden="true">
+                  ↗
+                </span>
+
+              </a>
+
+            }
+
+          } @else {
+
+            <p class="ctpl-search-no-results">
+              No matching pages found.
+            </p>
+
+          }
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+}

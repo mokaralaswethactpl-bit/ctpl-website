@@ -1,0 +1,379 @@
+
+/* ==========================================
+   CTPL CORPORATE GOVERNANCE
+   LIGHT BLUE-PURPLE GLASSMORPHISM DESIGN
+========================================== */
+
+.cg-section {
+  padding: 55px 0 85px;
+  background: transparent;
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* MAIN CONTAINER */
+
+.cg-section .container {
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.cg-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 40px;
+  min-height: 380px;
+
+  background: rgba(35, 55, 80, 0.88);
+  border: 1px solid rgba(100, 160, 210, 0.25);
+  border-radius: 22px;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.cg-layout {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 35px;
+  align-items: stretch;
+  min-height: 300px;
+}
+
+/* ==========================================
+   LEFT SIDE TABS
+========================================== */
+
+.cg-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+/* TAB BUTTONS */
+
+.cg-tabs button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 60px;
+  padding: 16px 20px;
+
+  border: 1px solid rgba(130, 175, 215, 0.22);
+  border-radius: 12px;
+
+  background: rgba(49, 72, 100, 0.75);
+  color: #eaf4ff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* HOVER EFFECT */
+
+.cg-tabs button:hover {
+  transform: translateX(5px);
+
+  background: rgba(67, 96, 130, 0.9);
+  border-color: #C4B5FD;
+
+  box-shadow:
+    0 6px 20px rgba(86, 207, 232, 0.15);
+}
+
+/* ACTIVE TAB */
+
+.cg-tabs button.active {
+  background: linear-gradient(
+    120deg,
+    #6D28D9,
+    #176b9b
+  );
+
+  color: #ffffff;
+  border-color: #C4B5FD;
+
+  box-shadow:
+    0 8px 25px rgba(8, 126, 156, 0.30);
+}
+
+/* ACTIVE TAB HOVER */
+
+.cg-tabs button.active:hover {
+  background: linear-gradient(
+    120deg,
+    #0798b8,
+    #6D28D9
+  );
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   RIGHT CONTENT AREA
+========================================== */
+
+.cg-content {
+  min-width: 0;
+  min-height: 300px;
+
+  padding: 30px;
+
+  border: 1px solid rgba(100, 160, 210, 0.25);
+  border-radius: 15px;
+
+  background: rgba(35, 55, 80, 0.65);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* CONTENT PANEL */
+
+.cg-panel {
+  width: 100%;
+  animation: cgFadeIn 0.35s ease;
+}
+
+/* CONTENT HEADING */
+
+.cg-content h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* CONTENT PARAGRAPH */
+
+.cg-content p {
+  margin: 0;
+
+  color: #c5d6e7;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   CONTENT ANIMATION
+========================================== */
+
+@keyframes cgFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   KEYBOARD ACCESSIBILITY
+========================================== */
+
+.cg-tabs button:focus-visible {
+  outline: 3px solid #C4B5FD;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .cg-layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .cg-card {
+    padding: 28px;
+  }
+
+  .cg-content {
+    padding: 24px;
+  }
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .cg-section {
+    padding: 35px 0 60px;
+  }
+
+  .cg-section .container {
+    width: calc(100% - 30px);
+  }
+
+  .cg-card {
+    padding: 20px;
+    border-radius: 17px;
+  }
+
+  .cg-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    min-height: auto;
+  }
+
+  .cg-tabs {
+    gap: 10px;
+  }
+
+  .cg-tabs button {
+    min-height: 54px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .cg-tabs button:hover {
+    transform: translateX(3px);
+  }
+
+  .cg-content {
+    min-height: 180px;
+    padding: 20px;
+  }
+
+  .cg-content h2 {
+    font-size: 20px;
+  }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .cg-card {
+    padding: 15px;
+  }
+
+  .cg-tabs button {
+    font-size: 12px;
+    padding: 13px;
+  }
+
+  .cg-content {
+    padding: 17px;
+  }
+
+  .cg-content h2 {
+    font-size: 18px;
+  }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cg-card,
+  .cg-tabs button,
+  .cg-content,
+  .cg-panel {
+    transition: none;
+    animation: none;
+  }
+
+  .cg-tabs button:hover {
+    transform: none;
+  }
+
+}
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.cg-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.cg-card h2,.cg-card h3,.cg-card h4,.cg-card strong{color:#0F1830;}
+.cg-card p,.cg-card li{color:#475569;}
+.cg-card a,.cg-card .card-link,.cg-card .ctpl-service-link,.cg-card .ctpl-investor-link{color:#0877E8;}
+
+.cg-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.cg-card,
+.cg-panel {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.cg-card,
+.cg-panel h2, .cg-card,
+.cg-panel h3 {color:#24183F;}
+.cg-card,
+.cg-panel p {color:#5D5872;}
+.cg-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.cg-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.cg-card:hover{transform:none;}}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}

@@ -1,0 +1,1083 @@
+
+/* ==========================================
+   CTPL LIMITS EPI PRODUCT PAGE
+========================================== */
+
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+
+  --limits-background: #140B24;
+  --limits-section-bg: #1E1035;
+  --limits-surface: #241438;
+  --limits-image-bg: #241438;
+  --limits-border: #493568;
+  --limits-heading: #f1f5f9;
+  --limits-text: #CBBBE5;
+  --limits-accent: #7C3AED;
+  --limits-accent-light: #C4B5FD;
+  --limits-icon-bg: #3B2359;
+}
+
+.limits-page,
+.limits-page * {
+  box-sizing: border-box;
+}
+
+.limits-page {
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: var(--limits-background);
+  color: var(--limits-heading);
+}
+
+
+/* ==========================================
+   COMMON CONTAINER
+========================================== */
+
+.limits-container {
+  width: 90%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.limits-page-header {
+  width: 100%;
+
+  padding: 48px 0;
+
+  background: linear-gradient(
+    110deg,
+    #241438,
+    #4C1D95 55%,
+    #7C3AED
+  );
+}
+
+.limits-page-header .limits-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.limits-page-header-label {
+  display: block;
+
+  color: #C4B5FD;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.limits-page-header h1 {
+  margin: 12px 0;
+
+  color: #ffffff;
+
+  font-size: clamp(34px, 4.5vw, 60px);
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+
+/* ==========================================
+   BACK TO HOME BUTTON
+========================================== */
+
+.limits-page-header .back-home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: fit-content;
+
+  margin-top: 12px;
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #C4B5FD;
+
+    color: #ffffff;
+
+    .back-arrow {
+      transform: translateX(-4px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #C4B5FD;
+    outline-offset: 4px;
+  }
+}
+
+.limits-page-header .back-arrow {
+  display: inline-block;
+
+  font-size: 20px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.limits-hero {
+  position: relative;
+
+  padding: 50px 0 60px;
+
+  background: var(--limits-background);
+}
+
+.limits-hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.limits-content {
+  min-width: 0;
+}
+
+
+/* ==========================================
+   SECTION LABELS
+========================================== */
+
+.limits-eyebrow,
+.limits-section-label {
+  display: inline-block;
+
+  color: var(--limits-accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   PRODUCT HEADING
+========================================== */
+
+.limits-content h2 {
+  max-width: 650px;
+
+  margin: 15px 0 20px;
+
+  color: var(--limits-heading);
+
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+.limits-content h2 span {
+  color: var(--limits-accent);
+}
+
+
+/* PRODUCT DESCRIPTION */
+
+.limits-content p {
+  max-width: 100%;
+
+  margin: 0;
+
+  color: var(--limits-text);
+
+  font-size: 15px;
+  line-height: 1.85;
+
+  overflow-wrap: break-word;
+}
+
+
+/* DECORATIVE LINE */
+
+.limits-line {
+  width: 65px;
+  height: 3px;
+
+  margin: 25px 0 15px;
+
+  background: var(--limits-accent);
+
+  border-radius: 10px;
+}
+
+
+/* COMPANY LABEL */
+
+.limits-company {
+  color: #A899BD;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE
+========================================== */
+
+.limits-visual {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* PRODUCT IMAGE GLOW */
+
+.limits-glow {
+  position: absolute;
+
+  inset: 10%;
+
+  background: rgba(0, 166, 204, 0.15);
+
+  border-radius: 50%;
+
+  filter: blur(65px);
+
+  pointer-events: none;
+}
+
+
+/* PRODUCT IMAGE FRAME */
+
+.limits-image-frame {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 330px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #2C1945,
+    #241438
+  );
+
+  border: 1px solid var(--limits-border);
+  border-radius: 18px;
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2);
+}
+
+.limits-image-frame img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 300px;
+
+  object-fit: contain;
+  object-position: center;
+
+  color: var(--limits-text);
+
+  transition: transform 0.6s ease;
+}
+
+.limits-image-frame:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE LABEL
+========================================== */
+
+.limits-image-label {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  color: var(--limits-text);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.limits-dot {
+  flex-shrink: 0;
+
+  width: 9px;
+  height: 9px;
+
+  background: #00b78a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 12px rgba(0, 183, 138, 0.5);
+}
+
+
+/* ==========================================
+   PRODUCT OVERVIEW
+========================================== */
+
+.limits-overview {
+  padding: 60px 0;
+
+  background: var(--limits-background);
+}
+
+
+/* COMMON SECTION HEADING */
+
+.limits-heading {
+  max-width: 850px;
+
+  margin-bottom: 30px;
+}
+
+.limits-heading h2 {
+  margin: 14px 0;
+
+  color: var(--limits-heading);
+
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.limits-heading h2 span {
+  color: var(--limits-accent);
+}
+
+.limits-heading p {
+  margin: 0;
+
+  color: var(--limits-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   PRODUCT OVERVIEW CARD
+========================================== */
+
+.limits-overview-card {
+  display: grid;
+
+  grid-template-columns:
+    55px minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 20px;
+
+  width: 100%;
+
+  padding: 24px;
+
+  background: var(--limits-surface);
+
+  border: 1px solid var(--limits-border);
+  border-radius: 14px;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.limits-overview-card:hover {
+  border-color: var(--limits-accent);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* OVERVIEW ICON */
+
+.limits-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  background: var(--limits-icon-bg);
+  color: var(--limits-accent);
+
+  border-radius: 12px;
+
+  font-size: 29px;
+}
+
+.limits-overview-card h3 {
+  margin: 0 0 10px;
+
+  color: var(--limits-heading);
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.limits-overview-card p {
+  margin: 0;
+
+  color: var(--limits-text);
+
+  font-size: 14px;
+  line-height: 1.85;
+
+  overflow-wrap: break-word;
+}
+
+
+/* ==========================================
+   PRODUCT APPLICATION
+========================================== */
+
+.limits-application {
+  padding: 60px 0;
+
+  background: var(--limits-section-bg);
+
+  border-top: 1px solid var(--limits-border);
+  border-bottom: 1px solid var(--limits-border);
+}
+
+
+/* ==========================================
+   APPLICATION CARD GRID
+========================================== */
+
+.limits-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* ==========================================
+   APPLICATION CARD
+========================================== */
+
+.limits-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  background: var(--limits-surface);
+
+  border: 1px solid var(--limits-border);
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.limits-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--limits-accent);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CARD NUMBER */
+
+.limits-card-number {
+  position: absolute;
+
+  top: 22px;
+  right: 22px;
+
+  color: #584672;
+
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+
+/* APPLICATION ICON */
+
+.limits-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 20px;
+
+  background: var(--limits-icon-bg);
+  color: var(--limits-accent);
+
+  border-radius: 12px;
+
+  font-size: 25px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.limits-card:hover .limits-card-icon {
+  background: #7C3AED;
+  color: #ffffff;
+}
+
+
+/* APPLICATION TITLE */
+
+.limits-card h3 {
+  margin: 0 0 12px;
+
+  color: var(--limits-heading);
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+
+/* APPLICATION DESCRIPTION */
+
+.limits-card p {
+  flex: 1;
+
+  margin: 0;
+
+  color: var(--limits-text);
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  overflow-wrap: break-word;
+}
+
+
+/* APPLICATION DECORATIVE LINE */
+
+.limits-card-line {
+  width: 40px;
+  height: 3px;
+
+  margin-top: 20px;
+
+  background: var(--limits-accent);
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.limits-card:hover .limits-card-line {
+  width: 65px;
+}
+
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.limits-contact {
+  padding: 45px 0;
+
+  background: linear-gradient(
+    120deg,
+    #241438,
+    #34204F
+  );
+
+  border-top: 1px solid var(--limits-border);
+}
+
+.limits-contact-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+.limits-contact-inner > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.limits-contact h2 {
+  max-width: 800px;
+
+  margin: 12px 0;
+
+  color: var(--limits-heading);
+
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.limits-contact p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--limits-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   CONTACT BUTTON
+========================================== */
+
+.limits-contact a {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 13px 22px;
+
+  background: linear-gradient(
+    120deg,
+    #6D28D9,
+    #7C3AED
+  );
+
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.limits-contact a:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+.limits-contact a span {
+  display: inline-block;
+
+  transition: transform 0.3s ease;
+}
+
+.limits-contact a:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+
+  .limits-hero-grid {
+    gap: 30px;
+  }
+
+  .limits-card-grid {
+    gap: 16px;
+  }
+
+  .limits-card {
+    padding: 20px;
+  }
+
+  .limits-image-frame {
+    min-height: 300px;
+  }
+
+  .limits-image-frame img {
+    max-height: 270px;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .limits-hero-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 30px;
+  }
+
+  .limits-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .limits-contact-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .limits-container {
+    width: 90%;
+  }
+
+  .limits-page-header {
+    padding: 40px 0;
+  }
+
+  .limits-page-header h1 {
+    font-size: 36px;
+  }
+
+  .limits-page-header .back-home-btn {
+    padding: 9px 15px;
+
+    font-size: 12px;
+  }
+
+  .limits-hero {
+    padding: 35px 0 40px;
+  }
+
+  .limits-content h2 {
+    font-size: 28px;
+  }
+
+  .limits-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .limits-image-frame {
+    min-height: 260px;
+
+    padding: 15px;
+  }
+
+  .limits-image-frame img {
+    max-height: 230px;
+  }
+
+  .limits-overview,
+  .limits-application {
+
+    padding: 40px 0;
+  }
+
+  .limits-heading {
+    margin-bottom: 24px;
+  }
+
+  .limits-heading h2 {
+    font-size: 29px;
+  }
+
+  .limits-heading p {
+    font-size: 14px;
+  }
+
+  .limits-overview-card {
+    padding: 20px;
+
+    gap: 15px;
+  }
+
+  .limits-card {
+    padding: 20px;
+  }
+
+  .limits-contact {
+    padding: 35px 0;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .limits-card-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 15px;
+  }
+
+  .limits-overview-card {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .limits-card h3 {
+    font-size: 18px;
+  }
+
+  .limits-card-number {
+    font-size: 32px;
+  }
+
+  .limits-card-icon {
+    margin-bottom: 16px;
+  }
+
+  .limits-card p {
+    font-size: 13px;
+  }
+
+}
+
+
+/* ==========================================
+   VERY SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+  .limits-page-header h1 {
+    font-size: 32px;
+  }
+
+  .limits-heading h2 {
+    font-size: 26px;
+  }
+
+  .limits-content h2 {
+    font-size: 25px;
+  }
+
+  .limits-card {
+    padding: 18px;
+  }
+
+  .limits-image-frame {
+    min-height: 220px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .limits-page-header .back-home-btn,
+  .limits-page-header .back-arrow,
+  .limits-image-frame img,
+  .limits-overview-card,
+  .limits-card,
+  .limits-card-icon,
+  .limits-card-line,
+  .limits-contact a,
+  .limits-contact a span {
+    transition: none;
+  }
+
+  .limits-image-frame:hover img,
+  .limits-card:hover,
+  .limits-contact a:hover,
+  .limits-contact a:hover span,
+  .limits-page-header .back-home-btn:hover
+  .back-arrow {
+    transform: none;
+  }
+
+}
+
+
+/* CTPL premium purple theme — page-specific refinements */
+
+.limits-page { background:#FBF9FF; color:#281742; }
+.limits-page-header { background:linear-gradient(115deg,#391955,#7134A9 70%,#9C6ADA); }
+.limits-hero { background:linear-gradient(130deg,#FCFAFF,#F1E6FD); }
+.limits-eyebrow, .limits-section-label { color:#7C3AED; }
+
+
+/* ================================================
+   INTRA LIGHT PALETTE — CTPL page-specific overrides
+   White cards + blue/cyan actions + lavender icons
+   Original structure and images retained.
+=============================================== */
+
+
+.limits-card,.limits-overview-card {background:#FFFFFF;border:1px solid #DCE7F2;color:#0F1830;box-shadow:0 8px 26px rgba(20,65,120,.065);}
+
+.limits-card h2,.limits-card h3,.limits-card h4,.limits-card strong,.limits-overview-card h2,.limits-overview-card h3,.limits-overview-card h4,.limits-overview-card strong{color:#0F1830;}
+.limits-card p,.limits-card li,.limits-overview-card p,.limits-overview-card li{color:#475569;}
+.limits-card a,.limits-card .card-link,.limits-card .ctpl-service-link,.limits-card .ctpl-investor-link,.limits-overview-card a,.limits-overview-card .card-link,.limits-overview-card .ctpl-service-link,.limits-overview-card .ctpl-investor-link{color:#0877E8;}
+
+.limits-card:hover,.limits-overview-card:hover{background:#F8FBFF;border-color:#A78BFA;box-shadow:0 14px 34px rgba(22,67,135,.11);}
+
+.limits-card-icon,.limits-icon{color:#885CF6;background:#EDE9FE;border-color:#DDD6FE;}
+
+.limits-hero{background:linear-gradient(112deg,#163D70 0%,#2563EB 55%,#7751D9 100%);}
+
+
+@media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* CTPL WHITE GLASS / PURPLE ICONS • APPROVED DESIGN SYSTEM */
+:host {--dealer-blue:#7C3AED;--dealer-blue-hover:#6D28D9;--de-primary:#7C3AED;--de-primary-hover:#6D28D9;--sop-blue:#7C3AED;--sop-blue-hover:#6D28D9;--esim-primary:#7C3AED;--vlt-primary:#7C3AED;--sms-primary:#7C3AED;--sms-primary-hover:#6D28D9;--rfc-blue:#7C3AED;}
+.limits-card,
+.limits-overview-card {
+ background:rgba(255,255,255,.94)!important; color:#21183B; border:1px solid #E9E1F7; border-radius:16px; box-shadow:0 12px 30px rgba(62,30,113,.075);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);}
+.limits-card,
+.limits-overview-card h2, .limits-card,
+.limits-overview-card h3 {color:#24183F;}
+.limits-card,
+.limits-overview-card p {color:#5D5872;}
+.limits-card, .limits-overview-card {transition:transform .25s cubic-bezier(.2,.75,.2,1),box-shadow .25s ease,border-color .25s ease;}
+.limits-card, .limits-overview-card:hover {transform:translateY(-3px);background:#FFFFFF!important;border-color:#B69AF2;box-shadow:0 18px 38px rgba(82,42,142,.12);}
+@media(prefers-reduced-motion:reduce){.limits-card, .limits-overview-card:hover{transform:none;}}
+.limits-card-icon,
+.limits-icon {color:#7C3AED!important;}
+.limits-card-icon, .limits-icon {background-color:#F1EAFE!important;}
+a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
+
+/* Consistent CTPL light surfaces and purple tokens */
+:host {
+  --de-primary: #7C3AED;
+  --dealer-blue: #7C3AED;
+  --esim-primary: #7C3AED;
+  --limits-accent: #7C3AED;
+  --limits-accent-light: #A78BFA;
+  --limits-background: #FAF8FF;
+  --limits-border: #E7DEFA;
+  --limits-heading: #24183F;
+  --limits-icon-bg: #FAF8FF;
+  --limits-image-bg: #FAF8FF;
+  --limits-section-bg: #FAF8FF;
+  --limits-surface: #FFFFFF;
+  --limits-text: #5D5872;
+  --rfc-blue: #7C3AED;
+  --sms-primary: #7C3AED;
+  --sop-blue: #7C3AED;
+  --vlt-primary: #7C3AED;
+}
