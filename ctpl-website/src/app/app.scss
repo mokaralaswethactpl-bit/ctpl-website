@@ -1551,3 +1551,92 @@ nav a:hover, nav a.active, .nav-dropdown > a:hover, .dropdown-arrow:hover {color
     transition: none !important;
   }
 }
+
+
+/* ==========================================
+   CTPL FULL-SCREEN DROPDOWN — FINAL FIX
+   KEEP ALL EXISTING CONTENT AND ICONS
+========================================== */
+
+/* HEADER IS THE DROPDOWN POSITIONING PARENT */
+
+.main-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+
+  overflow: visible !important;
+}
+
+/* FULL WIDTH + FULL HEIGHT BELOW HEADER */
+
+.main-header > .mega-menu {
+  position: absolute !important;
+
+  /* Immediately below actual navbar */
+  top: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+
+  /* Entire browser width */
+  width: 100% !important;
+  max-width: none !important;
+
+  /* Entire remaining viewport height */
+ height: 450px !important;
+min-height: 0 !important;
+max-height: calc(100dvh - 98px) !important;
+
+  margin: 0 !important;
+  padding: 35px 5% !important;
+
+  box-sizing: border-box !important;
+
+  /* Opaque white hides content behind menu */
+  background: #FFFFFF !important;
+  background-image: none !important;
+
+  /* Full-screen panel edges */
+  border-radius: 0 !important;
+
+  /* Scroll internally when needed */
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+
+  /* Prevent old centering */
+  transform: none !important;
+  translate: none !important;
+
+  /* Simple fade-in */
+  animation: ctplFullscreenReveal 0.25s ease-out both !important;
+
+  z-index: 10000 !important;
+}
+
+/* KEEP EXISTING 3-COLUMN CARD GRID */
+
+.main-header > .mega-menu .mega-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* OPENING ANIMATION */
+
+@keyframes ctplFullscreenReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .main-header > .mega-menu {
+    animation: none !important;
+  }
+}
