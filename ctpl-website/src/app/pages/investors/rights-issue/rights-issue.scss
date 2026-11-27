@@ -304,3 +304,134 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   RIGHTS ISSUE PAGE HEADER
+========================================== */
+
+.page-hero.ctpl-rights-hero {
+
+  width: 100%;
+  padding: 45px 0;
+
+  background: linear-gradient(
+    110deg,
+    #17365f 0%,
+    #204ba2 60%,
+    #2563eb 100%
+  ) !important;
+
+  color: #ffffff;
+
+  .eyebrow {
+
+    display: block;
+
+    color: #d8b4fe !important;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+  }
+
+  h1 {
+
+    margin: 0 0 20px;
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+
+    color: #ffffff !important;
+
+  }
+
+  .page-hero-actions {
+    margin: 0;
+  }
+
+}
+
+
+/* ==========================================
+   BACK TO HOME BUTTON
+========================================== */
+
+.rights-back-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  padding: 10px 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 5px;
+
+  color: #ffffff !important;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  .back-arrow {
+
+    font-size: 17px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+
+  }
+
+  &:hover {
+
+    background: #ffffff;
+    border-color: #ffffff;
+
+    color: #7c3aed !important;
+
+    .back-arrow {
+      transform: translateX(-4px);
+    }
+
+  }
+
+  &:focus-visible {
+
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .page-hero.ctpl-rights-hero {
+
+    padding: 32px 0;
+
+    h1 {
+      font-size: 34px;
+    }
+
+  }
+
+}

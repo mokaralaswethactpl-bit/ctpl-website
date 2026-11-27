@@ -1382,3 +1382,135 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   SLD HERO WHITE BACKGROUND
+========================================== */
+
+.sld-hero,
+.ctpl-sld-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.sld-eyebrow,
+.ctpl-sld-eyebrow,
+.sld-company,
+.ctpl-sld-company {
+
+  color: #7c3aed !important;
+
+}
+
+.sld-line,
+.ctpl-sld-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   IMAGE PANEL WHITE BACKGROUND
+========================================== */
+
+.sld-image-frame,
+.ctpl-sld-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.sld-glow,
+.ctpl-sld-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.sld-hero::before,
+.sld-hero::after,
+.ctpl-sld-hero::before,
+.ctpl-sld-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   IMAGE LABEL
+========================================== */
+
+.sld-image-label,
+.ctpl-sld-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+   FIX TEXT VISIBILITY
+========================================== */
+
+.sld-contact,
+.ctpl-sld-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .sld-section-label,
+  .ctpl-sld-section-label {
+
+    color: #d8b4fe !important;
+
+  }
+
+}

@@ -1253,3 +1253,275 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --umis-text: #5D5872;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   UMS HERO WHITE BACKGROUND
+========================================== */
+
+.ums-hero,
+.ctpl-ums-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+  }
+
+  h3 {
+    color: #28183e !important;
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.ums-eyebrow,
+.ctpl-ums-eyebrow,
+.ums-company,
+.ctpl-ums-company {
+
+  color: #7c3aed !important;
+
+}
+
+.ums-line,
+.ctpl-ums-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   IMAGE PANEL WHITE BACKGROUND
+========================================== */
+
+.ums-image-frame,
+.ctpl-ums-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.ums-glow,
+.ctpl-ums-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.ums-hero::before,
+.ums-hero::after,
+.ctpl-ums-hero::before,
+.ctpl-ums-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   IMAGE LABEL
+========================================== */
+
+.ums-image-label,
+.ctpl-ums-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+   FIX TEXT VISIBILITY
+========================================== */
+
+.ums-contact,
+.ctpl-ums-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .ums-section-label,
+  .ctpl-ums-section-label {
+
+    color: #d8b4fe !important;
+
+  }
+
+}
+
+
+/* ==========================================
+   UMIS HERO WHITE BACKGROUND
+========================================== */
+
+.umis-hero,
+.ums-hero,
+.ctpl-umis-hero,
+.ctpl-ums-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+  }
+
+  h3 {
+    color: #28183e !important;
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.umis-eyebrow,
+.ums-eyebrow,
+.umis-company,
+.ums-company,
+.umis-subtitle,
+.ums-subtitle {
+
+  color: #7c3aed !important;
+
+}
+
+.umis-line,
+.ums-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   IMAGE PANEL WHITE BACKGROUND
+========================================== */
+
+.umis-image-frame,
+.ums-image-frame,
+.ctpl-umis-image-frame,
+.ctpl-ums-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.umis-glow,
+.ums-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.umis-hero::before,
+.umis-hero::after,
+.ums-hero::before,
+.ums-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   IMAGE LABEL
+========================================== */
+
+.umis-image-label,
+.ums-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+========================================== */
+
+.umis-contact,
+.ums-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .umis-section-label,
+  .ums-section-label {
+
+    color: #d8b4fe !important;
+
+  }
+
+}

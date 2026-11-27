@@ -1236,3 +1236,146 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   MIS CONVERTZ HERO WHITE BACKGROUND
+========================================== */
+
+.mis-hero,
+.convertz-hero,
+.mis-convertz-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.mis-eyebrow,
+.convertz-eyebrow,
+.mis-convertz-eyebrow,
+.mis-company,
+.convertz-company,
+.mis-convertz-company {
+
+  color: #7c3aed !important;
+
+}
+
+.mis-line,
+.convertz-line,
+.mis-convertz-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE WHITE BACKGROUND
+========================================== */
+
+.mis-image-frame,
+.convertz-image-frame,
+.mis-convertz-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.mis-glow,
+.convertz-glow,
+.mis-convertz-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.mis-hero::before,
+.mis-hero::after,
+.convertz-hero::before,
+.convertz-hero::after,
+.mis-convertz-hero::before,
+.mis-convertz-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE LABEL
+========================================== */
+
+.mis-image-label,
+.convertz-image-label,
+.mis-convertz-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+   FIX TEXT VISIBILITY
+========================================== */
+
+.mis-contact,
+.convertz-contact,
+.mis-convertz-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .mis-section-label,
+  .convertz-section-label,
+  .mis-convertz-section-label {
+
+    color: #d8b4fe !important;
+
+  }
+
+}

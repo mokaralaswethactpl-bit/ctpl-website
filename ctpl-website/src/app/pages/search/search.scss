@@ -365,3 +365,251 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
     transform: none;
   }
 }
+
+
+
+/* ==========================================
+   CTPL FULL-SCREEN SEARCH EXPERIENCE
+========================================== */
+
+/* Full viewport overlay */
+
+.ctpl-search-overlay {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100dvh !important;
+
+  min-height: 100dvh !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+
+  background: rgba(20, 11, 36, 0.97) !important;
+
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+
+  border: none !important;
+  border-radius: 0 !important;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  z-index: 999999 !important;
+
+  animation: ctplSearchOpen 0.3s ease both;
+}
+
+/* Main search panel */
+
+.ctpl-search-panel {
+  width: min(850px, 90vw) !important;
+  max-width: 850px !important;
+
+  margin: clamp(110px, 18vh, 180px) auto 50px !important;
+  padding: 0 !important;
+
+  position: relative;
+  z-index: 2;
+
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Search input container */
+
+.ctpl-search-form {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 75px;
+
+  background: rgba(255, 255, 255, 0.10) !important;
+
+  border: 1px solid rgba(196, 181, 253, 0.55);
+  border-radius: 20px;
+
+  padding: 8px 20px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+  transition: border-color 0.3s ease;
+}
+
+.ctpl-search-form:focus-within {
+  border-color: #C4B5FD;
+}
+
+/* Input field */
+
+.ctpl-search-form input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+
+  padding: 15px 12px;
+
+  color: #FFFFFF !important;
+
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 500;
+
+  box-shadow: none !important;
+}
+
+.ctpl-search-form input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Search icon submit button */
+
+.ctpl-search-submit {
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #7C3AED;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
+
+/* Close button */
+
+.ctpl-search-close {
+  position: fixed !important;
+
+  top: 28px !important;
+  right: 35px !important;
+
+  display: grid;
+  place-items: center;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+/* Live search results */
+
+.ctpl-search-results {
+  width: 100%;
+
+  margin-top: 22px;
+  padding: 18px;
+
+  border: 1px solid rgba(196, 181, 253, 0.30);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-sizing: border-box;
+}
+
+.ctpl-search-results-label {
+  color: #C4B5FD;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.ctpl-search-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px;
+
+  color: #FFFFFF;
+  text-decoration: none;
+
+  border-radius: 10px;
+}
+
+.ctpl-search-result:hover {
+  background: rgba(124, 58, 237, 0.25);
+}
+
+.ctpl-search-result-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ctpl-search-result-text strong {
+  color: #FFFFFF;
+}
+
+.ctpl-search-result-text small {
+  color: #C4B5FD;
+}
+
+.ctpl-search-no-results {
+  color: #FFFFFF;
+}
+
+/* Opening animation */
+
+@keyframes ctplSearchOpen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .ctpl-search-panel {
+    width: 92vw !important;
+    margin-top: 120px !important;
+  }
+
+  .ctpl-search-form {
+    min-height: 62px;
+    padding: 6px 12px;
+  }
+
+  .ctpl-search-close {
+    top: 18px !important;
+    right: 18px !important;
+  }
+}

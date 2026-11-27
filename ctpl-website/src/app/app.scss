@@ -29,9 +29,10 @@
 }
 
 
+
 /* =========================================
-   COMPANY LOGO
-   ========================================= */
+   CTPL COMPANY LOGO — BIGGER SIZE
+========================================= */
 
 .brand {
   display: flex;
@@ -40,13 +41,27 @@
   text-decoration: none;
 }
 
-.company-logo {
-  width: 165px;
-  height: 55px;
-  object-fit: contain;
+.main-header .company-logo {
   display: block;
+
+  width: 260px !important;
+  height: 85px !important;
+
+  max-width: none !important;
+  object-fit: contain;
+
+  filter: none !important;
+  opacity: 1 !important;
 }
 
+/* Mobile */
+
+@media (max-width: 768px) {
+  .main-header .company-logo {
+    width: 180px !important;
+    height: 60px !important;
+  }
+}
 
 /* =========================================
    NAVIGATION
@@ -88,27 +103,45 @@ nav {
 }
 
 
+
 /* =========================================
-   INTRA BUTTON
-   ========================================= */
+   INTRA BUTTON — MATCH SEARCH BUTTON
+========================================= */
 
-.intra-button {
-  padding: 12px 20px;
+.main-header .intra-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  background: linear-gradient(
-    120deg,
-    #6D28D9,
-    #7C3AED
-  );
+  padding: 10px 18px;
 
-  color: white !important;
-  border-radius: 5px;
+  background: #FFFFFF !important;
+  background-image: none !important;
+
+  color: #7C3AED !important;
+
+  border: 1px solid #DDD0FF !important;
+  border-radius: 12px !important;
+
+  font-size: 13px;
   font-weight: 700 !important;
 
-  transition: 0.3s ease;
+  box-shadow: none !important;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 
   &:hover {
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+    background: #F3E8FF !important;
+    border-color: #7C3AED !important;
+    color: #7C3AED !important;
+
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.12) !important;
     transform: translateY(-2px);
   }
 }

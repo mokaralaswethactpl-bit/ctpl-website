@@ -46,12 +46,15 @@ export class ProductSlideshowComponent
     'geo-limits-gsld': '/products/gsld',
     'ais-140-is16833': '/products/ais',
     'embedded-esim': '/products/e-sim',
-    'trano-rfid': '/products/rfid'
+    'tranogo-4g': '/products/tranogo-4g'
   };
 
   getProductRoute(slug: string): string {
-    return this.productRoutes[slug] ?? '/page/' + slug;
-  }
+  const normalizedSlug = slug.trim().toLowerCase();
+
+  return this.productRoutes[normalizedSlug]
+    ?? '/page/' + normalizedSlug;
+}
 
   // ==========================================
   // CAROUSEL STATE

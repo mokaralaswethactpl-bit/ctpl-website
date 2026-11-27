@@ -127,6 +127,7 @@
             <a
               class="showcase-explore-button"
               [routerLink]="getProductRoute(item.slug)"
+              (click)="$event.stopPropagation()"
             >
               Explore Product
               <span aria-hidden="true">↗</span>

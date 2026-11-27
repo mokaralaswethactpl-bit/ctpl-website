@@ -1464,3 +1464,135 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --vltd-surface: #FFFFFF;
   --vltd-text: #5D5872;
 }
+
+
+/* ==========================================
+   VLTD HERO WHITE BACKGROUND
+========================================== */
+
+.vltd-hero,
+.ctpl-vltd-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.vltd-eyebrow,
+.ctpl-vltd-eyebrow,
+.vltd-company,
+.ctpl-vltd-company {
+
+  color: #7c3aed !important;
+
+}
+
+.vltd-line,
+.ctpl-vltd-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   IMAGE PANEL WHITE BACKGROUND
+========================================== */
+
+.vltd-image-frame,
+.ctpl-vltd-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.vltd-glow,
+.ctpl-vltd-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.vltd-hero::before,
+.vltd-hero::after,
+.ctpl-vltd-hero::before,
+.ctpl-vltd-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   IMAGE LABEL
+========================================== */
+
+.vltd-image-label,
+.ctpl-vltd-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+   FIX TEXT VISIBILITY
+========================================== */
+
+.vltd-contact,
+.ctpl-vltd-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .vltd-section-label,
+  .ctpl-vltd-section-label {
+
+    color: #d8b4fe !important;
+
+  }
+
+}

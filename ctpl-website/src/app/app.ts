@@ -98,8 +98,8 @@ export class App {
           path: '/products/motoreye'
         },
         {
-          name: 'Trano RFID',
-          path: '/products/rfid'
+          name: 'TRANOGO-4G',
+          path: '/products/tranogo-4g'
         }
       ]
     },

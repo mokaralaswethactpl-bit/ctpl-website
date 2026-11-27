@@ -5,13 +5,13 @@
 
 <div class="ctpl-investors-page">
 
-  <section class="ctpl-investors-section">
+  <!-- ======================================
+       INVESTORS PAGE HEADER
+  ====================================== -->
+
+  <section class="ctpl-investors-page-header">
 
     <div class="container">
-
-      <!-- ======================================
-           PAGE HEADER
-      ====================================== -->
 
       <div class="ctpl-investors-heading" appReveal>
 
@@ -26,8 +26,33 @@
           financial reports and shareholder disclosures.
         </p>
 
+        <!-- BACK TO HOME BUTTON -->
+
+        <a
+          routerLink="/"
+          class="ctpl-investors-back-btn"
+        >
+
+          <span class="back-arrow">←</span>
+
+          Back to Home
+
+        </a>
+
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       INVESTORS PAGE BODY
+  ====================================== -->
+
+  <section class="ctpl-investors-section">
+
+    <div class="container">
 
       <!-- ======================================
            INVESTOR CARDS
@@ -45,7 +70,8 @@
             appReveal
             class="ctpl-investor-card"
             [style.--delay]="(i % 2) * 90 + 'ms'"
-            [routerLink]="item.route">
+            [routerLink]="item.route"
+          >
 
 
             <!-- INVESTOR VISUAL -->
@@ -71,9 +97,7 @@
 
               </span>
 
-
               <h2>{{ item.title }}</h2>
-
 
               <p>{{ item.description }}</p>
 

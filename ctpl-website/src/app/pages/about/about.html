@@ -1,66 +1,104 @@
 
 <section class="ctpl-about-overview">
 
-  <div class="container">
+  <!-- ==========================================
+       ABOUT PAGE HEADER
+  ========================================== -->
 
-    <div class="ctpl-about-heading">
+  <section class="ctpl-about-page-header">
 
-      <span class="ctpl-about-eyebrow">
-        CTPL / ABOUT
-      </span>
+    <div class="container">
 
-      <h1>About</h1>
+      <div class="ctpl-about-heading">
 
-      <p>
-        Explore our company, mission,
-        capabilities and presence.
-      </p>
+        <span class="ctpl-about-eyebrow">
+          CTPL / ABOUT
+        </span>
 
-    </div>
+        <h1>About</h1>
 
-    <div class="ctpl-about-cards">
+        <p>
+          Explore our company, mission,
+          capabilities and presence.
+        </p>
 
-      @for (page of aboutPages; track page.slug) {
+        <!-- BACK TO HOME BUTTON -->
 
-        <a
-          class="ctpl-about-card"
-          [routerLink]="['/page', page.slug]"
-        >
+        <a routerLink="/" class="ctpl-about-back-btn">
 
-          <div class="ctpl-about-card-image">
+          <span class="back-arrow">←</span>
 
-            @if (page.image) {
-              <img
-                [src]="page.image"
-                [alt]="page.title"
-                loading="lazy"
-              />
-            }
-
-          </div>
-
-          <div class="ctpl-about-card-body">
-
-            <span class="ctpl-about-card-label">
-              {{ page.eyebrow }}
-            </span>
-
-            <h2>{{ page.title }}</h2>
-
-            <p>{{ page.summary }}</p>
-
-            <span class="ctpl-about-card-link">
-              Read more ↗
-            </span>
-
-          </div>
+          Back to Home
 
         </a>
 
-      }
+      </div>
 
     </div>
 
-  </div>
+  </section>
+
+
+  <!-- ==========================================
+       ABOUT PAGE BODY
+  ========================================== -->
+
+  <section class="ctpl-about-page-body">
+
+    <div class="container">
+
+      <div class="ctpl-about-cards">
+
+        @for (page of aboutPages; track page.slug) {
+
+          <a
+            class="ctpl-about-card"
+            [routerLink]="['/page', page.slug]"
+          >
+
+            <!-- CARD IMAGE -->
+
+            <div class="ctpl-about-card-image">
+
+              @if (page.image) {
+
+                <img
+                  [src]="page.image"
+                  [alt]="page.title"
+                  loading="lazy"
+                />
+
+              }
+
+            </div>
+
+
+            <!-- CARD CONTENT -->
+
+            <div class="ctpl-about-card-body">
+
+              <span class="ctpl-about-card-label">
+                {{ page.eyebrow }}
+              </span>
+
+              <h2>{{ page.title }}</h2>
+
+              <p>{{ page.summary }}</p>
+
+              <span class="ctpl-about-card-link">
+                Read more ↗
+              </span>
+
+            </div>
+
+          </a>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
 
 </section>

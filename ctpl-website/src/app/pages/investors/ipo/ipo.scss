@@ -369,3 +369,484 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   IPO PAGE HEADER
+========================================== */
+
+.page-hero.ctpl-ipo-hero {
+
+  width: 100%;
+  padding: 45px 0;
+
+  background: linear-gradient(
+    110deg,
+    #17365f 0%,
+    #204ba2 60%,
+    #2563eb 100%
+  ) !important;
+
+  color: #ffffff;
+
+  .eyebrow {
+
+    display: block;
+
+    color: #d8b4fe !important;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+  }
+
+  h1 {
+
+    margin: 0 0 20px;
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+
+    color: #ffffff !important;
+
+  }
+
+  .page-hero-actions {
+    margin: 0;
+  }
+
+}
+
+
+/* ==========================================
+   BACK TO HOME BUTTON
+========================================== */
+
+.ipo-back-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  padding: 10px 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 5px;
+
+  color: #ffffff !important;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  .back-arrow {
+
+    font-size: 17px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+
+  }
+
+  &:hover {
+
+    background: #ffffff;
+    border-color: #ffffff;
+
+    color: #7c3aed !important;
+
+    .back-arrow {
+      transform: translateX(-4px);
+    }
+
+  }
+
+  &:focus-visible {
+
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+
+  }
+
+}
+
+
+/* ==========================================
+   IPO DOCUMENTS BODY SECTION
+========================================== */
+
+.ctpl-ipo-section {
+
+  width: 100%;
+
+  padding: 50px 0 65px;
+
+  background: #f8f5fc !important;
+  background-image: none !important;
+
+  position: relative;
+
+}
+
+
+/* ==========================================
+   REMOVE DECORATIVE BACKGROUND SHAPES
+========================================== */
+
+.ipo-shape {
+  display: none !important;
+}
+
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.ipo-section-heading {
+
+  text-align: left;
+
+  margin-bottom: 30px;
+
+  .ipo-section-label {
+
+    display: block;
+
+    color: #7c3aed;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+  }
+
+  h2 {
+
+    margin: 0 0 12px;
+
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 700;
+
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed;
+    }
+
+  }
+
+  p {
+
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #635b70;
+
+  }
+
+}
+
+
+/* ==========================================
+   IPO DOCUMENT CARD GRID
+========================================== */
+
+.ipo-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  align-items: stretch;
+
+}
+
+
+/* ==========================================
+   IPO DOCUMENT CARDS
+========================================== */
+
+.ipo-card {
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  min-height: 240px;
+
+  padding: 22px;
+
+  background: #ffffff !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  text-align: left;
+
+  box-shadow:
+    0 5px 18px rgba(76, 29, 149, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  h3 {
+
+    margin: 18px 0 10px;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    color: #28183e !important;
+
+  }
+
+  p {
+
+    margin: 0 0 22px;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #635b70 !important;
+
+  }
+
+  &:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+      0 10px 25px rgba(124, 58, 237, 0.13);
+
+  }
+
+}
+
+
+/* ==========================================
+   CARD ICON AND NUMBER
+========================================== */
+
+.ipo-card-top {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.ipo-card-icon {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: #f0e7ff;
+
+  color: #7c3aed;
+
+  border-radius: 10px;
+
+}
+
+.ipo-card-number {
+
+  color: #614780;
+
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+
+/* ==========================================
+   MATERIAL SYMBOLS ICONS
+========================================== */
+
+.ipo-card .material-symbols-outlined {
+
+  font-family: 'Material Symbols Outlined' !important;
+
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+
+  line-height: 1;
+
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+
+  font-feature-settings: 'liga';
+
+}
+
+
+/* ==========================================
+   DOWNLOAD BUTTON
+========================================== */
+
+.ipo-card .ipo-download-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 100%;
+
+  padding: 11px 16px;
+
+  margin-top: auto;
+
+  background: #7c3aed !important;
+
+  border: 1px solid #7c3aed;
+  border-radius: 6px;
+
+  color: #ffffff !important;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  .material-symbols-outlined {
+
+    font-size: 18px;
+
+    color: #ffffff;
+
+  }
+
+  &:hover {
+
+    background: #5b21b6 !important;
+
+    border-color: #5b21b6;
+
+    box-shadow:
+      0 5px 15px rgba(124, 58, 237, 0.25);
+
+  }
+
+  &:focus-visible {
+
+    outline: 2px solid #7c3aed;
+    outline-offset: 4px;
+
+  }
+
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+
+  .ipo-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .page-hero.ctpl-ipo-hero {
+
+    padding: 32px 0;
+
+    h1 {
+      font-size: 32px;
+    }
+
+  }
+
+  .ctpl-ipo-section {
+
+    padding: 30px 0 40px;
+
+  }
+
+  .ipo-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .ipo-card {
+
+    min-height: 220px;
+
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ipo-card,
+  .ipo-heading-fall,
+  .ipo-card-fall,
+  .ipo-download-btn,
+  .ipo-back-btn {
+
+    animation: none !important;
+    transition: none !important;
+
+    opacity: 1 !important;
+    transform: none !important;
+
+  }
+
+}

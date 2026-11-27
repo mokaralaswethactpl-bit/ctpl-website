@@ -949,3 +949,131 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --tranopro-text: #5D5872;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   TRANOPRO HERO WHITE BACKGROUND
+========================================== */
+
+.tranopro-hero,
+.trano-pro-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.tranopro-eyebrow,
+.trano-pro-eyebrow,
+.tranopro-company,
+.trano-pro-company {
+
+  color: #7c3aed !important;
+
+}
+
+.tranopro-line,
+.trano-pro-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE WHITE BACKGROUND
+========================================== */
+
+.tranopro-image-frame,
+.trano-pro-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.tranopro-glow,
+.trano-pro-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.tranopro-hero::before,
+.tranopro-hero::after,
+.trano-pro-hero::before,
+.trano-pro-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE LABEL
+========================================== */
+
+.tranopro-image-label,
+.trano-pro-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+   FIX TEXT VISIBILITY
+========================================== */
+
+.tranopro-contact,
+.trano-pro-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .tranopro-section-label,
+  .trano-pro-section-label {
+    color: #d8b4fe !important;
+  }
+
+}

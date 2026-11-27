@@ -1236,3 +1236,135 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   CTPL ERP HERO WHITE BACKGROUND
+========================================== */
+
+.erp-hero,
+.ctpl-erp-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  h2 {
+
+    color: #28183e !important;
+
+    span {
+      color: #7c3aed !important;
+    }
+
+  }
+
+  p {
+    color: #635b70 !important;
+  }
+
+}
+
+
+/* ==========================================
+   HERO LABELS
+========================================== */
+
+.erp-eyebrow,
+.ctpl-erp-eyebrow,
+.erp-company,
+.ctpl-erp-company {
+
+  color: #7c3aed !important;
+
+}
+
+.erp-line,
+.ctpl-erp-line {
+
+  background: #7c3aed;
+
+}
+
+
+/* ==========================================
+   ERP IMAGE WHITE BACKGROUND
+========================================== */
+
+.erp-image-frame,
+.ctpl-erp-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.erp-glow,
+.ctpl-erp-glow {
+
+  display: none;
+
+}
+
+
+/* ==========================================
+   REMOVE GRADIENT OVERLAYS
+========================================== */
+
+.erp-hero::before,
+.erp-hero::after,
+.ctpl-erp-hero::before,
+.ctpl-erp-hero::after {
+
+  background: none !important;
+
+}
+
+
+/* ==========================================
+   ERP IMAGE LABEL
+========================================== */
+
+.erp-image-label,
+.ctpl-erp-image-label {
+
+  color: #635b70 !important;
+
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION
+   FIX TEXT VISIBILITY
+========================================== */
+
+.erp-contact,
+.ctpl-erp-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .erp-section-label,
+  .ctpl-erp-section-label {
+
+    color: #d8b4fe !important;
+
+  }
+
+}

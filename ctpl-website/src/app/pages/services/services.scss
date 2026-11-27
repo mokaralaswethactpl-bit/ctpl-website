@@ -562,3 +562,273 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ==========================================
+   SERVICES PAGE MAIN WRAPPER
+========================================== */
+
+.ctpl-services-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #f8f5fc;
+}
+
+
+/* ==========================================
+   SERVICES PAGE HEADER
+========================================== */
+
+.ctpl-services-page-header {
+
+  width: 100%;
+  padding: 45px 0;
+
+  background: linear-gradient(
+    110deg,
+    #17365f 0%,
+    #204ba2 60%,
+    #2563eb 100%
+  );
+
+  color: #ffffff;
+
+
+  /* HEADER CONTENT */
+
+  .ctpl-services-heading {
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+  }
+
+
+  /* HEADER LABEL */
+
+  .ctpl-services-label {
+    display: block;
+
+    color: #d8b4fe !important;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+  }
+
+
+  /* PAGE TITLE */
+
+  h1 {
+    margin: 0 0 12px;
+
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.2;
+
+    letter-spacing: -1.5px;
+
+    color: #ffffff !important;
+  }
+
+
+  /* PAGE DESCRIPTION */
+
+  p {
+    margin: 0 0 20px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #e5dcfa !important;
+  }
+
+}
+
+
+/* ==========================================
+   BACK TO HOME BUTTON
+========================================== */
+
+.ctpl-services-back-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  padding: 10px 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 5px;
+
+  color: #ffffff !important;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+
+  /* BACK ARROW */
+
+  .back-arrow {
+    font-size: 17px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+  }
+
+
+  /* BUTTON HOVER */
+
+  &:hover {
+
+    background: #ffffff;
+    border-color: #ffffff;
+
+    color: #7c3aed !important;
+
+    box-shadow:
+      0 5px 20px rgba(255, 255, 255, 0.15);
+
+    .back-arrow {
+      transform: translateX(-4px);
+    }
+
+  }
+
+  &:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+  }
+
+}
+
+
+/* ==========================================
+   SERVICES PAGE BODY
+========================================== */
+
+.ctpl-services-section {
+
+  width: 100%;
+
+  padding: 45px 0 60px;
+
+  background: #f8f5fc;
+
+  .ctpl-services-grid {
+    margin-top: 0;
+  }
+
+}
+
+
+/* ==========================================
+   SERVICE CARD TEXT COLOURS
+========================================== */
+
+.ctpl-service-content {
+
+  .ctpl-service-category {
+
+    color: #7c3aed !important;
+
+    font-weight: 600;
+
+  }
+
+  h2 {
+    color: #28183e;
+  }
+
+  p {
+    color: #70677d;
+  }
+
+  .ctpl-service-link {
+
+    color: #7c3aed !important;
+
+    font-weight: 600;
+
+  }
+
+  .ctpl-service-arrow {
+
+    color: #7c3aed !important;
+
+    transition: transform 0.3s ease;
+
+  }
+
+}
+
+
+/* ==========================================
+   SERVICE CARD HOVER
+========================================== */
+
+.ctpl-service-card:hover {
+
+  .ctpl-service-link {
+    color: #5b21b6 !important;
+  }
+
+  .ctpl-service-arrow {
+
+    display: inline-block;
+
+    transform: translate(3px, -3px);
+
+  }
+
+}
+
+
+/* ==========================================
+   SERVICE ICON COLOUR
+========================================== */
+
+.ctpl-service-symbol {
+  color: #7c3aed;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-services-page-header {
+
+    padding: 32px 0;
+
+    h1 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+  }
+
+  .ctpl-services-section {
+
+    padding: 30px 0;
+
+  }
+
+}

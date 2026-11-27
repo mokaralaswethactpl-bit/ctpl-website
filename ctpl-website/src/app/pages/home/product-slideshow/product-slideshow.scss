@@ -737,3 +737,51 @@
     0 0 28px rgba(124, 58, 237, 0.30),
     0 20px 50px rgba(124, 58, 237, 0.18);
 }
+
+/* ==========================================
+   FIX EXPLORE PRODUCT BUTTON CLICK
+========================================== */
+
+.ctpl-orbit-card {
+  position: absolute;
+}
+
+/* CARD SELECTION BUTTON */
+
+.ctpl-orbit-card-select {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* PRODUCT INFORMATION */
+
+.ctpl-orbit-information {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* EXPLORE PRODUCT BUTTON */
+
+.showcase-explore-button {
+  position: relative;
+  z-index: 10;
+
+  pointer-events: auto !important;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ACTIVE PRODUCT CARD */
+
+.ctpl-orbit-card.is-front {
+  pointer-events: auto;
+}
+
+.ctpl-orbit-card.is-front .showcase-explore-button {
+  pointer-events: auto !important;
+}

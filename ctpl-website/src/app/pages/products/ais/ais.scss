@@ -8,8 +8,8 @@
   width: 100%;
   min-width: 0;
 
-  --ais-background: #140B24;
-  --ais-section-bg: #1E1035;
+  --ais-background: hsl(264, 19%, 89%);
+  --ais-section-bg: hsl(264, 19%, 89%);
   --ais-surface: #241438;
   --ais-image-bg: #241438;
   --ais-border: #493568;
@@ -229,7 +229,7 @@
 
   border-radius: 50%;
 
-  background: rgba(0, 166, 204, 0.15);
+  background: hsl(264, 19%, 89%);
 
   filter: blur(65px);
 
@@ -258,12 +258,12 @@
 
   background: linear-gradient(
     145deg,
-    #2C1945,
-    #241438
+    
+    hsl(264, 19%, 89%),
   );
 
   box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.2);
+    0 18px 40px hsl(264, 19%, 89%);
 }
 
 .ais-image-frame img {
@@ -859,11 +859,8 @@
 .ais-contact {
   padding: 45px 0;
 
-  background: linear-gradient(
-    120deg,
-    #241438,
-    #34204F
-  );
+  background:  #ffffff,
+  ;
 
   border-top: 1px solid var(--ais-border);
 }
@@ -1516,4 +1513,228 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sms-primary: #7C3AED;
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
+}
+
+
+/* ==========================================
+   MATERIAL SYMBOLS ICONS
+========================================== */
+
+.ais-icon,
+.ais-card-icon {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f0e7ff;
+  color: #7c3aed;
+
+  .material-symbols-outlined {
+
+    font-family: 'Material Symbols Outlined' !important;
+    font-size: 22px;
+    font-weight: normal !important;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+
+    color: #7c3aed;
+  }
+}
+
+
+/* ==========================================
+   HERO TEXT SPACING
+========================================== */
+
+.ais-content {
+
+  p {
+    margin-bottom: 14px;
+    line-height: 1.8;
+  }
+
+}
+
+
+/* ==========================================
+   PRODUCT OVERVIEW SPACING
+========================================== */
+
+.ais-heading {
+
+  p {
+    margin-bottom: 12px;
+    line-height: 1.8;
+  }
+
+}
+
+
+/* ==========================================
+   CARD GRID
+========================================== */
+
+.ais-card-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+  align-items: stretch;
+
+}
+
+
+/* ==========================================
+   CARD DESIGN
+========================================== */
+
+.ais-card {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #dfd1f8;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+      0 10px 25px rgba(124, 58, 237, 0.13);
+
+  }
+
+  .ais-card-line {
+
+    margin-top: auto;
+
+    transition: width 0.3s ease;
+
+  }
+
+  &:hover .ais-card-line {
+
+    width: 48px;
+
+  }
+
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+
+  .ais-card-grid {
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .ais-card-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+/* ==========================================
+   PRODUCT HERO WHITE BACKGROUND
+========================================== */
+
+.ais-hero {
+
+  background: #ffffff !important;
+
+  .ais-content {
+
+    h2 {
+      color: #28183e !important;
+
+      span {
+        color: #7c3aed !important;
+      }
+    }
+
+    p {
+      color: #635b70 !important;
+    }
+  }
+
+  .ais-eyebrow {
+    color: #7c3aed !important;
+  }
+
+  .ais-company {
+    color: #7c3aed !important;
+  }
+
+  .ais-line {
+    background: #7c3aed;
+  }
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE FRAME
+========================================== */
+
+.ais-image-frame {
+
+  background: #ffffff !important;
+
+  border: 1px solid #dfd1f8;
+
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px
+    rgba(124, 58, 237, 0.08) !important;
+
+}
+
+
+/* REMOVE EXISTING IMAGE GLOW */
+
+.ais-glow {
+  display: none;
+}
+
+
+/* PRODUCT IMAGE LABEL */
+
+.ais-image-label {
+  color: #635b70 !important;
 }

@@ -924,11 +924,8 @@
 .geo-contact {
   padding: 45px 0;
 
-  background: linear-gradient(
-    120deg,
-    #241438,
-    #34204F
-  );
+  background: #ffffff;
+  
 
   border-top: 1px solid var(--geo-border);
 }
@@ -1380,4 +1377,121 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sms-primary: #7C3AED;
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
+}
+
+
+/* ==========================================
+   GSLD HERO WHITE BACKGROUND
+========================================== */
+
+.gsld-hero {
+
+  background: #ffffff !important;
+
+  .gsld-content {
+
+    h2 {
+      color: #28183e !important;
+
+      span {
+        color: #7c3aed !important;
+      }
+    }
+
+    p {
+      color: #635b70 !important;
+    }
+
+  }
+
+  .gsld-eyebrow {
+    color: #7c3aed !important;
+  }
+
+  .gsld-company {
+    color: #7c3aed !important;
+  }
+
+  .gsld-line {
+    background: #7c3aed;
+  }
+
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE FRAME
+========================================== */
+
+.gsld-image-frame {
+
+  background: #ffffff !important;
+
+  border: 1px solid #dfd1f8;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* ==========================================
+   REMOVE EXISTING IMAGE GLOW
+========================================== */
+
+.gsld-glow {
+  display: none;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE LABEL
+========================================== */
+
+.gsld-image-label {
+  color: #635b70 !important;
+}
+
+/* ==========================================
+   FORCE WHITE PRODUCT HERO BACKGROUND
+========================================== */
+
+.gsld-hero,
+.geo-hero,
+.geo-limits-hero,
+.geolimits-hero {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE WHITE BACKGROUND
+========================================== */
+
+.gsld-image-frame,
+.geo-image-frame,
+.geo-limits-image-frame,
+.geolimits-image-frame {
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px
+    rgba(124, 58, 237, 0.08) !important;
+}
+
+
+/* REMOVE GRADIENT OVERLAYS */
+
+.gsld-hero::before,
+.gsld-hero::after,
+.geo-hero::before,
+.geo-hero::after {
+  background: none !important;
 }

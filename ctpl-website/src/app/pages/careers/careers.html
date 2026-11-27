@@ -1,4 +1,5 @@
 
+
 <!-- =====================================
      CAREERS PAGE HEADER
 ===================================== -->
@@ -19,14 +20,40 @@
       connected mobility solutions.
     </p>
 
-    <a
-      href="#career-opportunities"
-      class="ctpl-careers-hero-button"
-      (click)="scrollToOpportunities($event)"
-    >
-      Explore Opportunities
-      <span aria-hidden="true">↗</span>
-    </a>
+
+    <!-- HERO ACTION BUTTONS -->
+
+    <div class="ctpl-careers-hero-actions">
+
+      <!-- BACK TO HOME -->
+
+      <a
+        routerLink="/"
+        class="ctpl-careers-back-btn"
+      >
+
+        <span class="back-arrow">←</span>
+
+        Back to Home
+
+      </a>
+
+
+      <!-- EXPLORE OPPORTUNITIES -->
+
+      <a
+        href="#career-opportunities"
+        class="ctpl-careers-hero-button"
+        (click)="scrollToOpportunities($event)"
+      >
+
+        Explore Opportunities
+
+        <span aria-hidden="true">↗</span>
+
+      </a>
+
+    </div>
 
   </div>
 

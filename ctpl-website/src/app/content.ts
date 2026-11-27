@@ -84,14 +84,14 @@ export const products: ContentPage[] = [
   },
 
   {
-    slug: 'trano-rfid',
-    title: 'Trano RFID',
+    slug: 'tranogo-4g',
+    title: 'TRANOGO-4G',
     group: 'Products',
     eyebrow: 'Identification',
     summary:
       'Intelligent contactless identification and tracking system.',
     source: 'https://containe.in/trano-rfid/',
-    image: '/assets/images/trano-rfid.png'
+    image: '/assets/images/tranogo-4g.png'
   }
 ];
 
@@ -229,7 +229,7 @@ export const corporate: ContentPage[] = [
 
       'Technology Expertise: Our capabilities include embedded electronics, GPS-based tracking, M2M communication, automotive software and connected vehicle technologies.',
 
-      'Product Development: CTPL develops solutions such as MotorEye EFRT, LIMITS EPI, Geo-Limits GSLD, TRANO PRO VLTD, embedded e-SIM and Trano RFID.',
+      'Product Development: CTPL develops solutions such as MotorEye EFRT, LIMITS EPI, Geo-Limits GSLD, TRANO PRO VLTD, embedded e-SIM and TRANOGO-4G.',
 
       'Manufacturing Excellence: Our operations combine electronics manufacturing, engineering, quality management and product testing to support reliable automotive solutions.',
 

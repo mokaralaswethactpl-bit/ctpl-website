@@ -36,7 +36,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     'geo-limits-gsld': '/products/gsld',
     'ais-140-is16833': '/products/ais',
     'embedded-esim': '/products/e-sim',
-    'trano-rfid': '/products/rfid'
+    'tranogo-4g': '/products/TRANOGO-4G'
   };
 
   getProductRoute(slug: string): string {

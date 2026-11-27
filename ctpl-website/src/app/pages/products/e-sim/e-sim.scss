@@ -275,7 +275,7 @@
 
   inset: 10%;
 
-  background: rgba(0, 166, 204, 0.15);
+  background:  #ffffff;
 
   border-radius: 50%;
 
@@ -301,11 +301,7 @@
 
   overflow: hidden;
 
-  background: linear-gradient(
-    145deg,
-    #2C1945,
-    #241438
-  );
+  background:  #ffffff;
 
   border: 1px solid var(--esim-border);
   border-radius: 18px;
@@ -927,11 +923,7 @@
 .esim-contact {
   padding: 45px 0;
 
-  background: linear-gradient(
-    120deg,
-    #241438,
-    #34204F
-  );
+  background:  #ffffff;
 
   border-top: 1px solid var(--esim-border);
 }
@@ -1396,4 +1388,71 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sms-primary: #7C3AED;
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
+}
+
+/* ==========================================
+   E-SIM HERO WHITE BACKGROUND
+========================================== */
+
+.esim-hero {
+
+  background: #ffffff !important;
+
+  .esim-content {
+
+    h2 {
+      color: #28183e !important;
+
+      span {
+        color: #7c3aed !important;
+      }
+    }
+
+    p {
+      color: #635b70 !important;
+    }
+  }
+
+  .esim-eyebrow {
+    color: #7c3aed !important;
+  }
+
+  .esim-company {
+    color: #7c3aed !important;
+  }
+
+  .esim-line {
+    background: #7c3aed;
+  }
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE FRAME
+========================================== */
+
+.esim-image-frame {
+
+  background: #ffffff !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px
+    rgba(124, 58, 237, 0.08) !important;
+
+}
+
+
+/* REMOVE IMAGE GLOW */
+
+.esim-glow {
+  display: none;
+}
+
+
+/* PRODUCT IMAGE LABEL */
+
+.esim-image-label {
+  color: #635b70 !important;
 }

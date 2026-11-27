@@ -948,3 +948,104 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --trano-text: #5D5872;
   --vlt-primary: #7C3AED;
 }
+
+/* ==========================================
+   TRANO HERO WHITE BACKGROUND
+========================================== */
+
+.trano-hero {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  .trano-content {
+
+    h2 {
+      color: #28183e !important;
+
+      span {
+        color: #7c3aed !important;
+      }
+    }
+
+    p {
+      color: #635b70 !important;
+    }
+
+  }
+
+  .trano-eyebrow {
+    color: #7c3aed !important;
+  }
+
+  .trano-company {
+    color: #7c3aed !important;
+  }
+
+  .trano-line {
+    background: #7c3aed;
+  }
+
+}
+
+
+/* ==========================================
+   PRODUCT IMAGE WHITE BACKGROUND
+========================================== */
+
+.trano-image-frame {
+
+  background: #ffffff !important;
+  background-image: none !important;
+
+  border: 1px solid #dfd1f8;
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.08)
+    !important;
+
+}
+
+
+/* REMOVE EXISTING IMAGE GLOW */
+
+.trano-glow {
+  display: none;
+}
+
+
+/* REMOVE GRADIENT OVERLAYS */
+
+.trano-hero::before,
+.trano-hero::after {
+  background: none !important;
+}
+
+
+/* PRODUCT IMAGE LABEL */
+
+.trano-image-label {
+  color: #635b70 !important;
+}
+
+
+/* ==========================================
+   BOTTOM CONTACT SECTION TEXT VISIBILITY
+========================================== */
+
+.trano-contact {
+
+  h2 {
+    color: #ffffff !important;
+  }
+
+  p {
+    color: #d8cbe9 !important;
+  }
+
+  .trano-section-label {
+    color: #d8b4fe !important;
+  }
+
+}

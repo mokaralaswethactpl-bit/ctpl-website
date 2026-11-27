@@ -1,7 +1,9 @@
 
-<!-- IPO PAGE HEADER -->
+<!-- ======================================
+     IPO PAGE HEADER
+====================================== -->
 
-<section class="page-hero ci-heading">
+<section class="page-hero ctpl-ipo-hero">
 
   <div class="container">
 
@@ -15,9 +17,13 @@
 
       <a
         routerLink="/"
-        class="btn btn-outline-light"
+        class="ipo-back-btn"
       >
-        ← Back to homepage
+
+        <span class="back-arrow">←</span>
+
+        Back to Home
+
       </a>
 
     </div>
@@ -27,44 +33,101 @@
 </section>
 
 
-<!-- IPO DOCUMENTS SECTION -->
+<!-- ======================================
+     IPO DOCUMENTS BODY SECTION
+====================================== -->
 
 <section class="ctpl-ipo-section">
 
-  <!-- BACKGROUND SHAPES -->
-
-  <span class="ipo-shape ipo-diamond-one"></span>
-  <span class="ipo-shape ipo-diamond-two"></span>
-  <span class="ipo-shape ipo-triangle-one"></span>
-  <span class="ipo-shape ipo-triangle-two"></span>
-  <span class="ipo-shape ipo-dot-one"></span>
-  <span class="ipo-shape ipo-dot-two"></span>
-
   <div class="container ipo-content">
 
-    <h2 class="ipo-heading-fall">
-      Supplier Opportunities
-    </h2>
+
+    <!-- SECTION HEADING -->
+
+    <div class="ipo-section-heading">
+
+      <span class="ipo-section-label">
+        INVESTOR RESOURCES
+      </span>
+
+      <h2 class="ipo-heading-fall">
+        IPO <span>Documents.</span>
+      </h2>
+
+      <p>
+        Access prospectuses, application forms and
+        essential documents related to the
+        Initial Public Offer.
+      </p>
+
+    </div>
+
+
+    <!-- ======================================
+         IPO DOCUMENT CARDS
+    ====================================== -->
 
     <div class="ipo-grid">
 
-      @for (item of ipoItems; track item.title; let i = $index) {
+      @for (
+        item of ipoItems;
+        track item.title;
+        let i = $index
+      ) {
 
         <article
           class="ipo-card ipo-card-fall"
           [attr.data-card-index]="i"
         >
 
+
+          <!-- CARD HEADER -->
+
+          <div class="ipo-card-top">
+
+            <div class="ipo-card-icon">
+
+              <span
+                class="material-symbols-outlined"
+                aria-hidden="true"
+              >
+                description
+              </span>
+
+            </div>
+
+            <span class="ipo-card-number">
+              {{ i < 9 ? '0' + (i + 1) : i + 1 }}
+            </span>
+
+          </div>
+
+
+          <!-- DOCUMENT INFORMATION -->
+
           <h3>{{ item.title }}</h3>
 
           <p>{{ item.description }}</p>
 
+
+          <!-- DOWNLOAD BUTTON -->
+
           <a
             class="ipo-download ipo-download-btn"
             [href]="item.url"
+            [attr.aria-label]="'Download ' + item.title"
             download
           >
+
+            <span
+              class="material-symbols-outlined"
+              aria-hidden="true"
+            >
+              download
+            </span>
+
             Download
+
           </a>
 
         </article>

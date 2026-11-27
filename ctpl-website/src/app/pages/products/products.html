@@ -5,13 +5,13 @@
 
 <div class="ctpl-products-page">
 
-  <section class="ctpl-products-section">
+  <!-- ======================================
+       PRODUCTS PAGE HEADER
+  ====================================== -->
+
+  <section class="ctpl-products-page-header">
 
     <div class="container">
-
-      <!-- ======================================
-           PAGE HEADER
-      ====================================== -->
 
       <div class="ctpl-products-heading" appReveal>
 
@@ -26,8 +26,33 @@
           connectivity technologies.
         </p>
 
+        <!-- BACK TO HOME BUTTON -->
+
+        <a
+          routerLink="/"
+          class="ctpl-products-back-btn"
+        >
+
+          <span class="back-arrow">←</span>
+
+          Back to Home
+
+        </a>
+
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       PRODUCTS PAGE BODY
+  ====================================== -->
+
+  <section class="ctpl-products-section">
+
+    <div class="container">
 
       <!-- ======================================
            PRODUCT CARDS
@@ -45,7 +70,8 @@
             appReveal
             class="ctpl-product-card"
             [style.--delay]="(i % 2) * 90 + 'ms'"
-            [routerLink]="getProductRoute(p.slug)">
+            [routerLink]="getProductRoute(p.slug)"
+          >
 
 
             <!-- PRODUCT IMAGE -->
@@ -85,9 +111,7 @@
 
               </span>
 
-
               <h2>{{ p.title }}</h2>
-
 
               <p>{{ p.summary }}</p>
 

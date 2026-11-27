@@ -18,7 +18,7 @@ import { EmbeddedEsimComponent } from './pages/products/e-sim/e-sim';
 import { GeoLimitsGsldComponent } from './pages/products/gsld/gsld';
 import { LimitsEpiComponent } from './pages/products/limits/limits';
 import { MotoreyeEfrtComponent } from './pages/products/motoreye/motoreye';
-import { TranoRfidComponent } from './pages/products/rfid/rfid';
+import { Tranogo4gComponent } from './pages/products/TRANOGO-4G/TRANOGO-4G';
 
 // SERVICES
 import { Services } from './pages/services/services';
@@ -125,9 +125,9 @@ export const routes: Routes = [
     component: MotoreyeEfrtComponent
   },
   {
-    path: 'products/rfid',
-    component: TranoRfidComponent
-  },
+  path: 'products/tranogo-4g',
+  component: Tranogo4gComponent
+},
 
 
   // =========================================

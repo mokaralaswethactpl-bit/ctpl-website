@@ -5,13 +5,13 @@
 
 <div class="ctpl-services-page">
 
-  <section class="ctpl-services-section">
+  <!-- ======================================
+       SERVICES PAGE HEADER
+  ====================================== -->
+
+  <section class="ctpl-services-page-header">
 
     <div class="container">
-
-      <!-- ======================================
-           PAGE HEADER
-      ====================================== -->
 
       <div class="ctpl-services-heading" appReveal>
 
@@ -26,8 +26,33 @@
           services designed to support your operations.
         </p>
 
+        <!-- BACK TO HOME BUTTON -->
+
+        <a
+          routerLink="/"
+          class="ctpl-services-back-btn"
+        >
+
+          <span class="back-arrow">←</span>
+
+          Back to Home
+
+        </a>
+
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       SERVICES PAGE BODY
+  ====================================== -->
+
+  <section class="ctpl-services-section">
+
+    <div class="container">
 
       <!-- ======================================
            SERVICE CARDS
@@ -45,7 +70,8 @@
             appReveal
             class="ctpl-service-card"
             [style.--delay]="(i % 2) * 90 + 'ms'"
-            [routerLink]="getServiceRoute(s.slug)">
+            [routerLink]="getServiceRoute(s.slug)"
+          >
 
 
             <!-- SERVICE IMAGE / ICON -->

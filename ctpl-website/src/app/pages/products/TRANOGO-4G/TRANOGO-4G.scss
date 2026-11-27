@@ -1,6 +1,6 @@
 
 /* ==========================================
-   CTPL TRANO RFID PRODUCT PAGE
+   CTPL TRANOGO-4G PRODUCT PAGE
 ========================================== */
 
 :host {
@@ -594,11 +594,7 @@
 
   overflow: hidden;
 
-  background: linear-gradient(
-    120deg,
-    #241438,
-    #34204F
-  );
+  background: #556bec;
 
   border: 1px solid var(--trfid-border);
   border-radius: 16px;
@@ -728,11 +724,7 @@
 .trfid-contact {
   padding: 45px 0;
 
-  background: linear-gradient(
-    120deg,
-    #241438,
-    #34204F
-  );
+  background: #ffffff;
 
   border-top: 1px solid var(--trfid-border);
 }
@@ -1180,4 +1172,144 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --trfid-surface: #FFFFFF;
   --trfid-text: #5D5872;
   --vlt-primary: #7C3AED;
+}
+
+
+/* =========================================
+   MATERIAL ICONS
+   ========================================= */
+
+.trfid-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #7c3aed;
+  background: #f0e7ff;
+
+  .material-symbols-outlined {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+  }
+}
+
+
+/* =========================================
+   CARD GRID
+   ========================================= */
+
+.trfid-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+
+/* =========================================
+   CARD DESIGN
+   ========================================= */
+
+.trfid-card {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  height: 100%;
+  background: #ffffff;
+
+  border: 1px solid #dfd1f8;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+
+    box-shadow:
+      0 10px 25px rgba(124, 58, 237, 0.13);
+  }
+}
+
+
+/* =========================================
+   TECHNOLOGY HIGHLIGHT SYMBOL
+   ========================================= */
+
+.trfid-highlight-symbol {
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 992px) {
+
+  .trfid-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .trfid-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================================
+   FIX MATERIAL SYMBOLS ICONS
+   ========================================= */
+
+.trfid-card-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f0e7ff;
+  color: #7c3aed;
+
+  border-radius: 10px;
+  flex-shrink: 0;
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+    font-weight: normal !important;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+
+    color: #7c3aed;
+  }
 }
