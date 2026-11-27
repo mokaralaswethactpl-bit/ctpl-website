@@ -219,3 +219,174 @@
 
 
 @media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
+
+
+/* ======================================================
+   CTPL SHAREHOLDINGS — FINAL HEADER DESIGN
+====================================================== */
+
+:host .page-hero.ci-heading {
+  width: 100%;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 40px 0 35px !important;
+
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+
+  color: #FFFFFF;
+  text-align: left !important;
+}
+
+
+/* ==========================================
+   HEADER CONTAINER
+========================================== */
+
+.page-hero.ci-heading .container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* HEADER LABEL */
+
+.page-hero.ci-heading .eyebrow {
+  color: #FFFFFF !important;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* HEADER TITLE */
+
+.page-hero.ci-heading h1 {
+  margin: 12px 0;
+
+  color: #FFFFFF !important;
+
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+
+/* BUTTON CONTAINER */
+
+.page-hero.ci-heading .page-hero-actions {
+  display: flex;
+  justify-content: flex-start;
+
+  margin-top: 12px;
+}
+
+
+/* ==========================================
+   TRANSPARENT BACK TO HOME BUTTON
+========================================== */
+
+.page-hero.ci-heading .btn-outline-light {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  width: fit-content;
+
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 6px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.page-hero.ci-heading .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+
+  border-color: rgba(255, 255, 255, 0.7) !important;
+
+  color: #FFFFFF !important;
+
+  transform: translateX(-3px);
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+
+.page-hero.ci-heading .btn-outline-light:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  :host .page-hero.ci-heading {
+    padding: 30px 0 25px !important;
+  }
+
+  .page-hero.ci-heading h1 {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .page-hero.ci-heading .btn-outline-light {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .page-hero.ci-heading .btn-outline-light {
+    transition: none;
+  }
+
+  .page-hero.ci-heading .btn-outline-light:hover {
+    transform: none;
+  }
+
+}

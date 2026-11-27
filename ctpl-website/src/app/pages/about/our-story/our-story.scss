@@ -34,11 +34,25 @@
   line-height: 1.15;
 }
 
+  /* ==========================================
+   ABOUT DETAIL HEADER — PURPLE GRADIENT
+========================================== */
+
+.ctpl-about-detail-hero {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+.ctpl-about-detail-hero h1 {
+  color: #FFFFFF;
+}
+
 .ctpl-about-detail-hero-label {
-  color: #C4B5FD;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
+  color: #FFFFFF;
 }
 
 /* =====================================
