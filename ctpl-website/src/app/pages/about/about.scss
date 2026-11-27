@@ -189,3 +189,262 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+
+/* ======================================================
+   CTPL ABOUT HEADER — LIGHT MODE ONLY
+====================================================== */
+
+.ctpl-about-heading {
+  position: relative;
+  isolation: isolate;
+}
+
+
+/* Full-width pink and purple gradient */
+
+.ctpl-about-heading::before {
+  content: '';
+  position: absolute;
+
+  top: -70px;
+  bottom: -20px;
+
+  left: 50%;
+  width: 100vw;
+
+  transform: translateX(-50%);
+  z-index: -1;
+
+  background: linear-gradient(
+    115deg,
+    #FF729A 0%,
+    #EF4DCF 25%,
+    #D946EF 50%,
+    #A23FEB 80%,
+    #DE70D9 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* Header text colours */
+
+.ctpl-about-heading .ctpl-about-eyebrow {
+  color: #FFFFFF !important;
+}
+
+.ctpl-about-heading h1 {
+  color: #FFFFFF !important;
+}
+
+.ctpl-about-heading p {
+  color: #FFFFFF !important;
+}
+
+
+/* Prevent horizontal scrolling */
+
+.ctpl-about-overview {
+  overflow: clip;
+}
+
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+  .ctpl-about-heading::before {
+    top: -45px;
+    bottom: -20px;
+  }
+}
+
+/* ======================================================
+   ABOUT HEADER - FINAL LIGHT MODE GRADIENT
+====================================================== */
+
+/* ABOUT HEADER — PURPLE GRADIENT */
+
+.ctpl-about-heading::before {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* ======================================================
+   ABOUT HEADER — FINAL ADJUSTMENTS
+   LIGHT MODE ONLY
+====================================================== */
+
+
+/* ==========================================
+   01. REDUCE HEADER TOP SPACING
+========================================== */
+
+.ctpl-about-overview {
+  padding-top: 40px;
+  overflow: clip;
+}
+
+
+/* ==========================================
+   02. HEADER CONTAINER
+========================================== */
+
+.ctpl-about-heading {
+  position: relative;
+  isolation: isolate;
+  margin-bottom: 65px;
+}
+
+
+/* ==========================================
+   03. HEADER BACKGROUND
+========================================== */
+
+.ctpl-about-heading::before {
+  content: '';
+
+  position: absolute;
+
+  top: -40px;
+  bottom: -35px;
+
+  left: 50%;
+  width: 100vw;
+
+  transform: translateX(-50%);
+
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+
+  pointer-events: none;
+}
+
+
+/* ==========================================
+   04. HEADER TEXT AND SPACING
+========================================== */
+
+.ctpl-about-heading .ctpl-about-eyebrow {
+  color: #FFFFFF !important;
+}
+
+.ctpl-about-heading h1 {
+  margin: 12px 0 16px;
+  color: #FFFFFF !important;
+}
+
+.ctpl-about-heading p {
+  margin: 0;
+  color: #FFFFFF !important;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   05. BACK TO HOME BUTTON
+========================================== */
+
+.ctpl-about-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 24px;
+  padding: 12px 20px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  color: #FFFFFF !important;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none !important;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.ctpl-about-back-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateX(-3px);
+}
+
+
+/* BUTTON ARROW */
+
+.ctpl-about-back-arrow {
+  font-size: 20px;
+  line-height: 1;
+}
+
+
+/* ==========================================
+   06. MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-about-overview {
+    padding-top: 30px;
+  }
+
+  .ctpl-about-heading {
+    margin-bottom: 50px;
+  }
+
+  .ctpl-about-heading::before {
+    top: -30px;
+    bottom: -25px;
+  }
+
+  .ctpl-about-back-btn {
+    margin-top: 20px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ctpl-about-back-btn {
+    transition: none;
+  }
+
+  .ctpl-about-back-btn:hover {
+    transform: none;
+  }
+
+}

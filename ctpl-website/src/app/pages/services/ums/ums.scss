@@ -1253,3 +1253,88 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --umis-text: #5D5872;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ======================================================
+   CTPL UMIS SERVICE — HEADER GRADIENT
+   Consistent CTPL Light Mode Theme
+====================================================== */
+
+.umis-page-header {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* HEADER LABEL */
+
+.umis-page-header-label {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.umis-page-header h1 {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER DESCRIPTION */
+
+.umis-page-header p {
+  color: #FFFFFF !important;
+}
+
+
+/* ======================================================
+   BACK TO HOME — TRANSPARENT GLASS BUTTON
+====================================================== */
+
+.umis-page-header .back-home-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.umis-page-header .back-home-btn:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #FFFFFF !important;
+}
+
+
+/* KEYBOARD FOCUS */
+
+.umis-page-header .back-home-btn:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .umis-page-header .back-home-btn {
+    transition: none;
+  }
+
+}

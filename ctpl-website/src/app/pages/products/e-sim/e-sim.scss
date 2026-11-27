@@ -1397,3 +1397,31 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+/* ======================================================
+   EMBEDDED e-SIM PAGE — HEADER GRADIENT
+   Consistent CTPL Light Mode Theme
+====================================================== */
+
+.esim-page-header {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* HEADER LABEL */
+
+.esim-page-header-label {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.esim-page-header h1 {
+  color: #FFFFFF !important;
+}

@@ -1181,3 +1181,45 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --trfid-text: #5D5872;
   --vlt-primary: #7C3AED;
 }
+
+/* ======================================================
+   TRANO RFID PRODUCT PAGE — HEADER GRADIENT
+   Consistent CTPL Light Mode Theme
+====================================================== */
+
+.trfid-hero {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* HEADER LABEL */
+
+.trfid-hero .trfid-eyebrow {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.trfid-hero h1 {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER DESCRIPTION */
+
+.trfid-hero p {
+  color: #FFFFFF !important;
+}
+
+
+/* BACK TO HOME BUTTON */
+
+.trfid-back-link {
+  color: #FFFFFF !important;
+}

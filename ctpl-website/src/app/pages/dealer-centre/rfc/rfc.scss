@@ -700,3 +700,221 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ======================================================
+   CTPL RFC / SERVICE CENTRES — FINAL HEADER DESIGN
+====================================================== */
+
+:host .page-hero.ctpl-rfc-image-hero {
+  position: relative;
+
+  display: block !important;
+
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 40px 0 35px !important;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+
+  color: #FFFFFF;
+  text-align: left !important;
+}
+
+
+/* ==========================================
+   HEADER CONTAINER
+========================================== */
+
+.ctpl-rfc-image-hero .container {
+  position: relative;
+
+  width: 90%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  z-index: 1;
+}
+
+
+/* HEADER LABEL */
+
+.ctpl-rfc-image-hero .eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #FFFFFF !important;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* HEADER TITLE */
+
+.ctpl-rfc-image-hero h1 {
+  margin: 0 0 12px;
+
+  color: #FFFFFF !important;
+
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 750;
+  line-height: 1.15;
+
+  text-align: left !important;
+}
+
+
+/* BUTTON CONTAINER */
+
+.ctpl-rfc-image-hero .page-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: 12px;
+}
+
+
+/* ==========================================
+   TRANSPARENT BACK TO HOME BUTTON
+========================================== */
+
+.ctpl-rfc-image-hero .btn-outline-light {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  width: fit-content;
+
+  min-height: 0 !important;
+
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 6px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.ctpl-rfc-image-hero .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+
+  border-color: rgba(255, 255, 255, 0.7) !important;
+
+  color: #FFFFFF !important;
+}
+
+
+/* BACK ARROW */
+
+.rfc-back-arrow {
+  display: inline-block;
+
+  color: #FFFFFF;
+
+  font-size: 20px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.ctpl-rfc-image-hero .btn-outline-light:hover
+.rfc-back-arrow {
+  transform: translateX(-4px);
+}
+
+
+/* BUTTON ACTIVE */
+
+.ctpl-rfc-image-hero .btn-outline-light:active {
+  transform: scale(0.97);
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+
+.ctpl-rfc-image-hero .btn-outline-light:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  :host .page-hero.ctpl-rfc-image-hero {
+    padding: 30px 0 25px !important;
+  }
+
+  .ctpl-rfc-image-hero h1 {
+    font-size: clamp(28px, 6vw, 36px);
+  }
+
+  .ctpl-rfc-image-hero .btn-outline-light {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ctpl-rfc-image-hero .btn-outline-light,
+  .rfc-back-arrow {
+    transition: none;
+  }
+
+  .ctpl-rfc-image-hero .btn-outline-light:active,
+  .ctpl-rfc-image-hero .btn-outline-light:hover
+  .rfc-back-arrow {
+    transform: none;
+  }
+
+}

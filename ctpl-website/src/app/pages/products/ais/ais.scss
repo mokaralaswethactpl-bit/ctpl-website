@@ -1517,3 +1517,31 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+/* ======================================================
+   AIS-140 PRODUCT PAGE — HEADER GRADIENT
+   Same colour as About and About Detail pages
+====================================================== */
+
+.ais-page-header {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* HEADER LABEL */
+
+.ais-page-header-label {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.ais-page-header h1 {
+  color: #FFFFFF !important;
+}

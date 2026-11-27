@@ -600,3 +600,165 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+/* ======================================================
+   CTPL CAREERS PAGE — HEADER GRADIENT
+   Consistent CTPL Light Mode Theme
+====================================================== */
+
+.ctpl-careers-hero {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* HEADER LABEL */
+
+.ctpl-careers-eyebrow {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.ctpl-careers-hero h1 {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER DESCRIPTION */
+
+.ctpl-careers-hero p {
+  color: #FFFFFF !important;
+}
+
+
+/* EXISTING CAREERS BUTTON */
+
+.ctpl-careers-hero-button {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================
+   CAREERS HERO — TRANSPARENT GLASS BUTTON
+========================================== */
+
+.ctpl-careers-hero-button {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.ctpl-careers-hero-button:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #FFFFFF !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* ACTIVE STATE */
+
+.ctpl-careers-hero-button:active {
+  transform: scale(0.97);
+}
+
+
+/* KEYBOARD FOCUS */
+
+.ctpl-careers-hero-button:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .ctpl-careers-hero-button {
+    transition: none;
+  }
+
+  .ctpl-careers-hero-button:hover,
+  .ctpl-careers-hero-button:active {
+    transform: none;
+  }
+}
+
+/* ==========================================
+   CAREERS — REMOVE EXCESS SPACING
+========================================== */
+
+.ctpl-careers-hero {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 40px 0 35px !important;
+}
+
+.ctpl-careers-eyebrow {
+  margin-bottom: 12px;
+}
+
+.ctpl-careers-hero h1 {
+  margin: 0 0 18px;
+  font-size: clamp(36px, 4vw, 56px);
+}
+
+.ctpl-careers-hero p {
+  margin: 0 0 20px;
+  line-height: 1.8;
+}
+
+.ctpl-careers-hero-button {
+  min-height: 0;
+  padding: 10px 18px;
+  font-size: 13px;
+}
+
+
+/* REDUCE SPACE BELOW HEADER */
+
+.ctpl-careers-intro {
+  padding: 40px 0;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .ctpl-careers-hero {
+    min-height: 0 !important;
+    padding: 30px 0 25px !important;
+  }
+
+  .ctpl-careers-hero h1 {
+    font-size: 36px;
+  }
+
+  .ctpl-careers-hero p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .ctpl-careers-intro {
+    padding: 30px 0;
+  }
+
+}

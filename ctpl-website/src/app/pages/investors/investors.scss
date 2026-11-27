@@ -537,3 +537,206 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+
+/* ======================================================
+   CTPL INVESTORS — FINAL HEADER DESIGN
+====================================================== */
+
+.ctpl-investors-section {
+  padding-top: 40px !important;
+  overflow: clip;
+}
+
+
+/* PAGE HEADING */
+
+.ctpl-investors-heading {
+  position: relative;
+  isolation: isolate;
+
+  margin-bottom: 65px !important;
+}
+
+
+/* ==========================================
+   FULL WIDTH PINK-PURPLE GRADIENT
+========================================== */
+
+.ctpl-investors-heading::before {
+  content: '';
+
+  position: absolute;
+
+  top: -40px;
+  bottom: -35px;
+  left: 50%;
+
+  width: 100vw;
+
+  transform: translateX(-50%);
+
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+
+  pointer-events: none;
+}
+
+
+/* HEADER LABEL */
+
+.ctpl-investors-heading .ctpl-investors-label {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.ctpl-investors-heading h1 {
+  color: #FFFFFF !important;
+  margin: 12px 0 18px;
+}
+
+
+/* HEADER DESCRIPTION */
+
+.ctpl-investors-heading p {
+  color: #FFFFFF !important;
+
+  margin: 0;
+  line-height: 1.8;
+}
+
+
+/* ======================================================
+   TRANSPARENT BACK TO HOME BUTTON
+====================================================== */
+
+.ctpl-investors-back-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  width: fit-content;
+
+  margin-top: 24px;
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.ctpl-investors-back-btn:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+
+  border-color: rgba(255, 255, 255, 0.7);
+
+  color: #FFFFFF !important;
+}
+
+
+/* BACK ARROW */
+
+.ctpl-investors-back-arrow {
+  display: inline-block;
+
+  font-size: 20px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.ctpl-investors-back-btn:hover
+.ctpl-investors-back-arrow {
+  transform: translateX(-4px);
+}
+
+
+/* BUTTON ACTIVE */
+
+.ctpl-investors-back-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+
+.ctpl-investors-back-btn:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+
+/* ======================================================
+   MOBILE RESPONSIVE
+====================================================== */
+
+@media (max-width: 768px) {
+
+  .ctpl-investors-section {
+    padding-top: 30px !important;
+  }
+
+  .ctpl-investors-heading {
+    margin-bottom: 50px !important;
+  }
+
+  .ctpl-investors-heading::before {
+    top: -30px;
+    bottom: -25px;
+  }
+
+  .ctpl-investors-back-btn {
+    margin-top: 20px;
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ctpl-investors-back-btn,
+  .ctpl-investors-back-arrow {
+    transition: none;
+  }
+
+  .ctpl-investors-back-btn:active,
+  .ctpl-investors-back-btn:hover
+  .ctpl-investors-back-arrow {
+    transform: none;
+  }
+
+}

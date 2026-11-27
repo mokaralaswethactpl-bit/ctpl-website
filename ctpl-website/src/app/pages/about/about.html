@@ -3,6 +3,10 @@
 
   <div class="container">
 
+    <!-- ==========================================
+         ABOUT HEADER SECTION
+    ========================================== -->
+
     <div class="ctpl-about-heading">
 
       <span class="ctpl-about-eyebrow">
@@ -16,7 +20,22 @@
         capabilities and presence.
       </p>
 
+      <!-- BACK TO HOME BUTTON -->
+
+      <a
+        class="ctpl-about-back-btn"
+        routerLink="/"
+      >
+        <span class="ctpl-about-back-arrow">←</span>
+        Back to Home
+      </a>
+
     </div>
+
+
+    <!-- ==========================================
+         ABOUT CARDS SECTION
+    ========================================== -->
 
     <div class="ctpl-about-cards">
 
@@ -30,11 +49,13 @@
           <div class="ctpl-about-card-image">
 
             @if (page.image) {
+
               <img
                 [src]="page.image"
                 [alt]="page.title"
                 loading="lazy"
               />
+
             }
 
           </div>

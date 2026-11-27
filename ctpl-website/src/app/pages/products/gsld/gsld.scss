@@ -1381,3 +1381,31 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   --sop-blue: #7C3AED;
   --vlt-primary: #7C3AED;
 }
+
+/* ======================================================
+   GEO-LIMITS GSLD — HEADER GRADIENT
+   Consistent CTPL Light Mode Theme
+====================================================== */
+
+.geo-page-header {
+  background: linear-gradient(
+    90deg,
+    #D164D5 0%,
+    #B74CE0 50%,
+    #A53BE4 100%
+  ) !important;
+}
+
+
+/* HEADER LABEL */
+
+.geo-page-header-label {
+  color: #FFFFFF !important;
+}
+
+
+/* HEADER TITLE */
+
+.geo-page-header h1 {
+  color: #FFFFFF !important;
+}

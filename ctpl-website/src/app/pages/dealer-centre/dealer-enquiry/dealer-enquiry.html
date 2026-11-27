@@ -1,11 +1,34 @@
 
 <!-- =====================================
-     FULL WIDTH DEALER ENQUIRY BANNER
+     DEALER ENQUIRY PAGE HEADER
 ===================================== -->
 
 <section class="de-image-hero">
 
-  <h1>Dealer Enquiry</h1>
+  <div class="container de-hero-content">
+
+    <span class="de-hero-eyebrow">
+      CTPL / DEALER CENTRE
+    </span>
+
+    <h1>Dealer Enquiry</h1>
+
+    <p>
+      Explore dealership opportunities, channel
+      partnerships and grow your business with CTPL.
+    </p>
+
+    <!-- BACK TO HOME BUTTON -->
+
+    <a routerLink="/" class="de-back-home-btn">
+
+      <span class="de-back-arrow">←</span>
+
+      Back to Home
+
+    </a>
+
+  </div>
 
 </section>
 
@@ -29,12 +52,19 @@
     </p>
 
     <p class="de-form-instruction">
+
       <strong>
         Submit your details to explore dealership
         requirements, onboarding process, and
         partnership benefits
       </strong>
+
     </p>
+
+
+    <!-- =====================================
+         DEALER ENQUIRY FORM
+    ===================================== -->
 
     <form
       [formGroup]="dealerForm"
@@ -43,6 +73,7 @@
     >
 
       <div class="de-form-grid">
+
 
         <!-- NAME -->
 
@@ -61,7 +92,11 @@
           />
 
           @if (showError('name')) {
-            <small>Please enter your name.</small>
+
+            <small>
+              Please enter your name.
+            </small>
+
           }
 
         </div>
@@ -83,9 +118,11 @@
           />
 
           @if (showError('phone')) {
+
             <small>
               Enter a valid 10-digit phone number.
             </small>
+
           }
 
         </div>
@@ -108,9 +145,11 @@
           />
 
           @if (showError('email')) {
+
             <small>
               Please enter a valid email address.
             </small>
+
           }
 
         </div>
@@ -129,7 +168,9 @@
             formControlName="enquiryType"
           >
 
-            <option value="">- Select -</option>
+            <option value="">
+              - Select -
+            </option>
 
             <option value="Dealership Enquiry">
               Dealership Enquiry
@@ -150,9 +191,11 @@
           </select>
 
           @if (showError('enquiryType')) {
+
             <small>
               Please select an enquiry type.
             </small>
+
           }
 
         </div>
@@ -174,9 +217,11 @@
           ></textarea>
 
           @if (showError('message')) {
+
             <small>
               Please enter your message.
             </small>
+
           }
 
         </div>
@@ -184,7 +229,9 @@
       </div>
 
 
-      <!-- SUBMIT BUTTON -->
+      <!-- =====================================
+           SUBMIT BUTTON
+      ===================================== -->
 
       <button
         type="submit"
@@ -219,6 +266,9 @@
 ===================================== -->
 
 <section class="de-partner-section">
+
+
+  <!-- NETWORK BACKGROUND -->
 
   <div
     class="de-network-background"
@@ -284,6 +334,10 @@
   </div>
 
 
+  <!-- =====================================
+       PARTNERSHIP CONTENT
+  ===================================== -->
+
   <div class="container de-partner-content">
 
     <h2>Ready to Partner With Us?</h2>
@@ -296,6 +350,9 @@
       dealership criteria, onboarding requirements,
       and partnership support.
     </p>
+
+
+    <!-- GET IN TOUCH BUTTON -->
 
     <a
       routerLink="/page/customer-centre"
