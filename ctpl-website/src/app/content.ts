@@ -31,7 +31,7 @@ export const products: ContentPage[] = [
     summary:
       'Advanced speed limiting solution for legacy commercial vehicles.',
     source: 'https://containe.in/motoreye-model-efrt/',
-    image: '/assets/images/motoreye.png',
+    image: 'assets/images/motoreye.png',
     note:
       'Original detail URL displayed unrelated shopping content during review. Verify specifications against approved product literature.'
   },
@@ -44,7 +44,7 @@ export const products: ContentPage[] = [
     summary:
       'Precision speed limiter for commercial vehicles.',
     source: 'https://containe.in/limits-model-epi/',
-    image: '/assets/images/limits-epi.png',
+    image: 'assets/images/limits-epi.png',
     note:
       'Original detail URL displayed unrelated shopping content during review. Verify specifications against approved product literature.'
   },
@@ -57,7 +57,7 @@ export const products: ContentPage[] = [
     summary:
       'Geofencing-based speed control with secure mobile profile management.',
     source: 'https://containe.in/geo-limits-model-gsld/',
-    image: '/assets/images/geo-limits-gsld.png'
+    image: 'assets/images/geo-limits-gsld.png'
   },
 
   {
@@ -68,7 +68,7 @@ export const products: ContentPage[] = [
     summary:
       'TRPRO140 — AIS-140 / IS 16833 compliant Vehicle Location Tracking Device (VLTD).',
     source: 'https://containe.in/ais-140-is16833/',
-    image: '/assets/images/tranopro.png'
+    image: 'assets/images/tranopro.png'
   },
 
   {
@@ -80,7 +80,7 @@ export const products: ContentPage[] = [
       'Future-ready, secure and redundant network access for mission-critical connected applications.',
     source:
       'https://containe.in/embedded-e-sim-connectivity-solution/',
-    image: '/assets/images/esim.png'
+    image: 'assets/images/esim.png'
   },
 
   {
@@ -91,7 +91,7 @@ export const products: ContentPage[] = [
     summary:
       'Intelligent contactless identification and tracking system.',
     source: 'https://containe.in/trano-rfid/',
-    image: '/assets/images/tranogo-4g.png'
+    image: 'assets/images/tranogo-4g.png'
   }
 ];
 
@@ -110,7 +110,7 @@ export const services: ContentPage[] = [
     summary:
       'TRANO is a vehicle tracking platform designed to support connected mobility and fleet monitoring operations. It helps organizations manage vehicle-related information through a centralized digital environment, providing better visibility into day-to-day fleet activities. The platform supports the operational needs of businesses that depend on vehicle tracking technology, helping improve coordination, monitoring efficiency and access to information for transport and fleet management teams.',
     source: 'https://containe.in/services/',
-    image: '/assets/images/trano.jpg'
+    image: 'assets/images/trano.jpg'
   },
 
   // 2. TRANOPRO
@@ -122,7 +122,7 @@ export const services: ContentPage[] = [
     summary:
       'TRANOPRO is a tracking platform developed to support vehicle location tracking devices associated with AIS-140 applications. It provides a digital environment for managing vehicle tracking information and monitoring connected transport operations. Designed for organizations working with commercial and regulated vehicle fleets, TRANOPRO helps bring vehicle-related information into an organized platform for operational oversight, reporting workflows and day-to-day tracking requirements.',
     source: 'https://containe.in/services/',
-    image: '/assets/images/tranopro-service.jpg'
+    image: 'assets/images/tranopro-service.jpg'
   },
 
   // 3. CTPL ERP
@@ -134,7 +134,7 @@ export const services: ContentPage[] = [
     summary:
       'CTPL ERP is an enterprise resource planning solution intended to support business processes associated with Speed Limiting Devices and Vehicle Location Tracking Devices. It brings operational activities into a structured digital environment, helping teams coordinate information across device-related workflows and business functions. The system is positioned to assist with organizational efficiency, information management and coordination between departments involved in connected mobility products and services.',
     source: 'https://containe.in/services/',
-    image: '/assets/images/ctpl-erp.jpg'
+    image: 'assets/images/ctpl-erp.jpg'
   },
 
   // 4. MIS CONVERTZ
@@ -146,7 +146,7 @@ export const services: ContentPage[] = [
     summary:
       'MIS · CONVERTZ is a management information system focused on device installations and renewal-related activities. It supports the organization of operational information used by teams responsible for managing these processes. By bringing installation and renewal records into a structured workflow, the platform is intended to improve visibility, coordination and consistency across service activities, helping businesses manage recurring administrative and operational requirements more efficiently.',
     source: 'https://containe.in/services/',
-    image: '/assets/images/mis-convertz.jpg'
+    image: 'assets/images/mis-convertz.jpg'
   },
 
   // 5. UMIS
@@ -158,7 +158,7 @@ export const services: ContentPage[] = [
     summary:
       'UMIS is a unified management platform designed to support connected operations through a centralized approach to information and workflow management. It is intended to help organizations organize operational activities and improve coordination between processes that would otherwise require separate management efforts. By providing a common digital environment for relevant operational information, UMIS supports more structured monitoring, administrative efficiency and management oversight.',
     source: 'https://containe.in/services/',
-    image: '/assets/images/umis.jpg'
+    image: 'assets/images/umis.jpg'
   },
 
   // 6. CTPL DIALER
@@ -170,7 +170,7 @@ export const services: ContentPage[] = [
     summary:
       'CTPL Dialer supports customer communication and technical assistance activities associated with CTPL products and services. The solution is intended to help support teams manage communication workflows and coordinate customer interactions in an organized manner. It contributes to a structured service environment in which product enquiries, technical assistance requirements and customer support activities can be handled through established operational processes.',
     source: 'https://containe.in/services/',
-    image: '/assets/images/ctpl-dialer.png'
+    image: 'assets/images/ctpl-dialer.png'
   },
 
   // 7. VLTD STATE INTEGRATIONS
@@ -182,7 +182,7 @@ export const services: ContentPage[] = [
     summary:
       'CTPL VLTD State Integrations services focus on the coordination of AIS-140 Vehicle Location Tracking Device requirements across government and departmental applications. These services relate to transport, mining and other sectors where vehicle tracking information is integrated with relevant operational systems. The integration framework supports the needs of organizations and authorized stakeholders working with state-level vehicle monitoring requirements, subject to the applicable technical specifications and approvals.',
     source: 'https://containe.in/vltd/',
-    image: '/assets/images/vltd-service.jpg',
+    image: 'assets/images/vltd-service.jpg',
     bullets: [
       'Mining: Andhra Pradesh, Telangana and Rajasthan',
       'Transport: Delhi, Himachal Pradesh, Kerala, Karnataka, Ladakh, Madhya Pradesh, Maharashtra, Nagaland, Odisha, Punjab, Tripura, Tamil Nadu, Uttarakhand, Uttar Pradesh and West Bengal',
@@ -200,7 +200,7 @@ export const services: ContentPage[] = [
     summary:
       'CTPL SLD Services are associated with the deployment and support of Speed Limiting Devices used in commercial vehicle applications. These services address operational requirements surrounding speed management technology, including device-related assistance and service coordination. The objective is to support customers, dealers and fleet operators in managing their speed limiting device requirements through an organized technical service ecosystem.',
     source: 'https://containe.in/sld/',
-    image: '/assets/images/sld-service.jpg'
+    image: 'assets/images/sld-service.jpg'
   }
 ];
 
@@ -220,7 +220,7 @@ export const corporate: ContentPage[] = [
     eyebrow: 'About Containe',
     summary:
       'Established in 2008, Containe Technologies Limited (CTPL) focuses on automotive safety, IoT and Machine-to-Machine (M2M) technologies. From electronic speed limiting devices to advanced vehicle tracking and connectivity solutions, CTPL works towards safer roads, reliable mobility and technology-driven transportation.',
-    image: '/assets/images/our-story.jpg',
+    image: 'assets/images/our-story.jpg',
     source: 'https://containe.in/our-story/',
     bullets: [
       'Company Overview: Containe Technologies Limited was established in 2008 with a focus on automotive electronics, vehicle safety and innovative technology solutions.',
@@ -255,7 +255,7 @@ export const corporate: ContentPage[] = [
     eyebrow: 'What Drives CTPL',
     summary:
       'At CTPL, our purpose is to improve road safety and connected mobility through reliable automotive technologies. Our vision, mission and values guide our focus on innovation, engineering excellence, ethical practices, customer satisfaction and continuous improvement.',
-    image: '/assets/images/vision-mission.jpg',
+    image: 'assets/images/vision-mission.jpg',
     source: 'https://containe.in/our-story/',
     bullets: [
       'Our Vision: To become a globally recognized and reliable manufacturer of IoT, M2M and automotive safety technologies that support smarter, safer and more connected transportation.',
@@ -292,7 +292,7 @@ export const corporate: ContentPage[] = [
     eyebrow: 'Engineering & Manufacturing',
     summary:
       'CTPL combines electronics manufacturing, research and development, software engineering, technical assistance and quality-focused operations. Our infrastructure supports the development, production and servicing of automotive safety and connected mobility technologies.',
-    image: '/assets/images/infrastructure.jpg',
+    image: 'assets/images/infrastructure.jpg',
     source: 'https://containe.in/our-story/',
     bullets: [
       'Manufacturing Infrastructure: CTPL maintains electronics manufacturing capabilities supporting the production of automotive safety devices and related technology products.',
@@ -329,7 +329,7 @@ export const corporate: ContentPage[] = [
     eyebrow: 'India & Global Reach',
     summary:
       'CTPL serves automotive safety and connected mobility requirements through its distribution network, dealer relationships and transport technology integrations. The company focuses on strengthening its presence across India while exploring opportunities in international markets.',
-    image: '/assets/images/market-presence.jpg',
+    image: 'assets/images/market-presence.jpg',
     source: 'https://containe.in/our-story/',
     bullets: [
       'Pan-India Presence: CTPL describes a nationwide distribution and service network supporting its automotive safety and vehicle tracking products.',
@@ -434,7 +434,7 @@ export const corporate: ContentPage[] = [
   summary:
     'Authorized service locations, dealer servicing and RFC centre information.',
   source: 'https://containe.in/rfc-service-centers/',
-  image: '/assets/images/rfc-service-centres.png'
+  image: 'assets/images/rfc-service-centres.png'
 },
 
 

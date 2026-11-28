@@ -135,56 +135,56 @@ export class IPOComponent implements AfterViewInit {
       title: 'DRAFT PROSPECTUS',
       description:
         'Preliminary prospectus issued for regulatory and investor review.',
-      url: '/assets/pdfs/ipo/draft-prospectus.pdf'
+      url: 'assets/pdfs/ipo/draft-prospectus.pdf'
     },
 
     {
       title: 'FINAL PROSPECTUS',
       description:
         'Final prospectus containing complete and approved issue details.',
-      url: '/assets/pdfs/ipo/final-prospectus.pdf'
+      url: 'assets/pdfs/ipo/final-prospectus.pdf'
     },
 
     {
       title: 'PRE-ISSUE ADVERTISEMENT',
       description:
         'Official pre-issue advertisements released as per regulatory requirements.',
-      url: '/assets/pdfs/ipo/pre-issue-advertisement.pdf'
+      url: 'assets/pdfs/ipo/pre-issue-advertisement.pdf'
     },
 
     {
       title: 'ONLINE APPLICATION FORM',
       description:
         'Download official IPO application and revision forms.',
-      url: '/assets/pdfs/ipo/online-application-form.pdf'
+      url: 'assets/pdfs/ipo/online-application-form.pdf'
     },
 
     {
       title: 'REVISION APPLICATION FORM',
       description:
         'Form for submitting corrections or revisions to IPO applications.',
-      url: '/assets/pdfs/ipo/revision-application-form.pdf'
+      url: 'assets/pdfs/ipo/revision-application-form.pdf'
     },
 
     {
       title: 'BLANK APPLICATION FORM',
       description:
         'Standard blank form for submitting a fresh IPO application.',
-      url: '/assets/pdfs/ipo/blank-application-form.pdf'
+      url: 'assets/pdfs/ipo/blank-application-form.pdf'
     },
 
     {
       title: 'ABRIDGED PROSPECTUS',
       description:
         'Summarised prospectus highlighting key issue and company details.',
-      url: '/assets/pdfs/ipo/abridged-prospectus.pdf'
+      url: 'assets/pdfs/ipo/abridged-prospectus.pdf'
     },
 
     {
       title: 'GENERAL INFORMATION DOCUMENT',
       description:
         'Essential general information related to the public issue.',
-      url: '/assets/pdfs/ipo/general-information-document.pdf'
+      url: 'assets/pdfs/ipo/general-information-document.pdf'
     }
 
   ];

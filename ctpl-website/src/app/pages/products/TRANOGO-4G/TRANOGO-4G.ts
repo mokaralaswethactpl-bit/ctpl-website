@@ -22,6 +22,6 @@ export class Tranogo4gComponent {
   summary =
     'Compact, feature-rich AIS-140 compliant LTE CAT1 smart vehicle tracker with advanced 4G connectivity and intelligent fleet monitoring.';
 
-  image = '/assets/images/tranogo-4g.png';
+  image = 'assets/images/tranogo-4g.png';
 
 }

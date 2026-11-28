@@ -21,7 +21,7 @@ export class VltdComponent {
 
   summary = `CTPL VLTD State Integrations services focus on the coordination of AIS-140 Vehicle Location Tracking Device requirements across government and departmental applications. These services relate to transport, mining and other sectors where vehicle tracking information is integrated with relevant operational systems. The integration framework supports the needs of organizations and authorized stakeholders working with state-level vehicle monitoring requirements, subject to the applicable technical specifications and approvals.`;
 
-  image = '/assets/images/vltd-service.jpg';
+  image = 'assets/images/vltd-service.jpg';
 
   source = 'https://containe.in/vltd/';
 

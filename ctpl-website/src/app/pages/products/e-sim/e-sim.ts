@@ -21,6 +21,6 @@ export class EmbeddedEsimComponent {
 
   summary = `Embedded e-SIM technology supports connectivity for compatible connected devices. It provides a digital SIM-based approach to device connectivity, helping support communication between devices and relevant digital platforms. It forms part of CTPL's connected mobility and IoT technology portfolio.`;
 
-  image = '/assets/images/embedded-esim.png';
+  image = 'assets/images/embedded-esim.png';
 
 }

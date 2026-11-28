@@ -21,6 +21,6 @@ export class GeoLimitsGsldComponent {
 
   summary = `Geo-Limits GSLD is a vehicle speed management solution associated with geographical speed limiting applications. It is designed around the concept of location-based speed control, supporting different speed management requirements across defined geographical areas. The solution forms part of CTPL's vehicle safety and speed management product portfolio.`;
 
-  image = '/assets/images/geo-limits-gsld.png';
+  image = 'assets/images/geo-limits-gsld.png';
 
 }

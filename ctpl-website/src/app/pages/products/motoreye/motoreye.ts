@@ -21,7 +21,7 @@ export class MotoreyeEfrtComponent {
 
   summary = `Advanced speed limiting solution for legacy commercial vehicles.`;
 
-  image = '/assets/images/motoreye.png';
+  image = 'assets/images/motoreye.png';
 
   source = 'https://containe.in/motoreye-model-efrt/';
 

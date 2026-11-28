@@ -33,7 +33,7 @@
 .hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/images/vehicle-hero.png');
+  background-image: url('../../../assets/images/vehicle-hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -591,7 +591,7 @@
   isolation: isolate;
   overflow: hidden;
   padding: 180px 0 70px;
-  background-image: url('/assets/images/ctpl-building.jpg');
+  background-image: url('../../../assets/images/ctpl-building.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1155,7 +1155,7 @@
   inset: 0;
   z-index: -2;
 
-  background-image: url('/assets/images/vehicle-hero.png');
+  background-image: url('../../../assets/images/vehicle-hero.png');
 
   background-size: cover !important;
   background-position: 65% center !important;
@@ -2343,7 +2343,7 @@ section.stakeholder-bg {
       rgba(30, 16, 65, 0.65),
       rgba(55, 28, 110, 0.36)
     ),
-    url('/assets/images/ctpl-office-bg.jpg') !important;
+    url('../../../assets/images/ctpl-office-bg.jpg') !important;
 
   background-position: center center !important;
   background-size: cover !important;

@@ -36,6 +36,16 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## GitHub Pages deployment
+
+Pushing to `main` builds and deploys the site to [https://mokaralaswethactl-bit.github.io/ctpl-website/](https://mokaralaswethactl-bit.github.io/ctpl-website/). The repository's Pages source must be set to **GitHub Actions** in Settings > Pages.
+
+To build the Pages version locally, run:
+
+```bash
+ng build --configuration github-pages
+```
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
