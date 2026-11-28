@@ -880,7 +880,12 @@
 /* CTPL premium purple theme — page-specific refinements */
 
 .motoreye-page { background:#FBF9FF; color:#281742; }
-.motoreye-page-header { background:linear-gradient(115deg,#391955,#7134A9 70%,#9C6ADA); }
+.motoreye-page-header { background:linear-gradient(
+    110deg,
+    #D354CE 0%,
+    #B83CDD 55%,
+    #A329EA 100%
+  ) !important; }
 .motoreye-hero { background:linear-gradient(130deg,#FCFAFF,#F1E6FD); }
 .motoreye-eyebrow, .motoreye-section-label { color:#7C3AED; }
 

@@ -11,7 +11,12 @@
 /* PAGE HEADER */
 
 .ci-heading {
-  background: #291740;
+  background: linear-gradient(
+    110deg,
+    #D354CE 0%,
+    #B83CDD 55%,
+    #A329EA 100%
+  ) !important;
   padding: 45px 0;
   color: #fff;
 }
