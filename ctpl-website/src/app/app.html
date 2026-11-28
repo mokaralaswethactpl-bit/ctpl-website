@@ -51,15 +51,15 @@
 
           <div class="nav-dropdown">
 
-            <!-- MAIN PAGE LINK -->
-
-            <a
-              [routerLink]="menu.path"
-              routerLinkActive="active"
-              (click)="closeNavigation()"
-            >
-              {{ menu.name }}
-            </a>
+            
+<a
+  [routerLink]="menu.path"
+  routerLinkActive="active"
+  [routerLinkActiveOptions]="{ exact: false }"
+  (click)="closeNavigation()"
+>
+  {{ menu.name }}
+</a>
 
 
             <!-- SEPARATE DROPDOWN BUTTON -->

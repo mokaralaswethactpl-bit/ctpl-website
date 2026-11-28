@@ -467,3 +467,166 @@ h1, h2, h3, h4 { letter-spacing: -.035em; font-weight: 750; }
   *, *::before, *::after {scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
   .will-reveal {opacity:1!important;transform:none!important;}
 }
+
+
+/* ==========================================
+   CTPL GLOBAL PAGE HEADER DESIGN
+   SAME COLOUR, HEIGHT AND ALIGNMENT
+========================================== */
+
+/* All page hero sections */
+
+.page-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 210px !important;
+
+  display: flex;
+  align-items: center;
+
+  padding: 32px 0 !important;
+
+  margin: 0;
+
+  background: linear-gradient(
+    110deg,
+    #D354CE 0%,
+    #B83CDD 55%,
+    #A329EA 100%
+  ) !important;
+
+  border: none;
+  border-radius: 0;
+
+  color: #FFFFFF;
+
+  box-sizing: border-box;
+}
+
+/* Same content width and alignment */
+
+.page-hero > .container {
+  width: min(1150px, 90%) !important;
+  max-width: 1150px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+  gap: 0;
+}
+
+/* Small label */
+
+.page-hero .eyebrow,
+.page-hero .eyebrow-light {
+  margin: 0 0 12px !important;
+
+  color: #FFFFFF !important;
+
+  font-size: 13px !important;
+  font-weight: 500 !important;
+
+  letter-spacing: 0 !important;
+  text-transform: none;
+}
+
+/* Main page title */
+
+.page-hero h1 {
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+
+  color: #FFFFFF !important;
+
+  font-size: clamp(38px, 4vw, 52px) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -1.5px !important;
+
+  text-align: left !important;
+}
+
+/* Back button container */
+
+.page-hero .page-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Back to Home button */
+
+.page-hero .btn-outline-light,
+.page-hero .page-hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 15px !important;
+
+  min-height: 34px;
+
+  background: rgba(255,255,255,0.08) !important;
+
+  color: #FFFFFF !important;
+
+  border: 1px solid rgba(255,255,255,0.45) !important;
+  border-radius: 5px !important;
+
+  font-size: 11px !important;
+  font-weight: 600 !important;
+
+  text-decoration: none;
+
+  box-shadow: none !important;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Button hover */
+
+.page-hero .btn-outline-light:hover,
+.page-hero .page-hero-actions a:hover {
+  background: rgba(255,255,255,0.18) !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+
+/* Remove page-specific hero decorations */
+
+.page-hero::before,
+.page-hero::after {
+  display: none !important;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .page-hero {
+    min-height: 190px !important;
+    padding: 30px 0 !important;
+  }
+
+  .page-hero > .container {
+    width: 90% !important;
+  }
+
+  .page-hero h1 {
+    font-size: 36px !important;
+    letter-spacing: -1px !important;
+  }
+}

@@ -574,10 +574,11 @@
   padding: 45px 0;
 
   background: linear-gradient(
-    120deg,
-    #241438,
-    #34204F
-  );
+    110deg,
+    #D354CE 0%,
+    #B83CDD 55%,
+    #A329EA 100%
+  ) !important;
 
   border-top: 1px solid var(--trano-border);
 }
