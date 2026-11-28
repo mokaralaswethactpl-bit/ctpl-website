@@ -1759,3 +1759,102 @@ max-height: calc(100dvh - 98px) !important;
   }
 }
 
+
+/* ==========================================
+   CTPL FOOTER — PURPLE TO BLUE BACKGROUND
+========================================== */
+
+.main-footer {
+  background: linear-gradient(
+    110deg,
+    #301452 0%,
+    #392078 35%,
+    #303F91 70%,
+    #174B83 100%
+  ) !important;
+
+  border-top: 2px solid #7C3AED !important;
+}
+
+/* Keep all existing footer information */
+
+.main-footer .footer-column h4,
+.main-footer .footer-brand h3 {
+  color: #FFFFFF !important;
+}
+
+.main-footer .footer-column a,
+.main-footer .footer-brand p,
+.main-footer .footer-contact address,
+.main-footer .footer-bottom p {
+  color: #E9DFF7 !important;
+}
+
+
+/* CTPL FOOTER LOGO */
+
+.main-footer .footer-logo {
+  display: block;
+  width: 180px;
+  height: 65px;
+
+  object-fit: contain;
+  object-position: left center;
+
+  opacity: 1;
+  visibility: visible;
+  filter: none;
+}
+
+
+/* ==========================================
+   CTPL FOOTER — GOOGLE MAPS LOCATION LINK
+========================================== */
+
+.main-footer .ctpl-footer-location {
+  display: inline-block;
+
+  color: #E9DFF7 !important;
+  text-decoration: none;
+
+  font-size: 13px;
+  line-height: 1.9;
+
+  transition: color 0.25s ease;
+}
+
+/* Hover effect */
+
+.main-footer .ctpl-footer-location:hover {
+  color: #FFFFFF !important;
+}
+
+/* View on Google Maps link */
+
+.main-footer .ctpl-footer-map-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  width: fit-content;
+  margin-top: 12px;
+
+  color: #C4B5FD;
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: color 0.25s ease;
+}
+
+.main-footer .ctpl-footer-location:hover
+.ctpl-footer-map-link {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+/* Purple location icon */
+
+.main-footer .ctpl-footer-map-link svg {
+  color: #A78BFA;
+  flex-shrink: 0;
+}

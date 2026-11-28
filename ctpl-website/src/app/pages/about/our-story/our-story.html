@@ -3,6 +3,8 @@
 
   <div class="ctpl-about-detail-page">
 
+    <!-- PAGE HEADER -->
+
     <section class="ctpl-about-detail-hero">
 
       <div class="container">
@@ -22,10 +24,17 @@
 
     </section>
 
+    <!-- PAGE CONTENT -->
+
     <section class="ctpl-about-detail-section">
+
       <div class="container">
 
+        <!-- TOP TWO-COLUMN LAYOUT -->
+
         <div class="ctpl-about-detail-grid">
+
+          <!-- LEFT: TEXT CONTENT -->
 
           <div class="ctpl-about-detail-text">
 
@@ -33,54 +42,84 @@
               {{ p.eyebrow }}
             </span>
 
-            <h2>{{ p.title }}</h2>
+            @if (p.title !== 'Our Story') {
+              <h2>{{ p.title }}</h2>
+            }
 
             <p class="ctpl-about-detail-summary">
               {{ p.summary }}
             </p>
 
-            <h3>Features & Information</h3>
+            <!-- FIRST FOUR FEATURE POINTS -->
 
-<ul class="ctpl-about-first-point">
+            @if (p.bullets; as bullets) {
 
-  @if (p.bullets; as bullets) {
+              @if (bullets.length > 0) {
 
-    @if (bullets.length > 0) {
+                <h3>Features &amp; Information</h3>
 
-      <li>{{ bullets[0] }}</li>
+                <ul class="ctpl-about-first-point">
 
-    }
+                  @for (
+                    bullet of bullets.slice(0, 4);
+                    track $index
+                  ) {
 
-  }
+                    <li>{{ bullet }}</li>
 
-</ul>
+                  }
+
+                </ul>
+
+              }
+
+            }
 
           </div>
 
+          <!-- RIGHT: IMAGE -->
+
           <div class="ctpl-about-detail-image">
+
             @if (p.image) {
+
               <img
                 [src]="p.image"
                 [alt]="p.title"
                 loading="lazy"
               />
+
             }
+
           </div>
 
         </div>
 
-        <div class="ctpl-about-detail-more">
-          <ul>
-            @for (
-              bullet of p.bullets?.slice(1) ?? [];
-              track $index
-            ) {
-              <li>{{ bullet }}</li>
-            }
-          </ul>
-        </div>
+        <!-- REMAINING POINTS BELOW THE IMAGE -->
+
+        @if ((p.bullets?.length ?? 0) > 4) {
+
+          <div class="ctpl-about-detail-more">
+
+            <ul>
+
+              @for (
+                bullet of p.bullets?.slice(4) ?? [];
+                track $index
+              ) {
+
+                <li>{{ bullet }}</li>
+
+              }
+
+            </ul>
+
+          </div>
+
+        }
 
       </div>
+
     </section>
 
   </div>

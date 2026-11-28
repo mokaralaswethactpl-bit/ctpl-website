@@ -1,0 +1,56 @@
+
+<!-- ==========================================
+     CTPL ORIGINAL LOGO INTRO
+========================================== -->
+
+@if (visible()) {
+
+  <div
+    class="ctpl-intro-overlay"
+    [class.ctpl-intro-flying]="flying()"
+    [class.ctpl-intro-hide]="fading()"
+    role="status"
+    aria-label="Loading CTPL website"
+  >
+
+    <div class="ctpl-intro-content">
+
+      <!-- ORIGINAL COMPANY LOGO -->
+
+      <img
+        #introLogo
+        src="/assets/images/ctpl-logo.png"
+        alt="Containe Technologies Limited"
+        class="ctpl-intro-logo"
+      />
+
+      <!-- PROGRESS BAR -->
+
+      <div class="ctpl-intro-track">
+
+        <div
+          class="ctpl-intro-progress"
+          [style.width.%]="progress()"
+        ></div>
+
+      </div>
+
+      <!-- LOADING INFORMATION -->
+
+      <div class="ctpl-intro-status">
+
+        <span>
+          Loading your experience
+        </span>
+
+        <span>
+          {{ progress() }}%
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+}

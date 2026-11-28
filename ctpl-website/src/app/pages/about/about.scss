@@ -367,3 +367,69 @@ a:not(.btn):not(.btn-primary):hover {text-decoration-color:#7C3AED;}
   }
 
 }
+
+
+/* ==========================================
+   CTPL ABOUT CARDS — BIGGER IMAGE SECTION
+========================================== */
+
+/* Image container */
+
+.ctpl-about-card-image {
+  width: 100%;
+  height: 400px !important;
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* Actual image */
+
+.ctpl-about-card-image img {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+/* Smooth image zoom on hover */
+
+.ctpl-about-card:hover .ctpl-about-card-image img {
+  transform: scale(1.05);
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .ctpl-about-card-image {
+    height: 260px !important;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .ctpl-about-card-image {
+    height: 230px !important;
+  }
+}
+
+
+/* ==========================================
+   CTPL ABOUT HEADER — PURPLE TO BLUE
+========================================== */
+
+.ctpl-about-page-header {
+  background: linear-gradient(
+    110deg,
+    #8953D7 0%,
+    #7960DC 30%,
+    #667FEA 65%,
+    #43B5F5 100%
+  ) !important;
+}

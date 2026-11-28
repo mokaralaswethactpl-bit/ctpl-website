@@ -1,12 +1,16 @@
 
 import { Component, HostListener } from '@angular/core';
 
+
+import { CtplIntro } from './pages/components/ctpl-intro/ctpl-intro';
+
 import { SearchComponent } from './pages/search/search';
 
 import {
   RouterOutlet,
   RouterLink,
-  RouterLinkActive
+  RouterLinkActive,
+  
 } from '@angular/router';
 
 
@@ -17,7 +21,8 @@ import {
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    SearchComponent
+    SearchComponent,
+    CtplIntro
   ],
 
   templateUrl: './app.html',

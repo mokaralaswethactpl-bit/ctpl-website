@@ -1,7 +1,12 @@
+<!-- CTPL INTRO ANIMATION -->
+
+<app-ctpl-intro></app-ctpl-intro>
 
 <!-- ======================================
      CTPL HEADER
 ====================================== -->
+
+
 
 <header
   class="main-header"
@@ -116,7 +121,7 @@
       <!-- INTRA BUTTON -->
 
       <a
-        href="/intra"
+        href="intra.containe.in"
         class="intra-button"
         (click)="closeNavigation()"
       >
@@ -228,7 +233,7 @@
         <a routerLink="/" class="footer-logo-link">
 
           <img
-            src="/assets/images/ctpl-logo.png"
+            src="/assets/images/ctpl-logo(1).png"
             alt="CTPL Logo"
             class="footer-logo"
           />
@@ -335,14 +340,45 @@
 
         <h4>Contact Us</h4>
 
-        <address>
+        
+<!-- CLICKABLE CTPL OFFICE LOCATION -->
 
-          #3-13-142 / 341P &amp; 342,<br>
-          Gokul Nagar, Marriguda, Mallapur,<br>
-          Secunderabad, Hyderabad,<br>
-          Telangana - 500076, India.
+<address>
+  <a
+    class="ctpl-footer-location"
+    href="https://www.google.com/maps/search/?api=1&query=Containe%20Technologies%20Ltd%20Mallapur%20Secunderabad"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="View CTPL office location on Google Maps"
+    aria-label="Open CTPL office address in Google Maps"
+  >
+    #3-13-142 / 341P &amp; 342,
+    <br>
+    Gokul Nagar, Marriguda, Mallapur,
+    <br>
+    Secunderabad, Hyderabad,
+    <br>
+    Telangana - 500076, India.
 
-        </address>
+    <span class="ctpl-footer-map-link">
+      <svg
+        viewBox="0 0 24 24"
+        width="15"
+        height="15"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/>
+        <circle cx="12" cy="10" r="2.5"/>
+      </svg>
+      View on Google Maps ↗
+    </span>
+  </a>
+</address>
 
         <a
           routerLink="/page/customer-centre"

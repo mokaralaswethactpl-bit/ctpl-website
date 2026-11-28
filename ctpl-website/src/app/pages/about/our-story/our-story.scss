@@ -17,14 +17,16 @@
    HERO HEADER
    ===================================== */
 
-.ctpl-about-detail-hero {
-  padding: 48px 0;
+
+.ctpl-about-detail-hero,
+.page-hero {
   background: linear-gradient(
     110deg,
-    #241438,
-    #4C1D95 55%,
-    #7C3AED
-  );
+    #8953D7 0%,
+    #7960DC 30%,
+    #667FEA 65%,
+    #43B5F5 100%
+  ) !important;
 }
 
 .ctpl-about-detail-hero h1 {
@@ -38,14 +40,18 @@
    ABOUT DETAIL HEADER — PURPLE GRADIENT
 ========================================== */
 
-.ctpl-about-detail-hero {
+
+.ctpl-about-detail-hero,
+.page-hero {
   background: linear-gradient(
-    90deg,
-    #D164D5 0%,
-    #B74CE0 50%,
-    #A53BE4 100%
+    110deg,
+    #8953D7 0%,
+    #7960DC 30%,
+    #667FEA 65%,
+    #43B5F5 100%
   ) !important;
 }
+
 
 .ctpl-about-detail-hero h1 {
   color: #FFFFFF;
@@ -148,7 +154,7 @@
   display: block;
   margin-bottom: 15px;
   color: #7C3AED;
-  font-size: 12px;
+  font-size: 19px;
   font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -168,7 +174,7 @@
 }
 
 .ctpl-about-detail-text h3 {
-  color: #241438;
+  color: #7C3AED;
   font-size: 19px;
   margin: 0 0 20px;
 }
@@ -309,7 +315,7 @@
 
 .ctpl-about-detail-page,.ctpl-about-detail-section { background:#FBF9FF; color:#2A1843; }
 .ctpl-about-detail-hero { background:linear-gradient(115deg,#3B1A5A,#6933A5 67%,#9D71D9); }
-.ctpl-about-detail-text h2,.ctpl-about-detail-text h3 { color:#2A1843; }
+.ctpl-about-detail-text h2,.ctpl-about-detail-text h3 { color:#7C3AED; }
 .ctpl-about-detail-summary,.ctpl-about-first-point li,.ctpl-about-detail-more li { color:#635474; }
 .ctpl-about-detail-label { color:#7C3AED; }
 .ctpl-about-detail-image img { border:1px solid #E5D7F6; border-radius:18px; box-shadow:0 18px 40px rgba(60,25,95,.12); }
@@ -331,5 +337,129 @@
 @media(prefers-reduced-motion:reduce){:host *{scroll-behavior:auto;}}
 
 .ctpl-about-detail-page,.ctpl-about-detail-section{background:#FAF8FF;color:#24183F;}
-.ctpl-about-detail-text h2,.ctpl-about-detail-text h3{color:#24183F;}
+.ctpl-about-detail-text h2,.ctpl-about-detail-text h3{color:#7C3AED;}
 .ctpl-about-detail-summary,.ctpl-about-first-point li,.ctpl-about-detail-more li{color:#5D5872;}
+
+
+/* ==========================================
+   CTPL ABOUT DETAILS — REMOVE EMPTY SPACE
+========================================== */
+
+/* Top-align text and image */
+
+.ctpl-about-detail-grid {
+  align-items: start !important;
+}
+
+/* Left information section */
+
+.ctpl-about-detail-text {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Features heading */
+
+.ctpl-about-detail-text h3 {
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+/* Feature bullet list */
+
+.ctpl-about-first-point {
+  margin: 0;
+  padding-left: 22px;
+
+  list-style: disc;
+}
+
+.ctpl-about-first-point li {
+  margin-bottom: 14px;
+
+  padding-left: 5px;
+
+  color: #665D78;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.ctpl-about-first-point li::marker {
+  color: #7C3AED;
+}
+
+/* Image */
+
+.ctpl-about-detail-image {
+  align-self: start;
+  overflow: hidden;
+}
+
+
+/* ==========================================
+   ABOUT DETAILS — FULL WIDTH BULLET CONTINUATION
+========================================== */
+
+/* Text and picture side by side */
+
+.ctpl-about-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 35px;
+}
+
+/* First points beside image */
+
+.ctpl-about-first-point {
+  padding-left: 22px;
+  margin: 12px 0 0;
+}
+
+.ctpl-about-first-point li {
+  margin-bottom: 14px;
+  line-height: 1.75;
+}
+
+/* Remaining information below image */
+
+.ctpl-about-detail-more {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin-top: 24px;
+  padding: 0 !important;
+
+  grid-column: 1 / -1;
+}
+
+.ctpl-about-detail-more ul {
+  width: 100%;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.ctpl-about-detail-more li {
+  margin-bottom: 16px;
+  line-height: 1.8;
+  color: #665D78;
+}
+
+.ctpl-about-first-point li::marker,
+.ctpl-about-detail-more li::marker {
+  color: #7C3AED;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .ctpl-about-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .ctpl-about-detail-more {
+    margin-top: 20px;
+  }
+}

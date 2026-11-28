@@ -247,3 +247,15 @@
 /* ======================================================
    END OF ABOUT DETAIL PAGE STYLES
 ====================================================== */
+
+
+.ctpl-about-detail-hero,
+.page-hero {
+  background: linear-gradient(
+    110deg,
+    #8953D7 0%,
+    #7960DC 30%,
+    #667FEA 65%,
+    #43B5F5 100%
+  ) !important;
+}
